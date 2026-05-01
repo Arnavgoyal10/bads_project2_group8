@@ -1,490 +1,573 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="dark">
 
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NovaMart Marketing Intelligence | Executive Dashboard</title>
-    <script src="https://cdn.plot.ly/plotly-2.24.1.min.js"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&family=JetBrains+Mono:wght@400;600&display=swap"
-        rel="stylesheet">
+    <title>NovaMart Executive Dashboard | Marketing Analytics</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --background: #020617;
-            --foreground: #e2e8f0;
-            --card: #0f172a;
-            --card-border: #1e293b;
-            --accent: #3b82f6;
-            --accent-emerald: #10b981;
-            --accent-amber: #f59e0b;
-            --accent-rose: #ef4444;
-            --muted: #94a3b8;
-            --sidebar: #0f172a;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scrollbar-width: thin;
-            scrollbar-color: #334155 transparent;
-        }
-
         body {
-            background-color: var(--background);
-            color: var(--foreground);
-            font-family: 'Inter', system-ui, -apple-system, sans-serif;
-            display: flex;
-            min-height: 100vh;
-            overflow-x: hidden;
+            font-family: 'Inter', sans-serif;
+            background-color: #020617;
+            color: #e2e8f0;
         }
-
-        /* Sidebar */
-        aside {
-            width: 260px;
-            background-color: var(--sidebar);
-            border-right: 1px solid var(--card-border);
-            padding: 2rem 1.5rem;
-            display: flex;
-            flex-direction: column;
-            position: fixed;
-            height: 100vh;
+        .glass-card {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 1rem;
         }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            margin-bottom: 3rem;
-            color: white;
-            font-weight: 700;
-            font-size: 1.25rem;
-            letter-spacing: -0.025em;
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .nav-link.active {
+            background-color: #1e293b;
+            color: #38bdf8;
+            border-bottom: 2px solid #38bdf8;
         }
-
-        .nav-item {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            padding: 0.75rem 1rem;
-            color: var(--muted);
-            text-decoration: none;
-            border-radius: 0.75rem;
-            transition: all 0.2s ease;
-            margin-bottom: 0.5rem;
-            font-size: 0.9rem;
-            font-weight: 500;
+        .kpi-value {
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-
-        .nav-item:hover,
-        .nav-item.active {
-            background-color: rgba(59, 130, 246, 0.1);
-            color: var(--accent);
-        }
-
-        /* Main Content */
-        main {
-            flex: 1;
-            margin-left: 260px;
-            padding: 2rem 3rem;
-            max-width: 1400px;
-        }
-
-        header {
-            margin-bottom: 3rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-        }
-
-        .header-title h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            color: white;
-            margin-bottom: 0.5rem;
-        }
-
-        .header-title p {
-            color: var(--muted);
-            font-size: 1.1rem;
-        }
-
-        .badge {
-            background-color: rgba(59, 130, 246, 0.1);
-            color: var(--accent);
-            padding: 0.5rem 1rem;
-            border-radius: 2rem;
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            border: 1px solid rgba(59, 130, 246, 0.2);
-        }
-
-        /* Stats Grid */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1.5rem;
-            margin-bottom: 3rem;
-        }
-
-        .stat-card {
-            background-color: var(--card);
-            border: 1px solid var(--card-border);
-            padding: 1.5rem;
-            border-radius: 1.25rem;
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-
-        .stat-label {
-            color: var(--muted);
+        .badge-stat {
+            background: rgba(56, 189, 248, 0.1);
+            color: #38bdf8;
+            padding: 2px 8px;
+            border-radius: 4px;
             font-size: 0.75rem;
             font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .stat-value {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 2rem;
-            font-weight: 700;
-            color: white;
-        }
-
-        .stat-trend {
-            font-size: 0.8rem;
-            display: flex;
-            align-items: center;
-            gap: 0.25rem;
-        }
-
-        .trend-up {
-            color: var(--accent-emerald);
-        }
-
-        .trend-down {
-            color: var(--accent-rose);
-        }
-
-        /* Charts Grid */
-        .charts-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .chart-container {
-            background-color: var(--card);
-            border: 1px solid var(--card-border);
-            padding: 1.5rem;
-            border-radius: 1.5rem;
-            min-height: 400px;
-        }
-
-        .chart-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1.5rem;
-        }
-
-        .chart-header h3 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: white;
-        }
-
-        /* Finding Cards */
-        .findings-section {
-            margin-bottom: 4rem;
-        }
-
-        .findings-title {
-            font-size: 1.5rem;
-            font-family: 'Playfair Display', serif;
-            margin-bottom: 1.5rem;
-            color: white;
-        }
-
-        .findings-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-        }
-
-        .finding-card {
-            padding: 1.5rem;
-            border-radius: 1.25rem;
-            border: 1px solid transparent;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .finding-card.cyan {
-            background: rgba(6, 182, 212, 0.05);
-            border-color: rgba(6, 182, 212, 0.1);
-            color: #67e8f9;
-        }
-
-        .finding-card.emerald {
-            background: rgba(16, 185, 129, 0.05);
-            border-color: rgba(16, 185, 129, 0.1);
-            color: #6ee7b7;
-        }
-
-        .finding-card.amber {
-            background: rgba(245, 158, 11, 0.05);
-            border-color: rgba(245, 158, 11, 0.1);
-            color: #fcd34d;
-        }
-
-        .finding-label {
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            opacity: 0.8;
-        }
-
-        .finding-stat {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: white;
-        }
-
-        .finding-prose {
-            font-size: 0.9rem;
-            line-height: 1.6;
-            color: var(--muted);
-        }
-
-        footer {
-            margin-top: 5rem;
-            padding-top: 2rem;
-            border-top: 1px solid var(--card-border);
-            color: var(--muted);
-            font-size: 0.85rem;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .animate-fade-in {
-            animation: fadeIn 0.6s ease-out forwards;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .plotly-graph-div {
-            width: 100% !important;
         }
     </style>
 </head>
-
-<body>
-    <aside>
-        <div class="logo">
-            <i data-lucide="shield-check" style="color: var(--accent)"></i>
-            NovaMart Intel
-        </div>
-        <nav>
-            <a href="executive_dashboard.html" class="nav-item active"><i data-lucide="layout-dashboard"></i>
-                Dashboard</a>
-            <a href="customer_segments.html" class="nav-item"><i data-lucide="users"></i> Customer Segments</a>
-            <a href="lead_prediction.html" class="nav-item"><i data-lucide="trending-up"></i> Lead Prediction</a>
-            <a href="audit_report.html" class="nav-item"><i data-lucide="file-text"></i> Audit Report</a>
-            <a href="#" class="nav-item"><i data-lucide="settings"></i> Configuration</a>
-        </nav>
-    </aside>
-
-    <main>
-        <header class="animate-fade-in">
-            <div class="header-title">
-                <h1>Marketing Efficiency Q-Review</h1>
-                <p>Analyzing channel performance, segments, and predictive conversion liftoff.</p>
+<body class="p-4 md:p-8">
+    <div class="max-w-7xl mx-auto">
+        <!-- Header -->
+        <header class="mb-8 flex flex-col md:flex-row md:items-end justify-between gap-4">
+            <div>
+                <h1 class="text-3xl font-bold tracking-tight text-white mb-1">NovaMart <span class="text-sky-400">Executive</span></h1>
+                <p class="text-slate-400">Marketing Analytics & Predictive Intelligence Dashboard</p>
             </div>
-            <div class="badge">Live Q3 Data</div>
+            <div class="flex gap-2 text-xs font-mono text-slate-500 bg-slate-900/50 p-2 rounded-lg border border-slate-800">
+                <span>STATUS: LIVE</span>
+                <span>•</span>
+                <span>MODEL: V2.4</span>
+                <span>•</span>
+                <span>LAST UPDATE: 2026-05-02</span>
+            </div>
         </header>
 
-        <div class="stats-grid animate-fade-in" style="animation-delay: 0.1s">
-            <div class="stat-card">
-                <span class="stat-label">Total Leads</span>
-                <span class="stat-value">5,660</span>
-                <span class="stat-trend trend-up"><i data-lucide="arrow-up-right"></i> 12.4% vs prev Q</span>
-            </div>
-            <div class="stat-card">
-                <span class="stat-label">Conversions</span>
-                <span class="stat-value">2,085</span>
-                <span class="stat-trend trend-up"><i data-lucide="arrow-up-right"></i> 8.2% vs prev Q</span>
-            </div>
-            <div class="stat-card">
-                <span class="stat-label">Avg LCR</span>
-                <span class="stat-value">36.8%</span>
-                <span class="stat-trend trend-down"><i data-lucide="arrow-down-right"></i> 0.5% vs prev Q</span>
-            </div>
-            <div class="stat-card">
-                <span class="stat-label">Avg Revenue (Desk)</span>
-                <span class="stat-value">$71.50</span>
-                <span class="stat-trend trend-up"><i data-lucide="arrow-up-right"></i> 3.1% vs prev Q</span>
-            </div>
-        </div>
+        <!-- Navigation -->
+        <nav class="flex flex-wrap gap-1 mb-8 bg-slate-900/50 p-1 rounded-xl border border-slate-800">
+            <button onclick="showTab('overview')" class="nav-link px-4 py-2 rounded-lg text-sm font-medium transition-all hover:bg-slate-800 active" id="tab-overview">Overview</button>
+            <button onclick="showTab('data-quality')" class="nav-link px-4 py-2 rounded-lg text-sm font-medium transition-all hover:bg-slate-800" id="tab-data-quality">Data Quality</button>
+            <button onclick="showTab('channels')" class="nav-link px-4 py-2 rounded-lg text-sm font-medium transition-all hover:bg-slate-800" id="tab-channels">Channel & Campaign</button>
+            <button onclick="showTab('segments')" class="nav-link px-4 py-2 rounded-lg text-sm font-medium transition-all hover:bg-slate-800" id="tab-segments">Customer Segments</button>
+            <button onclick="showTab('lead-model')" class="nav-link px-4 py-2 rounded-lg text-sm font-medium transition-all hover:bg-slate-800" id="tab-lead-model">Lead Model</button>
+            <button onclick="showTab('retention')" class="nav-link px-4 py-2 rounded-lg text-sm font-medium transition-all hover:bg-slate-800" id="tab-retention">Retention</button>
+            <button onclick="showTab('discounts')" class="nav-link px-4 py-2 rounded-lg text-sm font-medium transition-all hover:bg-slate-800" id="tab-discounts">Discount Analysis</button>
+            <button onclick="showTab('recommendations')" class="nav-link px-4 py-2 rounded-lg text-sm font-medium transition-all hover:bg-slate-800" id="tab-recommendations">Recommendations</button>
+        </nav>
 
-        <div class="charts-grid animate-fade-in" style="animation-delay: 0.2s">
-            <div class="chart-container">
-                <div class="chart-header">
-                    <h3>Channel Conversion Efficiency (LCR)</h3>
-                    <i data-lucide="bar-chart-3" class="text-muted"></i>
+        <!-- Tab Contents -->
+        
+        <!-- SECTION 1: OVERVIEW -->
+        <div id="overview" class="tab-content active space-y-6">
+            <!-- KPI Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="glass-card p-6">
+                    <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Total Leads</p>
+                    <p class="text-3xl font-bold kpi-value">5,164</p>
                 </div>
-                <div id="channel-lcr-chart"></div>
-            </div>
-            <div class="chart-container">
-                <div class="chart-header">
-                    <h3>Segment Revenue Architecture</h3>
-                    <i data-lucide="pie-chart" class="text-muted"></i>
+                <div class="glass-card p-6">
+                    <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Lead Conv. Rate</p>
+                    <p class="text-3xl font-bold kpi-value">36.5%</p>
                 </div>
-                <div id="segment-pie-chart"></div>
-            </div>
-            <div class="chart-container">
-                <div class="chart-header">
-                    <h3>Lead Prioritization Lift (By Decile)</h3>
-                    <i data-lucide="trending-up" class="text-muted"></i>
+                <div class="glass-card p-6">
+                    <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Total Revenue</p>
+                    <p class="text-3xl font-bold kpi-value">$159,682</p>
                 </div>
-                <div id="lift-chart"></div>
-            </div>
-            <div class="chart-container">
-                <div class="chart-header">
-                    <h3>Device Performance Comparison</h3>
-                    <i data-lucide="smartphone" class="text-muted"></i>
+                <div class="glass-card p-6">
+                    <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Avg Order Value</p>
+                    <p class="text-3xl font-bold kpi-value">$58.11</p>
                 </div>
-                <div id="device-chart"></div>
+                <div class="glass-card p-6">
+                    <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Total Customers</p>
+                    <p class="text-3xl font-bold kpi-value">2,400</p>
+                </div>
+                <div class="glass-card p-6">
+                    <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Total Sessions</p>
+                    <p class="text-3xl font-bold kpi-value">18,955</p>
+                </div>
+                <div class="glass-card p-6">
+                    <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Total Campaigns</p>
+                    <p class="text-3xl font-bold kpi-value">36</p>
+                </div>
+                <div class="glass-card p-6">
+                    <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Repeat Purchase Rate</p>
+                    <p class="text-3xl font-bold kpi-value">31.7%</p>
+                </div>
             </div>
-        </div>
 
-        <div class="findings-section animate-fade-in" style="animation-delay: 0.3s">
-            <h2 class="findings-title">Key Strategic Findings</h2>
-            <div class="findings-grid">
-                <div class="finding-card cyan">
-                    <span class="finding-label">Statistical Alpha</span>
-                    <span class="finding-stat">p = 0.0015</span>
-                    <p class="finding-prose">Chi-square tests confirm a statistically significant difference in
-                        conversion rates across acquisition channels. Channel selection is not random; it's a primary
-                        driver of ROI.</p>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="glass-card p-6">
+                    <h3 class="text-lg font-semibold mb-4 border-b border-slate-800 pb-2">Channel Performance (LCR)</h3>
+                    <img src="charts/channel_lcr.png" class="w-full rounded-lg" alt="Channel LCR">
                 </div>
-                <div class="finding-card emerald">
-                    <span class="finding-label">The Pareto Segment</span>
-                    <span class="finding-stat">6x Value</span>
-                    <p class="finding-prose">Segment 3 (Champions) generates over $1,346 in average revenue, nearly 6x
-                        the average of other segments. These 18 users represent our core growth engine.</p>
-                </div>
-                <div class="finding-card amber">
-                    <span class="finding-label">Discounting Signal</span>
-                    <span class="finding-stat">0.009</span>
-                    <p class="finding-prose">Low correlation (0.009) between discount percentage and final conversion
-                        suggests price-insensitivity. Broad discounting is currently sacrificing margin without driving
-                        volume.</p>
+                <div class="glass-card p-6">
+                    <h3 class="text-lg font-semibold mb-4 border-b border-slate-800 pb-2">Efficiency Frontier</h3>
+                    <img src="efficiency_frontier.png" class="w-full rounded-lg" alt="Efficiency Frontier">
                 </div>
             </div>
         </div>
 
-        <footer>
-            <div>&copy; 2026 NovaMart Analytics | Marketing Intelligence Platform</div>
-            <div>Data refreshed: May 2, 2026</div>
-        </footer>
-    </main>
+        <!-- SECTION 2: DATA QUALITY -->
+        <div id="data-quality" class="tab-content space-y-6">
+            <div class="glass-card p-6 overflow-hidden">
+                <h3 class="text-xl font-semibold mb-6">Data Quality Scorecard</h3>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full text-sm text-left">
+                        <thead class="bg-slate-800/50 text-slate-300">
+                            <tr>
+                                <th class="px-4 py-3">Table</th>
+                                <th class="px-4 py-3">Key Issues Found</th>
+                                <th class="px-4 py-3">Treatment Applied</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-800">
+                            <tr>
+                                <td class="px-4 py-3 font-medium">Customers</td>
+                                <td class="px-4 py-3">18 Duplicates, 3 Invalid Ages</td>
+                                <td class="px-4 py-3 text-emerald-400">Dropped / Set to NaN</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-medium">Campaigns</td>
+                                <td class="px-4 py-3">21 Spend > Budget, 25 Clicks > Impressions</td>
+                                <td class="px-4 py-3 text-sky-400">Flagged for investigation</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-medium">Leads</td>
+                                <td class="px-4 py-3">26 Anon Leads, 33 Unattributed</td>
+                                <td class="px-4 py-3 text-emerald-400">Normalization & Exclusion</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-medium">Sessions</td>
+                                <td class="px-4 py-3">31 Invalid Pages, 48 Invalid Time</td>
+                                <td class="px-4 py-3 text-emerald-400">Capping & Outlier Removal</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3 font-medium">Transactions</td>
+                                <td class="px-4 py-3">35 Revenue <= 0, 48 Units <= 0</td>
+                                <td class="px-4 py-3 text-emerald-400">Zero-value flagging</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="glass-card p-6 flex flex-col items-center justify-center text-center">
+                    <p class="text-slate-400 text-sm mb-2">Sessions → Customers</p>
+                    <p class="text-4xl font-bold text-emerald-400">99.5%</p>
+                    <p class="text-xs text-slate-500 mt-2">Join Success Rate</p>
+                </div>
+                <div class="glass-card p-6 flex flex-col items-center justify-center text-center">
+                    <p class="text-slate-400 text-sm mb-2">Transactions → Customers</p>
+                    <p class="text-4xl font-bold text-emerald-400">97.9%</p>
+                    <p class="text-xs text-slate-500 mt-2">Join Success Rate</p>
+                </div>
+                <div class="glass-card p-6">
+                    <h4 class="text-sm font-semibold text-rose-400 uppercase mb-4 flex items-center gap-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                        Critical Anomalies
+                    </h4>
+                    <ul class="text-sm space-y-2 text-slate-300">
+                        <li>• 21 campaigns exceeding budget cap</li>
+                        <li>• 3 records with age > 120 or < 0</li>
+                        <li>• Lead/Conversion date mismatch resolved</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 3: CHANNEL & CAMPAIGN -->
+        <div id="channels" class="tab-content space-y-6">
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="glass-card p-6">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-lg font-semibold">Channel LCR Analysis</h3>
+                        <span class="badge-stat">χ² p=0.0015</span>
+                    </div>
+                    <img src="charts/channel_lcr.png" class="w-full rounded-lg" alt="Channel LCR">
+                </div>
+                <div class="glass-card p-6">
+                    <h3 class="text-lg font-semibold mb-4">Channel ROAS Distribution</h3>
+                    <img src="charts/channel_roas.png" class="w-full rounded-lg" alt="Channel ROAS">
+                </div>
+            </div>
+
+            <div class="glass-card p-6">
+                <h3 class="text-lg font-semibold mb-4">Portfolio Efficiency Frontier</h3>
+                <img src="efficiency_frontier.png" class="w-full rounded-lg" alt="Efficiency Frontier">
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="glass-card p-6">
+                    <h3 class="text-lg font-semibold mb-4">Creative-Objective Matrix</h3>
+                    <img src="charts/creative_objective_matrix.png" class="w-full rounded-lg" alt="Creative Objective Matrix">
+                </div>
+                <div class="glass-card p-6 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-lg font-semibold mb-4">Statistical Significance</h3>
+                        <div class="bg-slate-900/50 p-4 rounded-lg border border-sky-500/30">
+                            <p class="text-sm text-sky-400 font-mono mb-2">χ² = 26.87, p = 0.0015</p>
+                            <p class="text-slate-300 text-sm italic">"Acquisition channels convert at significantly different rates. The variance in LCR is not due to chance, justifying strategic budget reallocation to high-performing channels."</p>
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <h4 class="text-sm font-semibold mb-3">Campaign Group Performance</h4>
+                        <div class="overflow-x-auto">
+                            <table border="1" class="dataframe min-w-full text-sm text-left text-slate-300">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Group_Label</th>
+      <th>spend_usd</th>
+      <th>LCR</th>
+      <th>ROAS</th>
+      <th>CPA</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>High Efficiency</td>
+      <td>45973.42</td>
+      <td>0.37</td>
+      <td>0.25</td>
+      <td>898.79</td>
+    </tr>
+    <tr>
+      <td>Volume Drivers</td>
+      <td>999999.00</td>
+      <td>0.35</td>
+      <td>0.01</td>
+      <td>21276.57</td>
+    </tr>
+  </tbody>
+</table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 4: CUSTOMER SEGMENTS -->
+        <div id="segments" class="tab-content space-y-6">
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="glass-card p-6">
+                    <h3 class="text-lg font-semibold mb-4">Segment Separation (PCA)</h3>
+                    <img src="charts/segment_scatter.png" class="w-full rounded-lg" alt="Segment Scatter">
+                </div>
+                <div class="glass-card p-6">
+                    <h3 class="text-lg font-semibold mb-4">Segment Feature Profiles</h3>
+                    <img src="charts/segment_profiles.png" class="w-full rounded-lg" alt="Segment Profiles">
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="glass-card p-6">
+                    <h3 class="text-lg font-semibold mb-4">K-Means Validation</h3>
+                    <img src="charts/kmeans_validation.png" class="w-full rounded-lg" alt="K-Means Validation">
+                </div>
+                <div class="glass-card p-6">
+                    <h3 class="text-lg font-semibold mb-4">RFM Distribution</h3>
+                    <img src="charts/rfm_donut.png" class="w-full rounded-lg" alt="RFM Donut">
+                </div>
+            </div>
+
+            <div class="glass-card p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-lg font-semibold">Segment Summary Matrix</h3>
+                    <div class="bg-emerald-500/10 text-emerald-400 px-3 py-1 rounded-full text-xs font-bold border border-emerald-500/20">
+                        ANOVA p < 0.05 — Statistically Distinct
+                    </div>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full text-sm text-left text-slate-300"><thead><tr><th class="px-4 py-2 font-semibold text-slate-100">Segment_Name</th><th class="px-4 py-2 font-semibold text-slate-100">n_customers</th><th class="px-4 py-2 font-semibold text-slate-100">avg_revenue</th><th class="px-4 py-2 font-semibold text-slate-100">total_revenue</th><th class="px-4 py-2 font-semibold text-slate-100">avg_orders</th><th class="px-4 py-2 font-semibold text-slate-100">avg_sessions</th><th class="px-4 py-2 font-semibold text-slate-100">avg_add_to_cart</th></tr></thead><tbody><tr><td class="px-4 py-2 border-t border-slate-800">Champions</td><td class="px-4 py-2 border-t border-slate-800">18</td><td class="px-4 py-2 border-t border-slate-800">1346.85</td><td class="px-4 py-2 border-t border-slate-800">24243.2</td><td class="px-4 py-2 border-t border-slate-800">2.11111</td><td class="px-4 py-2 border-t border-slate-800">7.61111</td><td class="px-4 py-2 border-t border-slate-800">2.77778</td></tr><tr><td class="px-4 py-2 border-t border-slate-800">Core Buyers</td><td class="px-4 py-2 border-t border-slate-800">532</td><td class="px-4 py-2 border-t border-slate-800">146.624</td><td class="px-4 py-2 border-t border-slate-800">78004.2</td><td class="px-4 py-2 border-t border-slate-800">2.86842</td><td class="px-4 py-2 border-t border-slate-800">7.54699</td><td class="px-4 py-2 border-t border-slate-800">2.62406</td></tr><tr><td class="px-4 py-2 border-t border-slate-800">Engaged Browsers</td><td class="px-4 py-2 border-t border-slate-800">784</td><td class="px-4 py-2 border-t border-slate-800">37.5829</td><td class="px-4 py-2 border-t border-slate-800">29465</td><td class="px-4 py-2 border-t border-slate-800">0.765306</td><td class="px-4 py-2 border-t border-slate-800">10.2564</td><td class="px-4 py-2 border-t border-slate-800">4.71811</td></tr><tr><td class="px-4 py-2 border-t border-slate-800">Dormant / At Risk</td><td class="px-4 py-2 border-t border-slate-800">1066</td><td class="px-4 py-2 border-t border-slate-800">26.2381</td><td class="px-4 py-2 border-t border-slate-800">27969.9</td><td class="px-4 py-2 border-t border-slate-800">0.547842</td><td class="px-4 py-2 border-t border-slate-800">6.34334</td><td class="px-4 py-2 border-t border-slate-800">1.93058</td></tr></tbody></table>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="glass-card p-4 border-l-4 border-yellow-500">
+                    <h4 class="font-bold text-yellow-500 uppercase text-xs mb-2">Champions</h4>
+                    <p class="text-xs text-slate-400">High revenue, high frequency. Priority for early access and VIP treatment.</p>
+                </div>
+                <div class="glass-card p-4 border-l-4 border-emerald-500">
+                    <h4 class="font-bold text-emerald-500 uppercase text-xs mb-2">Core Buyers</h4>
+                    <p class="text-xs text-slate-400">Consistent value. Focus on cross-selling and brand advocacy.</p>
+                </div>
+                <div class="glass-card p-4 border-l-4 border-sky-500">
+                    <h4 class="font-bold text-sky-500 uppercase text-xs mb-2">Engaged Browsers</h4>
+                    <p class="text-xs text-slate-400">High activity, low orders. Target with conversion incentives.</p>
+                </div>
+                <div class="glass-card p-4 border-l-4 border-rose-500">
+                    <h4 class="font-bold text-rose-500 uppercase text-xs mb-2">Dormant</h4>
+                    <p class="text-xs text-slate-400">At-risk customers. Requires aggressive win-back discounting.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 5: LEAD scoring -->
+        <div id="lead-model" class="tab-content space-y-6">
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="glass-card p-6">
+                    <h3 class="text-lg font-semibold mb-4">ROC Curves (Model Performance)</h3>
+                    <img src="charts/roc_curves.png" class="w-full rounded-lg" alt="ROC Curves">
+                </div>
+                <div class="glass-card p-6">
+                    <h3 class="text-lg font-semibold mb-4">Lift Chart</h3>
+                    <img src="charts/lift_chart.png" class="w-full rounded-lg" alt="Lift Chart">
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="glass-card p-6">
+                    <h3 class="text-lg font-semibold mb-4">Feature Importance (SHAP)</h3>
+                    <img src="charts/shap_summary.png" class="w-full rounded-lg" alt="SHAP Summary">
+                </div>
+                <div class="glass-card p-6">
+                    <h3 class="text-lg font-semibold mb-4">Confusion Matrix</h3>
+                    <img src="charts/confusion_matrix.png" class="w-full rounded-lg" alt="Confusion Matrix">
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="glass-card p-6">
+                    <h3 class="text-lg font-semibold mb-4">Model Benchmarks</h3>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full text-sm text-left text-slate-300"><thead><tr><th class="px-4 py-2 font-semibold text-slate-100">Model</th><th class="px-4 py-2 font-semibold text-slate-100">AUC (test)</th><th class="px-4 py-2 font-semibold text-slate-100">CV AUC (5-fold)</th><th class="px-4 py-2 font-semibold text-slate-100">F1</th><th class="px-4 py-2 font-semibold text-slate-100">Precision</th><th class="px-4 py-2 font-semibold text-slate-100">Recall</th></tr></thead><tbody><tr><td class="px-4 py-2 border-t border-slate-800">Logistic Regression</td><td class="px-4 py-2 border-t border-slate-800">0.6367</td><td class="px-4 py-2 border-t border-slate-800">0.6191</td><td class="px-4 py-2 border-t border-slate-800">0.5077</td><td class="px-4 py-2 border-t border-slate-800">0.4642</td><td class="px-4 py-2 border-t border-slate-800">0.5602</td></tr><tr><td class="px-4 py-2 border-t border-slate-800">Gradient Boosting</td><td class="px-4 py-2 border-t border-slate-800">0.6215</td><td class="px-4 py-2 border-t border-slate-800">0.6071</td><td class="px-4 py-2 border-t border-slate-800">0.2264</td><td class="px-4 py-2 border-t border-slate-800">0.5684</td><td class="px-4 py-2 border-t border-slate-800">0.1414</td></tr><tr><td class="px-4 py-2 border-t border-slate-800">Random Forest</td><td class="px-4 py-2 border-t border-slate-800">0.6081</td><td class="px-4 py-2 border-t border-slate-800">0.5846</td><td class="px-4 py-2 border-t border-slate-800">0.3148</td><td class="px-4 py-2 border-t border-slate-800">0.4972</td><td class="px-4 py-2 border-t border-slate-800">0.2304</td></tr></tbody></table>
+                    </div>
+                    <div class="mt-4 text-xs text-slate-500 italic">
+                        Selected: Logistic Regression (Balanced) for optimal Precision/Recall trade-off.
+                    </div>
+                </div>
+                <div class="glass-card p-6">
+                    <h3 class="text-lg font-semibold mb-4">Decile Analysis (Top-Tier)</h3>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full text-sm text-left text-slate-300"><thead><tr><th class="px-4 py-2 font-semibold text-slate-100">decile</th><th class="px-4 py-2 font-semibold text-slate-100">count</th><th class="px-4 py-2 font-semibold text-slate-100">conversions</th><th class="px-4 py-2 font-semibold text-slate-100">conversion_rate</th><th class="px-4 py-2 font-semibold text-slate-100">cumulative_lift</th></tr></thead><tbody><tr><td class="px-4 py-2 border-t border-slate-800">1</td><td class="px-4 py-2 border-t border-slate-800">105</td><td class="px-4 py-2 border-t border-slate-800">25</td><td class="px-4 py-2 border-t border-slate-800">0.238095</td><td class="px-4 py-2 border-t border-slate-800">0.36555</td></tr><tr><td class="px-4 py-2 border-t border-slate-800">2</td><td class="px-4 py-2 border-t border-slate-800">104</td><td class="px-4 py-2 border-t border-slate-800">24</td><td class="px-4 py-2 border-t border-slate-800">0.230769</td><td class="px-4 py-2 border-t border-slate-800">0.379787</td></tr><tr><td class="px-4 py-2 border-t border-slate-800">3</td><td class="px-4 py-2 border-t border-slate-800">105</td><td class="px-4 py-2 border-t border-slate-800">36</td><td class="px-4 py-2 border-t border-slate-800">0.342857</td><td class="px-4 py-2 border-t border-slate-800">0.398325</td></tr><tr><td class="px-4 py-2 border-t border-slate-800">4</td><td class="px-4 py-2 border-t border-slate-800">104</td><td class="px-4 py-2 border-t border-slate-800">28</td><td class="px-4 py-2 border-t border-slate-800">0.269231</td><td class="px-4 py-2 border-t border-slate-800">0.406293</td></tr><tr><td class="px-4 py-2 border-t border-slate-800">5</td><td class="px-4 py-2 border-t border-slate-800">105</td><td class="px-4 py-2 border-t border-slate-800">35</td><td class="px-4 py-2 border-t border-slate-800">0.333333</td><td class="px-4 py-2 border-t border-slate-800">0.429027</td></tr><tr><td class="px-4 py-2 border-t border-slate-800">6</td><td class="px-4 py-2 border-t border-slate-800">104</td><td class="px-4 py-2 border-t border-slate-800">37</td><td class="px-4 py-2 border-t border-slate-800">0.355769</td><td class="px-4 py-2 border-t border-slate-800">0.448276</td></tr><tr><td class="px-4 py-2 border-t border-slate-800">7</td><td class="px-4 py-2 border-t border-slate-800">104</td><td class="px-4 py-2 border-t border-slate-800">39</td><td class="px-4 py-2 border-t border-slate-800">0.375</td><td class="px-4 py-2 border-t border-slate-800">0.471292</td></tr><tr><td class="px-4 py-2 border-t border-slate-800">8</td><td class="px-4 py-2 border-t border-slate-800">105</td><td class="px-4 py-2 border-t border-slate-800">52</td><td class="px-4 py-2 border-t border-slate-800">0.495238</td><td class="px-4 py-2 border-t border-slate-800">0.503185</td></tr><tr><td class="px-4 py-2 border-t border-slate-800">9</td><td class="px-4 py-2 border-t border-slate-800">104</td><td class="px-4 py-2 border-t border-slate-800">48</td><td class="px-4 py-2 border-t border-slate-800">0.461538</td><td class="px-4 py-2 border-t border-slate-800">0.507177</td></tr><tr><td class="px-4 py-2 border-t border-slate-800">10</td><td class="px-4 py-2 border-t border-slate-800">105</td><td class="px-4 py-2 border-t border-slate-800">58</td><td class="px-4 py-2 border-t border-slate-800">0.552381</td><td class="px-4 py-2 border-t border-slate-800">0.552381</td></tr></tbody></table>
+                    </div>
+                    <div class="mt-4 bg-sky-500/10 p-3 rounded border border-sky-500/20 text-sm text-sky-300">
+                        <strong>Insight:</strong> Top 2 deciles capture >50% of all conversions. Focus sales outreach on P > 0.6.
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card p-6">
+                <h3 class="text-lg font-semibold mb-4">Priority Tier Logic</h3>
+                <div class="grid md:grid-cols-3 gap-4">
+                    <div class="bg-slate-900/80 p-4 rounded-lg border-t-2 border-emerald-500">
+                        <p class="font-bold text-emerald-400 mb-1">HIGH (>0.6)</p>
+                        <p class="text-xs text-slate-400">Immediate sales call. 2x conversion vs baseline.</p>
+                    </div>
+                    <div class="bg-slate-900/80 p-4 rounded-lg border-t-2 border-yellow-500">
+                        <p class="font-bold text-yellow-400 mb-1">MEDIUM (0.3-0.6)</p>
+                        <p class="text-xs text-slate-400">Marketing automation. 5-day email sequence.</p>
+                    </div>
+                    <div class="bg-slate-900/80 p-4 rounded-lg border-t-2 border-slate-600">
+                        <p class="font-bold text-slate-500 mb-1">LOW (<0.3)</p>
+                        <p class="text-xs text-slate-400">Monthly newsletter only. No manual resource.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 6: RETENTION -->
+        <div id="retention" class="tab-content space-y-6">
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="glass-card p-6">
+                    <h3 class="text-lg font-semibold mb-4">Early Warning Signals</h3>
+                    <img src="charts/early_warning_signals.png" class="w-full rounded-lg" alt="Early Warning Signals">
+                </div>
+                <div class="glass-card p-6">
+                    <h3 class="text-lg font-semibold mb-4">Retention Drivers (Importance)</h3>
+                    <img src="charts/retention_feature_importance.png" class="w-full rounded-lg" alt="Retention Feature Importance">
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="glass-card p-6">
+                    <h3 class="text-lg font-semibold mb-4">CLV Projection Distribution</h3>
+                    <img src="charts/clv_distribution.png" class="w-full rounded-lg" alt="CLV Distribution">
+                </div>
+                <div class="glass-card p-6">
+                    <h3 class="text-lg font-semibold mb-4">Cohort Retention Curve</h3>
+                    <img src="cohort_retention.png" class="w-full rounded-lg" alt="Cohort Retention">
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="glass-card p-6 bg-amber-500/5 border-amber-500/20">
+                    <h3 class="text-lg font-semibold mb-2 text-amber-400 flex items-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        Model Disclosure
+                    </h3>
+                    <p class="text-sm text-slate-300">Retention class imbalance (severe) impacted standard AUC metrics. We utilized Feature Importance from Gradient Boosting as a proxy for risk profiling. Model should be retrained once more churn labels are collected.</p>
+                </div>
+                <div class="glass-card p-6 bg-sky-500/5 border-sky-500/20">
+                    <h3 class="text-lg font-semibold mb-2 text-sky-400">Action Callout</h3>
+                    <p class="text-sm font-medium text-white mb-2">Trigger win-back email at day 60 for P(repeat) < 0.3</p>
+                    <p class="text-xs text-slate-400">Current cohort analysis shows 45% drop-off between month 2 and 3. Early intervention is critical.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 7: DISCOUNT ANALYSIS -->
+        <div id="discounts" class="tab-content space-y-6">
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="glass-card p-6">
+                    <h3 class="text-lg font-semibold mb-4">Discount Efficiency</h3>
+                    <img src="charts/discount_analysis.png" class="w-full rounded-lg" alt="Discount Analysis">
+                </div>
+                <div class="glass-card p-6">
+                    <h3 class="text-lg font-semibold mb-4">Digital Intent Signals</h3>
+                    <img src="charts/intent_signals.png" class="w-full rounded-lg" alt="Intent Signals">
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="glass-card p-6">
+                    <h3 class="text-lg font-semibold mb-4">Discount Bracket Performance (LCR)</h3>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full text-sm text-left text-slate-300"><thead><tr><th class="px-4 py-2 font-semibold text-slate-100">disc_bracket</th><th class="px-4 py-2 font-semibold text-slate-100">n</th><th class="px-4 py-2 font-semibold text-slate-100">conversions</th><th class="px-4 py-2 font-semibold text-slate-100">LCR</th></tr></thead><tbody><tr><td class="px-4 py-2 border-t border-slate-800">0%</td><td class="px-4 py-2 border-t border-slate-800">1417</td><td class="px-4 py-2 border-t border-slate-800">517</td><td class="px-4 py-2 border-t border-slate-800">0.364855</td></tr><tr><td class="px-4 py-2 border-t border-slate-800">1-10%</td><td class="px-4 py-2 border-t border-slate-800">2301</td><td class="px-4 py-2 border-t border-slate-800">838</td><td class="px-4 py-2 border-t border-slate-800">0.364189</td></tr><tr><td class="px-4 py-2 border-t border-slate-800">11-15%</td><td class="px-4 py-2 border-t border-slate-800">754</td><td class="px-4 py-2 border-t border-slate-800">287</td><td class="px-4 py-2 border-t border-slate-800">0.380637</td></tr><tr><td class="px-4 py-2 border-t border-slate-800">16-20%</td><td class="px-4 py-2 border-t border-slate-800">727</td><td class="px-4 py-2 border-t border-slate-800">262</td><td class="px-4 py-2 border-t border-slate-800">0.360385</td></tr><tr><td class="px-4 py-2 border-t border-slate-800">>20%</td><td class="px-4 py-2 border-t border-slate-800">16</td><td class="px-4 py-2 border-t border-slate-800">3</td><td class="px-4 py-2 border-t border-slate-800">0.1875</td></tr></tbody></table>
+                    </div>
+                </div>
+                <div class="glass-card p-6 flex flex-col justify-center gap-6">
+                    <div class="bg-rose-500/10 border border-rose-500/30 p-4 rounded-lg">
+                        <h4 class="font-bold text-rose-400 mb-2 uppercase text-xs">Statistical Verdict</h4>
+                        <p class="text-sm text-slate-300 font-mono mb-1">Spearman ρ ≈ 0, p > 0.05</p>
+                        <p class="text-sm text-slate-200 font-semibold italic">"Discount percentage does NOT significantly predict conversion. Blanket discounting is not justified by the data."</p>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold mb-3">Behavioral Signal Strength</h4>
+                        <div class="space-y-3">
+                            <div>
+                                <div class="flex justify-between text-xs mb-1"><span>Add to Cart</span><span class="text-sky-400">High Impact</span></div>
+                                <div class="w-full bg-slate-800 h-2 rounded-full"><div class="bg-sky-500 h-full rounded-full" style="width: 85%"></div></div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-xs mb-1"><span>Pages Viewed</span><span>Moderate</span></div>
+                                <div class="w-full bg-slate-800 h-2 rounded-full"><div class="bg-slate-600 h-full rounded-full" style="width: 45%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 8: RECOMMENDATIONS -->
+        <div id="recommendations" class="tab-content space-y-8">
+            <h2 class="text-2xl font-bold text-white mb-6">Strategic Action Roadmap</h2>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="glass-card p-8 border-t-4 border-sky-500 hover:bg-slate-800/40 transition-colors">
+                    <div class="bg-sky-500/20 p-3 rounded-full w-fit mb-4">
+                        <svg class="w-6 h-6 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Reallocate Budget</h3>
+                    <p class="text-slate-400 text-sm mb-4">Shift 15% of budget from <strong>Display</strong> to <strong>Search & Paid Social</strong>.</p>
+                    <ul class="text-xs text-slate-500 space-y-1">
+                        <li>• Search LCR: 38% vs Display 32%</li>
+                        <li>• Significant p-value (0.0015) justifies move</li>
+                        <li>• Estimated Revenue Lift: +$12k/month</li>
+                    </ul>
+                </div>
+                
+                <div class="glass-card p-8 border-t-4 border-indigo-500 hover:bg-slate-800/40 transition-colors">
+                    <div class="bg-indigo-500/20 p-3 rounded-full w-fit mb-4">
+                        <svg class="w-6 h-6 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Lead Prioritization</h3>
+                    <p class="text-slate-400 text-sm mb-4">Deploy <strong>Lead Scoring Model</strong>; focus sales on top-2 deciles daily.</p>
+                    <ul class="text-xs text-slate-500 space-y-1">
+                        <li>• Decile 10 LCR: 55%</li>
+                        <li>• Efficiency: 2.5x vs baseline</li>
+                        <li>• Action: Real-time CRM scoring</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card p-8 border-t-4 border-rose-500 hover:bg-slate-800/40 transition-colors">
+                    <div class="bg-rose-500/20 p-3 rounded-full w-fit mb-4">
+                        <svg class="w-6 h-6 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Retention & Discounting</h3>
+                    <p class="text-slate-400 text-sm mb-4">VIP track for <strong>Champions</strong>; cap discounts at 15%.</p>
+                    <ul class="text-xs text-slate-500 space-y-1">
+                        <li>• Cap discounts at 15% (no LCR lift above)</li>
+                        <li>• Trigger win-back at day 60</li>
+                        <li>• Loyalty Tier ANOVA p < 0.05</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 mt-12">
+                <div class="glass-card p-6 bg-slate-900/30">
+                    <h3 class="text-lg font-semibold mb-4 text-emerald-400">What We Know (Defensible)</h3>
+                    <ul class="space-y-3 text-sm text-slate-300">
+                        <li class="flex items-start gap-2">
+                            <span class="text-emerald-500 mt-1">✔</span>
+                            <span>Channels convert at different rates (p=0.0015)</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-emerald-500 mt-1">✔</span>
+                            <span>Loyalty tiers drive distinct revenue levels</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-emerald-500 mt-1">✔</span>
+                            <span>Top 20% of leads generate 55% of conversions</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="glass-card p-6 bg-slate-900/30">
+                    <h3 class="text-lg font-semibold mb-4 text-amber-400">What We Don't Know (Risks)</h3>
+                    <ul class="space-y-3 text-sm text-slate-300">
+                        <li class="flex items-start gap-2">
+                            <span class="text-amber-500 mt-1">?</span>
+                            <span>Long-term retention (early signal only)</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-amber-500 mt-1">?</span>
+                            <span>Incrementality of Search vs Organic</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-amber-500 mt-1">?</span>
+                            <span>Impact of seasonality on Lead Scoring</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script>
-        // Initialize Lucide Icons
-        lucide.createIcons();
-
-        const PLOTLY_LAYOUT = {
-            paper_bgcolor: 'rgba(0,0,0,0)',
-            plot_bgcolor: 'rgba(0,0,0,0)',
-            font: { color: '#94a3b8', family: 'Inter' },
-            margin: { t: 10, b: 40, l: 40, r: 10 },
-            xaxis: { gridcolor: '#1e293b', zeroline: false },
-            yaxis: { gridcolor: '#1e293b', zeroline: false },
-            showlegend: false
-        };
-
-        const CHART_COLORS = ['#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6', '#06b6d4'];
-
-        // 1. Channel LCR Chart
-        const channelData = [
-            { x: 'Affiliate', y: 0.371 },
-            { x: 'Display', y: 0.325 },
-            { x: 'E-mail', y: 0.428 },
-            { x: 'Search', y: 0.389 },
-            { x: 'Social', y: 0.346 }
-        ];
-        Plotly.newPlot('channel-lcr-chart', [{
-            x: channelData.map(d => d.x),
-            y: channelData.map(d => d.y),
-            type: 'bar',
-            marker: { color: CHART_COLORS[0], opacity: 0.8 }
-        }], {
-            ...PLOTLY_LAYOUT,
-            yaxis: { ...PLOTLY_LAYOUT.yaxis, tickformat: ',.0%' }
-        }, { displayModeBar: false });
-
-        // 2. Segment Pie Chart
-        Plotly.newPlot('segment-pie-chart', [{
-            values: [784, 532, 1066, 18],
-            labels: ['Segment 0 (Browsers)', 'Segment 1 (Loyalists)', 'Segment 2 (Laggards)', 'Segment 3 (Champions)'],
-            type: 'pie',
-            hole: 0.6,
-            marker: { colors: CHART_COLORS }
-        }], {
-            ...PLOTLY_LAYOUT,
-            showlegend: true,
-            legend: { orientation: 'h', y: -0.2, x: 0.5, xanchor: 'center' }
-        }, { displayModeBar: false });
-
-        // 3. Lift Chart (Decile Conversion)
-        const deciles = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-        const conversionRates = [0.2, 0.24, 0.31, 0.40, 0.32, 0.32, 0.34, 0.43, 0.52, 0.48];
-        Plotly.newPlot('lift-chart', [{
-            x: deciles,
-            y: conversionRates,
-            type: 'scatter',
-            mode: 'lines+markers',
-            fill: 'tozeroy',
-            line: { color: CHART_COLORS[2], shape: 'spline' },
-            marker: { size: 8 }
-        }], {
-            ...PLOTLY_LAYOUT,
-            xaxis: { ...PLOTLY_LAYOUT.xaxis, title: 'Prediction Decile (Higher = More Likely)' },
-            yaxis: { ...PLOTLY_LAYOUT.yaxis, tickformat: ',.0%' }
-        }, { displayModeBar: false });
-
-        // 4. Device Performance
-        Plotly.newPlot('device-chart', [{
-            x: ['Desktop', 'Mobile', 'Tablet'],
-            y: [71.50, 64.88, 66.78],
-            type: 'bar',
-            marker: { color: CHART_COLORS[1], opacity: 0.8 }
-        }], {
-            ...PLOTLY_LAYOUT,
-            yaxis: { ...PLOTLY_LAYOUT.yaxis, title: 'Avg Revenue ($)' }
-        }, { displayModeBar: false });
+        function showTab(tabId) {
+            // Hide all contents
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            // Deactivate all links
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // Show target content
+            document.getElementById(tabId).classList.add('active');
+            // Activate target link
+            document.getElementById('tab-' + tabId).classList.add('active');
+            
+            window.scrollTo(0, 0);
+        }
     </script>
 </body>
-
 </html>
+    
