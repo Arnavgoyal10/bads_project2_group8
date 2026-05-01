@@ -11,10 +11,12 @@ For an immediate review of the analytical findings, strategic recommendations, a
 This interactive portal contains:
 *   **Scope H**: Final Strategic Decision Memo to the CMO.
 *   **Scope G**: Executive Command Center (KPI Pulse).
-*   **Scope D**: Marketing Performance & Channel Analysis.
-*   **Scope C & F**: Customer Intelligence (Segmentation & Growth).
 *   **Scope E**: Predictive Lead Scoring Engine.
-*   **Analytical Foundation**: Data Trust Audit & Statistical Appendix.
+*   **Scope D**: Marketing Performance & Channel Analysis.
+*   **Scope C & F**: Customer Intelligence & Retention Analytics.
+*   **Scope B**: Statistical Diagnosis & Variance Testing.
+*   **Scope A**: Data Trust Audit & Analytical Base Table (ABT).
+*   **Analytical Foundation**: Comprehensive Statistical Appendix.
 
 ---
 
