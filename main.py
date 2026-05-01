@@ -13,7 +13,7 @@ def run_script(script_name):
 
 def main():
     parser = argparse.ArgumentParser(description="NovaMart Marketing Analytics Capstone Runner")
-    parser.add_argument("--phase", type=int, choices=range(1, 9), help="Run a specific phase (1-8)")
+    parser.add_argument("--phase", type=int, choices=range(1, 8), help="Run a specific phase (1-7)")
     args = parser.parse_args()
 
     phases = {
@@ -23,14 +23,13 @@ def main():
         4: "04_campaign_grouping.py",
         5: "05_lead_prediction.py",
         6: "06_retention_prediction.py",
-        7: "07_executive_dashboard.py",
-        8: "08_cmo_memo.py"
+        7: "07_executive_dashboard.py"
     }
 
     if args.phase:
         run_script(phases[args.phase])
     else:
-        for phase in range(1, 9):
+        for phase in range(1, 8):
             run_script(phases[phase])
 
     print("All requested phases completed successfully.")

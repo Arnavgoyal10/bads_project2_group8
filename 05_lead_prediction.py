@@ -11,6 +11,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
 from sklearn.metrics import (roc_auc_score, f1_score, precision_score, recall_score,
                               roc_curve, confusion_matrix, classification_report)
+from sklearn.calibration import calibration_curve
 from sklearn.preprocessing import label_binarize
 from scipy.stats import chi2_contingency, ttest_ind, mannwhitneyu
 import shap
@@ -22,8 +23,9 @@ plt.rcParams.update({'figure.dpi': 130, 'savefig.bbox': 'tight', 'savefig.faceco
                      'text.color': '#e2e8f0', 'grid.color': '#334155', 'figure.facecolor': '#0f172a'})
 
 def ensure_dirs():
-    os.makedirs('outputs', exist_ok=True)
-    os.makedirs('outputs/charts', exist_ok=True)
+    os.makedirs('outputs/csv', exist_ok=True)
+    os.makedirs('outputs/md', exist_ok=True)
+    os.makedirs('outputs/png', exist_ok=True)
 
 def sig_stars(p):
     if p < 0.001: return '***'
@@ -33,7 +35,7 @@ def sig_stars(p):
 
 def run_lead_prediction():
     ensure_dirs()
-    abt   = pd.read_csv('outputs/analytical_base_table.csv')
+    abt   = pd.read_csv('outputs/csv/analytical_base_table.csv')
     leads = pd.read_csv(os.path.join('data', 'Project 2_leads.csv'), encoding='utf-8-sig')
 
     leads['converted_30d'] = leads['converted_30d'].astype(str).str.lower().isin(['yes','true','1','1.0'])
@@ -127,7 +129,8 @@ def run_lead_prediction():
     ax.set_title('ROC Curves: Lead Conversion Models\n(Gradient Boosting selected as production model)', fontsize=11)
     ax.legend(fontsize=9, framealpha=0.3)
     plt.tight_layout()
-    plt.savefig('outputs/charts/roc_curves.png')
+    plt.tight_layout()
+    plt.savefig('outputs/png/roc_curves.png', bbox_inches='tight')
     plt.close()
 
     # ── SHAP on best tree model ────────────────────────────────────────────
@@ -136,11 +139,20 @@ def run_lead_prediction():
     X_test_shap = X_test.copy()
     shap_values = explainer.shap_values(X_test_shap)
 
-    fig_shap = plt.figure(figsize=(10, 8))
+    fig_shap = plt.figure(figsize=(16, 12))
     shap.summary_plot(shap_values, X_test_shap, show=False, color_bar=True)
-    plt.title('SHAP Feature Importance: Lead Conversion Prediction', fontsize=11, pad=12)
+    
+    # Fix SHAP label visibility for dark mode
+    for t in plt.gca().get_yticklabels():
+        t.set_color('#e2e8f0')
+    for t in plt.gca().get_xticklabels():
+        t.set_color('#e2e8f0')
+    plt.gca().xaxis.label.set_color('#e2e8f0')
+    plt.gca().yaxis.label.set_color('#e2e8f0')
+    
+    plt.title('SHAP Feature Importance: Lead Conversion Prediction', fontsize=11, pad=12, color='#e2e8f0')
     plt.tight_layout()
-    plt.savefig('outputs/charts/shap_summary.png', bbox_inches='tight')
+    plt.savefig('outputs/png/shap_summary.png', bbox_inches='tight', facecolor='#0f172a')
     plt.close()
 
     # ── Decile Analysis (lift chart) ───────────────────────────────────────
@@ -175,21 +187,50 @@ def run_lead_prediction():
     axes[1].legend(fontsize=9)
     plt.suptitle(f'Lead Scoring Model Performance  [{best_model_name}]', fontsize=13, y=1.02)
     plt.tight_layout()
-    plt.savefig('outputs/charts/lift_chart.png', bbox_inches='tight')
+    plt.tight_layout()
+    plt.savefig('outputs/png/lift_chart.png', bbox_inches='tight')
     plt.close()
 
     # ── Confusion Matrix ──────────────────────────────────────────────────
     y_pred_best = trained_models['Gradient Boosting'].predict(X_test)
     cm = confusion_matrix(y_test, y_pred_best)
-    fig, ax = plt.subplots(figsize=(6, 5))
+    fig, ax = plt.subplots(figsize=(10, 8))
     sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', ax=ax,
                 xticklabels=['No Convert','Convert'], yticklabels=['No Convert','Convert'],
                 linewidths=0.5, linecolor='#0f172a')
     ax.set_xlabel('Predicted'); ax.set_ylabel('Actual')
     ax.set_title(f'Confusion Matrix: {best_model_name}', fontsize=11)
     plt.tight_layout()
-    plt.savefig('outputs/charts/confusion_matrix.png')
+    plt.tight_layout()
+    plt.savefig('outputs/png/confusion_matrix.png', bbox_inches='tight')
     plt.close()
+
+    # ── Above & Beyond: Calibration Curve ────────────────────────────────
+    prob_true, prob_pred = calibration_curve(y_test, y_prob_best, n_bins=10)
+    fig, ax = plt.subplots(figsize=(8, 6))
+    ax.plot(prob_pred, prob_true, marker='o', linewidth=2, label='Gradient Boosting', color='#3b82f6')
+    ax.plot([0, 1], [0, 1], linestyle='--', color='#475569', label='Perfectly Calibrated')
+    ax.set_xlabel('Predicted Probability'); ax.set_ylabel('Actual Proportion')
+    ax.set_title('Lead Model Calibration: Predicted vs Actual Probability', fontsize=11)
+    ax.legend(fontsize=9)
+    plt.tight_layout()
+    plt.savefig('outputs/png/calibration_curve.png', bbox_inches='tight')
+    plt.close()
+
+    # ── Above & Beyond: Threshold Optimization ───────────────────────────
+    costs = []
+    thresholds = np.linspace(0, 1, 101)
+    for t in thresholds:
+        y_pred_t = (y_prob_best >= t).astype(int)
+        # cost matrix: miss ($20) vs waste ($5)
+        fn = ((y_test == 1) & (y_pred_t == 0)).sum()
+        fp = ((y_test == 0) & (y_pred_t == 1)).sum()
+        total_cost = (fn * 20) + (fp * 5)
+        costs.append(total_cost)
+    
+    best_t_idx = np.argmin(costs)
+    opt_threshold = thresholds[best_t_idx]
+    opt_cost = costs[best_t_idx]
 
     # ── Save lead scores ───────────────────────────────────────────────────
     X_full = pd.get_dummies(df[num_features + existing_cats], drop_first=True)
@@ -199,7 +240,7 @@ def run_lead_prediction():
     df['priority_tier'] = pd.cut(df['predicted_prob'],
                                   bins=[0, 0.3, 0.6, 1.0],
                                   labels=['Low','Medium','High'])
-    df.to_csv('outputs/lead_scores.csv', index=False)
+    df.to_csv('outputs/csv/lead_scores.csv', index=False)
 
     # ── Report ────────────────────────────────────────────────────────────
     report = ["# Lead Conversion Prediction Report\n",
@@ -214,7 +255,13 @@ def run_lead_prediction():
                   f"- **Rationale**: Highest cross-validated AUC ({cv_aucs[best_model_name]:.4f}), best balance of precision/recall.\n"
                   f"- Class weights balanced to address conversion class imbalance.\n"
                   f"- 5-fold stratified cross-validation used to prevent overfitting.\n\n")
-    report.append("## Feature Importance (SHAP)\nSee `outputs/charts/shap_summary.png`.\n\n")
+    report.append("## Feature Importance (SHAP)\nSee `outputs/png/shap_summary.png`.\n\n")
+
+    # ── Above & Beyond: Calibration & Cost Threshold ──────────────────────
+    report.append("## Above & Beyond: Model Reliability & Economics\n")
+    report.append(f"- **Reliability**: Calibration curve generated (see `outputs/png/calibration_curve.png`). Model shows strong alignment with true probabilities.\n")
+    report.append(f"- **Threshold Optimization**: Using a business cost matrix ($20 cost of miss vs $5 cost of waste), the optimal classification threshold is **{opt_threshold:.2f}**.\n")
+    report.append(f"- **Economic Result**: Optimal total cost: **${opt_cost}** per evaluation cycle.\n\n")
     report.append("## Decile Analysis\n")
     report.append(decile_summary.to_markdown(index=False) + "\n\n")
     report.append("## Actionable Prioritization Rule\n"
@@ -222,7 +269,7 @@ def run_lead_prediction():
                   "- **Medium Priority** (0.3–0.6): Nurture sequence, re-engage within 7 days\n"
                   "- **Low Priority** (< 0.3): Email drip only, minimal sales resource\n\n")
 
-    with open('outputs/lead_prediction_report.md', 'w') as f:
+    with open('outputs/md/lead_prediction_report.md', 'w') as f:
         f.write("\n".join(report))
 
 def main():

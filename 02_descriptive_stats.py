@@ -19,8 +19,9 @@ plt.rcParams.update({'figure.dpi': 130, 'savefig.bbox': 'tight', 'savefig.faceco
                      'text.color': '#e2e8f0', 'grid.color': '#334155', 'figure.facecolor': '#0f172a'})
 
 def ensure_dirs():
-    os.makedirs('outputs', exist_ok=True)
-    os.makedirs('outputs/charts', exist_ok=True)
+    os.makedirs('outputs/csv', exist_ok=True)
+    os.makedirs('outputs/md', exist_ok=True)
+    os.makedirs('outputs/png', exist_ok=True)
 
 def load_data():
     data_dir = 'data'
@@ -29,7 +30,7 @@ def load_data():
     leads      = pd.read_csv(os.path.join(data_dir, 'Project 2_leads.csv'),       encoding='utf-8-sig')
     sessions   = pd.read_csv(os.path.join(data_dir, 'Project 2_website_sessions.csv'), encoding='utf-8-sig')
     transactions = pd.read_csv(os.path.join(data_dir, 'Project 2_transactions.csv'), encoding='utf-8-sig')
-    abt        = pd.read_csv('outputs/analytical_base_table.csv')
+    abt        = pd.read_csv('outputs/csv/analytical_base_table.csv')
     return customers, campaigns, leads, sessions, transactions, abt
 
 def sig_stars(p):
@@ -96,7 +97,7 @@ def run_descriptive_stats():
     ax.tick_params(axis='x', rotation=30)
     ax.legend(fontsize=9)
     plt.tight_layout()
-    plt.savefig('outputs/charts/channel_lcr.png')
+    plt.savefig('outputs/png/channel_lcr.png', bbox_inches='tight')
     plt.close()
 
     # ── Section 2: Campaign Objective ────────────────────────────────────
@@ -165,7 +166,7 @@ def run_descriptive_stats():
     axes[1].tick_params(axis='x', rotation=20)
     plt.suptitle('Device Performance Comparison', fontsize=13, y=1.02)
     plt.tight_layout()
-    plt.savefig('outputs/charts/device_comparison.png')
+    plt.savefig('outputs/png/device_comparison.png', bbox_inches='tight')
     plt.close()
 
     # ── Section 6: Comprehensive Hypothesis Tests ─────────────────────────
@@ -240,7 +241,7 @@ def run_descriptive_stats():
     ax.set_title(f'Conversion Rate by Discount Bracket\n(Kruskal-Wallis p={kw_disc_p:.4f} {sig_stars(kw_disc_p)})', fontsize=11)
     ax.set_xlabel('Discount Bracket'); ax.set_ylabel('Lead Conversion Rate')
     plt.tight_layout()
-    plt.savefig('outputs/charts/discount_analysis.png')
+    plt.savefig('outputs/png/discount_analysis.png', bbox_inches='tight')
     plt.close()
 
     # ── Section 8: Behavioral Intent Signals ─────────────────────────────
@@ -270,7 +271,7 @@ def run_descriptive_stats():
     for i, (_, row) in enumerate(sig_df.iterrows()):
         ax.text(row['|r|'] + 0.001, i, f"{row['|r|']:.3f}", va='center', fontsize=9, color='#e2e8f0')
     plt.tight_layout()
-    plt.savefig('outputs/charts/intent_signals.png')
+    plt.savefig('outputs/png/intent_signals.png', bbox_inches='tight')
     plt.close()
 
     # ── Section 9: RFM Analysis ───────────────────────────────────────────
@@ -298,30 +299,64 @@ def run_descriptive_stats():
         ).reset_index().sort_values('avg_revenue', ascending=False)
         rfm_report.append(rfm_summary.to_markdown(index=False) + "\n\n")
 
-        # RFM donut chart
-        fig, ax = plt.subplots(figsize=(8, 6))
+        # RFM donut chart - Fix: Use legend to avoid text overlap
+        fig, ax = plt.subplots(figsize=(10, 7))
         wedges, texts, autotexts = ax.pie(
-            rfm_summary['count'], labels=rfm_summary['RFM_Tier'],
+            rfm_summary['count'],
             autopct='%1.1f%%', startangle=140,
-            colors=PALETTE[:len(rfm_summary)], pctdistance=0.75,
-            wedgeprops=dict(width=0.5, edgecolor='#0f172a', linewidth=2))
-        for t in texts: t.set_color('#e2e8f0')
-        for at in autotexts: at.set_color('#0f172a'); at.set_fontsize(9)
-        ax.set_title('RFM Customer Tier Distribution', fontsize=12)
+            colors=PALETTE[:len(rfm_summary)], pctdistance=0.85,
+            wedgeprops=dict(width=0.4, edgecolor='#0f172a', linewidth=2))
+        
+        ax.legend(wedges, rfm_summary['RFM_Tier'],
+                  title="RFM Tiers",
+                  loc="center left",
+                  bbox_to_anchor=(1, 0, 0.5, 1),
+                  frameon=False, fontsize=9)
+        
+        for at in autotexts: at.set_color('#e2e8f0'); at.set_fontsize(8); at.set_weight('bold')
+        ax.set_title('RFM Customer Tier Distribution', fontsize=14, pad=20)
         plt.tight_layout()
-        plt.savefig('outputs/charts/rfm_donut.png')
+        plt.savefig('outputs/png/rfm_donut.png', bbox_inches='tight')
         plt.close()
 
-        with open('outputs/rfm_analysis.md', 'w') as f:
-            f.write("\n".join(rfm_report))
+        # ── Above & Beyond: Marketing Attribution Comparison ──────────────────
+        attr_report = ["# Marketing Attribution Comparison\n",
+                       "Comparing Last-Touch (reported) vs First-Touch (inferred).\n\n"]
+        # Inferred First-Touch from earliest session
+        first_sess = sessions.sort_values(['customer_id', 'session_date']).drop_duplicates('customer_id', keep='first')
+        first_touch = first_sess[['customer_id', 'channel_group']].rename(columns={'channel_group':'first_touch_channel'})
+        
+        attr_df = transactions.merge(first_touch, on='customer_id', how='left')
+        last_touch_rev = transactions.groupby('marketing_channel_last_touch')['revenue_usd'].sum()
+        first_touch_rev = attr_df.groupby('first_touch_channel')['revenue_usd'].sum()
+        
+        comp_df = pd.DataFrame({'Last-Touch': last_touch_rev, 'First-Touch': first_touch_rev}).fillna(0)
+        attr_report.append(comp_df.to_markdown() + "\n\n")
+        
+        # ── Above & Beyond: Landing Page Deep-Dive ────────────────────────────
+        # Merge sessions with leads to get landing_page info
+        sess_lp = sessions.merge(leads[['customer_id','landing_page']], on='customer_id', how='left')
+        sess_lp['bounce'] = sess_lp['bounce'].astype(str).str.lower().isin(['true','1','1.0','yes']).astype(int)
+        sess_lp['pages_viewed'] = pd.to_numeric(sess_lp['pages_viewed'], errors='coerce')
+        
+        lp_perf = sess_lp.groupby('landing_page').agg(
+            sessions=('session_id','count'),
+            bounce_rate=('bounce','mean'),
+            avg_pages=('pages_viewed','mean')
+        ).reset_index().sort_values('sessions', ascending=False).head(10)
+        attr_report.append("## Top 10 Landing Page Performance\n")
+        attr_report.append(lp_perf.to_markdown(index=False) + "\n\n")
+        
+        with open('outputs/md/rfm_analysis.md', 'w') as f:
+            f.write("\n".join(rfm_report + attr_report))
 
         # Merge RFM tier back to ABT
         abt = abt.merge(abt_rfm[['customer_id','RFM_Tier']], on='customer_id', how='left')
-        abt.to_csv('outputs/analytical_base_table.csv', index=False)
+        abt.to_csv('outputs/csv/analytical_base_table.csv', index=False)
 
     # ── Section 10: Cohort Retention ──────────────────────────────────────
-    transactions['order_date'] = pd.to_datetime(transactions['order_date'], errors='coerce')
-    customers['signup_date']   = pd.to_datetime(customers['signup_date'],   errors='coerce')
+    transactions['order_date'] = pd.to_datetime(transactions['order_date'], format='mixed', errors='coerce')
+    customers['signup_date']   = pd.to_datetime(customers['signup_date'],   format='mixed', errors='coerce')
     if not transactions['order_date'].isna().all():
         cohort_df = transactions.merge(customers[['customer_id','signup_date']], on='customer_id')
         cohort_df['cohort_month'] = cohort_df['signup_date'].dt.to_period('M')
@@ -341,10 +376,10 @@ def run_descriptive_stats():
         ax.set_title('Cohort Retention Matrix (% of Cohort Retained)', fontsize=12)
         ax.set_xlabel('Months Since Acquisition'); ax.set_ylabel('Acquisition Cohort')
         plt.tight_layout()
-        plt.savefig('outputs/cohort_retention.png')
+        plt.savefig('outputs/png/cohort_retention.png', bbox_inches='tight')
         plt.close()
 
-    with open('outputs/descriptive_report.md', 'w') as f:
+    with open('outputs/md/descriptive_report.md', 'w') as f:
         f.write("\n".join(report))
 
 def main():

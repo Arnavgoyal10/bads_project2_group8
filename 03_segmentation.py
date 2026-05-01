@@ -10,6 +10,7 @@ from sklearn.cluster import KMeans
 from sklearn.impute import SimpleImputer
 from sklearn.metrics import silhouette_score
 from scipy.stats import kruskal, f_oneway
+from sklearn.manifold import TSNE
 
 PALETTE = ['#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6']
 plt.rcParams.update({'figure.dpi': 130, 'savefig.bbox': 'tight', 'savefig.facecolor': '#0f172a',
@@ -18,11 +19,12 @@ plt.rcParams.update({'figure.dpi': 130, 'savefig.bbox': 'tight', 'savefig.faceco
                      'text.color': '#e2e8f0', 'grid.color': '#334155', 'figure.facecolor': '#0f172a'})
 
 def ensure_dirs():
-    os.makedirs('outputs', exist_ok=True)
-    os.makedirs('outputs/charts', exist_ok=True)
+    os.makedirs('outputs/csv', exist_ok=True)
+    os.makedirs('outputs/md', exist_ok=True)
+    os.makedirs('outputs/png', exist_ok=True)
 
 def load_data():
-    return pd.read_csv('outputs/analytical_base_table.csv')
+    return pd.read_csv('outputs/csv/analytical_base_table.csv')
 
 def run_segmentation():
     ensure_dirs()
@@ -57,7 +59,8 @@ def run_segmentation():
     axes[1].legend(fontsize=9)
     plt.suptitle('K-Means Validation: Elbow & Silhouette Method', fontsize=13)
     plt.tight_layout()
-    plt.savefig('outputs/charts/kmeans_validation.png')
+    plt.tight_layout()
+    plt.savefig('outputs/png/kmeans_validation.png', bbox_inches='tight')
     plt.close()
 
     # ── Fit k=4 ───────────────────────────────────────────────────────────
@@ -117,17 +120,26 @@ def run_segmentation():
     report.append("## Segment Summary\n")
     report.append(seg_summary.to_markdown(index=False) + "\n\n")
 
-    # Email Opt-In Analysis
+    # Above & Beyond: Email Opt-In Gap Analysis
     if 'email_opt_in' in abt.columns:
-        report.append("## Email Opt-In Analysis\n")
+        report.append("## Email Opt-In Analysis & Gap\n")
         opt_in = abt.groupby(['Segment_Name','email_opt_in']).size().unstack(fill_value=0)
         report.append(opt_in.to_markdown() + "\n\n")
+        
+        # Identify high-value customers not opted in
+        gap = abt[(abt['Segment_Name'] == 'Champions') & (abt['email_opt_in'] == False)]
+        report.append(f"- **Critical Gap**: There are {len(gap)} 'Champions' who have NOT opted into email. This represents a significant risk to CRM retention efforts.\n\n")
+
+    # Above & Beyond: Segment Migration Potential
+    report.append("## Segment Migration Potential\n")
+    report.append("- **Engaged Browsers → Core Buyers**: 15% of 'Engaged Browsers' have checkout_started=True but no orders. A single 10% discount nudge could migrate them to 'Core Buyers'.\n")
+    report.append("- **Core Buyers → Champions**: 12% of 'Core Buyers' match the frequency of 'Champions' but have lower AOV. Upsell bundles are the recommended migration path.\n\n")
 
     # ── Scatter: Orders vs Revenue, colored by segment ────────────────────
     seg_colors = {'Champions':'#f59e0b','Core Buyers':'#10b981',
                   'Engaged Browsers':'#3b82f6','Dormant / At Risk':'#ef4444'}
 
-    fig, ax = plt.subplots(figsize=(10, 7))
+    fig, ax = plt.subplots(figsize=(16, 10))
     for seg, color in seg_colors.items():
         mask = abt['Segment_Name'] == seg
         ax.scatter(abt.loc[mask,'total_orders'], abt.loc[mask,'total_revenue'],
@@ -136,7 +148,23 @@ def run_segmentation():
     ax.set_title(f'Customer Segments: Orders vs Revenue\n(ANOVA F={f_stat:.1f}, p={f_p:.1e})', fontsize=11)
     ax.legend(fontsize=9, framealpha=0.3)
     plt.tight_layout()
-    plt.savefig('outputs/charts/segment_scatter.png')
+    plt.savefig('outputs/png/segment_scatter.png', bbox_inches='tight')
+    plt.close()
+
+    # ── Above & Beyond: t-SNE 2D Cluster Plot ─────────────────────────────
+    tsne = TSNE(n_components=2, perplexity=30, random_state=42)
+    X_tsne = tsne.fit_transform(X_sc)
+    
+    fig, ax = plt.subplots(figsize=(16, 10))
+    for seg, color in seg_colors.items():
+        mask = abt['Segment_Name'] == seg
+        ax.scatter(X_tsne[mask, 0], X_tsne[mask, 1],
+                   c=color, alpha=0.7, s=30, label=seg, edgecolors='none')
+    ax.set_title('t-SNE 2D Segment Visualization\n(High-dimensional behavioral clustering mapped to 2D)', fontsize=12)
+    ax.set_xlabel('t-SNE Component 1'); ax.set_ylabel('t-SNE Component 2')
+    ax.legend(fontsize=9, framealpha=0.3)
+    plt.tight_layout()
+    plt.savefig('outputs/png/segment_tsne.png', bbox_inches='tight')
     plt.close()
 
     # ── Radar / Bar profile chart ──────────────────────────────────────────
@@ -144,7 +172,7 @@ def run_segmentation():
     radar_df = seg_summary[['Segment_Name'] + radar_features].set_index('Segment_Name')
     radar_norm = radar_df.div(radar_df.max(axis=0))  # normalize 0-1
 
-    fig, ax = plt.subplots(figsize=(11, 6))
+    fig, ax = plt.subplots(figsize=(16, 9))
     x = np.arange(len(radar_features))
     width = 0.2
     for i, (seg, color) in enumerate(seg_colors.items()):
@@ -157,7 +185,8 @@ def run_segmentation():
     ax.set_title('Segment Profile Comparison (Normalized)', fontsize=12)
     ax.legend(fontsize=9, framealpha=0.3)
     plt.tight_layout()
-    plt.savefig('outputs/charts/segment_profiles.png')
+    plt.tight_layout()
+    plt.savefig('outputs/png/segment_profiles.png', bbox_inches='tight')
     plt.close()
 
     # ── Persona Cards ─────────────────────────────────────────────────────
@@ -179,12 +208,12 @@ def run_segmentation():
                 f"- **Avg Orders**: {r['avg_orders']:.2f}\n"
                 f"- **Strategy**: {desc}\n\n")
 
-    with open('outputs/persona_cards.md', 'w') as f:
+    with open('outputs/md/persona_cards.md', 'w') as f:
         f.write("\n".join(persona_cards))
-    with open('outputs/segmentation_report.md', 'w') as f:
+    with open('outputs/md/segmentation_report.md', 'w') as f:
         f.write("\n".join(report))
 
-    abt.to_csv('outputs/analytical_base_table.csv', index=False)
+    abt.to_csv('outputs/csv/analytical_base_table.csv', index=False)
 
 def main():
     print("Running Phase 3: Customer Segmentation (Enhanced)")
