@@ -324,33 +324,33 @@ def generate_dashboard():
         </div>
         
         <nav class="flex-1 px-4 space-y-1">
-            <button onclick="showPage('page-memo')" class="nav-link w-full flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 hover:text-white transition-all active" id="btn-memo">
+            <button onclick="showPage('page-memo')" class="nav-link w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all active" id="btn-memo">
                 <i data-lucide="file-text" class="w-5 h-5"></i>
-                <span class="font-medium">Final Board Memo</span>
+                <span class="font-medium">Strategic Memo (Scope H)</span>
+            </button>
+            <button onclick="showPage('page-audit')" class="nav-link w-full flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 hover:text-white transition-all" id="btn-audit">
+                <i data-lucide="shield-check" class="w-5 h-5"></i>
+                <span class="font-medium">Data Trust (Scope A)</span>
             </button>
             <button onclick="showPage('page-home')" class="nav-link w-full flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 hover:text-white transition-all" id="btn-home">
                 <i data-lucide="layout-dashboard" class="w-5 h-5"></i>
-                <span class="font-medium">Command Center</span>
-            </button>
-            <button onclick="showPage('page-audit')" class="nav-link w-full flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 hover:text-white transition-all" id="btn-audit">
-                <i data-lucide="database" class="w-5 h-5"></i>
-                <span class="font-medium">Data Trust</span>
-            </button>
-            <button onclick="showPage('page-marketing')" class="nav-link w-full flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 hover:text-white transition-all" id="btn-marketing">
-                <i data-lucide="trending-up" class="w-5 h-5"></i>
-                <span class="font-medium">Performance</span>
+                <span class="font-medium">Command Center (Scope B)</span>
             </button>
             <button onclick="showPage('page-customer')" class="nav-link w-full flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 hover:text-white transition-all" id="btn-customer">
                 <i data-lucide="users" class="w-5 h-5"></i>
-                <span class="font-medium">Customer Intelligence</span>
+                <span class="font-medium">Customer Intel (Scope C/F)</span>
+            </button>
+            <button onclick="showPage('page-marketing')" class="nav-link w-full flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 hover:text-white transition-all" id="btn-marketing">
+                <i data-lucide="bar-chart-3" class="w-5 h-5"></i>
+                <span class="font-medium">Marketing Perf (Scope D)</span>
             </button>
             <button onclick="showPage('page-predictive')" class="nav-link w-full flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 hover:text-white transition-all" id="btn-predictive">
-                <i data-lucide="cpu" class="w-5 h-5"></i>
-                <span class="font-medium">Predictive Engine</span>
+                <i data-lucide="zap" class="w-5 h-5"></i>
+                <span class="font-medium">Predictive Engine (Scope E)</span>
             </button>
             <button onclick="showPage('page-appendix')" class="nav-link w-full flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 hover:text-white transition-all" id="btn-appendix">
                 <i data-lucide="microscope" class="w-5 h-5"></i>
-                <span class="font-medium">Statistical Appendix</span>
+                <span class="font-medium">Stats Appendix (Scope B+)</span>
             </button>
             <button onclick="showPage('page-roadmap')" class="nav-link w-full flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 hover:text-white transition-all" id="btn-roadmap">
                 <i data-lucide="map" class="w-5 h-5"></i>
