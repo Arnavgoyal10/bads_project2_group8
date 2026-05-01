@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Segments | NovaMart Marketing Intel</title>
+    <script src="https://cdn.plot.ly/plotly-2.24.1.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --background: #020617;
+            --foreground: #e2e8f0;
+            --card: #0f172a;
+            --card-border: #1e293b;
+            --accent: #3b82f6;
+            --accent-emerald: #10b981;
+            --accent-amber: #f59e0b;
+            --accent-rose: #ef4444;
+            --muted: #94a3b8;
+            --sidebar: #0f172a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scrollbar-width: thin;
+            scrollbar-color: #334155 transparent;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--foreground);
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            display: flex;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Sidebar */
+        aside {
+            width: 260px;
+            background-color: var(--sidebar);
+            border-right: 1px solid var(--card-border);
+            padding: 2rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            height: 100vh;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 3rem;
+            color: white;
+            font-weight: 700;
+            font-size: 1.25rem;
+            letter-spacing: -0.025em;
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 1rem;
+            color: var(--muted);
+            text-decoration: none;
+            border-radius: 0.75rem;
+            transition: all 0.2s ease;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .nav-item:hover, .nav-item.active {
+            background-color: rgba(59, 130, 246, 0.1);
+            color: var(--accent);
+        }
+
+        /* Main Content */
+        main {
+            flex: 1;
+            margin-left: 260px;
+            padding: 2rem 3rem;
+            max-width: 1400px;
+        }
+
+        header {
+            margin-bottom: 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .header-title h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        .header-title p {
+            color: var(--muted);
+            font-size: 1.1rem;
+        }
+
+        /* Segment Cards */
+        .segment-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .segment-card {
+            background-color: var(--card);
+            border: 1px solid var(--card-border);
+            padding: 1.5rem;
+            border-radius: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .segment-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .segment-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .segment-badge {
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 0.25rem 0.75rem;
+            border-radius: 1rem;
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--accent);
+        }
+
+        .segment-metrics {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--card-border);
+        }
+
+        .metric {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .metric-label { font-size: 0.7rem; color: var(--muted); font-weight: 600; text-transform: uppercase; }
+        .metric-value { font-family: 'JetBrains Mono', monospace; font-size: 1.1rem; font-weight: 700; color: white; }
+
+        .segment-prose { font-size: 0.9rem; line-height: 1.6; color: var(--muted); margin-top: 0.5rem; }
+
+        /* Tables */
+        .table-container {
+            background-color: var(--card);
+            border: 1px solid var(--card-border);
+            border-radius: 1.5rem;
+            overflow: hidden;
+            margin-bottom: 3rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+
+        th {
+            background-color: rgba(255, 255, 255, 0.02);
+            text-align: left;
+            padding: 1rem 1.5rem;
+            color: var(--muted);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.05em;
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        td {
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid var(--card-border);
+            color: var(--foreground);
+        }
+
+        tr:last-child td { border-bottom: none; }
+        tr:hover td { background-color: rgba(255, 255, 255, 0.01); }
+
+        .animate-fade-in {
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <aside>
+        <div class="logo">
+            <i data-lucide="shield-check" style="color: var(--accent)"></i>
+            NovaMart Intel
+        </div>
+        <nav>
+            <a href="executive_dashboard.html" class="nav-item"><i data-lucide="layout-dashboard"></i> Dashboard</a>
+            <a href="customer_segments.html" class="nav-item active"><i data-lucide="users"></i> Customer Segments</a>
+            <a href="lead_prediction.html" class="nav-item"><i data-lucide="trending-up"></i> Lead Prediction</a>
+            <a href="audit_report.html" class="nav-item"><i data-lucide="file-text"></i> Audit Report</a>
+            <a href="#" class="nav-item"><i data-lucide="settings"></i> Configuration</a>
+        </nav>
+    </aside>
+
+    <main>
+        <header class="animate-fade-in">
+            <div class="header-title">
+                <h1>Customer Segmentation</h1>
+                <p>K-Means clustering identifying distinct behavioral archetypes.</p>
+            </div>
+        </header>
+
+        <div class="segment-grid animate-fade-in" style="animation-delay: 0.1s">
+            <div class="segment-card">
+                <div class="segment-header">
+                    <span class="segment-name">Segment 3: Champions</span>
+                    <span class="segment-badge" style="background: rgba(16, 185, 129, 0.1); color: var(--accent-emerald);">High Value</span>
+                </div>
+                <p class="segment-prose">The core growth engine. Extremely high revenue per user and high lead volume. Price-insensitive and highly engaged.</p>
+                <div class="segment-metrics">
+                    <div class="metric"><span class="metric-label">Avg Revenue</span><span class="metric-value">$1,346.85</span></div>
+                    <div class="metric"><span class="metric-label">Avg Orders</span><span class="metric-value">2.11</span></div>
+                    <div class="metric"><span class="metric-label">Avg Leads</span><span class="metric-value">2.83</span></div>
+                </div>
+            </div>
+
+            <div class="segment-card">
+                <div class="segment-header">
+                    <span class="segment-name">Segment 1: Loyalists</span>
+                    <span class="segment-badge" style="background: rgba(59, 130, 246, 0.1); color: var(--accent);">Frequent</span>
+                </div>
+                <p class="segment-prose">Steady customers with consistent purchase behavior. High order frequency but lower total revenue than champions.</p>
+                <div class="segment-metrics">
+                    <div class="metric"><span class="metric-label">Avg Revenue</span><span class="metric-value">$146.62</span></div>
+                    <div class="metric"><span class="metric-label">Avg Orders</span><span class="metric-value">2.87</span></div>
+                    <div class="metric"><span class="metric-label">Avg Leads</span><span class="metric-value">2.08</span></div>
+                </div>
+            </div>
+
+            <div class="segment-card">
+                <div class="segment-header">
+                    <span class="segment-name">Segment 0: Browsers</span>
+                    <span class="segment-badge" style="background: rgba(245, 158, 11, 0.1); color: var(--accent-amber);">High Intent</span>
+                </div>
+                <p class="segment-prose">High engagement and add-to-cart rates but low conversion. This group represents a significant "leaky bucket" opportunity.</p>
+                <div class="segment-metrics">
+                    <div class="metric"><span class="metric-label">Avg Revenue</span><span class="metric-value">$37.58</span></div>
+                    <div class="metric"><span class="metric-label">Avg Sessions</span><span class="metric-value">10.26</span></div>
+                    <div class="metric"><span class="metric-label">Add-to-Cart</span><span class="metric-value">4.72</span></div>
+                </div>
+            </div>
+
+            <div class="segment-card">
+                <div class="segment-header">
+                    <span class="segment-name">Segment 2: Laggards</span>
+                    <span class="segment-badge" style="background: rgba(239, 68, 68, 0.1); color: var(--accent-rose);">At Risk</span>
+                </div>
+                <p class="segment-prose">Low revenue and low engagement. Likely one-time purchasers or leads that have cooled significantly.</p>
+                <div class="segment-metrics">
+                    <div class="metric"><span class="metric-label">Avg Revenue</span><span class="metric-value">$26.24</span></div>
+                    <div class="metric"><span class="metric-label">Avg Orders</span><span class="metric-value">0.55</span></div>
+                    <div class="metric"><span class="metric-label">Avg Sessions</span><span class="metric-value">6.34</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-container animate-fade-in" style="animation-delay: 0.2s">
+            <div style="padding: 1.5rem; border-bottom: 1px solid var(--card-border); font-weight: 600;">Segment Statistical Profiles</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Segment</th>
+                        <th>Avg Age</th>
+                        <th>Avg Revenue</th>
+                        <th>Avg Orders</th>
+                        <th>Avg Sessions</th>
+                        <th>Avg Leads</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>0 (Browsers)</td><td>33.9</td><td>$37.58</td><td>0.77</td><td>10.26</td><td>2.15</td></tr>
+                    <tr><td>1 (Loyalists)</td><td>32.8</td><td>$146.62</td><td>2.87</td><td>7.55</td><td>2.08</td></tr>
+                    <tr><td>2 (Laggards)</td><td>33.0</td><td>$26.24</td><td>0.55</td><td>6.34</td><td>2.18</td></tr>
+                    <tr><td>3 (Champions)</td><td>33.3</td><td>$1,346.85</td><td>2.11</td><td>7.61</td><td>2.83</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>

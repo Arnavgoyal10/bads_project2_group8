@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Audit | NovaMart Marketing Intel</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --background: #020617;
+            --foreground: #e2e8f0;
+            --card: #0f172a;
+            --card-border: #1e293b;
+            --accent: #3b82f6;
+            --accent-emerald: #10b981;
+            --accent-amber: #f59e0b;
+            --accent-rose: #ef4444;
+            --muted: #94a3b8;
+            --sidebar: #0f172a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scrollbar-width: thin;
+            scrollbar-color: #334155 transparent;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--foreground);
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            display: flex;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Sidebar */
+        aside {
+            width: 260px;
+            background-color: var(--sidebar);
+            border-right: 1px solid var(--card-border);
+            padding: 2rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            height: 100vh;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 3rem;
+            color: white;
+            font-weight: 700;
+            font-size: 1.25rem;
+            letter-spacing: -0.025em;
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 1rem;
+            color: var(--muted);
+            text-decoration: none;
+            border-radius: 0.75rem;
+            transition: all 0.2s ease;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .nav-item:hover, .nav-item.active {
+            background-color: rgba(59, 130, 246, 0.1);
+            color: var(--accent);
+        }
+
+        /* Main Content */
+        main {
+            flex: 1;
+            margin-left: 260px;
+            padding: 2rem 3rem;
+            max-width: 1400px;
+        }
+
+        header {
+            margin-bottom: 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .header-title h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        .header-title p {
+            color: var(--muted);
+            font-size: 1.1rem;
+        }
+
+        /* Audit Sections */
+        .audit-section {
+            background-color: var(--card);
+            border: 1px solid var(--card-border);
+            border-radius: 1.5rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .audit-section h2 {
+            font-size: 1.25rem;
+            color: white;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .audit-list {
+            list-style: none;
+        }
+
+        .audit-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .audit-item:last-child { border-bottom: none; }
+
+        .audit-icon {
+            margin-top: 0.25rem;
+            flex-shrink: 0;
+        }
+
+        .audit-content strong {
+            display: block;
+            color: white;
+            margin-bottom: 0.25rem;
+            font-size: 0.95rem;
+        }
+
+        .audit-content p {
+            font-size: 0.9rem;
+            color: var(--muted);
+            line-height: 1.5;
+        }
+
+        .status-pill {
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 0.2rem 0.6rem;
+            border-radius: 0.5rem;
+            margin-left: auto;
+        }
+
+        .status-warning { background: rgba(245, 158, 11, 0.1); color: var(--accent-amber); }
+        .status-fixed { background: rgba(16, 185, 129, 0.1); color: var(--accent-emerald); }
+        .status-info { background: rgba(59, 130, 246, 0.1); color: var(--accent); }
+
+        .animate-fade-in {
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <aside>
+        <div class="logo">
+            <i data-lucide="shield-check" style="color: var(--accent)"></i>
+            NovaMart Intel
+        </div>
+        <nav>
+            <a href="executive_dashboard.html" class="nav-item"><i data-lucide="layout-dashboard"></i> Dashboard</a>
+            <a href="customer_segments.html" class="nav-item"><i data-lucide="users"></i> Customer Segments</a>
+            <a href="lead_prediction.html" class="nav-item"><i data-lucide="trending-up"></i> Lead Prediction</a>
+            <a href="audit_report.html" class="nav-item active"><i data-lucide="file-text"></i> Audit Report</a>
+            <a href="#" class="nav-item"><i data-lucide="settings"></i> Configuration</a>
+        </nav>
+    </aside>
+
+    <main>
+        <header class="animate-fade-in">
+            <div class="header-title">
+                <h1>Data Quality Audit</h1>
+                <p>Integrity check and cleaning summary for the NovaMart dataset.</p>
+            </div>
+        </header>
+
+        <div class="audit-section animate-fade-in" style="animation-delay: 0.1s">
+            <h2><i data-lucide="users" class="text-blue-400"></i> Customers Dataset</h2>
+            <div class="audit-list">
+                <div class="audit-item">
+                    <i data-lucide="copy-minus" class="audit-icon text-emerald-400"></i>
+                    <div class="audit-content">
+                        <strong>Duplicate Records</strong>
+                        <p>18 duplicated customer IDs were identified and removed during the ingestion phase.</p>
+                    </div>
+                    <span class="status-pill status-fixed">Fixed</span>
+                </div>
+                <div class="audit-item">
+                    <i data-lucide="user-x" class="audit-icon text-amber-400"></i>
+                    <div class="audit-content">
+                        <strong>Invalid Demographics</strong>
+                        <p>3 instances of impossible ages (<0 or >120) were found and handled via median imputation.</p>
+                    </div>
+                    <span class="status-pill status-fixed">Fixed</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="audit-section animate-fade-in" style="animation-delay: 0.2s">
+            <h2><i data-lucide="megaphone" class="text-amber-400"></i> Campaigns & Leads</h2>
+            <div class="audit-list">
+                <div class="audit-item">
+                    <i data-lucide="alert-circle" class="audit-icon text-amber-400"></i>
+                    <div class="audit-content">
+                        <strong>Budget Overruns</strong>
+                        <p>21 campaigns show actual spend exceeding assigned budget. Flagged for review by finance.</p>
+                    </div>
+                    <span class="status-pill status-warning">Warning</span>
+                </div>
+                <div class="audit-item">
+                    <i data-lucide="user-minus" class="audit-icon text-blue-400"></i>
+                    <div class="audit-content">
+                        <strong>Anonymous Leads</strong>
+                        <p>26 leads lack associated customer IDs. These were excluded from the retention model but kept for volume analysis.</p>
+                    </div>
+                    <span class="status-pill status-info">Info</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="audit-section animate-fade-in" style="animation-delay: 0.3s">
+            <h2><i data-lucide="mouse-pointer-2" class="text-emerald-400"></i> Website Activity</h2>
+            <div class="audit-list">
+                <div class="audit-item">
+                    <i data-lucide="database" class="audit-icon text-emerald-400"></i>
+                    <div class="audit-content">
+                        <strong>Relational Integrity</strong>
+                        <p>99.5% of sessions successfully joined with customer records. Excellent tracking consistency.</p>
+                    </div>
+                    <span class="status-pill status-fixed">Verified</span>
+                </div>
+                <div class="audit-item">
+                    <i data-lucide="clock" class="audit-icon text-amber-400"></i>
+                    <div class="audit-content">
+                        <strong>Session Outliers</strong>
+                        <p>48 sessions recorded impossible durations (>24h). These were dropped to prevent skewing engagement metrics.</p>
+                    </div>
+                    <span class="status-pill status-fixed">Fixed</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>
