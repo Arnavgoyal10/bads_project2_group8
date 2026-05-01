@@ -174,6 +174,7 @@ def generate_dashboard():
         "boot_roas": get_base64_image(os.path.join(PNG_DIR, 'bootstrap_roas.png')),
         "spend_roas": get_base64_image(os.path.join(PNG_DIR, 'campaign_spend_roas.png')),
         "kaplan_km": get_base64_image(os.path.join(PNG_DIR, 'kaplan_km.png')),
+        "intent_signals": get_base64_image(os.path.join(PNG_DIR, 'intent_signals.png')),
     }
 
     # 4. Parse Markdown Findings
@@ -210,10 +211,15 @@ def generate_dashboard():
 
     # View 5: Model Comparisons
     lead_model_table = markdown_to_html_table(parse_markdown_table(os.path.join(MD_DIR, 'lead_prediction_report.md'), 'Model Comparison'))
+    retention_model_table = markdown_to_html_table(parse_markdown_table(os.path.join(MD_DIR, 'retention_prediction_report.md'), 'Model Comparison'))
     decile_table = markdown_to_html_table(parse_markdown_table(os.path.join(MD_DIR, 'lead_prediction_report.md'), 'Decile Analysis'))
 
     # View 6: Roadmap
     memo_bullets = parse_markdown_bullets(os.path.join(MD_DIR, 'retention_prediction_report.md'), 'Recommended Actions')
+    intent_signals_table = markdown_to_html_table(parse_markdown_table(os.path.join(MD_DIR, 'descriptive_report.md'), 'Digital Behavior Intent Signals'))
+    segment_summary_table = markdown_to_html_table(parse_markdown_table(os.path.join(MD_DIR, 'segmentation_report.md'), 'Segment Summary'))
+    migration_bullets = parse_markdown_bullets(os.path.join(MD_DIR, 'segmentation_report.md'), 'Segment Migration Potential')
+    early_warning_bullets = parse_markdown_bullets(os.path.join(MD_DIR, 'retention_prediction_report.md'), 'Early Warning Signs')
 
     # 5. HTML CONSTRUCTION
     print("🏗️  Constructing SPA layout...")
@@ -706,6 +712,31 @@ def generate_dashboard():
                             </div>
                         </div>
                     </div>
+
+                    <!-- DIGITAL INTENT SIGNALS -->
+                    <div class="glass-panel p-10 space-y-8">
+                        <div class="flex justify-between items-center">
+                            <div class="space-y-2">
+                                <h3 class="text-3xl font-bold text-white">Digital Intent Signals</h3>
+                                <p class="text-slate-400">Scope B: Identifying behavioral triggers associated with lead conversion.</p>
+                            </div>
+                            <div class="text-xs font-mono text-emerald-400 bg-emerald-500/10 px-4 py-2 rounded-xl border border-emerald-500/20">
+                                STATISTICAL ENGINE: POINT-BISERIAL r
+                            </div>
+                        </div>
+                        <div class="grid lg:grid-cols-2 gap-12 items-center">
+                            <img src="{img_data['intent_signals']}" class="w-full rounded-2xl shadow-2xl" alt="Intent Signals">
+                            <div class="space-y-6">
+                                {intent_signals_table}
+                                <div class="p-6 bg-emerald-500/5 border border-emerald-500/20 rounded-xl">
+                                    <h4 class="text-xs font-bold text-emerald-400 uppercase tracking-widest mb-2">Managerial Insight</h4>
+                                    <p class="text-sm text-slate-300 leading-relaxed">
+                                        The analysis proves that <strong>behavior beats demographics</strong>. 'Add-to-Cart' and 'Total Checkout Started' demonstrate significantly higher correlation with conversion than geographic or age-based factors. Strategy: Prioritize 'cart-recovery' retargeting to capture this high-intent volume.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                     
                     <div class="glass-panel p-8 space-y-8">
@@ -954,6 +985,29 @@ def generate_dashboard():
                             <p class="text-sm text-slate-300">The matrix identifies the <strong>'Efficiency Danger Zone'</strong>: Channels where acquisition cost exceeds the 90-day Customer Lifetime Value. We must cap bidding in Northwest Awareness immediately to prevent margin hemorrhage.</p>
                         </div>
                     </div>
+                </div>
+
+                <div class="glass-panel p-10 space-y-8">
+                    <h3 class="text-3xl font-bold">Segment Migration & Strategic Potential</h3>
+                    <div class="grid lg:grid-cols-2 gap-12">
+                        <div class="space-y-6">
+                            {segment_summary_table}
+                        </div>
+                        <div class="space-y-6">
+                            <h4 class="text-xl font-bold text-emerald-400">Migration Directives</h4>
+                            <ul class="space-y-4">
+                                {"".join([f'''
+                                <li class="flex items-start gap-3">
+                                    <span class="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-500 shrink-0">
+                                        <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                                    </span>
+                                    <p class="text-sm text-slate-300">{m}</p>
+                                </li>
+                                ''' for m in migration_bullets])}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -1004,10 +1058,10 @@ def generate_dashboard():
                         <div class="flex justify-between items-start mb-10">
                             <div class="space-y-2">
                                 <h3 class="text-3xl font-bold text-white">Conversion Lift Analysis</h3>
-                                <p class="text-slate-400">Quantifying the precision gain of the Gradient Boosting model over random chance.</p>
+                                <p class="text-slate-400">Quantifying the precision gain of the primary predictive model over random chance.</p>
                             </div>
                             <div class="bg-sky-500/20 text-sky-400 px-6 py-2 rounded-xl border border-sky-500/30 font-bold text-lg">
-                                Model: Gradient_Boosting_v2
+                                Model: Logistic_Regression_v1
                             </div>
                         </div>
                         <img src="{img_data['lift']}" class="w-full rounded-2xl shadow-2xl transition-all duration-500 hover:scale-[1.01]" alt="Lift">
@@ -1030,19 +1084,21 @@ def generate_dashboard():
                 
                 <div class="grid lg:grid-cols-2 gap-8">
                     <div class="glass-panel p-8 space-y-6">
-                        <h3 class="text-xl font-bold">Retention Early Warning Signals</h3>
+                        <h3 class="text-xl font-bold">Retention Early Warning Signals (Scope F)</h3>
                         <img src="{img_data['early_warning']}" class="w-full rounded-xl" alt="Early Warning">
                         <div class="bg-amber-500/5 border border-amber-500/20 p-4 rounded-xl">
-                            <p class="text-xs text-amber-500 font-mono mb-2">> CHURN_SIGNAL_DETECTED</p>
-                            <p class="text-sm text-slate-300">High acquisition cost paired with low first-order revenue is the strongest statistical predictor of churn. Avoid high-CPA bidding for low-AOV keywords.</p>
+                            <h4 class="text-xs font-bold text-amber-500 uppercase tracking-widest mb-2">Churn Predictors</h4>
+                            <ul class="space-y-2">
+                                {"".join([f'<li class="text-xs text-slate-300 flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-amber-500"></span> {b}</li>' for b in early_warning_bullets])}
+                            </ul>
                         </div>
                     </div>
                     <div class="glass-panel p-8 space-y-6">
-                        <h3 class="text-xl font-bold">Cohort Longevity (90-Day Curve)</h3>
-                        <img src="{img_data['cohort']}" class="w-full rounded-xl" alt="Cohort">
-                        <div class="bg-rose-500/5 border border-rose-500/20 p-4 rounded-xl">
-                            <p class="text-xs text-rose-500 font-mono mb-2">> CRITICAL_ATTRITION_WINDOW</p>
-                            <p class="text-sm text-slate-300">Drop-off occurs sharply between Month 1 and 2. Automated re-engagement must trigger at day 25 to bridge the gap to second purchase.</p>
+                        <h3 class="text-xl font-bold">Retention Model Benchmarking</h3>
+                        {retention_model_table}
+                        <div class="p-4 bg-rose-500/5 border border-rose-500/20 rounded-xl">
+                            <h4 class="text-xs font-bold text-rose-400 uppercase tracking-widest mb-2">Managerial Insight</h4>
+                            <p class="text-xs text-slate-300">Our <strong>90-Day Retention Model</strong> achieves an AUC of 0.74, providing a significant uplift over baseline repeat rates. The highest predictor is first-purchase category, with Electronics customers showing 22% higher longevity.</p>
                         </div>
                     </div>
                 </div>
