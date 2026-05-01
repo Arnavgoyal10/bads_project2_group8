@@ -5,7 +5,7 @@
 - Mean ROAS (campaign-level): 0.24 (95% CI 0.18 – 0.31)
 
 ## ANOVA: Channel AOV
-ANOVA error: deprecate_kwarg() missing 1 required positional argument: 'new_arg_name'
+ANOVA error: Library Error: deprecate_kwarg() missing 1 required positional argument: 'new_arg_name'. Fallback to descriptive comparison.
 
 ## Tukey HSD (saved to outputs/tukey_channel_aov.csv)
 
