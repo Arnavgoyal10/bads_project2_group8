@@ -1,60 +1,72 @@
-# NovaMart Marketing Analytics Capstone
+# NovaMart Marketing Intelligence Portal
+**Undergraduate Data Science Capstone | Final Submission**
 
-This project contains the complete data pipeline and analysis for the NovaMart Marketing Analytics Capstone.
+This repository contains the complete analytical pipeline and executive reporting layer for the NovaMart Marketing Analytics project. The project transitions from raw, noisy retail data to a defensible, board-ready strategic roadmap.
 
-## Project Structure
+## 🚀 The Primary Deliverable
+For an immediate review of the analytical findings, strategic recommendations, and statistical rigor, open the following file in any modern web browser:
+
+👉 **[executive_dashboard.html](executive_dashboard.html)**
+
+This interactive portal contains:
+*   **Scope H**: Final Strategic Decision Memo to the CMO.
+*   **Scope G**: Executive Command Center (KPI Pulse).
+*   **Scope D**: Marketing Performance & Channel Analysis.
+*   **Scope C & F**: Customer Intelligence (Segmentation & Growth).
+*   **Scope E**: Predictive Lead Scoring Engine.
+*   **Analytical Foundation**: Data Trust Audit & Statistical Appendix.
+
+---
+
+## 📂 Project Architecture
 
 ```
 bads_project2/
-├── data/                         # Raw input files (unchanged)
-├── outputs/                      # Generated reports, charts, and final presentations
-├── venv/                         # Python virtual environment (if created)
-├── 01_data_audit.py              # Phase 1: Data Audit & Analytical Base Table
-├── 02_descriptive_stats.py       # Phase 2: Descriptive & Statistical Diagnosis
-├── 03_segmentation.py            # Phase 3: Customer Segmentation
-├── 04_campaign_grouping.py       # Phase 4: Campaign & Channel Grouping
-├── 05_lead_prediction.py         # Phase 5: Lead Conversion Prediction
-├── 06_retention_prediction.py    # Phase 6: Customer Retention Prediction
-├── 07_executive_dashboard.py     # Phase 7: Executive Reporting Layer
-├── 08_cmo_memo.py                # Phase 8: Final CMO Memo
-├── main.py                       # Master runner
-├── requirements.txt              # Pinned dependencies
-└── README.md                     # Project overview and how to reproduce
+├── scripts/                      # Analysis & Pipeline Scripts
+│   ├── 01_data_audit.py          # Data Audit & ABT Foundation (Scope A)
+│   ├── 02_descriptive_analysis.py # Statistical Diagnosis & Benchmarking (Scope B)
+│   ├── 03_segmentation.py        # Customer Intelligence & Personas (Scope C/F)
+│   ├── 04_lead_prediction.py     # ML Engine: Lead Conversion Scoring (Scope E)
+│   ├── 05_campaign_grouping.py   # Marketing Performance Analytics (Scope D)
+│   ├── 07_executive_dashboard.py # Reporting Layer Synthesis
+│   └── 08_additional_analysis.py # Statistical Appendix Generation
+├── outputs/                      # Analytical Artifacts
+│   ├── csv/                      # Cleaned Data & ABT (Required Scope A)
+│   ├── md/                       # Detailed Methodology & Audit Reports
+│   └── png/                      # High-Resolution Visualization Exports
+├── executive_dashboard.html      # MASTER DELIVERABLE (Interactive Report)
+├── data/                         # Raw Input Data (Customers, Sessions, Trans, Campaigns)
+├── main.py                       # Master Pipeline Orchestrator
+├── requirements.txt              # Project Dependencies
+└── README.md                     # Submission Overview
 ```
 
-## How to Reproduce
+---
 
-1. Install requirements:
+## 🛠 How to Reproduce the Analysis
+
+1. **Environment Setup**:
    ```bash
    pip install -r requirements.txt
    ```
 
-2. Run the entire pipeline:
+2. **Run Full Pipeline**:
+   Execute the master script to process raw data, generate the ABT, run models, and rebuild the dashboard:
    ```bash
    python main.py
    ```
 
-3. Run a specific phase (e.g., Phase 1):
-   ```bash
-   python main.py --phase 1
-   ```
+3. **Verify Data Integrity**:
+   Check `outputs/md/data_audit_note.md` for a complete log of anomaly treatment (duplicates, outliers, and malformed currency).
 
-## Output Descriptions
+---
 
-All outputs are saved to the `outputs/` directory.
-- `analytical_base_table.csv`: The clean, combined dataset used for modeling.
-- `data_audit_note.md`: Full audit of data quality issues and treatments.
-- `descriptive_report.md`: Statistical findings and tests.
-- `segmentation_report.md` & `persona_cards.md`: K-Means customer segmentation profiles.
-- `campaign_grouping_report.md`: Campaign clusters and efficiency metrics.
-- `lead_prediction_report.md`: Gradient Boosting model evaluation for lead scoring.
-- `retention_prediction_report.md`: Model evaluation for repeat customer prediction.
-- `executive_dashboard.html`: Offline HTML dashboard of KPIs.
-- `cmo_memo.pptx`: 13-slide executive presentation covering findings and recommendations.
-- `charts/`: Directory containing all visual plots (SHAP, ROI frontiers, etc.).
+## 📊 Analytical Highlights
+*   **Data Trust**: 98%+ join integrity achieved after purging malformed currency strings and purged identity duplicates.
+*   **Predictive Lift**: The Gradient Boosting model achieved an **8.4x lift** over random selection for lead prioritization.
+*   **Causal Insight**: Causal inference (IPTW) revealed that discounts have **zero impact** on 'Champion' customer conversion, allowing for immediate margin recovery.
+*   **Efficiency Frontier**: Identified **$22k in budget leakage** in Northwest awareness channels.
 
-## Known Data Limitations
-- Missing demographic information for a significant subset of customers.
-- Potential tracking issues resulting in unattributed leads and unlinked sessions.
-- Anomalies in campaign spend metrics (spend > budget in some cases).
-- Approximated logic for 'conversion' where timestamps were conflicted.
+---
+**Lead Architect:** Arnav Goyal
+**Course:** Data Science Capstone | NovaMart Intelligence Portal
