@@ -169,6 +169,11 @@ def generate_dashboard():
         "lifecycle": get_base64_image(os.path.join(PNG_DIR, 'campaign_lifecycle.png')),
         "early_warning": get_base64_image(os.path.join(PNG_DIR, 'early_warning_signals.png')),
         "cohort": get_base64_image(os.path.join(PNG_DIR, 'cohort_retention.png')),
+        # Additional Statistical Rigor (Phase 7)
+        "boot_aov": get_base64_image(os.path.join(PNG_DIR, 'bootstrap_aov.png')),
+        "boot_roas": get_base64_image(os.path.join(PNG_DIR, 'bootstrap_roas.png')),
+        "spend_roas": get_base64_image(os.path.join(PNG_DIR, 'campaign_spend_roas.png')),
+        "kaplan_km": get_base64_image(os.path.join(PNG_DIR, 'kaplan_km.png')),
     }
 
     # 4. Parse Markdown Findings
@@ -321,7 +326,7 @@ def generate_dashboard():
         <nav class="flex-1 px-4 space-y-1">
             <button onclick="showPage('page-memo')" class="nav-link w-full flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 hover:text-white transition-all active" id="btn-memo">
                 <i data-lucide="file-text" class="w-5 h-5"></i>
-                <span class="font-medium">Final CMO Memo</span>
+                <span class="font-medium">Final Board Memo</span>
             </button>
             <button onclick="showPage('page-home')" class="nav-link w-full flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 hover:text-white transition-all" id="btn-home">
                 <i data-lucide="layout-dashboard" class="w-5 h-5"></i>
@@ -342,6 +347,10 @@ def generate_dashboard():
             <button onclick="showPage('page-predictive')" class="nav-link w-full flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 hover:text-white transition-all" id="btn-predictive">
                 <i data-lucide="cpu" class="w-5 h-5"></i>
                 <span class="font-medium">Predictive Engine</span>
+            </button>
+            <button onclick="showPage('page-appendix')" class="nav-link w-full flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 hover:text-white transition-all" id="btn-appendix">
+                <i data-lucide="microscope" class="w-5 h-5"></i>
+                <span class="font-medium">Statistical Appendix</span>
             </button>
             <button onclick="showPage('page-roadmap')" class="nav-link w-full flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 hover:text-white transition-all" id="btn-roadmap">
                 <i data-lucide="map" class="w-5 h-5"></i>
@@ -517,8 +526,22 @@ def generate_dashboard():
                             <p class="text-xs text-slate-400 leading-relaxed">Low repeat-purchase volume (0.1%) limits the robustness of the retention model. Loyalty-tier transitions are used as a proxy for growth.</p>
                         </div>
                         <div class="space-y-2">
-                            <h4 class="font-bold text-rose-400 text-sm">3. Model Decay</h4>
-                            <p class="text-xs text-slate-400 leading-relaxed">Marketing environments are dynamic. The 0.14-threshold model requires bi-weekly re-calibration to account for shifting cost-of-miss economic factors.</p>
+                <div class="glass-panel p-12 border-l-8 border-l-rose-500">
+                    <h2 class="text-3xl font-bold text-white mb-8 flex items-center gap-3">
+                        <i data-lucide="alert-octagon" class="w-10 h-10 text-rose-500"></i> Board Risk Assessment
+                    </h2>
+                    <div class="grid md:grid-cols-3 gap-12 text-slate-400 leading-relaxed text-lg">
+                        <div class="space-y-4">
+                            <h4 class="font-bold text-white">Attribution Uncertainty</h4>
+                            <p>Current models rely on last-click attribution. 12% of conversion value may be over-attributed to Search vs. top-of-funnel Social. Recommendation: Implement incrementality testing in Q4.</p>
+                        </div>
+                        <div class="space-y-4">
+                            <h4 class="font-bold text-white">Sample Sparsity</h4>
+                            <p>While the Champions segment is high value, it represents a small N. Any aggressive policy change for this group should be phased to prevent unintended attrition of high-LTV assets.</p>
+                        </div>
+                        <div class="space-y-4">
+                            <h4 class="font-bold text-white">Model Obsolescence</h4>
+                            <p>ML models require retraining. The current 0.14-threshold was optimized on Q1-Q2 data. Shifting market conditions could degrade precision if not monitored monthly.</p>
                         </div>
                     </div>
                 </div>
@@ -752,7 +775,6 @@ def generate_dashboard():
                         <img src="{img_data['lifecycle']}" class="w-full rounded-xl shadow-lg" alt="Lifecycle">
                     </div>
                 </div>
-                </div>
                 
                 <div class="grid lg:grid-cols-3 gap-8">
                     <div class="glass-panel p-8 lg:col-span-2">
@@ -905,7 +927,6 @@ def generate_dashboard():
                             </div>
                         </div>
                     </div>
-                </div>
                 </div>
                 
                 <div class="grid lg:grid-cols-2 gap-8">

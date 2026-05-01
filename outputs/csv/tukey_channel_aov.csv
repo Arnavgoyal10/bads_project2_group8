@@ -1,0 +1,67 @@
+group1,group2,meandiff,p-adj,lower,upper,reject
+Affiliate,Direct,12.8039,0.9501,-15.8341,41.4419,False
+Affiliate,Email,17.0175,0.7516,-12.1128,46.1478,False
+Affiliate,Influencer,-0.1256,1.0,-28.2663,28.015,False
+Affiliate,Organic,5.1435,1.0,-24.4181,34.7051,False
+Affiliate,Paid Search,17.5204,0.7064,-11.4273,46.4682,False
+Affiliate,Paid Social,9.4473,0.9964,-19.9129,38.8076,False
+Affiliate,affiliate ,3.2616,1.0,-167.3692,173.8925,False
+Affiliate,email,-18.2116,1.0,-118.1228,81.6995,False
+Affiliate,organic ,8.3244,1.0,-82.4661,99.1149,False
+Affiliate,paid social,-8.6216,1.0,-114.3478,97.1047,False
+Affiliate,search,-9.7517,1.0,-96.8761,77.3727,False
+Direct,Email,4.2136,1.0,-24.7149,33.1421,False
+Direct,Influencer,-12.9295,0.9366,-40.8612,15.0022,False
+Direct,Organic,-7.6604,0.9995,-37.0232,21.7024,False
+Direct,Paid Search,4.7165,1.0,-24.0281,33.4612,False
+Direct,Paid Social,-3.3566,1.0,-32.5166,25.8035,False
+Direct,affiliate ,-9.5422,1.0,-180.1387,161.0542,False
+Direct,email,-31.0155,0.9973,-130.8681,68.837,False
+Direct,organic ,-4.4795,1.0,-95.2054,86.2465,False
+Direct,paid social,-21.4255,1.0,-127.0963,84.2453,False
+Direct,search,-22.5556,0.9995,-109.6127,64.5016,False
+Email,Influencer,-17.1431,0.7116,-45.5793,11.293,False
+Email,Organic,-11.874,0.9789,-41.7171,17.9691,False
+Email,Paid Search,0.5029,1.0,-28.7322,29.738,False
+Email,Paid Social,-7.5702,0.9996,-37.2138,22.0735,False
+Email,affiliate ,-13.7559,1.0,-184.4357,156.924,False
+Email,email,-35.2291,0.9921,-135.224,64.7657,False
+Email,organic ,-8.6931,1.0,-99.5756,82.1894,False
+Email,paid social,-25.6391,0.9997,-131.4443,80.1662,False
+Email,search,-26.7692,0.9976,-113.9895,60.4511,False
+Influencer,Organic,5.2691,1.0,-23.6087,34.147,False
+Influencer,Paid Search,17.6461,0.6624,-10.603,45.8952,False
+Influencer,Paid Social,9.573,0.995,-19.0987,38.2447,False
+Influencer,affiliate ,3.3873,1.0,-167.1264,173.901,False
+Influencer,email,-18.086,1.0,-117.797,81.625,False
+Influencer,organic ,8.45,1.0,-82.1201,99.0202,False
+Influencer,paid social,-8.4959,1.0,-114.033,97.0411,False
+Influencer,search,-9.6261,1.0,-96.5209,77.2687,False
+Organic,Paid Search,12.3769,0.9697,-17.288,42.0418,False
+Organic,Paid Social,4.3038,1.0,-25.7638,34.3714,False
+Organic,affiliate ,-1.8819,1.0,-172.6358,168.8721,False
+Organic,email,-23.3551,0.9998,-123.4765,76.7662,False
+Organic,organic ,3.1809,1.0,-87.8408,94.2026,False
+Organic,paid social,-13.7651,1.0,-119.6899,92.1597,False
+Organic,search,-14.8952,1.0,-102.2605,72.4701,False
+Paid Search,Paid Social,-8.0731,0.9992,-37.5373,21.3911,False
+Paid Search,affiliate ,-14.2588,1.0,-184.9075,156.39,False
+Paid Search,email,-35.7321,0.9911,-135.6739,64.2097,False
+Paid Search,organic ,-9.196,1.0,-100.0202,81.6281,False
+Paid Search,paid social,-26.142,0.9997,-131.8971,79.6131,False
+Paid Search,search,-27.2721,0.9972,-114.4316,59.8874,False
+Paid Social,affiliate ,-6.1857,1.0,-176.9049,164.5335,False
+Paid Social,email,-27.659,0.9991,-127.721,72.4031,False
+Paid Social,organic ,-1.1229,1.0,-92.0794,89.8336,False
+Paid Social,paid social,-18.0689,1.0,-123.9377,87.7999,False
+Paid Social,search,-19.199,0.9999,-106.4964,68.0984,False
+affiliate ,email,-21.4733,1.0,-217.0884,174.1418,False
+affiliate ,organic ,5.0628,1.0,-186.0548,196.1804,False
+affiliate ,paid social,-11.8832,1.0,-210.5313,186.7649,False
+affiliate ,search,-13.0133,1.0,-202.4168,176.3902,False
+email,organic ,26.536,1.0,-105.3476,158.4197,False
+email,paid social,9.5901,1.0,-132.9877,152.1678,False
+email,search,8.4599,1.0,-120.9273,137.8472,False
+organic ,paid social,-16.946,1.0,-153.2878,119.3959,False
+organic ,search,-18.0761,1.0,-140.5576,104.4054,False
+paid social,search,-1.1301,1.0,-135.0586,132.7984,False
