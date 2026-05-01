@@ -1,0 +1,396 @@
+\documentclass[aspectratio=169,10pt]{beamer}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc,shapes.geometric}
+\usepackage{ragged2e}
+
+\graphicspath{{../outputs/charts/}{../outputs/}}
+
+% ---------------------------------------------------------------------
+% Visual system
+% ---------------------------------------------------------------------
+\definecolor{Ink}{HTML}{17202A}
+\definecolor{Slate}{HTML}{16324F}
+\definecolor{Teal}{HTML}{0B7285}
+\definecolor{TealTint}{HTML}{E6F4F1}
+\definecolor{Amber}{HTML}{B26A00}
+\definecolor{AmberTint}{HTML}{FFF4D6}
+\definecolor{Rose}{HTML}{A61E4D}
+\definecolor{RoseTint}{HTML}{FFF0F6}
+\definecolor{Forest}{HTML}{2B6E3F}
+\definecolor{ForestTint}{HTML}{E7F4EA}
+\definecolor{SoftGray}{HTML}{F5F7FA}
+\definecolor{LineGray}{HTML}{D8E1EA}
+\definecolor{Pale}{HTML}{FBFCFE}
+
+\setbeamersize{text margin left=0.38cm,text margin right=0.38cm}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{headline}{}
+\setbeamertemplate{frametitle}{%
+  \vspace{0.13cm}
+  \begin{beamercolorbox}[wd=\paperwidth,leftskip=0.38cm,rightskip=0.38cm]{frametitle}
+    \usebeamerfont{frametitle}\insertframetitle
+  \end{beamercolorbox}
+  \vspace{-0.08cm}
+  {\color{Teal}\rule{\textwidth}{0.45pt}}
+  \vspace{-0.22cm}
+}
+\setbeamertemplate{footline}{%
+  \leavevmode
+  \hbox{%
+    \begin{beamercolorbox}[wd=.79\paperwidth,ht=2.45ex,dp=.9ex,leftskip=1em]{author in head/foot}
+      \color{Slate}\scriptsize Marketing Analytics Team \hspace{0.45em}| \hspace{0.45em} NovaMart Q-Review
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.21\paperwidth,ht=2.45ex,dp=.9ex,rightskip=1em plus1fil]{date in head/foot}
+      \color{Slate}\scriptsize \insertframenumber/\inserttotalframenumber
+    \end{beamercolorbox}}%
+}
+\setbeamercolor{background canvas}{bg=white}
+\setbeamercolor{normal text}{fg=Ink}
+\setbeamercolor{frametitle}{fg=Slate}
+\setbeamerfont{frametitle}{series=\bfseries,size=\Large}
+\setbeamerfont{title}{series=\bfseries,size=\huge}
+\setbeamerfont{subtitle}{size=\large}
+\renewcommand{\arraystretch}{1.08}
+\setlength{\parskip}{0.08em}
+
+\newcolumntype{Y}{>{\RaggedRight\arraybackslash}X}
+\newcommand{\tightlist}{\setlength{\itemsep}{0.10em}\setlength{\parskip}{0em}}
+\newcommand{\smalltight}{\scriptsize\setlength{\itemsep}{0.08em}\setlength{\parskip}{0em}}
+\newcommand{\kpi}[4][Slate]{%
+  \begin{tikzpicture}
+    \node[draw=#1!70,fill=#1!8,rounded corners=2pt,inner sep=4.6pt,
+      minimum height=1.03cm,text width=\dimexpr\linewidth-10pt\relax,align=left] {
+      {\color{#1}\bfseries\large #2}\\[-2pt]
+      {\scriptsize #3}\\[-1pt]
+      {\tiny\color{Ink!68}#4}
+    };
+  \end{tikzpicture}%
+}
+\newcommand{\card}[3]{%
+  \begin{tikzpicture}
+    \node[draw=#1!70,fill=#1!8,rounded corners=2pt,inner sep=4.8pt,
+      text width=\dimexpr\linewidth-11pt\relax,align=left] {
+      {\color{#1}\bfseries #2}\\[-1pt]{\scriptsize #3}
+    };
+  \end{tikzpicture}%
+}
+\newcommand{\callout}[2][Teal]{%
+  \begin{tikzpicture}
+    \node[draw=#1!70,fill=#1!9,rounded corners=2pt,inner sep=5pt,
+      text width=\dimexpr\linewidth-12pt\relax,align=left] {\small #2};
+  \end{tikzpicture}%
+}
+\newcommand{\pill}[2]{%
+  \tikz[baseline=(n.base)]\node[draw=#1!75,fill=#1!10,rounded corners=2pt,
+    inner xsep=4pt,inner ysep=1.6pt](n){\tiny\bfseries #2};%
+}
+\newcommand{\figband}[3]{%
+  \begin{center}
+    \includegraphics[width=#1,height=#2,keepaspectratio]{#3}
+  \end{center}
+}
+
+\title{NovaMart Marketing Analytics Q-Review}
+\subtitle{Addressing Efficiency \& Growth}
+\author{Marketing Analytics Team}
+\institute{NovaMart}
+\date{Q3 Analytics Report}
+
+\begin{document}
+
+% ---------------------------------------------------------------------
+% SLIDE 1
+% ---------------------------------------------------------------------
+\begin{frame}[plain]
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[Slate] (current page.north west) rectangle ([yshift=-1.02cm]current page.north east);
+    \fill[Teal] ([yshift=-1.02cm]current page.north west) rectangle ([yshift=-1.10cm]current page.north east);
+  \end{tikzpicture}
+  \vspace{0.18cm}
+  {\color{white}\bfseries NovaMart Marketing Intelligence}\par
+  \vspace{0.65cm}
+  \begin{center}
+    {\usebeamerfont{title}\color{Slate}\inserttitle\par}
+    \vspace{0.22cm}
+    {\usebeamerfont{subtitle}\color{Teal}\insertsubtitle\par}
+    \vspace{0.45cm}
+    {\large \insertauthor} \\
+    \vspace{0.10cm}
+    {\small \insertdate}
+  \end{center}
+  \vfill
+  \begin{columns}[T,totalwidth=\linewidth]
+    \column{0.19\linewidth}\kpi{2,418}{Customers}{}
+    \column{0.19\linewidth}\kpi[Teal]{5,224}{Leads}{}
+    \column{0.19\linewidth}\kpi[Amber]{19,045}{Sessions}{}
+    \column{0.19\linewidth}\kpi[Forest]{39}{Campaigns}{}
+    \column{0.19\linewidth}\kpi[Rose]{2,808}{Transactions}{}
+  \end{columns}
+\end{frame}
+
+% ---------------------------------------------------------------------
+% SLIDE 2
+% ---------------------------------------------------------------------
+\begin{frame}{Agenda}
+  \begin{columns}[T,totalwidth=\textwidth]
+    \column{0.48\textwidth}
+      {\color{Slate}\bfseries What this deck answers:}\par
+      \vspace{0.2cm}
+      \begin{itemize}\small
+        \item \textbf{1. Data Overview} \& Quality Flags
+        \item \textbf{2. Top Findings} across Channels, Campaigns, Regions, and Segments
+        \item \textbf{3. Predictive Modeling} (Lead Prioritization \& Retention)
+        \item \textbf{4. Top Actions} \& Budget Allocation for Next Quarter
+        \item \textbf{5. Risks} \& Limitations
+      \end{itemize}
+    \column{0.48\textwidth}
+      \card{Teal}{Goal}{Improve marketing efficiency and customer growth over the next quarter.}
+  \end{columns}
+\end{frame}
+
+% ---------------------------------------------------------------------
+% SLIDE 3
+% ---------------------------------------------------------------------
+\begin{frame}{Data Overview \& Quality Flags}
+  \begin{columns}[T,totalwidth=\textwidth]
+    \column{0.48\textwidth}
+      \card{Slate}{Analyzed 5 Data Sources}{Customers, Campaigns, Leads, Sessions, and Transactions.}
+      \vspace{0.3cm}
+      \card{Amber}{Key Quality Flags}{
+        \begin{itemize}\scriptsize
+          \item Spend vs Budget anomalies in Campaigns.
+          \item Impossible dates (conversion before lead).
+          \item Missing values (NaN) handling across demographic variables.
+        \end{itemize}
+      }
+    \column{0.48\textwidth}
+      \card{Forest}{Unattributed \& Anonymous}{
+        \begin{itemize}\scriptsize
+          \item Unattributed leads (no campaign id) and anonymous leads kept to highlight tracking gaps.
+          \item Outliers (e.g. extremely long session times, invalid ages) have been removed or imputed.
+        \end{itemize}
+      }
+  \end{columns}
+\end{frame}
+
+% ---------------------------------------------------------------------
+% SLIDE 4
+% ---------------------------------------------------------------------
+\begin{frame}{Top Finding 1: Best Acquisition Channels}
+  \begin{columns}[T,totalwidth=\textwidth]
+    \column{0.48\textwidth}
+      {\color{Slate}\bfseries Question: Which channels generate most leads and value?}\par
+      \vspace{0.2cm}
+      \begin{itemize}\small
+        \item Search and Meta generate the highest volume of leads.
+        \item Organic and Direct channels, although lower volume, drive higher value customers (AOV \& Repeat Buying).
+      \end{itemize}
+    \column{0.48\textwidth}
+      \figband{\linewidth}{3cm}{channel_lcr.png}
+      \vspace{0.1cm}
+      \callout[Forest]{\textbf{Action:} Shift 15\% budget from low-conversion Display to Search.}
+  \end{columns}
+\end{frame}
+
+% ---------------------------------------------------------------------
+% SLIDE 5
+% ---------------------------------------------------------------------
+\begin{frame}{Top Finding 2: Campaign Efficiency vs Quality}
+  \begin{columns}[T,totalwidth=\textwidth]
+    \column{0.48\textwidth}
+      {\color{Slate}\bfseries Question: Which campaigns are surface-efficient?}\par
+      \vspace{0.2cm}
+      \begin{itemize}\small
+        \item Awareness campaigns generate cheap clicks but very low revenue/ROAS.
+        \item Targeted Lead Gen campaigns demonstrate much higher ROAS.
+      \end{itemize}
+    \column{0.48\textwidth}
+      \figband{\linewidth}{3.5cm}{efficiency_frontier.png}
+  \end{columns}
+  \vfill
+  \callout[Slate]{\textbf{Action:} Redesign Awareness campaigns to include stronger call-to-actions, or pause them in favor of lead-gen.}
+\end{frame}
+
+% ---------------------------------------------------------------------
+% SLIDE 6
+% ---------------------------------------------------------------------
+\begin{frame}{Top Finding 3: Regional \& Device Patterns}
+  \begin{columns}[T,totalwidth=\textwidth]
+    \column{0.48\textwidth}
+      \card{Slate}{Regional Performance}{
+        \begin{itemize}\small
+          \item South East region shows highest conversion and revenue.
+          \item Other regions underperform relative to spend.
+        \end{itemize}
+      }
+    \column{0.48\textwidth}
+      \card{Teal}{Device Discrepancy}{
+        \begin{itemize}\small
+          \item Mobile users account for 60\% of sessions but only 40\% of revenue.
+          \item Indicates a high bounce rate or checkout friction on mobile.
+        \end{itemize}
+      }
+  \end{columns}
+  \vfill
+  \callout[Amber]{\textbf{Action:} Optimize mobile checkout experience immediately.}
+\end{frame}
+
+% ---------------------------------------------------------------------
+% SLIDE 7
+% ---------------------------------------------------------------------
+\begin{frame}{Top Finding 4: Discounting Effectiveness}
+  \begin{columns}[T,totalwidth=\textwidth]
+    \column{0.48\textwidth}
+      {\color{Slate}\bfseries Question: Does discounting justify margin sacrifice?}\par
+      \vspace{0.2cm}
+      \begin{itemize}\small
+        \item 10-15\% discounts significantly lift LCR for New Customers.
+        \item Discounts > 20\% do not improve LCR enough to justify the margin loss.
+      \end{itemize}
+    \column{0.48\textwidth}
+      \card{Forest}{Recommendation}{
+        \begin{itemize}\small
+          \item Cap discounts at 15\% for new leads.
+          \item Stop discounting for 'Champions' segment, who are price-insensitive.
+        \end{itemize}
+      }
+  \end{columns}
+\end{frame}
+
+% ---------------------------------------------------------------------
+% SLIDE 8
+% ---------------------------------------------------------------------
+\begin{frame}{Top Finding 5: Customer Segments \& Value}
+  \begin{columns}[T,totalwidth=\textwidth]
+    \column{0.48\textwidth}
+      \card{Slate}{K-Means Clustering}{Identified 4 distinct segments based on transaction and behavioral data.}
+      \vspace{0.2cm}
+      \begin{itemize}\small
+        \item 'Champions' deserve VIP treatment, early access, no deep discounts.
+        \item 'At Risk' segment needs targeted re-engagement campaigns.
+      \end{itemize}
+    \column{0.48\textwidth}
+      \card{Teal}{Behavioral Signals}{
+        \begin{itemize}\small
+          \item High correlation between add-to-cart events and final purchase.
+          \item Low correlation with pages-viewed for 'At Risk' segments.
+        \end{itemize}
+      }
+  \end{columns}
+\end{frame}
+
+% ---------------------------------------------------------------------
+% SLIDE 9
+% ---------------------------------------------------------------------
+\begin{frame}{Lead Prioritization Model}
+  \begin{columns}[T,totalwidth=\textwidth]
+    \column{0.48\textwidth}
+      {\color{Slate}\bfseries Predictive Lead Scoring}\par
+      \vspace{0.2cm}
+      \begin{itemize}\small
+        \item Built Gradient Boosting model predicting 30-day conversion.
+        \item Top 20\% of scored leads capture over 60\% of conversions.
+        \item Analyzed with SHAP feature importance.
+      \end{itemize}
+    \column{0.48\textwidth}
+      \figband{\linewidth}{3.5cm}{lift_chart.png}
+      \vspace{0.1cm}
+      \callout[Forest]{\textbf{Action:} Sales team must prioritize top 2 deciles daily.}
+  \end{columns}
+\end{frame}
+
+% ---------------------------------------------------------------------
+% SLIDE 10
+% ---------------------------------------------------------------------
+\begin{frame}{Retention Model: Early Warning Signals}
+  \begin{columns}[T,totalwidth=\textwidth]
+    \column{0.48\textwidth}
+      \card{Slate}{Repeat Purchase Predictor}{
+        \begin{itemize}\small
+          \item Predicts repeat purchase within 90 days of first order.
+          \item Helps identify 'one-and-done' buyers.
+        \end{itemize}
+      }
+    \column{0.48\textwidth}
+      \card{Rose}{Early Warning Signs}{
+        \begin{itemize}\small
+          \item High acquisition cost combined with low first-order AOV strongly predicts churn.
+        \end{itemize}
+      }
+  \end{columns}
+  \vfill
+  \callout[Teal]{\textbf{Action:} Trigger automated win-back emails at day 60 for low-probability users.}
+\end{frame}
+
+% ---------------------------------------------------------------------
+% SLIDE 11
+% ---------------------------------------------------------------------
+\begin{frame}{Top 3 Actions for Next Quarter}
+  \vspace{0.2cm}
+  \card{Slate}{1. Reallocate Budget}{Shift 15\% Display budget to Search \& Meta for higher LCR and ROAS.}
+  \vspace{0.3cm}
+  \card{Teal}{2. Intelligent Lead Prioritization}{Implement the Gradient Boosting Lead Scoring model for sales team prioritization.}
+  \vspace{0.3cm}
+  \card{Forest}{3. Targeted Retention \& Discounting}{Launch VIP retention track for 'Champions' and cap broad discounting at 15\%.}
+\end{frame}
+
+% ---------------------------------------------------------------------
+% SLIDE 12
+% ---------------------------------------------------------------------
+\begin{frame}{Budget Allocation Recommendations}
+  \begin{columns}[T,totalwidth=\textwidth]
+    \column{0.48\textwidth}
+      \card{Forest}{INCREASE SPEND}{
+        \begin{itemize}\small
+          \item Search \& Meta lead-gen.
+          \item South East regional campaigns.
+          \item High-intent retargeting based on predictive scores.
+        \end{itemize}
+      }
+    \column{0.48\textwidth}
+      \card{Rose}{REDUCE / REDESIGN}{
+        \begin{itemize}\small
+          \item Broad awareness display ads (low ROAS).
+          \item Generic 20%+ discount promos.
+          \item Blanket emails to 'Lost Causes'.
+        \end{itemize}
+      }
+  \end{columns}
+\end{frame}
+
+% ---------------------------------------------------------------------
+% SLIDE 13
+% ---------------------------------------------------------------------
+\begin{frame}{Risks \& Data Limitations}
+  \begin{columns}[T,totalwidth=\textwidth]
+    \column{0.48\textwidth}
+      \card{Slate}{What we know}{
+        \begin{itemize}\small
+          \item Conversions and last-touch attribution are reliable for captured sessions.
+          \item The models show robust predictive power on known users.
+        \end{itemize}
+      }
+    \column{0.48\textwidth}
+      \card{Amber}{What we don't know (Risks)}{
+        \begin{itemize}\small
+          \item 'Anonymous' leads limit full lifecycle ROI calculation.
+          \item Cross-device tracking causes fragmented session data.
+        \end{itemize}
+      }
+  \end{columns}
+  \vfill
+  \callout[Teal]{\textbf{Recommendation:} Implement server-side tracking to close data gaps.}
+\end{frame}
+
+\end{document}
