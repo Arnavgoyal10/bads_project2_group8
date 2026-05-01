@@ -17,7 +17,7 @@
 ## Campaign Spend & Margin ROAS
 - Mean cleaned ROAS: 0.269 
 - Mean margin ROAS (assumed margin 30%): 0.081 
-- Campaign anomalies flagged: 4 (see outputs/campaigns_cleaned.csv)
+- Campaign anomalies flagged: 4 (see outputs/csv/campaigns_cleaned.csv)
 
 ## Causal Check: Discount Effect on Conversion
 - Logit discount coef: -0.0127, p=0.001

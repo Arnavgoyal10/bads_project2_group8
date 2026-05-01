@@ -89,13 +89,13 @@ def anova_tukey_channel_abt(abt):
 
     # save outputs
     if isinstance(anova_res, pd.DataFrame):
-        anova_res.to_csv('outputs/anova_channel_aov.csv')
+        anova_res.to_csv('outputs/csv/anova_channel_aov.csv')
     else:
-        with open('outputs/anova_channel_aov.txt','w') as f:
+        with open('outputs/csv/anova_channel_aov.txt','w') as f:
             f.write(str(anova_res))
 
     if tukey_table is not None:
-        tukey_table.to_csv('outputs/tukey_channel_aov.csv', index=False)
+        tukey_table.to_csv('outputs/csv/tukey_channel_aov.csv', index=False)
 
     return anova_res, tukey_table
 
@@ -183,7 +183,7 @@ def clean_campaigns_and_margin_roas(margin_rate=0.30):
     campaigns['spend_wins'] = campaigns['spend_usd'].clip(lower=low, upper=high)
 
     # save cleaned campaigns
-    campaigns.to_csv('outputs/campaigns_cleaned.csv', index=False)
+    campaigns.to_csv('outputs/csv/campaigns_cleaned.csv', index=False)
 
     # summary stats
     summary = {
@@ -204,7 +204,7 @@ def clean_campaigns_and_margin_roas(margin_rate=0.30):
     plt.savefig('outputs/png/campaign_spend_roas.png', dpi=150)
     plt.close()
 
-    return summary, 'outputs/campaigns_cleaned.csv'
+    return summary, 'outputs/csv/campaigns_cleaned.csv'
 
 def causal_check_discount():
     # Use leads dataset for causal check: effect of offered discount on conversion (converted_30d)
@@ -302,9 +302,9 @@ def causal_check_discount():
     # save regression table
     try:
         if isinstance(summary, pd.DataFrame):
-            summary.to_csv('outputs/discount_logit_table.csv')
+            summary.to_csv('outputs/csv/discount_logit_table.csv')
         else:
-            with open('outputs/discount_logit_error.txt','w') as f:
+            with open('outputs/csv/discount_logit_error.txt','w') as f:
                 f.write(str(summary))
     except Exception:
         pass
