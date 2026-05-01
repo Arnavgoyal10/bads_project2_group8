@@ -13,7 +13,7 @@ def run_script(script_name):
 
 def main():
     parser = argparse.ArgumentParser(description="NovaMart Marketing Analytics Capstone Runner")
-    parser.add_argument("--phase", type=int, choices=range(1, 8), help="Run a specific phase (1-7)")
+    parser.add_argument("--phase", type=int, choices=range(1, 9), help="Run a specific phase (1-8)")
     args = parser.parse_args()
 
     phases = {
