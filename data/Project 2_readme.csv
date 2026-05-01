@@ -1,0 +1,8 @@
+﻿NovaMart Data Science Project,
+,
+Business question,How should NovaMart improve marketing efficiency and customer growth over the next quarter?
+,
+Included tables,"customers, campaigns, leads, website_sessions, transactions, data_dictionary"
+Expected joins,customers.customer_id ↔ leads / website_sessions / transactions; campaigns.campaign_id ↔ leads / website_sessions
+Potential Data issues,"Duplicates, missing values, invalid dates, inconsistent labels, malformed numerics, outliers, impossible values, broken keys"
+Student task,"Clean the data, frame KPIs, diagnose patterns, segment customers/campaigns, build predictive models, and produce executive reporting"

@@ -1,0 +1,57 @@
+﻿table_name,column_name,description
+customers,customer_id,Customer identifier (may contain duplicates/malformed values)
+customers,gender,Self-reported gender with inconsistent labels/casing
+customers,age,Customer age with missing/invalid entries
+customers,city,Customer city with typos/blanks/spaces
+customers,region,Broad region with inconsistent naming
+customers,signup_date,Signup date with mixed formats / invalid dates
+customers,preferred_device,Preferred device with inconsistent labels
+customers,loyalty_tier,Loyalty tier
+customers,email_opt_in,Email permission with mixed encodings
+customers,income_band,Income segment
+campaigns,campaign_id,Campaign identifier
+campaigns,campaign_name,Campaign name
+campaigns,channel,Marketing channel with inconsistent labels
+campaigns,objective,Campaign objective
+campaigns,start_date,Start date with mixed formats
+campaigns,end_date,End date with missing/invalid values
+campaigns,budget_usd,Planned budget with mixed number formats
+campaigns,spend_usd,Actual spend with mixed number formats and outliers
+campaigns,target_region,Target geography with inconsistent labels
+campaigns,creative_type,Creative format
+campaigns,impressions,Impressions with mixed number formatting
+campaigns,clicks,Clicks with mixed number formatting and some anomalies
+leads,lead_id,Lead identifier
+leads,customer_id,Linked customer identifier where known
+leads,campaign_id,Linked campaign identifier
+leads,lead_date,Lead creation date with mixed formats
+leads,lead_source,Lead source with inconsistent labels
+leads,landing_page,Landing page path
+leads,discount_offered_pct,Offered discount with inconsistent formats
+leads,lead_score,Sales lead score with mixed data types
+leads,observed_region,Observed region from touchpoint
+leads,converted_30d,Whether the lead converted within 30 days (mixed encodings)
+leads,conversion_date,Conversion date with missing/invalid orderings
+leads,acquisition_cost_usd,Estimated acquisition cost with mixed number formats
+website_sessions,session_id,Session identifier
+website_sessions,customer_id,Known customer identifier if logged in
+website_sessions,campaign_id,Attributed campaign identifier where applicable
+website_sessions,session_date,Session timestamp/date with mixed formats
+website_sessions,device,Session device with inconsistent labels
+website_sessions,channel_group,Traffic channel with inconsistent labels
+website_sessions,pages_viewed,Pages viewed with invalid values
+website_sessions,time_on_site_sec,Session duration with invalid values
+website_sessions,bounce,Bounce flag with mixed encodings
+website_sessions,add_to_cart,Add-to-cart flag with mixed encodings
+website_sessions,checkout_started,Checkout-started flag with mixed encodings
+website_sessions,geo_region,Observed region with inconsistent labels
+transactions,order_id,Order identifier
+transactions,customer_id,Customer identifier
+transactions,order_date,Order date with mixed formats
+transactions,product_category,Product category with inconsistent labels
+transactions,units,Units sold with invalid values
+transactions,revenue_usd,Revenue with mixed number formats and some invalid values
+transactions,discount_pct,Applied discount with mixed formats
+transactions,payment_type,Payment method with inconsistent labels
+transactions,returned_flag,Return flag with mixed encodings
+transactions,marketing_channel_last_touch,Last-touch channel with inconsistent labels

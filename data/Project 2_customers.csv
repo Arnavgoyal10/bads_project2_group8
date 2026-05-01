@@ -1,0 +1,2419 @@
+﻿customer_id,gender,age,city,region,signup_date,preferred_device,loyalty_tier,email_opt_in,income_band
+C100000,Male,31,Lagos,South West,2024-10-10,Desktop,Bronze,No,Low
+C100001,Female,52,Kaduna,North West,2025-11-20,Tablet,Bronze,No,Low
+C100002,Female,32,Port Harcourt,South South,2025/01/03,Mobile,Bronze,No,Upper-Middle
+C100003,Female,37,Kaduna,North West,2025/10/11,Mobile,Bronze,Yes,Middle
+C100004,Male,24,Calabar,South South,2024/02/21,Mobile,Bronze,Yes,Middle
+C100005,Male,45,Ibadan,South West,2024-04-26,Mobile,Bronze,No,Middle
+C100006,Female,25,Ibadan,South West,"Jun 14, 2025",Tablet,Bronze,No,Low
+C100007,Female,27,Lagos,South West,2025-11-04,Mobile,Silver,Yes,Middle
+C100008,Female,28,Abuja,North Central,2025-03-17,Tablet,Bronze,No,Upper-Middle
+C100009,Male,25,Ibadan,South West,2024/07/31,Mobile,Silver,Yes,Lower-Middle
+C100010,Female,21,Kano,North West,17/04/2024,Mobile,Platinum,Yes,Upper-Middle
+C100011,Female,31,Enugu,South East,2024-03-09,Desktop,Gold,Yes,Upper-Middle
+C100012,Male,29,Port Harcourt,South South,2024-10-13,Tablet,Gold,No,Middle
+C100013,Female,32,Lagos,South West,2024/11/20,Mobile,Bronze,Yes,Lower-Middle
+C100014,Female,25,Abuja,North Central,2024-04-16,Mobile,Bronze,No,Middle
+C100015,Female,25,Jos,North Central,2025-10-04,Mobile,Bronze,Yes,Middle
+C100016,Female,30,Lagos,South West,09/06/2024,Mobile,Bronze,No,Lower-Middle
+C100017,Male,33,Ibadan,South West,2025-07-05,Desktop,Gold,No,Upper-Middle
+C100018,Male,thirty,Jos,North Central,2024-11-25,Mobile,Silver,Yes,Middle
+C100019,Female,33,Lagos,South West,2024-05-26,Mobile,Bronze,Yes,Middle
+C100020,Female,31,Benin City,South South,2024-11-30,Mobile,Silver,Yes,Low
+C100021,Male,42,Calabar,South South,2025-09-12,Mobile,Gold,Yes,Upper-Middle
+C100022,Male,39,Abuja,North Central,2024/09/11,Desktop,Silver,Yes,Middle
+C100023,Male,38,Benin City,South South,2025-01-10,Desktop,Bronze,No,Middle
+C100024,Female,42,Jos,North Central,2025-07-13,Desktop,Bronze,Yes,Middle
+C100025,Male,28,Lagos,South West,2025-09-08,Desktop,Silver,Yes,Middle
+C100026,Female,45,Ibadan,South West,2024-05-23,Mobile,Silver,Yes,High
+C100027,Male,35,Kaduna,North West,2025-10-31,Tablet,Bronze,Yes,Lower-Middle
+C100028,Female,29,Kano,North West,2024-07-14,Mobile,Bronze,Yes,Middle
+C100029,Male,37,Ibadan,South West,2025-11-30,Mobile,Bronze,Yes,Low
+C100030,Female,24,Lagos,South West,2025-01-08,Mobile,Bronze,Yes,Low
+C100031,Male,49,Ibadan,South West,2024-03-11,Mobile,Gold,Yes,Middle
+C100032,Male,35,Port Harcourt,South South,2025-11-24,Mobile,Silver,Yes,Middle
+C100033,Female,20,Ibadan,South West,2025-11-08,Mobile,Bronze,Yes,Lower-Middle
+C100034,Male,23,Port Harcourt,South South,2024-02-07,TAB,Gold,Yes,Low
+C100035,Male,?,Enugu,South East,23/09/2025,Mobile,Bronze,No,Lower-Middle
+C100036,Male,28,Kaduna,North West,07-12-2024,Mobile,Silver,Yes,Lower-Middle
+C100037,Male,37,Abuja,North Central,2024-10-22,Desktop,Gold,Yes,Upper-Middle
+C100038,Male,41,Benin City,South South,2025-01-05,Mobile,Silver,Yes,High
+C100039,Male,42,Abuja,North Central,2025-01-06,Tablet,Silver,Yes,Upper-Middle
+C100040,Female,38,Ibadan,South West,2025-09-12,Mobile,Gold,Yes,Middle
+C100041,Male,25,Port Harcourt,South South,2025-02-25,Mobile,Bronze,No,Lower-Middle
+C100042,Male,43,Kano,North West,"Jun 11, 2025",Mobile,Bronze,Yes,Middle
+C100043,Male,44,Port Harcourt,South South,10-23-2024,Desktop,Bronze,No,Upper-Middle
+C100044,Female,18,Ibadan,South West,"Dec 01, 2024",phone,Bronze,No,Middle
+C100045,Female,28,Kano,North West,2025-08-05,Desktop,Silver,Yes,Low
+C100046,Female,30,Port Harcourt,South South,2024-12-03,Mobile,Bronze,Yes,Lower-Middle
+C100047,Female,26,Jos,North Central,2025/04/21,Mobile,Gold,Yes,Middle
+C100048,Male,42,Lagos,South West,2024-01-03,Tablet,Gold,Yes,Middle
+C100049,Male,37,Kaduna,North West,2024-12-23,Mobile,Bronze,Yes,Upper-Middle
+C100050,Female,34,Port Harcourt,South South,2025-11-16,Mobile,Bronze,Yes,Middle
+C100051,Female,22,Port Harcourt,South South,2025-03-03,Desktop,Bronze,Yes,Middle
+C100052,Male,18,Kano,North West,2024-04-04,Desktop,Platinum,Yes,Low
+C100053,Male,25,Ibadan,South West,2024-08-04,Mobile,Silver,No,Middle
+C100054,Female,26,Port Harcourt,South South,2024-05-07,Desktop,Gold,Yes,Low
+C100055,Male,25,Lagos,South West,2025-07-06,Mobile,Silver,No,Lower-Middle
+C100056,Male,18,Lagos,South West,2025-10-16,Tablet,Silver,No,Lower-Middle
+C100057,Male,20,Kano,North West,2024-07-21,Mobile,Bronze,Yes,Middle
+C100058,Male,29,Ibadan,South West,2025-11-24,Mobile,Bronze,Yes,Middle
+C100059,Female,36,Kano,North West,07-15-2025,Mobile,Gold,No,Lower-Middle
+C100060,Male,28,Calabar,South South,2024-10-30,Desktop,Silver,Yes,Upper-Middle
+C100061,Female,31,Kano,North West,2025-07-14,Desktop,Silver,No,Lower-Middle
+C100062,Female,32,Lagos,South West,2024-01-14,Mobile,Bronze,Yes,Middle
+C100063,Male,32,Abuja,North Central,2025-08-25,Desktop,Silver,No,Middle
+C100064,Female,43,Benin City,South South,2024-10-29,Mobile,Silver,No,Lower-Middle
+C100065,Male,26,Abuja,North Central,2025-11-17,Mobile,Bronze,No,High
+C100066,Male,35,Calabar,South South,"May 05, 2025",Desktop,Bronze,No,Upper-Middle
+C100067,Male,21,,South South,2024-04-12,Mobile,Silver,Yes,Lower-Middle
+C100068,Male,43,Enugu,South East,2024-07-09,Desktop,Silver,Yes,Middle
+C100069,Male,39,Ibadan,South West,2024-12-09,Mobile,Bronze,Yes,Middle
+C100070,Female,42,Enugu,South East,2025-05-03,Mobile,Silver,Yes,Low
+C100071,Female,34,,South West,2024-05-27,Mobile,Platinum,No,Middle
+C100072,Male,32,Abuja,North Central,2025-02-19,Tablet,Gold,Yes,Upper-Middle
+C100073,Male,22,Ibadan,South West,2025-07-02,Mobile,Gold,Yes,Low
+C100074,Non-binary,36,Kaduna,North West,2025-08-26,Desktop,Bronze,Yes,Middle
+C100075,Male,45,Ibadan,South West,2024-02-15,Mobile,Bronze,Yes,Middle
+C100076,Female,18,Lagos,South West,"Jul 02, 2024",Mobile,Silver,Yes,Middle
+C100077,Female,48,Port Harcourt,South South,2024-02-25,Mobile,Gold,Yes,Middle
+C100078,Female,26,Abuja,North Central,2024-07-04,Mobile,Gold,Yes,Lower-Middle
+C100079,Male,37,Abuja,North Central,2025-10-30,Mobile,Bronze,Yes,Middle
+C100080,Male,26,Lagos,South West,2025-01-17,Mobile,Bronze,Yes,Middle
+C100081,Male,32,Port Harcourt,South South,2024-07-29,Mobile,Bronze,Yes,Middle
+C100082,Female,40,Ibadan,South West,2025-07-17,Mobile,Bronze,Yes,Low
+C100083,Female,31,Kaduna,North West,2025-02-28,Mobile,Silver,Yes,Upper-Middle
+C100084,Female,49,Kaduna,North West,2025-04-18,Mobile,Silver,Yes,Upper-Middle
+C100085,Male,33,Ibadan,South West,2024-07-15,Mobile,Bronze,Yes,Middle
+C100086,Male,39,Ibadan,South West,02/05/2024,Tablet,Bronze,Yes,Lower-Middle
+C100087,Female,28,Kaduna,North West,28/02/2025,Mobile,Bronze,No,Lower-Middle
+C100088,Male,29,Jos,North Central,2025/04/07,Mobile,Bronze,No,Low
+C100089,Male,29,Kano,North West,2025-07-26,Mobile,Silver,Yes,Lower-Middle
+C100090,Male,37,Enugu,South East,2024-08-10,Desktop,Silver,Yes,Lower-Middle
+C100091,Male,48,Jos,North Central,2024/02/28,Desktop,Gold,No,Middle
+C100092,Female,33,Lagos,South West,2024-05-01,Desktop,Silver,Yes,Upper-Middle
+C100093,Female,22,Enugu,South East,2025-08-29,Mobile,Bronze,Yes,High
+C100094,Female,28,Abuja,North Central,2024-11-28,Mobile,Platinum,Yes,Upper-Middle
+C100095,Male,21,Ibadan,South West,2025-06-27,Mobile,Platinum,Yes,Middle
+C100096,Female,37,Kaduna,North West,2025-03-13,Mobile,Gold,Yes,Upper-Middle
+C100097,Male,33,Kano,North West,2025-08-25,Mobile,Bronze,No,Upper-Middle
+C100098,Male,24,Lagos,South West,2024-12-21,Mobile,Bronze,Yes,Middle
+C100099,Male,30,Kano,North West,2025/09/07,Mobile,Bronze,Yes,Low
+C100100,Female,41,Lagos,North Cntrl,2024-06-22,Desktop,Bronze,Yes,Low
+C100101,Male,37,Port Harcourt,South South,2024-06-23,Desktop,Gold,Yes,Low
+C100102,Female,28,Enugu,South East,"May 31, 2024",Desktop,Silver,Yes,Lower-Middle
+C100103,Female,40,Port Harcourt,South South,2024-06-09,Desktop,Bronze,No,Upper-Middle
+C100104,Female,36,Benin City,South South,2024-11-13,Mobile,Gold,Yes,High
+C100105,Female,28,Kaduna,North West,2025-06-18,Desktop,Bronze,Yes,High
+C100106,Male,35,Enugu,South East,2025/07/27,Tablet,Bronze,Yes,Low
+C100107,Male,49,Kaduna,North West,2025-08-15,Mobile,Bronze,No,Upper-Middle
+C100108,Female,23,Lagos,South West,2025-10-30,Mobile,Bronze,Yes,Upper-Middle
+C100109,Female,42,Port Harcourt,South South,2024-03-23,Tablet,Silver,No,Low
+C100110,Male,32,Ibadan,South West,2025-05-17,Mobile,Bronze,Yes,Low
+C100111,Female,39,Lagos,South West,2025-11-11,Mobile,Silver,Yes,Upper-Middle
+C100112,Female,37,Benin City,South South,12/04/2024,Desktop,Gold,Yes,Low
+C100113,Female,35,Benin City,South South,2024-01-18,Desktop,Gold,Yes,Low
+C100114,Female,32,Enugu,South East,12-21-2024,Mobile,Silver,No,Lower-Middle
+C100115,Female,33,Calabar,South South,2024-12-03,Mobile,Bronze,Yes,Lower-Middle
+C100116,Male,39,Lagos,South West,2025-05-11,Mobile,Bronze,Yes,Low
+C100117,male,37,Abuja,North Central,2024-10-22,Mobile,Gold,Yes,Middle
+C100118,Female,20,Kano,North West,"Jul 18, 2025",Mobile,Bronze,Yes,Upper-Middle
+C100119,Female,37,Lagos,South West,2025-09-04,Mobile,Silver,Yes,High
+C100120,Male,44,Abuja,North Central,2025-06-02,Mobile,Gold,No,Lower-Middle
+C100121,Male,41,Benin City,North Cntrl,2025-03-21,Mobile,Gold,Yes,Upper-Middle
+C100122,Male,35,Lagos,South West,2024-08-16,Mobile,Silver,Yes,Upper-Middle
+C100123,Male,18,Kaduna,North West,2025-05-26,Desktop,Bronze,No,Lower-Middle
+C100124,Male,38,Enugu,South East,2024-10-29,Mobile,Silver,No,Lower-Middle
+C100125,Male,39,Lagos,South West,2024-06-30,Mobile,Bronze,No,Middle
+C100126,Female,46,Ibadan,South West,2025-10-25,Tablet,Gold,Yes,Upper-Middle
+C100127,Male,25,Kaduna,North West,2024-02-21,Mobile,Silver,No,Lower-Middle
+C100128,Female,31,Calabar,South South,2025-07-01,Mobile,Bronze,Yes,Upper-Middle
+C100129,Male,28,Abuja,North Central,2025-08-05,Tablet,Bronze,Yes,High
+C100130,Non-binary,31,Lagos,South West,2024-10-15,Tablet,Silver,Yes,Upper-Middle
+C100131,Male,18,Enugu,South East,2025-07-26,Mobile,Silver,Yes,Lower-Middle
+C100132,Female,29,Jos,North Central,2024-09-09,Mobile,Silver,No,Lower-Middle
+C100133,Female,29,Lagos,South West,2024-09-12,Mobile,Silver,No,Lower-Middle
+C100134,Female,?,Ibadan,South West,2024-09-24,Mobile,Gold,No,Upper-Middle
+C100135,Male,47,Kano,North West,2025-05-18,Mobile,Silver,Yes,Middle
+C100136,Male,27,Enugu,South East,11-04-2025,Mobile,Gold,Yes,Upper-Middle
+C100137,Female,29,Lagos,South West,2024-02-03,Mobile,Silver,Yes,Lower-Middle
+C100138,Male,43,Kano,North West,2025-10-16,Mobile,Gold,No,Lower-Middle
+C100139,Male,28,Enugu,South East,2024-02-29,Mobile,Gold,Yes,Upper-Middle
+C100140,Female,43,Benin City,South South,2025-10-16,Mobile,Bronze,No,Middle
+C100141,Male,37,Lagos,South West,2024-10-04,Mobile,Platinum,Yes,Lower-Middle
+C100142,Female,27,Lagos,North Cntrl,2024-09-29,Mobile,Gold,No,Middle
+C100143,Male,27,Abuja,North Central,2024-09-30,Desktop,Gold,No,Lower-Middle
+C100144,Female,34,Enugu,South East,2025-04-25,Mobile,Silver,Yes,Upper-Middle
+C100145,Female,31,Lagos,South West,2025-01-30,Mobile,Bronze,Yes,Upper-Middle
+C100146,Female,34,Lagos,South West,2025-11-09,Desktop,Platinum,Yes,Middle
+C100147,Male,28, lagos ,South South,2024-03-01,Mobile,Bronze,Yes,Middle
+C100148,Male,38,Lagos,South West,2024-08-04,Desktop,Bronze,No,Lower-Middle
+C100149,Male,27,Lagos,South West,2025-09-26,Mobile,Bronze,No,Low
+C100150,Non-binary,29,Lagos,South West,2024-03-27,Mobile,Silver,Yes,Lower-Middle
+C100151,Male,31,Ibadan,South West,2024-11-20,Mobile,Silver,No,Low
+C100152,Female,22,Kano,North West,2025-11-19,Mobile,Gold,Yes,Middle
+C100153,Male,30,Port Harcourt,South South,2025-05-07,Tablet,Silver,Yes,Lower-Middle
+C100154,Female,31,Lagos,South West,2025-06-01,Desktop,Platinum,Yes,Lower-Middle
+C100155,Male,20,Abuja,North Central,2025-09-18,Mobile,Bronze,Yes,Upper-Middle
+C100156,Female,18,Benin City,South South,2024-04-05,Mobile,Bronze,Yes,Middle
+C100157,Male,44,Calabar,South South,2025-04-22,Mobile,Gold,Yes,Middle
+C100158,Female,30,Calabar,South South,2024-05-06,Mobile,Silver,No,Middle
+C100159,Male,32,Abuja,North Central,2024-02-21,Mobile,Bronze,Yes,High
+C100160,Female,27,Lagos,South West,2024-05-07,Mobile,Gold,Yes,Lower-Middle
+C100161,Female,47,Enugu,South East,2024-07-02,Mobile,Silver,,Lower-Middle
+C100162,Male,31,,North Central,2024-07-16,Mobile,Bronze,Yes,High
+C100163,Male,18,Ibadan,South West,2024-04-05,Desktop,Bronze,Yes,Middle
+C100164,Male,37,Kaduna,North West,2024-02-25,Desktop,Gold,No,Low
+C100165,Female,24,Enugu,South East,2024-06-08,Mobile,Bronze,Yes,Lower-Middle
+C100166,Male,37,Benin City,South South,2025-10-10,Mobile,Silver,Yes,Lower-Middle
+C100167,Male,32,Enugu,South East,2025-01-21,Mobile,Bronze,Yes,Middle
+C100168,Male,44,Lagos,South West,2025-03-17,Desktop,Silver,No,Low
+C100169,Male,37,Abuja,North Central,2025-01-15,Mobile,Gold,Yes,Middle
+C100170,Male,30,Abuja,North Central,2024-04-17,Mobile,Bronze,No,Low
+C100171,Male,45,Lagos,South West,2025-10-09,Mobile,Bronze,Yes,Lower-Middle
+C100172,Female,57,Jos,North Central,2025-07-02,Mobile,Bronze,Yes,Lower-Middle
+C100173,Female,28,Lagos,South West,2024-04-26,Desktop,Bronze,No,Upper-Middle
+C100174,Non-binary,43,Kano,North West,2024-05-15,Desktop,Bronze,Yes,Low
+C100175,Female,36,Lagos,South West,2025-07-16,Mobile,Bronze,Yes,Middle
+C100176,Female,37,Port Harcourt,South South,2025-02-25,Mobile,Bronze,Yes,Lower-Middle
+C100177,Male,?,Port Harcourt,South South,2024-11-10,Tablet,Bronze,Yes,Middle
+C100178,Female,24,Lagos,South West,2024-09-28,Mobile,Bronze,Yes,High
+C100179,Male,45,Ibadan,South West,10-26-2025,Mobile,Silver,Yes,Lower-Middle
+C100180,Male,34,Ibadan,South West,"Apr 25, 2025",Mobile,Gold,Yes,Middle
+C100181,Male,28,Abuja,North Central,2024-02-13,Tablet,Silver,Yes,Lower-Middle
+C100182,Female,49,Kaduna,North West,2025-04-06,Mobile,Silver,Yes,Middle
+C100183,Male,44,Lagos,South West,26/12/2024,Mobile,Gold,No,Lower-Middle
+C100184,Male,39,Lagos,South West,05/08/2024,Mobile,Bronze,No,Lower-Middle
+C100185,Male,24,Port Harcourt,South South,2024/03/17,Mobile,Gold,No,Lower-Middle
+C100186,Non-binary,33,Port Harcourt,South South,2024-09-13,Mobile,Bronze,Yes,Middle
+C100187,Male,46,Lagos,South West,2025-01-29,Desktop,Platinum,Yes,Low
+C100188,Female,18,Jos,North Central,2025/10/05,Mobile,Gold,No,Upper-Middle
+C100189,Non-binary,19,Enugu,South East,2025-04-23,Mobile,Bronze,Yes,Lower-Middle
+C100190,Female,26,Lagos,South West,2024-05-07,Mobile,Silver,Yes,Middle
+C100191,Non-binary,42,Port Harcourt,South South,2024-06-11,Desktop,Bronze,Yes,Middle
+C100192,Non-binary,35,Abuja,North Central,2025-08-01,Desktop,Bronze,No,Upper-Middle
+C100193,Female,37,Ibadan,South West,2024-03-03,Desktop,Bronze,FALSE,Low
+C100194,Female,35,Abuja,North Central,2024-01-13,Mobile,Gold,No,Middle
+C100195,Male,34,Ibadan,South West,2025-03-17,Mobile,Gold,No,Low
+C100196,Male,44,Jos,North Central,14/11/2025,Mobile,Gold,Yes,Lower-Middle
+C100197,Male,65,Port Harcourt,South South,2025-12-19,Mobile,Bronze,No,Lower-Middle
+C100198,Male,37,Kano,North West,2025-04-04,Desktop,Gold,Yes,Upper-Middle
+C100199,Female,45,Benin City,South South,2025-12-12,Tablet,Bronze,Yes,Upper-Middle
+C100200,Male,29,Kaduna,North West,2024-12-04,Desktop ,Bronze,Yes,Lower-Middle
+C100201,Female,47,Lagos,South West,2024-02-22,Mobile,Bronze,Yes,Lower-Middle
+C100202,Male,34,Kaduna,North West,2025-02-21,Tablet,Bronze,Yes,Upper-Middle
+C100203,Female,35,Calabar,South South,2025-06-26,Mobile,Gold,Yes,Middle
+C100204,Male,29,Benin City,South South,2024-11-17,Mobile,Silver,No,Middle
+C100205,Male,26,Abuja,North Central,2024-01-05,Mobile,Bronze,Yes,Low
+C100206,Female,28,Kano,North West,2024-08-23,Mobile,Bronze,Yes,High
+C100207,Male,24,Kano,North West,03-29-2024,Mobile,Silver,No,Low
+C100208,Female,22,Kano,North West,2024-11-12,Mobile,Bronze,Yes,Low
+C100209,Male,50,Lagos,South West,2024-09-11,Mobile,Bronze,No,Lower-Middle
+C100210,Female,37,Calabar,South South,2025-08-23,Mobile,Silver,Yes,Low
+C100211,Male,42,Calabar,South South,2024-08-15,Mobile,Bronze,Yes,Lower-Middle
+C100212,Male,38,Port Harcourt,South South,2025-04-08,Mobile,Silver,Yes,Lower-Middle
+C100213,Female,20,Benin City,South South,2024-02-22,Mobile,Silver,No,Lower-Middle
+C100214,Female,33,Lagos,South West,24/05/2024,Mobile,Silver,Yes,High
+C100215,Female,25,Calabar,South South,2025-01-17,Mobile,Silver,Yes,High
+C100216,Male,26,Enugu,South East,"Jul 30, 2025",Desktop,Bronze,Yes,Low
+C100217,Female,32,Kano,North West,2024-02-22,Mobile,Gold,Yes,Lower-Middle
+C100218,Male,35,Kaduna,North West,2024-02-24,Desktop,Silver,Yes,Middle
+C100219,Non-binary,34,Lagos,South West,2024-07-21,Mobile,Gold,Yes,Lower-Middle
+C100220,Female,34,Abuja,North Central,16/06/2025,Mobile,Bronze,No,Lower-Middle
+C100221,Female,31,Abuja,North Central,2024-08-21,Mobile,Silver,Yes,Low
+C100222,Male,33,Benin City,South South,2024-09-12,Mobile,Silver,Yes,Middle
+C100223,Female,44,Lagos,South West,2024-07-10,Mobile,Bronze,Yes,Middle
+C100224,Non-binary,53,Jos,North Central,2024-10-24,Desktop,Silver,Yes,Low
+C100225,Female,43,Ibadan,South West,2024-11-22,Mobile,Silver,Yes,Lower-Middle
+C100226,Female,31,Ibadan,South West,2024-07-03,Mobile,Gold,Yes,Middle
+C100227,Male,37,Lagos,South West,2025-03-08,Desktop,Bronze,No,Middle
+C100228,Male,42,Kano,North West,2025/04/17,Mobile,Silver,No,Lower-Middle
+C100229,Female,42,Enugu,South East,19/06/2024,Mobile,Gold,Yes,Middle
+C100230,Female,44,Kano,North West,2024-03-14,Mobile,Gold,Yes,Low
+C100231,Female,44,Abuja,south west,2025-12-03,Desktop,Gold,No,Middle
+C100232,Male,37,Kaduna,North West,2024-05-30,Mobile,Bronze,No,Low
+C100233,Male,31,Lagos,South West,2025-08-31,Tablet,Bronze,Yes,Lower-Middle
+C100234,Female,19,Enugu,South East,2025-05-16,Mobile,Bronze,Yes,Middle
+C100235,Male,43,Benin City,South South,2024-10-11,Desktop,Bronze,Yes,Low
+C100236,Non-binary,39,,North Central,2025-02-07,Mobile,Bronze,Yes,Low
+C100237,Male,25,Ibadan,South West,2025-02-02,Mobile,Silver,Yes,Upper-Middle
+C100238,Female,33,Kano,North West,2024-07-16,Tablet,Silver,No,Lower-Middle
+C100239,Female,30,Abuja,North Central,2025-12-02,Desktop,Bronze,No,Lower-Middle
+C100240,Female,29,Enugu,South East,2025-08-30,Mobile,Silver,No,Lower-Middle
+C100241,Female,49,Port Harcourt,South South,2025-05-06,Mobile,Silver,Yes,High
+C100242,Female,30,Jos,North Central,2024-09-15,Mobile,Bronze,No,Middle
+C100243,Female,55,Enugu,South East,2024-02-23,Desktop,Silver,No,Middle
+C100244,Male,32,Lagos,South West,2024-12-19,Mobile,Bronze,No,Lower-Middle
+C100245,Male,27,Kano,North West,2025-08-20,Desktop,Bronze,Yes,Middle
+C100246,Male,34,Abuja,North Central,2024-11-22,Mobile,Silver,No,Low
+C100247,Male,55,Kaduna,North West,2025-01-22,Mobile,Bronze,No,Middle
+C100248,Female,32,Benin City,South South,2024-08-25,Mobile,Silver,Yes,High
+C100249,F,38,Ibadan,South West,2025-06-02,Mobile,Gold,Yes,Low
+C100250,Female,18,Jos,North Central,2025-09-29,Mobile,Silver,Yes,Upper-Middle
+C100251,Female,38,Lagos,South West,2025-09-10,Mobile,Bronze,Yes,Low
+C100252,Female,21,Benin City,South South,2024-07-03,Mobile,Bronze,No,High
+C100253,Male,32,Abuja,North Central,2024-12-22,Mobile,Bronze,Yes,Lower-Middle
+C100254,Female,45,Lagos,South West,2024-10-13,Tablet,Bronze,Yes,Upper-Middle
+C100255,Female,31,Kaduna,North West,2025-05-21,Mobile,Bronze,Yes,Lower-Middle
+C100256,Female,39,Benin City,South South,2024-03-09,Mobile,Bronze,Yes,High
+C100257,Female,31,Jos,North Central,2024-12-17,Mobile,Bronze,No,Middle
+C100258,Male,30,Benin City,South South,2025-06-14,Desktop,Bronze,Yes,High
+C100259,Male,35,Abuja,North Central,29/12/2024,Tablet,Silver,Yes,Middle
+C100260,Female,43,Calabar,South South,2024-05-25,Mobile,Bronze,Yes,Lower-Middle
+C100261,Male,34,Lagos,South West,2025-04-09,Mobile,Gold,Yes,Low
+C100262,Female,33,Lagos,North Cntrl,2024-01-16,Mobile,Gold,Yes,Low
+C100263,Female,24,Kaduna,North West,2024-02-10,Mobile,Bronze,Yes,Middle
+C100264,Female,18,Port Harcourt,South South,"Aug 15, 2024",Desktop,Silver,No,Lower-Middle
+C100265,Male,34,Port Harcourt,South South,2025-07-19,Mobile,Gold,Yes,Low
+C100266,Female,31,Enugu,South East,2025-11-29,Mobile,Silver,Yes,Middle
+C100267,Male,35,Abuja,North Central,2024-04-14,Mobile,Platinum,No,Low
+C100268,Male,42,Jos,North Central,2024-06-22,Desktop,Gold,Yes,Middle
+C100269,Male,40,Kano,North West,2025-04-25,Mobile,Bronze,Yes,Low
+C100270,Female,25,Abuja,North Central,2024-07-09,Mobile,Silver,No,High
+C100271,Male,35,Lagos,South West,"Jan 17, 2024",phone,Silver,Yes,Low
+C100272,Female,35,Abuja,North Central,2024-03-22,Mobile,Silver,No,Middle
+C100273,Female,31,Calabar,South South,2024-07-04,Desktop,Silver,Yes,Middle
+C100274,Female,18,Port Harcourt,South South,2024-09-08,Mobile,Gold,Yes,Upper-Middle
+C100275,Male,26,Lagos,South West,2025-02-08,Mobile,Silver,Yes,Low
+C100276,Non-binary,32,Abuja,North Central,04-25-2025,Mobile,Silver,No,Low
+C100277,Female,40,Jos,North Central,2024/10/09,Mobile,Bronze,Yes,Lower-Middle
+C100278,Male,30,Lagos,South West,2024-05-02,Mobile,Gold,No,Upper-Middle
+C100279,Female,20,Kaduna,North West,2024-06-22,Tablet,Bronze,Yes,Middle
+C100280,Female,45,Lagos,South West,2025-08-13,Mobile,Silver,No,Low
+C100281,F,33,Calabar,South South,2025-10-16,Mobile,Bronze,Yes,Lower-Middle
+C100282,Female,29,Ibadan,South West,2025-01-04,Mobile,Silver,Yes,High
+C100283,Non-binary,38,Lagos,South West,2024-12-16,Mobile,Bronze,Yes,Lower-Middle
+C100284,Female,39,Jos,North Central,04/08/2024,Desktop,Silver,No,Lower-Middle
+C100285,Female,32,Port Harcourt,South South,2025-05-07,Tablet,Gold,Yes,Lower-Middle
+C100286,Female,28,Kaduna,North West,10-28-2025,Mobile,Bronze,Yes,Upper-Middle
+C100287,Male,28,Ibadan,South West,2024-12-07,Desktop,Bronze,No,Lower-Middle
+C100288,Female,40,Lagos,South West,2025-10-20,Mobile,Bronze,Yes,Middle
+C100289,Female,32,Lagos,South West,2024-09-21,Desktop,Bronze,Yes,Lower-Middle
+C100290,Female,37,Lagos,South West,2024-07-05,Mobile,Bronze,Yes,Middle
+C100291,Female,18,Lagos,South West,2025-01-16,Mobile,Bronze,No,Middle
+C100292,Female,28,Lagos,South West,2025-05-24,Mobile,Gold,No,Low
+C100293,Female,29,Lagos,South West,2025-09-20,Mobile,Bronze,Yes,Lower-Middle
+C100294,Female,29,P/Harcourt,South South,2025-11-12,Mobile,Bronze,No,Middle
+C100295,Female,18,Lagos,South West,2024-08-25,Desktop,Gold,Yes,Middle
+C100296,Non-binary,29,Ibadan,South West,2025-05-12,Desktop,Bronze,No,Low
+C100297,Female,47,Lagos,South West,2024-10-13,Desktop,Gold,Yes,High
+C100298,Male,35,Lagos,South West,2024-07-18,Mobile,Bronze,Yes,High
+C100299,Male,28,Kaduna,North West,2025-10-27,Mobile,Gold,Yes,Lower-Middle
+C100300,Male,26,Jos,North Central,2024-11-30,Mobile,Bronze,Yes,Low
+C100301,Male,21,Ibadan,South West,2025-10-02,Mobile,Bronze,Yes,Upper-Middle
+C100302,Female,35,Lagos,South West,2025-08-22,Mobile,Silver,Yes,Low
+C100303,Male,26, lagos ,South South,2025-06-15,Desktop,Bronze,No,Upper-Middle
+C100304,Female,29,Lagos,South West,2024-06-02,Mobile,Gold,Yes,Upper-Middle
+C100305,Non-binary,41,Port Harcourt,South South,2024-05-15,Mobile,Silver,Yes,Middle
+C100306,Female,41,Ibadan,South West,2024-02-10,Desktop,Gold,Yes,Upper-Middle
+C100307,Female,38,Jos,North Central,12/04/2024,Mobile,Bronze,Yes,Lower-Middle
+C100308,Female,18,Enugu,South East,2025-01-20,Mobile,Silver,Yes,Upper-Middle
+C100309,Female,28,Benin City,South South,2025-08-03,Mobile,Bronze,No,Middle
+C100310,Male,43,Port Harcourt,South South,2025-01-16,Desktop,Bronze,Yes,Upper-Middle
+C100311,Female,22,Enugu,South East,2025-04-07,Mobile,Bronze,No,Lower-Middle
+C100312,Female,44,Enugu,South East,2024-10-09,Mobile,Silver,Yes,Low
+C100313,Male,32,Enugu,South East,2025-09-17,Desktop,Gold,No,Middle
+C100314,Female,41,Kano,North West,2025/04/20,Mobile,Silver,Yes,Middle
+C100315,Male,29,Lagos,South West,2026-02-14,Mobile,Bronze,Yes,Upper-Middle
+C100316,Male,22,Abuja,North Central,2024-12-26,Mobile,Silver,Yes,Middle
+C100317,Male,24,Ibadan,South West,2025-01-31,Mobile,Gold,No,Upper-Middle
+C100318,Male,46,Ibadan,South West,2025-08-12,Mobile,Bronze,No,Middle
+C100319,Female,30,Enugu,North Cntrl,2025-02-24,Desktop,Bronze,Yes,Upper-Middle
+C100320,Male,22,Abuja,North Central,2025-06-24,Mobile,Bronze,No,Upper-Middle
+C100321,Female,40,Kano,N Central,2024-06-08,Desktop,Gold,Yes,Lower-Middle
+C100322,Male,19,Port Harcourt,South South,2024-01-31,Mobile,Bronze,Yes,High
+C100323,Female,31,Kaduna,North West,2024-12-31,Mobile,Bronze,Yes,Low
+C100324,Female,36,Lagos,South West,2025-11-15,Desktop,Bronze,Yes,Middle
+C100325,Male,35,Ibadan,South West,2024-06-03,Desktop,Bronze,No,High
+C100326,Female,36,Lagos,South West,2025-04-14,Mobile,Bronze,No,Upper-Middle
+C100327,Female,32,Lagos,South West,2025-01-07,Desktop,Bronze,No,Middle
+C100328,Male,18,Jos,North Central,2024-10-19,Mobile,Gold,Yes,Low
+C100329,Female,35,Abuja,North Central,2025-09-23,Mobile,Bronze,No,Lower-Middle
+C100330,Male,32,Jos,North Central,2025-01-27,Mobile,Silver,Yes,Lower-Middle
+C100331,male,31,Ibadan,South West,2025-01-28,Mobile,Platinum,Yes,Middle
+C100332,Female,37,Lagos,South West,2025-08-25,Mobile,Bronze,Yes,Middle
+C100333,Female,40,Kaduna,North West,2024-12-03,Tablet,Bronze,No,Low
+C100334,Female,35,Lagos,South West,2024-09-18,Mobile,Gold,Yes,Middle
+C100335,Female,46,Enugu,South East,"Mar 10, 2025",Desktop,Gold,Yes,High
+C100336,Female,52,Lagos,South West,2025-05-27,Mobile,Gold,No,Lower-Middle
+C100337,Male,35,Kano,North West,2025-03-22,Mobile,Platinum,No,Upper-Middle
+C100338,Female,29,Lagos,South West,2024-05-15,Tablet,Silver,Yes,Lower-Middle
+C100339,Female,21,Port Harcourt,South South,2024-06-08,Mobile,Bronze,No,Lower-Middle
+C100340,Male,38,Calabar,South South,2024-04-08,Mobile,Bronze,No,Middle
+C100341,Male,18,Ibadan,South West,2024-11-23,Mobile,Silver,Yes,Lower-Middle
+C100342,Female,48,Kano,North West,2025-08-29,Mobile,Bronze,No,Middle
+C100343,Male,41,Kaduna,North West,2025-05-28,Mobile,Gold,No,Upper-Middle
+C100344,Male,28,Lagos,South West,2025-01-05,Mobile,Silver,No,Upper-Middle
+C100345,Female,39,Enugu,South East,2025-08-31,Mobile,Platinum,Yes,Low
+C100346,Female,25,Jos,North Central,09-18-2025,Mobile,Silver,Yes,Low
+C100347,female ,23,Lagos,South West,2024-12-09,Mobile,Silver,Yes,Middle
+C100348,Female,39,Benin City,South South,2024-09-04,Tablet,Silver,Yes,Middle
+C100349,Male,23,Abuja,North Central,10-30-2024,Mobile,Bronze,Yes,Lower-Middle
+C100350,Male,35,Kaduna,North West,2024-09-08,Tablet,Silver,Yes,Middle
+C100351,Male,31,Lagos,South West,"May 12, 2024",Mobile,Silver,Yes,High
+C100352,Female,47,Ibadan,South West,2025-12-14,Mobile,Silver,Yes,High
+C100353,Female,35,Kaduna,North West,2025-02-21,Desktop,Gold,No,Low
+C100354,Male,47,Kaduna,North West,2024-06-02,Mobile,Silver,Yes,Upper-Middle
+C100355,Female,40,Lagos,South West,2024-09-10,Mobile,Platinum,Yes,Lower-Middle
+C100356,Female,26,Enugu,South East,2024-04-13,Mobile,Gold,Yes,Middle
+C100357,Non-binary,22,Abuja,North Central,2024-09-04,Tablet,Gold,Yes,High
+C100358,Female,18,Enugu,South-West,"Jan 09, 2025",Mobile,Gold,No,Middle
+C100359,Female,33,Ibadan,South West,02-28-2025,Desktop,Bronze,Yes,High
+C100360,Female,18,Lagos,South West,2024-04-19,Desktop,Bronze,No,Lower-Middle
+C100361,Male,25,Kaduna,North West,2024-07-10,Desktop,Bronze,Yes,Low
+C100362,Female,18,Enugu,South East,2025-02-06,Mobile,Gold,Yes,Lower-Middle
+C100363,Male,27,Kano,North West,2025-08-24,Mobile,Silver,Yes,Lower-Middle
+C100364,Female,39,Calabar,South South,2024-05-26,Mobile,Silver,No,Lower-Middle
+C100365,Female,25,Abuja,North Central,2025-08-11,Tablet,Silver,Yes,Low
+C100366,Male,28,Abuja,North Central,2024-11-02,Tablet,Platinum,Yes,Upper-Middle
+C100367,Female,28,Lagos,South West,"Jan 22, 2025",Mobile,Bronze,Yes,Low
+C100368,Female,35,Ibadan,South West,09-02-2024,Mobile,Bronze,Yes,Middle
+C100369,Male,19,P/Harcourt,South South,2024-09-29,Desktop,Bronze,Yes,Lower-Middle
+C100370,Male,33,Port Harcourt,South South,2024-05-26,Mobile,Silver,Yes,Upper-Middle
+C100371,Female,32,Ibadan,South West,2025-06-03,Mobile,Silver,Yes,Middle
+C100372,Male,23,Abuja,North Central,10-27-2025,Tablet,Bronze,Yes,Middle
+C100373,Male,24,Lagos,South West,2025-07-24,Mobile,Silver,No,Upper-Middle
+C100374,Female,43,Ibadan,South West,2024/05/16,Mobile,Bronze,Yes,Upper-Middle
+C100375,Female,39,Abuja,North Central,2024-05-14,Mobile,Silver,No,Middle
+C100376,Non-binary,36,Ibadan,South West,2024-01-31,Desktop,Silver,Yes,Middle
+C100377,Male,25,Jos,North Central,2024-03-29,Mobile,Silver,No,Upper-Middle
+C100378,Male,29,Lagos,South West,2024/02/18,Mobile,Gold,Yes,Middle
+C100379,Non-binary,21,Kano,S/South,2024-09-12,Mobile,Silver,Yes,Low
+C100380,Female,18,Kano,North West,2024/05/20,Desktop,Bronze,Yes,Lower-Middle
+C100381,Female,28,Abuja,North Central,2025-09-28,Mobile,Silver,Yes,Middle
+C100382,Male,27,Ibadan,South West,2025-03-22,Mobile,Bronze,Yes,Upper-Middle
+C100383,Male,21,Calabar,South South,2024-03-17,Mobile,Silver,Yes,Lower-Middle
+C100384,Female,21,Port Harcourt,South South,2024/01/04,Desktop,Bronze,No,Upper-Middle
+C100385,male,36,Kano,North West,2025-07-09,Tablet,Bronze,Yes,Upper-Middle
+C100386,Male,28,Enugu,South East,2024/06/28,Mobile,Gold,No,Low
+C100387,Male,18,Port Harcourt,South South,2025-04-10,Mobile,Silver,0,Upper-Middle
+C100388,Male,51,Calabar,South South,2025-10-30,Mobile,Gold,Yes,Middle
+C100389,Male,18,Kano,North West,2024-12-06,Mobile,Silver,Yes,Middle
+C100390,Male,34,Ibadan,South West,2025/02/20,Desktop,Platinum,No,Middle
+C100391,Male,23,Kano,North West,2024-04-12,Desktop,Silver,Yes,Middle
+C100392,Female,38,Port Harcourt,South South,2024-01-10,Desktop,Gold,Yes,Upper-Middle
+C100393,Female,33,Kano,North West,2025-05-30,Mobile,Gold,Yes,Lower-Middle
+C100394,Female,41,Abuja,North Central,2025/04/23,Mobile,Bronze,Yes,Lower-Middle
+C100395,Male,32,Jos,North Central,2024-02-28,Mobile,Gold,No,Lower-Middle
+C100396,Female,26,Benin City,South South,2025-03-26,Mobile,Bronze,Yes,Middle
+C100397,Prefer not say,45,Abuja,North Central,2024-11-28,Mobile,Bronze,Yes,High
+C100398,Male,32,Port Harcourt,South South,2025-06-25,Desktop,Silver,Yes,Lower-Middle
+C100399,Female,30,Jos,North Central,2025-05-13,Desktop,Bronze,No,Low
+C100400,Non-binary,31,Enugu,South East,05-07-2025,Mobile,Bronze,No,Upper-Middle
+C100401,Female,26,Ibadan,South West,2025-07-03,Desktop,Bronze,Yes,Middle
+C100402,Male,36,Port Harcourt,South South,2024-11-20,Desktop,Bronze,Yes,Lower-Middle
+C100403,Male,47,Port Harcourt,South South,2025-01-07,Mobile,Platinum,No,Upper-Middle
+C100404,Male,46,Calabar,South South,2025-04-20,Mobile,Silver,No,High
+C100405,Male,35,Lagos,N Central,2024-07-07,Mobile,Bronze,Yes,Middle
+C100406,Male,38,Jos,North Central,2024-09-25,Mobile,Platinum,No,Lower-Middle
+C100407,Female,39,Enugu,South East,2024-10-17,Tablet,Silver,Yes,Middle
+C100408,male,27,Abuja,North Central,2024-07-14,Mobile,Silver,No,Upper-Middle
+C100409,Male,46,Port Harcourt,South South,2024-03-15,Tablet,Silver,Yes,Low
+C100410,Male,35,Benin City,South South,2025-04-07,Desktop,Bronze,Yes,Middle
+C100411,Male,18,Enugu,South East,2025-09-18,Mobile,Silver,Yes,Upper-Middle
+C100412,Female,38,Calabar,South South,2024-09-14,Mobile,Bronze,Yes,Middle
+C100413,Female,24,Calabar,South South,"Mar 10, 2024",Mobile,Gold,Yes,Middle
+C100414,Non-binary,35,Abuja,North Central,2024-11-10,Desktop,Bronze,Yes,Upper-Middle
+C100415,Female,38,Lagos,South West,11-03-2024,Mobile,Bronze,No,Middle
+C100416,Female,30,Ibadan,South West,2025-05-19,Mobile,Bronze,No,Middle
+C100417,Female,35,Benin City,South South,2024-01-23,Mobile,Bronze,Yes,Low
+C100418,Male,44,Kano,North West,2024-07-22,Mobile,Silver,Yes,Upper-Middle
+C100419,Male,20,Lagos,South West,2025-06-06,Mobile,Bronze,Yes,Middle
+C100420,Female,18,Kano,North West,2025-05-01,Desktop,Bronze,No,Lower-Middle
+C100421,Prefer not say,31,Jos,North Central,2025-11-27,Desktop,Bronze,No,Upper-Middle
+C100422,Female,30,Jos,North Central,01-12-2024,Tablet,Platinum,No,Lower-Middle
+C100423,Female,99,Calabar,South South,2025-03-28,Tablet,Bronze,Yes,Low
+C100424,Female,41,Jos,North Central,2024-08-24,Desktop,Gold,Yes,Low
+C100425,Female,37,Calabar,South South,2025-12-06,Desktop,Gold,Yes,Lower-Middle
+C100426,Female,31,Lagos,South West,13/12/2025,Mobile,Bronze,Yes,Lower-Middle
+C100427,Male,18,Jos,North Central,2025-08-22,Desktop,Bronze,Yes,Low
+C100428,Female,20,Abuja,North Central,2024-05-17,Mobile,Silver,Yes,Middle
+C100429,Male,29,Abuja,North Central,2025-08-22,Desktop,Bronze,No,Middle
+C100430,Female,34,Ibadan,South West,2024-12-18,Mobile,Silver,Yes,Low
+C100431,Male,28,Calabar,South South,"Jun 14, 2024",Mobile,Bronze,Yes,Middle
+C100432,Male,33,Benin City,South South,07-28-2025,Mobile,Silver,Yes,Low
+C100433,Female,39,Port Harcourt,South South,2025-02-16,Desktop,Gold,Yes,Middle
+C100434,Female,26,Port Harcourt,South South,19/07/2025,Mobile,Gold,No,Middle
+C100435,Female,28,Jos,North Central,2024-05-14,Desktop,Gold,Yes,Middle
+C100436,Male,23,Enugu,South East,2024-02-08,Mobile,Bronze,No,Low
+C100437,Male,43,Lagos,South West,2024-08-24,Desktop,Silver,Yes,Middle
+C100438,Male,18,Abuja,North Central,2025-01-25,Mobile,Silver,Yes,Low
+C100439,Female,38,Port Harcourt,South South,2024-12-03,Mobile,Gold,Yes,Lower-Middle
+C100440,Female,39,Lagos,South West,2024/09/05,Mobile,Gold,Yes,Upper-Middle
+C100441,Female,18,Benin City,South South,2025-01-29,Mobile,Silver,No,Upper-Middle
+C100442,Male,28,Abuja,North Central,2025-10-06,Tablet,Gold,Yes,Low
+C100443,Female,42,Benin City,South South,2024-02-21,Mobile,Bronze,No,Middle
+C100444,Male,24,Jos,North Central,"Feb 09, 2025",Mobile,Platinum,Yes,Lower-Middle
+C100445,Female,27,Enugu,South East,2025/11/15,Mobile,Bronze,Y,Lower-Middle
+C100446,Female,32,Lagos,South West,2024-02-13,Mobile,Bronze,Yes,Middle
+C100447,Non-binary,44,Lagos,South West,2024-09-26,Desktop,Gold,Yes,High
+C100448,Female,38,Port Harcourt,South South,2025-02-17,Desktop,Bronze,Yes,Low
+C100449,Female,26,Kano,North West,2024-05-26,Mobile,Gold,Yes,Low
+C100450,Male,20,Port Harcourt,South South,2024-04-29,Mobile,Silver,,Low
+C100451,Female,18,Abuja,North Central,2025-12-16,Mobile,Bronze,Yes,Low
+C100452,Female,35,Port Harcourt,South South,2025-03-17,Mobile,Silver,No,Middle
+C100453,Female,18,Lagos,South West,2024/10/28,Mobile,Platinum,Yes,Lower-Middle
+C100454,Female,27,Enugu,South East,2024-10-17,Mobile,Gold,No,Lower-Middle
+C100455,Female,37,Kano,North West,2025-12-05,Desktop,Gold,Yes,High
+C100456,Female,21,Port Harcourt,South South,2025-06-03,Mobile,Bronze,No,Lower-Middle
+C100457,Female,29,Kano,North West,2025-11-22,Mobile,Bronze,No,Middle
+C100458,Female,31,Ibadan,South West,2025-01-27,Mobile,Silver,Yes,Lower-Middle
+C100459,Male,39,Ibadan,South West,11-05-2025,Mobile,Gold,Yes,Lower-Middle
+C100460,Female,20,Port Harcourt,South South,2024-01-20,Mobile,Silver,Yes,Low
+C100461,Female,33,Ibadan,South West,2025-06-20,Mobile,Bronze,No,Middle
+C100462,Female,31,Calabar,South South,2024-12-30,Mobile,Bronze,Yes,High
+C100463,Male,33,Kaduna,south west,2024-06-05,Mobile,Bronze,Yes,Lower-Middle
+C100464,Male,18,Enugu,South East,2025-04-01,Mobile,Silver,Yes,Middle
+C100465,Female,37,Lagos,South West,2024-09-01,Mobile,Silver,Yes,High
+C100466,Female,24,Ibadan,South West,2024-09-20,Mobile,Gold,Yes,Middle
+C100467,Female,31,Port Harcourt,South South,2024-10-30,Desktop,Bronze,Yes,High
+C100468,Non-binary,24,Lagos,South West,2024-07-28,Mobile,Silver,No,Lower-Middle
+C100469,Female,49,Port Harcourt,South South,2025-02-17,Desktop,Platinum,Yes,Upper-Middle
+C100470,Female,32,Lagos,South West,10-08-2025,Desktop ,Bronze,No,High
+C100471,Female,51,Abuja,North Central,07-25-2024,Tablet,Bronze,Yes,Lower-Middle
+C100472,Female,26,Kaduna,North West,2025-02-23,Mobile,Gold,Yes,Lower-Middle
+C100473,Male,29,Kano,North West,17/10/2025,Tablet,Bronze,Yes,Lower-Middle
+C100474,Male,45,Kano,North West,2024-04-10,Desktop,Bronze,Yes,Lower-Middle
+C100475,Male,29,Lagos,South West,2025-02-06,Mobile,Bronze,Yes,Lower-Middle
+C100476,Female,36,Lagos,South West,2024-06-25,Mobile,Bronze,Yes,Middle
+C100477,Female,42,Lagos,South West,2024-09-11,Mobile,Platinum,Yes,High
+C100478,Male,29,Lagos,South West,2025-05-17,Mobile,Silver,Yes,Middle
+C100479,Male,26,Lagos,South West,2025-09-16,Mobile,Silver,No,Middle
+C100480,Male,30,Calabar,South South,2025-11-28,Tablet,Silver,No,Low
+C100481,Female,41,Jos,North Central,2025-06-20,Mobile,Silver,Yes,High
+C100482,Male,36,Lagos,South West,2025-11-01,Desktop,Bronze,Yes,High
+C100483,Male,44,Abuja,North Central,2024-11-25,Mobile,Platinum,Yes,Low
+C100484,Male,30,Calabar,South South,2025-01-31,Mobile,Silver,Yes,Middle
+C100485,Male,28,Benin City,South South,02-12-2025,Mobile,Gold,Yes,Middle
+C100486,Male,22,Port Harcourt,South South,2025-08-17,Mobile,Bronze,No,Upper-Middle
+C100487,Female,29,Ibadan,South West,04-09-2024,Desktop,Gold,No,Lower-Middle
+C100488,Female,27,Abuja,North Central,2024-07-21,Mobile,Gold,No,Low
+C100489,Male,31,Benin City,South South,2025-03-17,Desktop,Bronze,Yes,Lower-Middle
+C100490,Female,24,Kaduna,North West,2024-01-25,Mobile,Silver,Yes,High
+C100491,Male,26,Ibadan,South West,2024-06-27,Mobile,Bronze,No,Middle
+C100492,Non-binary,29,Enugu,South East,2025-11-27,Mobile,Silver,Yes,Middle
+C100493,Male,41,Lagos,South West,"Oct 21, 2024",Desktop,Platinum,Yes,Upper-Middle
+C100494,Female,29,Benin City,South South,2024-09-26,Desktop,Bronze,Yes,Low
+C100495,Non-binary,27,Calabar,South South,2025-11-17,Desktop,Silver,Yes,Lower-Middle
+C100496,Male,41,Lagos,South West,2024-01-30,Desktop,Gold,No,Lower-Middle
+C100497,Male,44,Ibadan,South West,2025-12-10,phone,Bronze,Yes,Low
+C100498,Female,29,Kano,North West,"Dec 01, 2024",Tablet,Silver,No,Low
+C100499,Female,30,Abuja,North Central,2025-10-31,Mobile,Platinum,Yes,High
+C100500,Male,18,Calabar,South South,2025-10-27,Desktop,Gold,Yes,Lower-Middle
+C100501,Female,18,Ibadan,South West,2025-07-31,Mobile,Gold,Yes,Lower-Middle
+C100502,Female,32,Ibadan,South West,2024-12-17,Tablet,Bronze,No,Middle
+C100503,Female,45,Jos,North Central,2025/09/01,Mobile,Silver,No,Lower-Middle
+C100504,Male,49,Lagos,South West,"Oct 18, 2025",Mobile,Bronze,Yes,Middle
+C100505,Female,39,Enugu,South East,2024-07-16,Mobile,Bronze,Yes,Upper-Middle
+C100506,Female,28,Lagos,South West,2024-02-13,Mobile,Bronze,No,Upper-Middle
+C100507,Male,37,Port Harcourt,South South,2025-07-09,Tablet,Bronze,Yes,Middle
+C100508,Female,19,Ibadan,South West,2024-07-19,Desktop,Bronze,Yes,Lower-Middle
+C100509,Female,31,Ibadan,South West,2024-08-09,Mobile,Silver,Yes,Middle
+C100510,Female,21,Lagos,South West,2025-07-08,Tablet,Bronze,No,Middle
+C100511,Male,32,Abuja,North Central,2025-02-18,Mobile,Bronze,No,Lower-Middle
+C100512,Male,45,Port Harcourt,South South,2025-09-08,Mobile,Gold,Yes,Upper-Middle
+C100513,Male,52,Calabar,South South,2025-03-19,Mobile,Gold,No,Upper-Middle
+C100514,Female,34,Jos,North Central,06/01/2025,Mobile,Silver,Yes,Middle
+C100515,Male,36,Benin City,South South,2024/03/22,Desktop,Silver,Yes,Lower-Middle
+C100516,Male,18,Jos,North Central,2025-05-04,Desktop,Platinum,Yes,Middle
+C100517,Female,26,Enugu,South East,2024-01-23,Desktop,Bronze,No,Upper-Middle
+C100518,Male,46,Port Harcourt,South South,2024-07-22,Mobile,Gold,Yes,Upper-Middle
+C100519,Male,43,Lagos,South West,2024-08-16,Desktop,Bronze,Yes,Middle
+C100520,Female,40,Benin City,South South,2024-08-31,Mobile,Bronze,Yes,Lower-Middle
+C100521,Male,-3,Abuja,North Central,2025-08-08,Mobile,Bronze,Yes,Middle
+C100522,Female,47,Lagos,South West,16/06/2024,Mobile,Silver,Yes,Low
+C100523,Female,30,Calabar,South South,2024-12-02,Mobile,Silver,Yes,Middle
+C100524,Male,30,Calabar,South South,2025/08/26,Mobile,Bronze,No,Middle
+C100525,Male,57,Ibadan,south west,19/06/2024,Mobile,Silver,Yes,Lower-Middle
+C100526,Female,24,Benin City,South South,2024-07-27,Mobile,Bronze,No,Upper-Middle
+C100527,Male,36,Kano,North West,2025-05-01,Mobile,Silver,Yes,Upper-Middle
+C100528,Male,29,Jos,North Central,2024-09-09,phone,Silver,Yes,Lower-Middle
+C100529,Male,46,Ibadan,South West,"Sep 08, 2024",Mobile,Gold,No,Middle
+C100530,Male,30,Benin City,South South,2025-09-26,Desktop,Bronze,Yes,Low
+C100531,Female,thirty,Abuja,North Central,2025-06-22,Desktop,Gold,Yes,Lower-Middle
+C100532,Male,29,Abuja,North Central,2025-06-16,Mobile,Silver,Yes,Middle
+C100533,Non-binary,39,Ibadan,South West,2025-08-21,Desktop,Bronze,Yes,Lower-Middle
+C100534,Male,23,Abuja,North Central,2024-03-29,Mobile,Silver,Yes,High
+C100535,Female,19,Lagos,South West,2025-08-17,Mobile,Bronze,Yes,Middle
+C100536,Female,31,Port Harcourt,South South,2024-04-21,Mobile,Bronze,No,Lower-Middle
+C100537,Female,29,Kaduna,North West,2025-07-25,Tablet,Gold,Yes,High
+C100538,Male,37,Abuja,North Central,2025-07-31,Mobile,Bronze,No,Lower-Middle
+C100539,Male,29,Enugu,South East,2024-11-06,Mobile,Bronze,Yes,Lower-Middle
+C100540,Female,27,Kano,North West,2025-05-01,Mobile,Bronze,Yes,Middle
+C100541,Female,35,Kano,North West,2024-08-16,Tablet,Bronze,Yes,Low
+C100542,Male,36,Jos,North Central,28/06/2025,Mobile,Bronze,Yes,Middle
+C100543,Male,41,Lagos,South West,2025-02-15,Mobile,Bronze,Yes,Low
+C100544,Male,33,Lagos,South West,2024-06-05,Mobile,Silver,Yes,Lower-Middle
+C100545,Non-binary,18,Jos,North Central,2025-04-22,Mobile,Silver,Yes,High
+C100546,Male,32,Jos,North Central,2025-12-15,Mobile,Silver,Yes,Lower-Middle
+C100547,Male,32,Lagos,South West,2024-08-06,Mobile,Bronze,No,Upper-Middle
+C100548,Female,31,Kaduna,North West,2024-09-12,Mobile,Platinum,Yes,Lower-Middle
+C100549,Male,37,Lagos,South West,"Jul 15, 2024",Mobile,Gold,Yes,Middle
+C100550,Female,30,Lagos,South West,2024-12-18,Mobile,Silver,No,Middle
+C100551,Female,42,Lagos,South West,2025-01-04,Desktop,Gold,Yes,Middle
+C100552,Non-binary,30,Abuja,North Central,2024-04-01,Mobile,Bronze,Yes,Upper-Middle
+C100553,Male,45,Port Harcourt,South South,2024-08-09,Desktop,Gold,No,Low
+C100554,Female,22,Jos,North Central,"Sep 23, 2025",Mobile,Bronze,Yes,Lower-Middle
+C100555,Male,18,Port Harcourt,South South,2025-04-08,Mobile,Gold,No,Middle
+C100556,Female,23,Lagos,South West,2025-01-23,Mobile,Platinum,No,Upper-Middle
+C100557,Male,58,Abuja,North Central,2025-02-04,Desktop,Gold,Yes,High
+C100558,Female,30,Lagos,South West,2025-04-17,Mobile,Silver,Yes,Upper-Middle
+C100559,Female,31,Lagos,South West,2024-12-12,Tablet,Gold,Yes,Upper-Middle
+C100560,Female,35,Port Harcourt,South South,2024-04-11,Desktop,Silver,Yes,Lower-Middle
+C100561,Male,28,Ibadan,South West,2025-08-03,Mobile,Silver,Yes,High
+C100562,Male,35,Abuja,North Central,2025-10-30,Mobile,Bronze,Yes,Low
+C100563,Female,33,Port Harcourt,South South,2025-10-17,Mobile,Bronze,N,Upper-Middle
+C100564,Female,51,Lagos,South West,2025-08-25,Tablet,Bronze,Yes,Low
+C100565,Male,99,Kano,North West,2024-10-16,Mobile,Platinum,Yes,Lower-Middle
+C100566,Male,35,Port Harcourt,South South,2025-01-18,Mobile,Gold,No,Lower-Middle
+C100567,Female,39,Lagos,South West,2025-02-17,Mobile,Platinum,Yes,Low
+C100568,Male,38,Ibadan,South West,2024-01-17,Mobile,Silver,Yes,Upper-Middle
+C100569,Male,23,Lagos,South West,20/08/2024,Mobile,Bronze,Yes,Upper-Middle
+C100570,Female,42,Abuja,North Central,2024-08-26,Mobile,Silver,No,Lower-Middle
+C100571,Female,27,Lagos,South West,2025-08-08,Mobile,Silver,Yes,Middle
+C100572,Male,39,Kaduna,North West,2025-10-25,Mobile,Gold,No,High
+C100573,Male,34,Abuja,North Central,2025-11-01,Mobile,Silver,Yes,Upper-Middle
+C100574,Male,41,Calabar,South South,02-29-2024,Mobile,Bronze,Yes,Lower-Middle
+C100575,Male,45,Port Harcourt,South South,2024-01-17,Mobile,Gold,Yes,Low
+C100576,Female,38,Lagos,South West,2025-11-06,Mobile,Bronze,No,Low
+C100577,Male,28,Kano,North West,2025-05-30,Desktop,Silver,Yes,Low
+C100578,Female,30,Kaduna,North West,01-09-2024,Mobile,Silver,Yes,Middle
+C100579,Female,37,Jos,North Central,2024-02-25,Tablet,Gold,Yes,Middle
+C100580,Male,29,Lagos,South West,2025-02-24,Desktop,Bronze,No,Lower-Middle
+C100581,Female,29,Kaduna,North West,2025-04-05,Mobile,Bronze,Yes,Middle
+C100582,Male,31,Enugu,South East,2025-11-01,Mobile,Bronze,No,Middle
+C100583,Female,29,Abuja,North Central,2024-09-04,Mobile,Gold,Yes,Upper-Middle
+C100584,Male,37,Ibadan,South West,07-02-2025,Mobile,Platinum,Yes,Lower-Middle
+C100585,Male,28,Benin City,South South,2025-12-13,Desktop,Silver,Yes,Lower-Middle
+C100586,Non-binary,33,Abuja,North Central,2025-11-26,Mobile,Bronze,Yes,Middle
+C100587,Female,26,Enugu,South East,2025-01-16,Tablet,Silver,No,Low
+C100588,Female,18,Kano,North West,2024-12-14,Mobile,Gold,Yes,Middle
+C100589,Male,40,Enugu,South East,2024-02-21,Desktop,Silver,No,Low
+C100590,Male,41,Ibadan,South West,2024-01-23,Desktop,Gold,Yes,Middle
+C100591,Female,28,Ibadan,South West,2024-10-13,Mobile,Bronze,No,Lower-Middle
+C100592,Female,40,Lagos,N Central,"Mar 26, 2025",Desktop,Gold,Yes,Lower-Middle
+C100593,Male,35,Abuja,North Central,2024-10-08,Desktop,Bronze,Yes,Middle
+C100594,Female,22,Kaduna,North West,2025-11-25,Mobile,Silver,Yes,Middle
+C100595,Female,43,Calabar,North Cntrl,"Sep 20, 2024",Mobile,Silver,Yes,Lower-Middle
+C100596,Male,18,Lagos,South West,2025-03-20,Mobile,Silver,No,Lower-Middle
+C100597,Male,32,Lagos,South West,2024-11-14,Mobile,Bronze,Yes,Lower-Middle
+C100598,Female,39,Lagos,South West,07/03/2025,Mobile,Bronze,No,Lower-Middle
+C100599,Female,23,Port Harcourt,South South,2024-01-23,Desktop,Bronze,No,Upper-Middle
+C100600,Female,47,Kaduna,North West,2025-07-10,Mobile,Gold,Yes,Low
+C100601,Female,27,Abuja,North Central,2025-07-19,Mobile,Silver,Yes,Low
+C100602,Female,44,Ibadan,South West,02-02-2024,Mobile,Bronze,Yes,Low
+C100603,Male,31,Ibadan,South West,2024-02-09,Desktop,Bronze,No,Lower-Middle
+C100604,Female,39,Enugu,South East,2025-10-20,Mobile,Bronze,Yes,Middle
+C100605,Male,32,Lagos,South West,2025-03-16,Mobile,Silver,Yes,Low
+C100606,Male,54,Lagos,South West,04-21-2025,Mobile,Bronze,Yes,High
+C100607,Female,36,Ibadan,South West,2025-10-08,Tablet,Bronze,Yes,Lower-Middle
+C100608,Non-binary,42,Port Harcourt,South South,2025-04-09,Mobile,Silver,No,Low
+C100609,Male,39,Abuja,North Central,2024-04-29,Mobile,Bronze,Yes,Lower-Middle
+C100610,Female,34,Kaduna,North West,2024-10-17,Mobile,Bronze,Yes,High
+C100611,Female,30,Kano,North West,2024-11-09,Mobile,Silver,Yes,Low
+C100612,Female,36,Lagos,South West,2025-07-12,Mobile,Gold,No,Low
+C100613,Male,42,Benin City,South South,2025-09-12,Mobile,Silver,Yes,High
+C100614,Male,41,Kaduna,North West,2025-10-16,Desktop,Silver,No,High
+C100615,Male,38,Jos,North Central,2025-05-27,Mobile,Bronze,Yes,Middle
+C100616,Female,32,Lagos,South West,2024-10-23,Mobile,Silver,Yes,Middle
+C100617,Male,39,Enugu,South East,2025-07-24,Mobile,Bronze,No,Middle
+C100618,Female,24,Lagos,South West,2024-02-16,Tablet,Silver,No,Upper-Middle
+C100619,Male,33,Kano,North West,2025-12-03,Desktop,Gold,Yes,Middle
+C100620,Female,18,Benin City,South South,2025-02-04,Mobile,Silver,Yes,Low
+C100621,Female,27,Calabar,South South,2024-11-13,Mobile,Bronze,Yes,Middle
+C100622,Male,31,Kano,North West,2024-01-22,Mobile,Silver,No,Middle
+C100623,Female,20,Lagos,South West,2024-03-17,Mobile,Silver,Yes,Lower-Middle
+C100624,Female,23,Kano,North West,"Feb 28, 2024",Desktop,Silver,Yes,Low
+C100625,Female,41,Abuja,North Central,2025-03-16,Mobile,Gold,Yes,Low
+C100626,Male,38,P/Harcourt,South East,2025-09-24,Mobile,Bronze,No,Upper-Middle
+C100627,male,43,Lagos,South West,2024-07-21,Mobile,Silver,Yes,Low
+C100628,Female,44,Abuja,North Central,2024-06-07,Mobile,Gold,Yes,Low
+C100629,Male,39,Kano,North West,2024-09-29,Mobile,Gold,Yes,Middle
+C100630,Female,40,Lagos,South West,2025-01-29,Desktop,Bronze,FALSE,Lower-Middle
+C100631,Female,36,Kano,North West,2024-07-09,Desktop,Gold,No,High
+C100632,Female,45,Kano,North West,2024-07-20,Mobile,Silver,Yes,Lower-Middle
+C100633,Female,19,Kaduna,North West,2025-09-17,Tablet,Gold,Yes,Middle
+C100634,Male,32,Enugu,South East,2025-10-17,Mobile,Gold,No,Upper-Middle
+C100635,Male,42,Port Harcourt,South South,2024-09-18,Mobile,Bronze,Yes,Middle
+C100636,Female,41,Lagos,South West,2025-01-31,Desktop,Gold,Yes,Upper-Middle
+C100637,Male,34,Abuja,North Central,2025-05-10,Mobile,Silver,No,Upper-Middle
+C100638,Female,30,Port Harcourt,South South,2025-07-21,Desktop,Bronze,No,Middle
+C100639,Female,41,Lagos,South West,"Nov 30, 2024",Mobile,Silver,Yes,Lower-Middle
+C100640,Male,32,Kano,North West,2024-08-11,Mobile,Silver,Yes,Middle
+C100641,Female,23,Lagos,South West,2024-04-21,Mobile,Silver,Yes,Upper-Middle
+C100642,Male,44,Lagos,South West,2024-10-11,Mobile,Silver,No,Upper-Middle
+C100643,Female,30,Jos,North Central,2025-11-15,Mobile,Gold,Yes,Middle
+C100644,Male,35,Enugu,South East,2025-05-31,Mobile,Silver,No,Lower-Middle
+C100645,Female,19,Abuja,North Central,2025-03-16,Desktop,Bronze,Yes,Middle
+C100646,Male,18,Port Harcourt,South South,2024-01-14,Mobile,Platinum,Yes,Middle
+C100647,Male,37,Enugu,South East,17/07/2024,Mobile,Gold,Yes,Middle
+C100648,Male,48,Benin City,South South,2024-03-11,Mobile,Gold,Yes,Lower-Middle
+C100649,Female,18,Abuja,North Central,2024-11-30,Mobile,Silver,Yes,Lower-Middle
+C100650,Male,29,Ibadan,South West,2025-06-08,Mobile,Silver,Yes,Low
+C100651,Female,38,Enugu,South East,2025-09-22,Tablet,Silver,Yes,Upper-Middle
+C100652,Female,35,Lagos,South West,"Jun 24, 2025",Mobile,Silver,Yes,Upper-Middle
+C100653,Male,34,Calabar,South South,2025-03-21,Mobile,Bronze,Yes,Upper-Middle
+C100654,Female,33,Benin City,South South,2025-12-01,Mobile,Bronze,Y,Middle
+C100655,Non-binary,24,Lagos,South West,2024-07-02,Desktop,Silver,Yes,Lower-Middle
+C100656,Female,43,Enugu,South East,2025-04-22,Mobile,Bronze,Yes,Low
+C100657,Male,42,Lagos,South West,2024-07-20,Mobile,Silver,No,Middle
+C100658,Female,36,Port Harcourt,South South,2025-02-26,Mobile,Silver,No,Low
+C100659,Female,18,Benin City,South South,2024-01-01,Mobile,Bronze,No,Low
+C100660,Female,48,Abuja,North Central,2025-05-16,Desktop,Bronze,No,Upper-Middle
+C100661,Male,33,Jos,North Central,2024-09-28,Desktop,Silver,No,Middle
+C100662,M,38,Kano,North West,2025-08-21,Mobile,Gold,Yes,Lower-Middle
+C100663,Male,51,Lagos,South West,2025-08-01,Tablet,Bronze,No,Upper-Middle
+C100664,Male,45,Lagos,South West,2024-06-11,Mobile,Bronze,Yes,Middle
+C100665,Female,32,Lagos,South West,2024-01-20,TAB,Gold,No,Low
+C100666,Male,43,Benin City,South South,01/10/2024,Desktop,Bronze,Yes,Middle
+C100667,Female,39,Lagos,South West,2025-08-06,Tablet,Bronze,No,Lower-Middle
+C100668,Male,28,Benin City,South South,2025-03-06,Mobile,Bronze,Yes,Lower-Middle
+C100669,Male,34,Enugu,South East,2024-04-10,Tablet,Bronze,0,Lower-Middle
+C100670,Male,18,Enugu,South East,2025-06-16,Tablet,Gold,Yes,Lower-Middle
+C100671,Female,19,Lagos,South West,2025-03-02,Mobile,Bronze,Yes,Middle
+C100672,Female,35,Abuja,North Central,2025-03-13,Mobile,Gold,Yes,Low
+C100673,Male,46,Port Harcourt,South South,2025-10-26,Mobile,Bronze,Yes,Middle
+C100674,Male,24,Port Harcourt,South South,2024-08-26,Mobile,Silver,Yes,Lower-Middle
+C100675,Male,44,Port Harcourt,South South,2025-09-07,Mobile,Gold,Yes,Middle
+C100676,Male,35,Ibadan,South West,2024-12-17,Mobile,Bronze,Yes,Low
+C100677,Non-binary,49,Kaduna,North West,2025/01/14,Mobile,Bronze,Yes,Low
+C100678,Female,30,Abuja,North Central,2024-02-10,Mobile,Silver,Yes,Lower-Middle
+C100679,Male,60,Port Harcourt,South South,2024-03-30,Tablet,Bronze,Yes,Lower-Middle
+C100680,Female,37,Port Harcourt,South South,2024-09-13,Tablet,Platinum,Yes,Middle
+C100681,Female,31,Lagos,N Central,13/03/2025,Mobile,Bronze,Yes,Lower-Middle
+C100682,Female,36,Kano,North West,"Aug 19, 2025",Desktop,Bronze,Yes,Middle
+C100683,Female,18,Port Harcourt,South South,2024-09-14,Mobile,Bronze,Yes,Lower-Middle
+C100684,Male,36,Jos,North Central,2024-01-04,Mobile,Gold,No,Lower-Middle
+C100685,Female,30,Enugu,South East,2024-07-11,Desktop,Silver,Yes,Upper-Middle
+C100686,Non-binary,38,Abuja,North Central,2024-12-17,Mobile,Platinum,No,Low
+C100687,Female,30,Abuja,North Central,2024-12-08,Desktop,Silver,Yes,Upper-Middle
+C100688,Female,18,Kaduna,North West,2025-08-26,Mobile,Silver,Yes,Low
+C100689,Female,18,Benin City,South South,2024-11-18,Mobile,Silver,Yes,Low
+C100690,Male,27,Lagos,South West,2025-08-01,Desktop,Bronze,Yes,High
+C100691,Male,22,Kano,North West,2024-09-09,Desktop,Silver,Yes,Middle
+C100692,Male,41,Port Harcourt,South South,2025-11-26,Desktop,Bronze,No,Upper-Middle
+C100693,Male,23,Kaduna,North West,2024-10-28,Desktop,Gold,Yes,Middle
+C100694,Male,37,Kaduna,North West,2025-07-10,Mobile,Bronze,Yes,High
+C100695,Female,32,Jos,North Central,2025-06-11,Mobile,Bronze,Yes,Lower-Middle
+C100696,Female,47,Kano,North West,2024-05-12,Desktop,Silver,Yes,Upper-Middle
+C100697,Female,34,Jos,North Central,2024-07-21,Mobile,Bronze,No,Middle
+C100698,Female,35,Abuja,North Central,2025-08-19,Desktop,Silver,Yes,Low
+C100699,Female,24,Abuja,North Central,08/08/2025,Mobile,Bronze,,Low
+C100700,Female,36,Lagos,South West,2024-07-09,Mobile,Bronze,Yes,Upper-Middle
+C100701,Female,39,Enugu,South East,"May 13, 2025",Tablet,Bronze,Yes,Upper-Middle
+C100702,Female,32,Lagos,South West,2025-10-03,Mobile,Silver,No,High
+C100703,Female,39,Benin City,South South,2024-07-04,phone,Gold,Yes,Upper-Middle
+C100704,Male,24,Ibadan,South West,2025-05-28,Tablet,Gold,No,Low
+C100705,Female,31,Enugu,South East,"Apr 05, 2025",Desktop,Gold,Yes,Middle
+C100706,Male,37,Port Harcourt,South South,2024-06-29,Mobile,Bronze,No,Low
+C100707,Male,30,Lagos,South West,2025-05-06,Mobile,Bronze,No,Middle
+C100708,Female,44,Port Harcourt,South South,2025-09-23,Mobile,Gold,Yes,Middle
+C100709,Male,39,Lagos,South West,2024-06-11,Mobile,Silver,Yes,Lower-Middle
+C100710,Female,27,Abuja,North Central,2024-03-12,Desktop,Silver,Yes,Middle
+C100711,Male,25,Kano,North West,2024-02-08,Mobile,Gold,No,Low
+C100712,Male,33,Lagos,South West,2024-08-23,Desktop,Silver,No,Low
+C100713,Female,26,Calabar,South South,19/04/2025,Mobile,Bronze,Yes,Middle
+C100714,Female,29,Ibadan,South West,2024-03-22,Mobile,Bronze,No,High
+C100715,Male,23,Abuja,North Central,2025-05-20,Mobile,Gold,Yes,Low
+C100716,Female,40,Enugu,South East,2025-03-08,Desktop,Bronze,Yes,Lower-Middle
+C100717,Male,35,Lagos,South West,2024-04-07,Mobile,Bronze,Yes,Upper-Middle
+C100718,Female,36,Abuja,North Central,2024-05-24,Desktop,Gold,Yes,Middle
+C100719,Female,40,Jos,North Central,2025-08-16,Mobile,Silver,Yes,Lower-Middle
+C100720,Female,18,Abuja,North Central,05-30-2025,Mobile,Bronze,No,High
+C100721,Female,33,Kaduna,North West,2025-11-27,Desktop,Gold,No,Middle
+C100722,Female,31,Lagos,South West,2024-04-10,Tablet,Silver,No,Upper-Middle
+C100723,Female,39,Ibadan,South West,2024-08-11,Desktop,Bronze,No,High
+C100724,Male,38,Kano,North West,2025-01-30,Mobile,Bronze,No,High
+C100725,Non-binary,38,Lagos,South West,2024-12-09,Mobile,Gold,No,High
+C100726,Female,45,Abuja,North Central,2024-05-06,Mobile,Silver,Yes,Lower-Middle
+C100727,Male,18,Benin City,South South,2024-12-01,Tablet,Bronze,Yes,Upper-Middle
+C100728,Male,23,Benin City,South South,2024/02/17,Mobile,Silver,No,Middle
+C100729,Male,44,Lagos,South West,2024-08-21,Mobile,Bronze,Yes,Middle
+C100730,Female,46,Port Harcourt,South South,10-27-2025,Mobile,Bronze,No,Middle
+C100731,Female,26,Calabar,South South,2025-09-22,Mobile,Bronze,Yes,Low
+C100732,Male,43,Abuja,North Central,2024-06-03,Desktop,Bronze,Yes,Middle
+C100733,Male,41,Kaduna,North West,2024-08-11,Mobile,Bronze,Yes,Lower-Middle
+C100734,Male,21,Lagos,South West,2024-07-16,Mobile,Gold,Yes,Low
+C100735,Female,28,Ibadan,South West,2024-01-22,Mobile,Silver,Yes,Middle
+C100736,Male,36,Ibadan,South West,2025-12-09,Mobile,Bronze,No,Middle
+C100737,Female,32,Benin City,South South,"Dec 13, 2024",Mobile,Silver,No,Middle
+C100738,Female,49,Kano,North West,2024-07-22,Mobile,Bronze,Yes,Low
+C100739,Female,39,Kaduna,North West,2024-06-08,Mobile,Gold,No,Middle
+C100740,Male,41,Kano,North West,2024-08-02,Mobile,Bronze,No,High
+C100741,Male,27,Enugu,South East,2024-02-24,Mobile,Bronze,No,Lower-Middle
+C100742,Male,22,Jos,North Central,2024-09-03,Desktop,Bronze,Yes,Lower-Middle
+C100743,Male,28,Abuja,North Central,2025-02-28,Mobile,Gold,No,Middle
+C100744,Female,46,Enugu,South East,2025/10/07,Mobile,Bronze,Yes,Lower-Middle
+C100745,Male,50,Ibadan,South West,2025-01-13,Mobile,Gold,Yes,Lower-Middle
+C100746,Female,26,Abuja,North Central,2025-06-30,Desktop,Bronze,Yes,High
+C100747,Male,32,Lagos,South West,2025-02-17,Mobile,Gold,Yes,High
+C100748,male,18,Kaduna,North West,2024-02-07,Mobile,Gold,No,High
+C100749,Male,45,Kano,North West,2024-04-03,Desktop,Bronze,Yes,Middle
+C100750,Non-binary,22,Lagos,South West,2024-02-12,Desktop ,Bronze,Yes,High
+C100751,Male,41,Benin City,South South,2025-09-26,Desktop,Gold,Yes,Lower-Middle
+C100752,Male,45,Lagos,South West,2025-08-26,Mobile,Gold,Yes,Upper-Middle
+C100753,Female,21,Port Harcourt,South South,2025-12-15,Mobile,Silver,Yes,Lower-Middle
+C100754,Male,25,Benin City,South South,2024/10/14,Mobile,Silver,Yes,Middle
+C100755,Male,40,Kano,North West,2024-09-09,Mobile,Bronze,Yes,Lower-Middle
+C100756,Male,45,Lagos,South West,2025-01-29,Mobile,Silver,No,Middle
+C100757,Female,28,Lagos,South West,11-12-2024,Mobile,Bronze,No,Middle
+C100758,Male,24,Benin City,South South,05/11/2024,Mobile,Bronze,Yes,Middle
+C100759,Male,36,Enugu,South East,2025-02-25,Mobile,Silver,No,Low
+C100760,Female,44,Kaduna,North West,29/03/2024,Mobile,Platinum,1,Upper-Middle
+C100761,Male,23,Port Harcourt,South South,2025-02-14,Mobile,Bronze,No,High
+C100762,Male,26,Benin City,South South,2025-08-10,Mobile,Silver,Yes,Middle
+C100763,Male,44,Kano,North West,2024-10-04,Desktop,Bronze,Yes,High
+C100764,Female,35,Enugu,South East,2024-08-25,Mobile,Silver,Yes,Middle
+C100765,Female,26,Ibadan,South West,2024-12-29,Desktop ,Bronze,No,Lower-Middle
+C100766,Female,33,,South East,2024-05-12,Mobile,Gold,Yes,Middle
+C100767,Male,37,Abuja,North Central,2024-10-06,Desktop,Gold,Yes,Lower-Middle
+C100768,Female,42,Lagos,South West,2024-10-14,Mobile,Bronze,No,Middle
+C100769,Male,36,Abuja,North Central,2024-09-25,Mobile,Platinum,No,Middle
+C100770,Female,33,Kaduna,North West,2025-05-09,Mobile,Gold,Yes,High
+C100771,Female,18,Jos,North Central,2025-11-28,Mobile,Silver,Yes,Lower-Middle
+C100772,Male,38,Ibadan,South West,2025/03/26,Desktop,Silver,Yes,Upper-Middle
+C100773,Non-binary,38,Kano,North West,07/01/2025,Desktop,Bronze,Yes,Middle
+C100774,Female,35,Lagos,South West,2024-04-30,Desktop,Bronze,Yes,Low
+C100775,Female,33,Ibadan,South West,2025-03-31,Mobile,Silver,Yes,Low
+C100776,Female,34,Port Harcourt,South South,2025-05-14,Mobile,Gold,Yes,Low
+C100777,Female,42,Port Harcourt,South South,2024-06-07,Mobile,Silver,Yes,Lower-Middle
+C100778,Male,30,Lagos,South West,2024-10-10,Mobile,Bronze,Yes,Lower-Middle
+C100779,Male,22, lagos ,North West,2024/11/17,Mobile,Bronze,Yes,Lower-Middle
+C100780,Male,41,Kano,North West,2024-05-11,Mobile,Bronze,Yes,High
+C100781,Female,30,Kano,North West,2024-09-16,Mobile,Silver,No,Lower-Middle
+C100782,Female,30,Kaduna,North West,03-22-2024,Mobile,Silver,Yes,Low
+C100783,Male,37,Ibadan,South West,2024-02-04,Tablet,Bronze,No,Middle
+C100784,Non-binary,31,Enugu,South East,2025-01-20,Desktop,Silver,No,Middle
+C100785,Male,32,Benin City,South South,2024-04-12,Desktop,Gold,Yes,Middle
+C100786,Male,23,Jos,North Central,2025-05-10,Mobile,Bronze,Yes,Upper-Middle
+C100787,Male,45,Port Harcourt,South South,2024-08-15,Mobile,Bronze,Yes,High
+C100788,Female,21,Kano,North West,2024-12-25,Tablet,Gold,Yes,Middle
+C100789,Female,45,Lagos,South West,2025-06-22,Tablet,Bronze,No,High
+C100790,Female,22,Lagos,South West,2025-09-18,Mobile,Silver,Yes,Upper-Middle
+C100791,Male,27,Jos,North Central,2025-02-30,Mobile,Bronze,Yes,Lower-Middle
+C100792,Male,29,Port Harcourt,South South,2025-07-15,Desktop,Silver,No,Upper-Middle
+C100793,Female,41,Lagos,South West,2024-10-02,Desktop,Bronze,Yes,Middle
+C100794,Male,35,Benin City,South South,25/10/2024,Mobile,Bronze,No,Low
+C100795,Female,29,Jos,North Central,2024-09-25,Mobile,Gold,Yes,Middle
+C100796,Female,22,Kaduna,North West,2024-12-14,Mobile,Silver,TRUE,High
+C100797,Female,42,Calabar,South South,2024/04/20,Desktop,Bronze,Yes,Lower-Middle
+C100798,Female,33,Jos,North Central,2024-12-29,Mobile,Bronze,Yes,Middle
+C100799,Female,37,Ibadan,South West,2025-08-06,Mobile,Bronze,Yes,Low
+C100800,Male,31,Abuja,North Central,11-08-2025,Mobile,Bronze,Yes,Upper-Middle
+C100801,Female,28,Lagos,South West,2024-11-11,Mobile,Bronze,Yes,Middle
+C100802,Female,39,Abuja,North Central,2024-04-20,Desktop,Bronze,No,Upper-Middle
+C100803,Female,36,Kano,North West,2025-05-11,Desktop,Silver,Yes,Lower-Middle
+C100804,Male,43,Jos,North Central,"May 15, 2025",Mobile,Silver,Yes,Low
+C100805,Male,35,Lagos,South West,2024-06-12,phone,Gold,No,Lower-Middle
+C100806,Female,20,Enugu,South East,2024-06-30,Mobile,Silver,Yes,Upper-Middle
+C100807,Female,40,Kaduna,North West,2025-07-12,Mobile,Bronze,No,Lower-Middle
+C100808,Male,33,Kano,North West,2024-10-18,Desktop,Silver,Yes,Low
+C100809,Female,31,Lagos,South West,2024-04-16,Desktop,Silver,Yes,Low
+C100810,Male,18,Lagos,South West,"Oct 16, 2025",Mobile,Bronze,Yes,Middle
+C100811,Male,25,Kaduna,North West,2025-11-30,Mobile,Bronze,Yes,Low
+C100812,Female,34,Kano,North West,2024-11-08,Desktop,Bronze,No,Middle
+C100813,Non-binary,27,Port Harcourt,South South,2025-11-28,Tablet,Silver,Yes,Middle
+C100814,Male,35,Port Harcourt,South South,2025/09/16,Mobile,Bronze,Yes,Lower-Middle
+C100815,Male,?,Lagos,South West,2024-02-04,Mobile,Bronze,Yes,Upper-Middle
+C100816,Male,33,Calabar,South South,2025-05-29,Mobile,Bronze,Yes,Upper-Middle
+C100817,Female,24,Enugu,South East,2024-02-17,Mobile,Gold,No,Low
+C100818,Male,37,Calabar,South South,2025-03-24,Mobile,Silver,Yes,Middle
+C100819,Male,36,Enugu,South East,2024-06-10,Desktop,Bronze,Yes,Low
+C100820,Female,31,Ibadan,South West,2025-06-21,Mobile,Gold,Yes,Lower-Middle
+C100821,Male,18,Enugu,South East,2025-04-14,Desktop ,Silver,No,Lower-Middle
+C100822,Female,22,Lagos,South West,2024-10-26,Mobile,Silver,Yes,Lower-Middle
+C100823,Female,40,Kano,North West,2025-05-20,Tablet,Silver,No,High
+C100824,Non-binary,31,Abuja,North Central,2025/01/26,Mobile,Gold,Yes,Lower-Middle
+C100825,Female,18,Port Harcourt,S/South,04-24-2024,Mobile,Gold,Yes,Upper-Middle
+C100826,Female,31,Enugu,South East,28/08/2025,Mobile,Platinum,Yes,Lower-Middle
+C100827,Male,33,Port Harcourt,South South,2025-03-26,Mobile,Bronze,No,Upper-Middle
+C100828,Female,39,Jos,North Central,2025-06-18,Mobile,Silver,Yes,Middle
+C100829,Female,37,Abjua,South South,2025-12-09,Mobile,Bronze,Yes,Low
+C100830,Male,36,Abuja,North Central,2025-08-07,Mobile,Gold,No,Middle
+C100831,Female,26,Abuja,North Central,2025-01-11,Mobile,Platinum,Yes,Middle
+C100832,Female,18,Lagos,South West,2025-01-08,Mobile,Bronze,Yes,High
+C100833,Non-binary,27,Benin City,South South,2025-06-01,Desktop,Bronze,Yes,Lower-Middle
+C100834,Female,45,Enugu,South East,2024-04-07,Mobile,Gold,Yes,Lower-Middle
+C100835,Female,19,Abuja,North Central,2025-05-14,Tablet,Gold,No,Low
+C100836,Female,41,Ibadan,South West,2024-08-09,Desktop,Platinum,No,Middle
+C100837,Female,19,Calabar,South South,2024-06-26,Desktop ,Bronze,Yes,Lower-Middle
+C100838,Female,21,Port Harcourt,South South,2025-12-17,Tablet,Bronze,Yes,Middle
+C100839,Female,34,Jos,North Central,2025-09-29,Desktop,Platinum,No,Low
+C100840,Female,25,Enugu,South East,2025-09-20,Desktop,Silver,Yes,Middle
+C100841,Non-binary,31,Ibadan,South West,2025-08-03,Mobile,Silver,Yes,Lower-Middle
+C100842,Female,22,Kano,North West,2024-09-25,Desktop,Bronze,Yes,Lower-Middle
+C100843,Female,34,Lagos,South West,2025-07-10,Mobile,Gold,Yes,Middle
+C100844,Non-binary,40,Ibadan,South West,2024-09-09,Mobile,Gold,Yes,Lower-Middle
+C100845,Female,20,Kaduna,North West,2025-04-17,Desktop,Silver,No,High
+C100846,Male,38,Abuja,North Central,2025-07-18,Desktop,Gold,No,Lower-Middle
+C100847,Female,36,Lagos,South West,2024-04-27,Mobile,Silver,No,High
+C100848,Female,40,Lagos,South West,2025-09-02,Mobile,Silver,Yes,Lower-Middle
+C100849,Female,18,Lagos,South West,2025-01-09,Desktop,Gold,Yes,Lower-Middle
+C100850,Non-binary,41,Abuja,North Central,2025-01-05,Mobile,Silver,Yes,Upper-Middle
+C100851,Female,22,Enugu,South East,2024-02-05,Desktop,Silver,Yes,Middle
+C100852,Non-binary,30,Ibadan,South West,13/13/2025,Desktop,Bronze,Yes,Upper-Middle
+C100853,Female,29,Ibadan,South West,2025-08-27,Desktop,Bronze,No,Upper-Middle
+C100854,Non-binary,23,Abuja,North Central,02-28-2024,Mobile,Silver,Yes,Lower-Middle
+C100855,Male,25,Abuja,North Central,2024-08-05,Desktop,Bronze,Yes,Lower-Middle
+C100856,Male,26,Benin City,North Cntrl,"Oct 04, 2024",Mobile,Silver,Yes,Upper-Middle
+C100857,Female,34,Kaduna,North West,2024-12-13,Desktop,Silver,Yes,Lower-Middle
+C100858,Female,39,Lagos,South West,2024-12-13,Mobile,Silver,Yes,Low
+C100859,Female,30,Port Harcourt,South South,11/02/2024,Tablet,Bronze,No,Lower-Middle
+C100860,Female,40,Kano,North West,01-28-2024,Tablet,Bronze,Yes,Lower-Middle
+C100861,Male,34,Calabar,South South,2025-05-31,Mobile,Bronze,Yes,Lower-Middle
+C100862,Male,43,Abuja,North Central,2024-07-16,Mobile,Bronze,No,Lower-Middle
+C100863,Male,21,Port Harcourt,South South,2024/06/28,Mobile,Gold,Yes,High
+C100864,Male,34,Benin City,South South,2024-07-08,Tablet,Bronze,Yes,High
+C100865,Female,32,Lagos,South West,2025-11-17,Desktop,Bronze,No,Upper-Middle
+C100866,Non-binary,34,Benin City,South South,2025-10-31,Mobile,Gold,No,High
+C100867,Female,36,Calabar,South South,2024-01-22,Tablet,Gold,No,Lower-Middle
+C100868,Female,40,Abuja,North Central,2024-05-03,Tablet,Bronze,Yes,Lower-Middle
+C100869,Female,34,Ibadan,South West,2024-02-15,Desktop,Gold,Y,Upper-Middle
+C100870,Male,37,Lagos,South West,2025-02-27,Mobile,Bronze,Yes,Upper-Middle
+C100871,Male,30,Ibadan,South West,2025-10-16,Mobile,Gold,Yes,Low
+C100872,Female,31,Calabar,South South,2024-01-05,Mobile,Silver,Yes,Low
+C100873,Female,27,Benin City,South South,2024-08-07,Mobile,Bronze,No,Upper-Middle
+C100874,Non-binary,42,Lagos,South West,2024-06-13,Mobile,Bronze,Yes,Middle
+C100875,Female,40,Abuja,North Central,2024-03-04,Mobile,Bronze,Yes,Low
+C100876,Female,44,Kano,North West,23/10/2025,Mobile,Bronze,Yes,Middle
+C100877,Female,28,Enugu,South East,08-03-2024,Mobile,Silver,Yes,Middle
+C100878,Female,31,Ibadan,South West,2024-11-09,Mobile,Bronze,Yes,Low
+C100879,Male,55,Ibadan,South West,2025-02-10,Mobile,Silver,FALSE,Lower-Middle
+C100880,Female,42,Enugu,South East,2025-01-18,Mobile,Platinum,Yes,Upper-Middle
+C100881,Female,20,Lagos,South West,2024-01-12,Mobile,Silver,No,Lower-Middle
+C100882,Female,39,Calabar,South South,2024-05-19,Mobile,Bronze,Yes,Lower-Middle
+C100883,Male,36,Ibadan,South West,2025-10-17,Mobile,Gold,Yes,Upper-Middle
+C100884,Female,30,Abuja,North Central,2025-10-08,Mobile,Silver,Yes,Lower-Middle
+C100885,Female,30,Kaduna,North West,2024-12-21,Mobile,Bronze,Yes,Lower-Middle
+C100886,Male,25,Abuja,North Central,2025-02-26,Mobile,Silver,Yes,Middle
+C100887,Female,28,Lagos,South West,2024-04-16,Desktop,Silver,Yes,Upper-Middle
+C100888,Male,26,Abuja,North Central,2025-03-29,Mobile,Bronze,No,Low
+C100889,Male,22,Kano,North West,2024-09-27,Mobile,Bronze,Yes,Middle
+C100890,Female,29,Lagos,South West,2024-10-23,Mobile,Gold,Yes,Low
+C100891,Female,25,Ibadan,South West,2025-01-16,Desktop,Silver,No,Lower-Middle
+C100892,Female,39,Abuja,North Central,2025-11-09,Desktop,Bronze,No,Lower-Middle
+C100893,Male,42,Benin City,North Cntrl,2025-03-15,Mobile,Bronze,Yes,Middle
+C100894,Male,31,Lagos,South West,2025-04-19,Mobile,Gold,Yes,Lower-Middle
+C100895,Male,30, lagos ,North West,2025-10-09,Mobile,Silver,No,Middle
+C100896,Male,38,Jos,North Central,2025-01-11,Tablet,Bronze,Yes,Middle
+C100897,Male,31,Abuja,North Central,2025-11-28,Desktop,Gold,Yes,Lower-Middle
+C100898,Female,51,Port Harcourt,South South,2025-03-16,Mobile,Bronze,Yes,Low
+C100899,Female,18,Benin City,South South,2025-01-16,Mobile,Silver,No,Middle
+C100900,Female,18,Kaduna,North West,08-28-2025,Tablet,Bronze,Yes,Upper-Middle
+C100901,Female,23,Lagos,South West,2025-07-19,Mobile,Bronze,Yes,Upper-Middle
+C100902,Male,37,Kano,North West,2024-05-05,Mobile,Gold,Yes,Upper-Middle
+C100903,Female,40,Enugu,South East,2024-05-18,Mobile,Bronze,Yes,Low
+C100904,Female,28,Kaduna,North West,2025-09-13,Mobile,Silver,Yes,Lower-Middle
+C100905,Male,33,Port Harcourt,South South,2024-05-11,Mobile,Bronze,No,Upper-Middle
+C100906,Female,30,Enugu,South East,2025-05-14,Tablet,Bronze,No,Lower-Middle
+C100907,Male,37,Benin City,South South,2025-01-17,Mobile,Silver,Yes,High
+C100908,Female,51,Lagos,South West,2025-06-26,Mobile,Silver,Yes,Middle
+C100909,Female,18,Abuja,North Central,2025-06-21,Mobile,Bronze,No,High
+C100910,Male,53,Benin City,South South,2024-06-05,Desktop,Bronze,No,Lower-Middle
+C100911,Female,42,Benin City,South South,2024-12-15,Mobile,Gold,No,Low
+C100912,Male,30,Enugu,South East,2025-08-17,Desktop,Platinum,Yes,High
+C100913,Female,37,Kano,North West,10-30-2025,Mobile,Gold,No,Middle
+C100914,Female,32,Lagos,South West,2024-11-29,Mobile,Gold,Yes,High
+C100915,Male,37,Port Harcourt,South South,2025-05-02,Mobile,Bronze,Yes,Lower-Middle
+C100916,Female,37,Kaduna,North West,2024-03-03,Mobile,Gold,Yes,Middle
+C100917,Male,40,Ibadan,South West,2024-12-02,Mobile,Bronze,Yes,Upper-Middle
+C100918,Male,24,Abuja,North Central,2024-10-14,Desktop,Silver,No,Low
+C100919,Female,38,Jos,North Central,2025-03-03,Mobile,Bronze,Yes,Low
+C100920,Female,27,Ibadan,South West,2025-02-01,Desktop,Bronze,Yes,Lower-Middle
+C100921,Male,30,Abuja,North Central,2024-06-21,Desktop,Platinum,Yes,Low
+C100922,Male,40,Abjua,South West,2025-09-04,Mobile,Bronze,Yes,Middle
+C100923,Male,29,Abuja,North Central,2025-01-07,Mobile,Bronze,Yes,Middle
+C100924,Female,35,Abuja,North Central,2025-01-20,Mobile,Bronze,Yes,Upper-Middle
+C100925,Female,36,Kano,North West,2025-07-04,Mobile,Gold,No,High
+C100926,Female,34,Kaduna,North West,2024-07-21,Desktop,Bronze,Yes,Lower-Middle
+C100927,Male,22,Port Harcourt,South South,2025-03-13,Mobile,Silver,Yes,Low
+C100928,Male,37,Lagos,South West,2025-05-10,Desktop,Silver,Yes,Low
+C100929,Male,34,Ibadan,South West,2025-11-17,Mobile,Bronze,Yes,Upper-Middle
+C100930,Female,53,Port Harcourt,South South,2025-10-20,Mobile,Bronze,Yes,Lower-Middle
+C100931,Male,23,Port Harcourt,South South,"Aug 24, 2025",Desktop,Gold,Yes,Upper-Middle
+C100932,Female,42,Abuja,North Central,2025-02-01,Desktop,Bronze,Yes,Lower-Middle
+C100933,Male,29,Kaduna,North West,2025-01-03,Desktop ,Bronze,Yes,High
+C100934,Male,30,Lagos,South West,2025-09-12,Tablet,Bronze,Yes,Middle
+C100935,Female,48,Lagos,South West,2025-11-08,Tablet,Silver,Yes,Lower-Middle
+C100936,Female,32,Kano,North West,2025-07-18,Desktop,Bronze,No,Low
+C100937,Male,40,Kaduna,North West,2025-06-21,Desktop,Bronze,No,Low
+C100938,Male,34,Abuja,North Central,2025-10-08,Desktop,Bronze,No,Upper-Middle
+C100939,Male,25,Lagos,South West,2025-02-01,Mobile,Bronze,Yes,Lower-Middle
+C100940,Male,31,Benin City,South South,2024-07-02,Mobile,Silver,Yes,High
+C100941,Male,29,Jos,North Central,12-20-2024,Desktop,Silver,Yes,Middle
+C100942,Female,31,Abuja,North Central,2025-10-03,Desktop,Platinum,Yes,Middle
+C100943,Male,50,Benin City,South South,2025-07-28,Mobile,Silver,Yes,Lower-Middle
+C100944,Male,37,Abuja,North Central,24/03/2024,Desktop,Silver,No,Low
+C100945,Female,18,Kaduna,North West,2025-02-15,Mobile,Silver,Yes,Lower-Middle
+C100946,Female,50,Ibadan,South West,2024-04-12,Mobile,Bronze,Yes,Lower-Middle
+C100947,Female,36,Port Harcourt,South South,01/05/2024,Mobile,Bronze,Yes,High
+C100948,Male,41,Kano,North West,2024-08-23,Mobile,Bronze,No,Upper-Middle
+C100949,Female,47,Ibadan,South West,2024-03-18,Mobile,Gold,Yes,Lower-Middle
+C100950,Female,26,Lagos,South West,2024-05-08,Mobile,Bronze,No,Lower-Middle
+C100951,Male,36,Port Harcourt,South South,2025-04-16,Mobile,Silver,No,Low
+C100952,Female,32,Calabar,South South,2024/03/07,Mobile,Silver,Yes,Middle
+C100953,Male,30,Enugu,S/South,2025-11-01,Desktop,Silver,Yes,Middle
+C100954,Female,30,Ibadan,South West,2024-07-01,Tablet,Bronze,Yes,Middle
+C100955,Female,34,Kano,North West,2024-06-26,Mobile,Silver,No,Low
+C100956,Non-binary,43,Lagos,South West,2024-11-27,Mobile,Silver,Yes,Middle
+C100957,Male,40,Port Harcourt,South South,2024-12-26,Mobile,Platinum,Yes,Lower-Middle
+C100958,Female,36,Jos,North Central,2024-02-22,Mobile,Gold,Yes,Upper-Middle
+C100959,Male,44,Lagos,South West,2025-03-10,Mobile,Gold,Yes,Lower-Middle
+C100960,Female,18,Calabar,South South,2025/02/22,Tablet,Bronze,Yes,Middle
+C100961,Female,33,Enugu,South East,20/04/2025,Mobile,Silver,Yes,Low
+C100962,Female,36,Kano,North West,2024-08-18,Mobile,Bronze,Yes,Upper-Middle
+C100963,Male,36,Port Harcourt,South South,2025-12-06,Tablet,Silver,TRUE,Upper-Middle
+C100964,Female,46,Lagos,South West,2024/02/18,Mobile,Platinum,Yes,Middle
+C100965,Male,35,Abuja,North Central,2024-05-11,Mobile,Bronze,Yes,Middle
+C100966,Female,45,Kaduna,North West,2024-08-06,Mobile,Bronze,Yes,Lower-Middle
+C100967,Male,31,Port Harcourt,South South,2024-03-11,Desktop,Gold,Yes,Middle
+C100968,Male,39,Enugu,South East,2024-12-09,Mobile,Platinum,Yes,High
+C100969,Male,34,Lagos,South West,2025-11-06,Desktop,Bronze,Yes,Upper-Middle
+C100970,Female,31,Enugu,South East,2025-07-15,Desktop,Gold,Yes,Lower-Middle
+C100971,Female,38,Enugu,South East,2025-08-13,Desktop,Bronze,Yes,Upper-Middle
+C100972,Female,38,Kaduna,North West,2025-02-07,Mobile,Platinum,Yes,Middle
+C100973,Male,25,Lagos,South West,2025-01-31,Tablet,Bronze,Yes,Middle
+C100974,Female,42,Abuja,North Central,2025-05-07,Mobile,Bronze,No,Low
+C100975,Female,31,Lagos,South West,2025-05-07,Mobile,Bronze,No,Lower-Middle
+C100976,Male,34,Lagos,South West,2024-11-17,Mobile,Bronze,Yes,Lower-Middle
+C100977,Female,18,Kaduna,North West,2025-10-29,Desktop,Bronze,Yes,Middle
+C100978,Male,33,Ibadan,South West,2024-02-20,Tablet,Silver,No,Low
+C100979,Female,18,Kaduna,North West,2024-08-16,Desktop,Gold,No,Low
+C100980,Male,41,Abuja,North Central,2024-06-28,Mobile,Bronze,No,Upper-Middle
+C100981,Male,26,Port Harcourt,South South,2024-07-30,Desktop,Bronze,Y,Lower-Middle
+C100982,Male,29,Jos,North Central,"Apr 25, 2024",Mobile,Silver,Yes,Middle
+C100983,Male,32,Calabar,South South,2024-02-13,Desktop,Silver,Yes,Lower-Middle
+C100984,Female,21,Lagos,South West,2025-12-01,Mobile,Silver,No,High
+C100985,Female,33,Kaduna,North West,2025-01-01,Mobile,Silver,No,Lower-Middle
+C100986,Male,22,Benin City,South South,01-23-2024,Mobile,Silver,No,Upper-Middle
+C100987,Female,31,Lagos,South West,2024-03-17,Mobile,Gold,No,Middle
+C100988,Male,41,Benin City,South South,2025-02-22,Desktop,Platinum,Yes,Low
+C100989,Female,45,Abuja,North Central,2024-05-14,Mobile,Gold,Yes,Low
+C100990,Female,46,Port Harcourt,South South,2025-08-08,Mobile,Bronze,Yes,Middle
+C100991,Male,31,Calabar,South South,2024-04-28,Mobile,Silver,Yes,High
+C100992,Female,24,Kaduna,North West,2025-05-20,Mobile,Silver,Yes,Middle
+C100993,Female,37,Lagos,South West,2024-07-17,Desktop ,Bronze,No,Lower-Middle
+C100994,Female,47,,North West,2025-12-15,Mobile,Platinum,Yes,Upper-Middle
+C100995,Female,25,Lagos,South West,2024-05-04,Desktop,Gold,Yes,Middle
+C100996,Female,45,Jos,North Central,2024-05-06,Mobile,Bronze,Yes,Middle
+C100997,Female,32,Benin City,South South,2024-05-03,Tablet,Bronze,No,Low
+C100998,Male,18,Kano,North West,01-22-2024,Desktop,Bronze,Yes,Middle
+C100999,Male,34,Lagos,South West,2025-03-31,Mobile,Silver,Yes,Upper-Middle
+C101000,Female,50,Lagos,South West,2025-03-14,Mobile,Bronze,Yes,Upper-Middle
+C101001,Female,40,Ibadan,South West,2025-07-29,Mobile,Platinum,Yes,Lower-Middle
+C101002,Male,43,Port Harcourt,South South,12-15-2025,Mobile,Silver,Yes,Middle
+C101003,Female,37,Enugu,South East,2025-03-28,Mobile,Bronze,Yes,Upper-Middle
+C101004,Male,18,Abuja,North Central,2024-06-18,Mobile,Silver,No,Lower-Middle
+C101005,Male,18,Port Harcourt,South South,2024-09-29,Tablet,Silver,Yes,Upper-Middle
+C101006,Female,24,Lagos,South West,2024-08-14,Desktop,Platinum,Yes,Middle
+C101007,Male,30,Ibadan,South West,2024-07-13,Mobile,Silver,Yes,Low
+C101008,Female,24,Calabar,South South,2024-03-17,Mobile,Silver,Yes,Middle
+C101009,Female,26,Abuja,North Central,2025-03-11,Mobile,Bronze,No,Middle
+C101010,Male,40,Kaduna,North West,2025-06-01,Mobile,Silver,No,Middle
+C101011,Male,46,Lagos,South West,2025-10-19,Mobile,Bronze,No,Upper-Middle
+C101012,Female,18,Jos,North Central,2024-11-20,Desktop,Bronze,Yes,Middle
+C101013,Male,23,Ibadan,South West,2025-09-17,Desktop,Silver,Yes,Lower-Middle
+C101014,Female,32,Lagos,South West,2025-01-28,Mobile,Bronze,Yes,Low
+C101015,Female,31,Kaduna,North West,2024-09-23,Mobile,Gold,0,Low
+C101016,Male,18,Jos,North Central,2025-09-14,Desktop,Bronze,No,Low
+C101017,Female,60,Lagos,South West,2025-05-23,Mobile,Platinum,Yes,Upper-Middle
+C101018,Female,39,Lagos,South West,2024-05-01,Mobile,Bronze,No,Middle
+C101019,Male,36,Abuja,North Central,2024-12-27,Mobile,Silver,No,Upper-Middle
+C101020,Female,18,Ibadan,South West,2024-07-14,Desktop,Bronze,Yes,Upper-Middle
+C101021,Male,36,Calabar,South South,03/04/2025,Mobile,Bronze,Yes,Middle
+C101022,Male,22,Enugu,South East,2024-08-07,Mobile,Bronze,Yes,Upper-Middle
+C101023,Male,38,Abuja,North Central,2024/09/12,Mobile,Bronze,Yes,Middle
+C101024,Female,36,Lagos,South West,2024-02-24,Mobile,Gold,Yes,Lower-Middle
+C101025,Male,33,Benin City,South South,2025-02-17,Mobile,Gold,No,Middle
+C101026,Female,37,Benin City,South South,2024-09-11,Mobile,Bronze,Yes,Upper-Middle
+C101027,Male,28,Abuja,North Central,31/03/2024,Mobile,Bronze,Yes,Low
+C101028,Male,35,Benin City,South South,2024-06-08,Mobile,Gold,Yes,Low
+C101029,Female,18,Calabar,South South,2025-11-11,Tablet,Silver,Yes,Low
+C101030,Male,40,Lagos,South West,2025-12-07,Mobile,Bronze,Yes,Upper-Middle
+C101031,Female,31,Abuja,North Central,2025-07-28,Mobile,Bronze,No,Upper-Middle
+C101032,Male,56,Enugu,South East,2025/07/06,phone,Silver,No,Lower-Middle
+C101033,Non-binary,34,Lagos,South West,2025-03-07,Tablet,Silver,Yes,High
+C101034,Non-binary,18,Lagos,South West,2024-10-03,Mobile,Silver,Yes,Low
+C101035,Male,47,Lagos,South West,2024-07-20,Desktop,Bronze,Yes,Low
+C101036,Female,26,Kaduna,North West,2024-04-08,Mobile,Silver,Yes,Middle
+C101037,Female,23,Lagos,South West,2025-11-25,Mobile,Platinum,Yes,Upper-Middle
+C101038,Male,33,Lagos,South West,2024-07-16,Mobile,Bronze,No,Low
+C101039,Male,45,Kano,North West,2025-02-26,Mobile,Silver,Yes,Upper-Middle
+C101040,Male,51,Kaduna,North West,2025-03-17,Mobile,Bronze,Yes,Lower-Middle
+C101041,Male,30,Kaduna,North West,2025-05-27,Desktop,Bronze,Yes,Low
+C101042,Female,35,Port Harcourt,South South,2024-09-03,Desktop,Silver,Yes,Lower-Middle
+C101043,M,35,Jos,North Central,2025-06-02,Desktop,Gold,Yes,Lower-Middle
+C101044,Male,27,Lagos,South West,2024-11-27,Mobile,Silver,Yes,Low
+C101045,Male,28,Ibadan,South West,2024-07-24,Desktop,Bronze,Yes,Upper-Middle
+C101046,F,32,Port Harcourt,South South,2025-12-11,Mobile,Gold,Yes,Upper-Middle
+C101047,Female,32,Benin City,South South,2025-05-13,Mobile,Platinum,Yes,High
+C101048,Male,43,Lagos,South West,2025-04-18,Mobile,Gold,Yes,Low
+C101049,Female,18,Lagos,South West,2024-06-19,Mobile,Silver,Yes,Low
+C101050,Male,37,Calabar,South South,2024-05-28,Mobile,Silver,No,Upper-Middle
+C101051,Female,36,Abuja,North Central,2024-04-25,Mobile,Silver,Yes,High
+C101052,Female,45,Ibadan,South West,2025-10-29,Desktop,Platinum,Yes,Middle
+C101053,Female,30,Jos,North Central,2024-07-14,Desktop,Gold,N,Middle
+C101054,Male,30,Abuja,North Central,2025-07-29,Desktop,Silver,Yes,Low
+C101055,Female,34,Port Harcourt,South South,2025-04-29,Mobile,Platinum,Yes,Upper-Middle
+C101056,Male,28,Benin City,South South,06-27-2024,Mobile,Bronze,Yes,Lower-Middle
+C101057,Male,28,Lagos,South West,2025-01-22,Desktop,Bronze,Yes,Middle
+C101058,Male,27,Lagos,South West,2025-05-16,Desktop,Bronze,Yes,Upper-Middle
+C101059,Female,27,Kano,North West,2024-06-18,Mobile,Silver,No,Lower-Middle
+C101060,Male,24,Port Harcourt,South South,2024-12-20,Desktop,Silver,Yes,High
+C101061,Female,27,Lagos,South West,2024-04-03,Mobile,Bronze,Yes,Middle
+C101062,Male,26,Abuja,North Central,2024-03-12,Mobile,Bronze,Yes,Middle
+C101063,Non-binary,26,Kano,North West,2024-02-18,Mobile,Silver,No,Middle
+C101064,Female,21,Kaduna,North West,2024/05/07,Mobile,Silver,Yes,Low
+C101065,Female,41,Ibadan,South West,2025-02-19,Tablet,Silver,No,Middle
+C101066,Female,36,Abuja,North Central,2024-10-02,Mobile,Silver,Yes,Middle
+C101067,Male,32,Enugu,South East,2024-04-10,Mobile,Silver,No,Middle
+C101068,Male,23,Lagos,South West,2024-02-01,Mobile,Bronze,No,High
+C101069,Female,39,Kaduna,North West,2024-04-28,Mobile,Bronze,Yes,Middle
+C101070,Female,31,Lagos,South West,2024-04-01,Mobile,Gold,Yes,Upper-Middle
+C101071,Female,32,Jos,North Central,06-02-2025,Desktop,Gold,Yes,Middle
+C101072,Male,34,Kaduna,North West,2024-08-18,Mobile,Silver,No,Middle
+C101073,Female,32,Ibadan,South West,2024-08-05,Desktop,Bronze,Yes,Low
+C101074,Male,42,Port Harcourt,South South,2025-06-23,Desktop,Bronze,No,Low
+C101075,Male,26,Benin City,South South,2025-01-27,Mobile,Bronze,No,Lower-Middle
+C101076,Male,27,Kano,North West,10-20-2024,Mobile,Silver,Yes,Middle
+C101077,Male,34,Benin City,South South,2024-03-19,Mobile,Silver,Yes,Upper-Middle
+C101078,Female,31,Kano,North West,2025-04-17,Desktop,Silver,No,Low
+C101079,Female,38,Lagos,South West,2025-03-09,Mobile,Gold,No,Lower-Middle
+C101080,Female,41,Abjua,South South,2025-12-08,Desktop,Gold,Yes,Low
+C101081,Male,45, lagos ,North West,2024-01-17,Mobile,Bronze,Yes,Middle
+C101082,Male,42,Port Harcourt,South South,2024-06-29,Mobile,Bronze,Yes,Upper-Middle
+C101083,Male,30,Calabar,South South,2025-05-26,Mobile,Silver,No,Upper-Middle
+C101084,Female,31,Ibadan,South West,2025-06-18,Mobile,Bronze,Yes,Upper-Middle
+C101085,Male,30,Abuja,North Central,2025-09-30,Mobile,Silver,No,Lower-Middle
+C101086,Female,43,Jos,South-West,2025-01-13,Mobile,Bronze,Yes,Upper-Middle
+C101087,Male,31,Port Harcourt,South South,2024-01-31,Mobile,Silver,No,Upper-Middle
+C101088,Female,25,Benin City,South South,2025-09-01,Mobile,Platinum,Yes,Low
+C101089,Female,24,Kano,North West,2024-06-16,Mobile,Silver,Yes,Lower-Middle
+C101090,Male,40,Enugu,South East,2025-10-13,Mobile,Silver,Yes,Upper-Middle
+C101091,Male,25,Lagos,South West,2025-03-28,Desktop,Gold,No,Lower-Middle
+C101092,Female,18,Enugu,South East,2024-10-22,Mobile,Bronze,No,Upper-Middle
+C101093,Female,39,Benin City,South South,2025-12-11,Mobile,Bronze,Yes,Middle
+C101094,Female,36,Port Harcourt,South South,09-01-2024,Mobile,Platinum,Yes,Upper-Middle
+C101095,Female,40,Abuja,North Central,2025-11-15,Mobile,Bronze,Yes,Lower-Middle
+C101096,Male,99,Calabar,South South,2024-07-21,Tablet,Gold,Yes,Low
+C101097,Male,38,Calabar,South South,2024-07-15,Mobile,Bronze,Yes,Lower-Middle
+C101098,Female,37,Benin City,South South,2025-07-20,Mobile,Gold,Yes,Low
+C101099,Male,33,Port Harcourt,South South,2024-12-14,Mobile,Bronze,Yes,High
+C101100,Female,26,Calabar,South South,2024-11-24,Mobile,Silver,No,High
+C101101,Female,18,Lagos,South West,2024-02-15,Mobile,Bronze,No,Middle
+C101102,Male,18,Lagos,South West,2024-02-04,Desktop,Silver,Yes,Middle
+C101103,Male,36,Ibadan,South West,2024-10-23,Desktop,Platinum,Yes,Upper-Middle
+C101104,Female,40,Benin City,South South,22/12/2024,Mobile,Gold,,Lower-Middle
+C101105,Female,33,Lagos,South West,2024-08-28,Mobile,Gold,No,Upper-Middle
+C101106,Male,26,Lagos,South West,2025/03/07,Mobile,Silver,Yes,Upper-Middle
+C101107,Male,39,Lagos,South West,2025-07-26,Mobile,Bronze,Yes,Upper-Middle
+C101108,Male,33,Abuja,North Central,2025-07-08,Desktop,Bronze,Yes,Middle
+C101109,Male,33,Lagos,South West,2025-12-01,Desktop,Silver,No,Low
+C101110,Female,-3,Lagos,South West,2024-11-24,Mobile,Bronze,Yes,Middle
+C101111,Male,23,Lagos,South West,2024-11-27,Mobile,Silver,No,Upper-Middle
+C101112,Female,24,Port Harcourt,South South,"Dec 08, 2024",Mobile,Bronze,Yes,Lower-Middle
+C101113,Female,37,Lagos,South West,2024-12-25,Desktop,Bronze,No,Middle
+C101114,Male,48,Kaduna,North West,2024-11-02,Desktop,Bronze,No,Middle
+C101115,Female,49,Port Harcourt,South South,"Jul 22, 2025",Mobile,Bronze,Yes,Middle
+C101116,Male,31,Lagos,South West,2024-10-12,Mobile,Gold,Yes,Upper-Middle
+C101117,Female,37,Kano,North West,2025-03-19,Mobile,Bronze,No,Lower-Middle
+C101118,Male,32,Kaduna,North West,2024-10-21,Mobile,Silver,No,High
+C101119,Female,34,Port Harcourt,South South,2025-02-06,Mobile,Silver,Yes,Upper-Middle
+C101120,Male,37,Lagos,South West,2024-11-12,Mobile,Silver,Yes,Lower-Middle
+C101121,Female,41,Kano,North West,2024-09-03,Desktop,Silver,No,Low
+C101122,Female,23,Kaduna,North West,2025-05-31,Mobile,Gold,No,Lower-Middle
+C101123,Female,49,Jos,North Central,2024-05-31,Mobile,Bronze,Yes,Low
+C101124,Male,32,Kano,North West,2025-09-13,Mobile,Silver,Yes,Lower-Middle
+C101125,Male,24,Benin City,South South,2024-07-01,Desktop,Gold,Yes,Middle
+C101126,Non-binary,54,Port Harcourt,South South,2024-07-24,Mobile,Gold,Yes,High
+C101127,Male,25,Abuja,North Central,2025-10-04,Mobile,Platinum,Yes,Middle
+C101128,Female,33,Lagos,South West,2024-02-13,Tablet,Silver,Yes,Upper-Middle
+C101129,Female,27,Enugu,South East,2025-07-07,Mobile,Gold,Yes,Upper-Middle
+C101130,Female,44,Benin City,South South,2024-03-01,Mobile,Gold,No,Low
+C101131,Male,18,Abuja,North Central,2024-03-06,Mobile,Bronze,Yes,Middle
+C101132,Female,36,Lagos,South West,2025-04-13,Mobile,Gold,Yes,Middle
+C101133,Female,19,Abuja,North Central,2025-11-03,Mobile,Bronze,No,Upper-Middle
+C101134,Male,47,Kaduna,North West,2024-02-13,Desktop,Bronze,Yes,Low
+C101135,Female,52,Lagos,South West,2025-06-23,Mobile,Bronze,Yes,Upper-Middle
+C101136,Female,41,Lagos,South West,2025-10-11,Mobile,Gold,Yes,Lower-Middle
+C101137,Female,26,Port Harcourt,South South,2024-03-13,Desktop,Gold,Yes,Upper-Middle
+C101138,Male,44,Abuja,North Central,2025-03-08,Mobile,Bronze,Yes,Middle
+C101139,Female,53,Kano,North West,26/10/2025,Mobile,Bronze,Yes,Lower-Middle
+C101140,Female,35,Benin City,South South,2024-02-07,Desktop ,Silver,Yes,Lower-Middle
+C101141,Male,30,Ibadan,South West,2024-11-25,Mobile,Bronze,No,Low
+C101142,Female,46,Calabar,South South,2025-04-28,Tablet,Silver,Yes,Upper-Middle
+C101143,Male,thirty,Enugu,South East,2025-04-15,Tablet,Bronze,Yes,Middle
+C101144,Male,31,Lagos,South West,2025-09-23,Desktop,Bronze,No,Middle
+C101145,Male,33,Abuja,North Central,17/02/2024,Mobile,Silver,Yes,Lower-Middle
+C101146,Female,34,Port Harcourt,South South,2025-01-17,Desktop,Silver,Yes,Upper-Middle
+C101147,Male,43,Lagos,South West,2024-12-04,Mobile,Gold,No,Lower-Middle
+C101148,Female,32,Kaduna,North West,"Jun 03, 2024",Tablet,Bronze,Yes,Low
+C101149,Female,23,Kaduna,North West,2025-09-10,Mobile,Bronze,Yes,Upper-Middle
+C101150,Male,20,Abuja,North Central,2025-02-03,Desktop,Silver,No,Upper-Middle
+C101151,Non-binary,32,Jos,North Central,2024-01-31,Desktop,Gold,No,Middle
+C101152,Male,37,Benin City,South-West,2025-09-26,Mobile,Bronze,Yes,Lower-Middle
+C101153,Male,42,Abuja,North Central,2024/05/07,Mobile,Bronze,Yes,Upper-Middle
+C101154,Female,39,Kano,North West,2024-11-01,Mobile,Bronze,Yes,Middle
+C101155,Male,21,Kano,North West,10/09/2024,Tablet,Gold,Yes,Low
+C101156,Male,38,Kano,North West,2024-12-25,Mobile,Bronze,Yes,Upper-Middle
+C101157,Male,27,Calabar,South South,2024-05-30,Mobile,Gold,Yes,Middle
+C101158,Male,45,Jos,North Central,2025-08-14,Desktop,Bronze,Yes,Low
+C101159,Male,30,Port Harcourt,South South,2024-12-14,Desktop,Bronze,Yes,Middle
+C101160,Female,31,Port Harcourt,South South,2024-03-02,Mobile,Bronze,Yes,Low
+C101161,Male,28,Lagos,South West,2024-05-11,Mobile,Silver,No,Middle
+C101162,Male,42,Port Harcourt,South South,2025-04-16,Mobile,Platinum,Yes,Lower-Middle
+C101163,Female,32,Lagos,South West,2025-09-13,Mobile,Bronze,Yes,Lower-Middle
+C101164,Female,58,Lagos,South West,2025-03-17,Mobile,Silver,Yes,Middle
+C101165,Male,44,Enugu,South East,2024-06-02,Desktop,Bronze,FALSE,Lower-Middle
+C101166,Male,23,Lagos,South West,2024-02-18,Mobile,Gold,Yes,Upper-Middle
+C101167,Non-binary,33,Lagos,South West,2025-09-05,Desktop,Bronze,Yes,Lower-Middle
+C101168,Male,43,Kano,North West,2024-10-01,Mobile,Bronze,Yes,Middle
+C101169,Female,40,Benin City,South South,2024-12-22,Mobile,Gold,No,Lower-Middle
+C101170,Male,39,Port Harcourt,South South,2024-10-02,Mobile,Silver,Yes,Lower-Middle
+C101171,Female,35,Enugu,South East,2024-11-14,Mobile,Bronze,Yes,Lower-Middle
+C101172,Female,19,Abuja,North Central,"Sep 18, 2024",Mobile,Bronze,No,Middle
+C101173,Female,20,Lagos,South West,2025-10-24,Mobile,Gold,Yes,Lower-Middle
+C101174,Non-binary,40,Ibadan,South West,2024-04-03,Mobile,Bronze,Yes,Lower-Middle
+C101175,Female,27,Lagos,South West,2025-12-12,Mobile,Silver,Yes,Upper-Middle
+C101176,Female,33,Kano,North West,"Apr 30, 2024",Mobile,Bronze,Yes,Lower-Middle
+C101177,Female,39,Jos,North Central,2024-02-21,Tablet,Bronze,Yes,Low
+C101178,Female,18,Enugu,South East,"Apr 28, 2025",Mobile,Bronze,Yes,Low
+C101179,Female,18,Jos,North Central,2025-06-07,Mobile,Gold,Yes,Upper-Middle
+C101180,Female,38,Lagos,South West,2025-09-08,Mobile,Platinum,No,Low
+C101181,Female,28,Port Harcourt,South South,2025-10-31,Mobile,Gold,Yes,High
+C101182,Male,30,Jos,North Central,2024-08-03,Mobile,Silver,Yes,Upper-Middle
+C101183,Female,43,Enugu,South East,2024-04-30,Desktop,Bronze,Yes,Low
+C101184,Female,31,Benin City,South South,"Jan 08, 2024",Mobile,Platinum,Yes,Lower-Middle
+C101185,Male,33,Kano,North West,2024-10-02,Mobile,Gold,No,Low
+C101186,Female,36,Abuja,North Central,07-16-2025,TAB,Bronze,Yes,Middle
+C101187,Male,18,Abuja,North Central,2024-07-15,Desktop,Silver,Yes,Low
+C101188,Male,49,Lagos,South West,21/09/2024,Mobile,Silver,No,Low
+C101189,Female,37,Jos,North Central,2025-03-11,Mobile,Bronze,No,Low
+C101190,Non-binary,28,Abuja,North Central,2025/04/12,Mobile,Gold,No,Middle
+C101191,Male,43,Calabar,South South,2025-06-30,Desktop,Gold,Yes,Lower-Middle
+C101192,Male,25,Lagos,South West,2024-03-02,Mobile,Bronze,No,Middle
+C101193,Male,27,Kaduna,south west,2024-08-05,Mobile,Bronze,Yes,Middle
+C101194,Female,22,Ibadan,South West,11-14-2024,Desktop,Platinum,No,Low
+C101195,Male,31,Lagos,South West,2025-03-11,Mobile,Gold,Yes,Upper-Middle
+C101196,Female,26,Kano,North West,2024-12-04,Mobile,Bronze,Yes,Middle
+C101197,Female,35,Kano,North West,2025-01-17,Mobile,Gold,Yes,Upper-Middle
+C101198,Male,27,Kano,North West,2024-01-19,Mobile,Bronze,Yes,Upper-Middle
+C101199,Non-binary,35,Kano,North West,2025-04-19,Desktop,Platinum,Yes,Upper-Middle
+C101200,Male,37,Kano,North West,2025-07-18,Desktop,Bronze,Yes,Low
+C101201,Female,37, lagos ,North West,2025-11-18,Mobile,Silver,Yes,Middle
+C101202,Male,36,Port Harcourt,South South,2024/11/09,Desktop,Bronze,Yes,Middle
+C101203,Female,34,Calabar,South South,2025-04-15,Mobile,Bronze,No,Middle
+C101204,Female,26,Ibadan,South West,06-16-2024,Mobile,Silver,No,Low
+C101205,Male,18,Abuja,North Central,2025-08-09,Mobile,Silver,Yes,Middle
+C101206,Female,36,Calabar,South South,2025-01-16,Mobile,Gold,Yes,Low
+C101207,Female,20,Abuja,North Central,2024-07-28,Tablet,Gold,Yes,Low
+C101208,Male,36,Ibadan,South West,2024-12-09,Desktop,Silver,Yes,Low
+C101209,Female,33,Kano,North West,2024-08-03,Mobile,Bronze,Yes,Middle
+C101210,Male,33,Kaduna,North West,2025-12-13,Mobile,Silver,No,Low
+C101211,Male,33,Abuja,North Central,2024-04-02,Desktop,Gold,Yes,Low
+C101212,Female,38,Lagos,South West,2024-01-05,Mobile,Silver,Yes,High
+C101213,Male,24,Benin City,South South,2024-01-24,Desktop,Bronze,Yes,Upper-Middle
+C101214,Non-binary,36,Benin City,South South,2025-11-07,Desktop ,Bronze,No,Upper-Middle
+C101215,Male,43,Kaduna,North West,2024-01-12,Mobile,Bronze,Yes,Lower-Middle
+C101216,Female,40,Abuja,North Central,2025-11-26,Mobile,Bronze,Yes,High
+C101217,Male,43,Enugu,South East,2024-10-05,Mobile,Bronze,Yes,Upper-Middle
+C101218,Male,31,Kaduna,North West,2025-01-09,Mobile,Gold,Yes,Middle
+C101219,Female,32,Enugu,South East,2024-04-28,Desktop,Bronze,Yes,Lower-Middle
+C101220,Male,50,Kaduna,North West,2024-11-27,Mobile,Bronze,Yes,Lower-Middle
+C101221,Female,38,Kano,North West,2024-12-22,Mobile,Gold,Yes,Low
+C101222,Female,35,Benin City,South South,2024-03-02,Mobile,Bronze,Yes,Lower-Middle
+C101223,Male,42,Enugu,South East,2025-09-13,Mobile,Bronze,Yes,Middle
+C101224,Male,25,Abuja,North Central,2024-05-30,Desktop,Silver,Yes,Middle
+C101225,Female,32,Kano,North West,2024-11-20,Tablet,Bronze,Yes,Lower-Middle
+C101226,Female,37,Kaduna,North West,2025-02-03,Tablet,Bronze,Yes,Middle
+C101227,Male,32,Kaduna,North West,2024-09-14,Mobile,Gold,Yes,Middle
+C101228,Male,47,Lagos,South West,2025-11-14,Mobile,Silver,Yes,Middle
+C101229,Female,37,Abuja,North Central,2025-03-14,Desktop,Gold,Yes,Low
+C101230,Female,41,Jos,North Central,2024-03-25,Mobile,Silver,Yes,Low
+C101231,Male,26,Kaduna,North West,2024-01-19,Desktop,Silver,Yes,Middle
+C101232,Male,33,Lagos,South West,2024-01-15,Mobile,Gold,No,Middle
+C101233,Female,33,Ibadan,South West,2024-03-07,Mobile,Gold,Yes,Upper-Middle
+C101234,Female,38,Enugu,South East,"Aug 04, 2025",Tablet,Bronze,Yes,Low
+C101235,Male,37,Enugu,South East,2024-02-28,Tablet,Gold,Yes,Middle
+C101236,Female,33,Ibadan,South West,2025-08-24,Desktop,Silver,Yes,Upper-Middle
+C101237,male,38,Lagos,South West,2025-02-20,Mobile,Bronze,No,Upper-Middle
+C101238,Female,52,Lagos,South West,2025-06-14,Mobile,Bronze,Yes,Upper-Middle
+C101239,Male,33,Lagos,South West,2024-09-26,Mobile,Gold,No,Middle
+C101240,Female,27,Lagos,South West,2025-08-27,Mobile,Silver,Yes,Upper-Middle
+C101241,Male,44,Lagos,South West,2024-08-17,Desktop,Silver,Yes,Middle
+C101242,Female,46,Kano,North West,02-01-2025,Mobile,Gold,Yes,Lower-Middle
+C101243,Non-binary,35,Kano,North West,2025-08-01,Mobile,Gold,Yes,Middle
+C101244,Female,42,Ibadan,South West,2025-02-12,Desktop,Bronze,Yes,Low
+C101245,Male,18,Jos,North Central,2024-07-25,Mobile,Silver,Yes,Upper-Middle
+C101246,Female,37,Lagos,South West,2025-02-16,Mobile,Bronze,Yes,Low
+C101247,Male,31,Lagos,South West,2024-07-02,Desktop,Bronze,Yes,Middle
+C101248,Male,53,Benin City,South South,09-07-2024,Mobile,Gold,Yes,Lower-Middle
+C101249,Female,35,Ibadan,South West,05-16-2025,Mobile,Platinum,Yes,Lower-Middle
+C101250,Female,50,Lagos,South West,2025-10-19,Desktop,Platinum,Yes,High
+C101251,Female,31,Jos,North Central,2025/10/23,Mobile,Bronze,Yes,Lower-Middle
+C101252,Male,31,Kano,North West,2024-10-14,Desktop,Bronze,No,Lower-Middle
+C101253,Female,28,Benin City,South South,2025-04-26,Desktop,Silver,Yes,Middle
+C101254,Female,23,Port Harcourt,South South,04-13-2025,Desktop,Bronze,Yes,Upper-Middle
+C101255,Male,28,Benin City,South South,2025-07-23,Tablet,Silver,Yes,Upper-Middle
+C101256,Female,43,Lagos,South West,2024-07-12,Desktop ,Silver,No,High
+C101257,Non-binary,19,Abuja,North Central,2024-03-05,Desktop,Bronze,Yes,Middle
+C101258,Male,34,Kano,North West,08-02-2025,Mobile,Silver,Yes,Middle
+C101259,Female,43,Benin City,South South,2024-05-10,Mobile,Bronze,Yes,Upper-Middle
+C101260,Non-binary,35,Ibadan,South West,19/12/2025,Desktop,Bronze,Yes,Upper-Middle
+C101261,Female,38,Lagos,South West,2025-07-02,Desktop,Bronze,Yes,Lower-Middle
+C101262,Female,36,Abuja,North Central,2025-08-09,Mobile,Bronze,Yes,Middle
+C101263,Male,38,Calabar,South South,2025-10-23,Desktop,Gold,Yes,Low
+C101264,Male,18,Calabar,South South,2024-06-11,Mobile,Silver,Yes,Lower-Middle
+C101265,Female,47,Enugu,South East,2025-10-26,Mobile,Silver,Yes,Upper-Middle
+C101266,Male,36,Lagos,South West,2024-03-18,Mobile,Bronze,Yes,Upper-Middle
+C101267,Female,28,Lagos,South West,2025-06-09,Tablet,Platinum,Yes,Upper-Middle
+C101268,Female,31,Lagos,South West,2025-07-26,Mobile,Gold,Yes,Upper-Middle
+C101269,Female,32,Enugu,South East,2024-04-30,Desktop,Bronze,Yes,Low
+C101270,Female,39,Lagos,South West,2024-08-30,Mobile,Gold,Yes,Lower-Middle
+C101271,Female,23,Abuja,North Central,2025/05/08,Mobile,Gold,Yes,Middle
+C101272,Female,22,Abuja,North Central,2025-08-10,Mobile,Silver,Yes,Middle
+C101273,Female,21,Kaduna,North West,2025-08-29,Desktop,Bronze,No,Lower-Middle
+C101274,Female,41,Ibadan,South West,2025-12-19,Desktop,Platinum,N,Lower-Middle
+C101275,Male,25,Enugu,South East,2025-11-17,mobile,Bronze,0,Middle
+C101276,Male,34,Lagos,South West,2025-05-21,Tablet,Gold,Yes,Upper-Middle
+C101277,Female,23,Lagos,South West,2024-01-28,Mobile,Gold,Yes,Lower-Middle
+C101278,Male,33,Enugu,South East,2024-11-12,Mobile,Bronze,Yes,Low
+C101279,Male,29,Lagos,South West,2024-05-28,Mobile,Silver,Yes,High
+C101280,Male,27,Kano,North West,2025-12-02,Mobile,Bronze,Yes,Lower-Middle
+C101281,Male,43,Benin City,South South,2024-06-12,Desktop,Silver,Yes,Lower-Middle
+C101282,Female,34,Lagos,South West,2024-08-11,Mobile,Bronze,Yes,Low
+C101283,Male,25,Abuja,North Central,"Dec 11, 2025",Mobile,Gold,Yes,Low
+C101284,Male,55,Kaduna,North West,2025-10-18,Mobile,Silver,Yes,Upper-Middle
+C101285,Female,25,Lagos,South West,2024-12-16,Mobile,Bronze,Yes,Middle
+C101286,Male,23,Calabar,South South,2025-09-20,Mobile,Bronze,Yes,Lower-Middle
+C101287,Female,18,Lagos,South West,2024-04-20,Mobile,Bronze,No,Lower-Middle
+C101288,Female,48,Lagos,South West,2025-10-14,Mobile,Bronze,Yes,Low
+C101289,Male,35,Kano,North West,2025/10/12,Mobile,Gold,No,Low
+C101290,Female,120,Lagos,South West,2024-12-21,Mobile,Bronze,No,Middle
+C101291,Female,43,Calabar,South South,08-12-2024,Mobile,Silver,Yes,Low
+C101292,Female,34,Port Harcourt,South South,2024-06-12,Mobile,Gold,Yes,Upper-Middle
+C101293,Non-binary,40,Lagos,South West,2025-10-13,Mobile,Silver,Yes,Lower-Middle
+C101294,Female,48,Lagos,South West,2024-09-30,Mobile,Bronze,Yes,Lower-Middle
+C101295,Male,36,Benin City,South South,2024-04-13,Desktop,Silver,Yes,Lower-Middle
+C101296,Female,41,Enugu,South East,2024-06-05,Mobile,Bronze,Yes,Middle
+C101297,Male,35,Abuja,North Central,2025-09-28,Desktop,Silver,No,Middle
+C101298,Female,35,Port Harcourt,South South,2024-09-11,Mobile,Gold,Yes,Middle
+C101299,Male,46,Benin City,South South,02-22-2025,Mobile,Bronze,Yes,Lower-Middle
+C101300,Male,39,Kano,North West,2025-06-19,Mobile,Silver,Yes,Lower-Middle
+C101301,Female,36,Kaduna,North West,2025/03/01,Desktop,Bronze,No,Low
+C101302,Female,18,Abuja,North Central,06-20-2024,Desktop,Silver,Yes,Middle
+C101303,Female,25,Port Harcourt,South South,2025-04-26,Mobile,Bronze,Yes,Middle
+C101304,Non-binary,27,Enugu,South East,"Dec 03, 2025",Mobile,Bronze,Yes,Low
+C101305,Male,33,Jos,North Central,2024-11-02,Mobile,Gold,Yes,Lower-Middle
+C101306,Male,37,Port Harcourt,South South,2025-05-04,Tablet,Gold,Yes,Low
+C101307,Female,35,Calabar,South South,"Jul 15, 2024",Mobile,Bronze,Yes,Middle
+C101308,Male,32,Lagos,South West,2024-02-13,Tablet,Silver,Yes,High
+C101309,Female,37,Enugu,South East,2024-02-15,Mobile,Silver,Yes,Upper-Middle
+C101310,Male,37,Jos,North Central,2024-10-26,Desktop,Bronze,Yes,Middle
+C101311,Female,41,Benin City,South South,2025-11-18,Mobile,Bronze,No,Upper-Middle
+C101312,Male,18,Kano,North West,2025-05-17,Mobile,Bronze,Yes,Middle
+C101313,Male,43,Lagos,South West,2025-11-29,Mobile,Silver,No,High
+C101314,Male,51,Enugu,South East,2025-05-26,Mobile,Platinum,Yes,Middle
+C101315,Female,44,Kano,North West,2025-04-03,Mobile,Gold,Yes,Lower-Middle
+C101316,Male,30,Benin City,South South,2024-03-11,Tablet,Bronze,Yes,Upper-Middle
+C101317,Non-binary,25,Benin City,South South,2024-05-23,Desktop,Bronze,No,Low
+C101318,Male,33,Lagos,South West,2025-01-09,Tablet,Silver,Yes,Middle
+C101319,Male,45,Enugu,South East,2025-03-31,Mobile,Silver,Yes,Upper-Middle
+C101320,Male,36,Ibadan,South West,2024-08-07,Mobile,Bronze,Yes,High
+C101321,Female,18,Benin City,South South,2024-07-16,Desktop,Gold,Yes,Lower-Middle
+C101322,Male,18,Lagos,South West,2025-11-13,Mobile,Bronze,Yes,Low
+C101323,Female,35,Kano,North West,2025-12-05,Mobile,Gold,No,Lower-Middle
+C101324,Female,55,Abuja,North Central,2025-08-11,Desktop,Silver,Yes,Upper-Middle
+C101325,Female,19,Kaduna,North West,2024-05-23,Mobile,Bronze,0,Middle
+C101326,Female,28,Lagos,South West,2025-10-03,Desktop,Gold,No,Middle
+C101327,Female,33,Lagos,South West,2025-08-26,Mobile,Bronze,No,Middle
+C101328,Male,36,Lagos,South West,2025-08-12,Mobile,Bronze,Yes,Middle
+C101329,Male,41,Port Harcourt,South South,2025-03-12,Desktop,Gold,Yes,Lower-Middle
+C101330,Female,19,Enugu,South East,2024-02-09,Mobile,Bronze,Yes,Lower-Middle
+C101331,Male,34,Lagos,South West,2024-04-05,Mobile,Gold,Yes,Low
+C101332,Male,27,Benin City,South South,2025-11-04,Mobile,Bronze,Yes,Lower-Middle
+C101333,Female,41,Lagos,South West,2024-10-20,Desktop,Bronze,No,Lower-Middle
+C101334,Female,37,Port Harcourt,South South,2025-12-01,Mobile,Bronze,No,Low
+C101335,Female,43,Abuja,North Central,2025/04/18,Mobile,Platinum,Yes,Upper-Middle
+C101336,Female,22,Lagos,South West,2024-06-13,Tablet,Bronze,Yes,Middle
+C101337,Female,23,Ibadan,South West,2025-07-25,Desktop,Bronze,No,Low
+C101338,Male,27, lagos ,South South,10-09-2025,Mobile,Platinum,Yes,Lower-Middle
+C101339,Non-binary,29,Abuja,North Central,2024-07-16,Mobile,Bronze,No,Upper-Middle
+C101340,Male,27,Benin City,South South,2025-04-06,Desktop,Platinum,Yes,Lower-Middle
+C101341,Male,22,Abuja,North Central,2025-02-23,Mobile,Gold,Yes,High
+C101342,Male,28,Calabar,South South,2024-07-13,Mobile,Bronze,Yes,Middle
+C101343,Female,18,Abuja,North Central,2024-01-11,Mobile,Silver,Yes,Middle
+C101344,Female,42,Calabar,South South,2024-09-17,Mobile,Bronze,No,Upper-Middle
+C101345,Male,29,Lagos,South West,2025-04-10,Mobile,Bronze,No,Upper-Middle
+C101346,Female,21,Calabar,South South,2024-11-07,Desktop,Gold,Yes,Upper-Middle
+C101347,Male,34,Lagos,South West,2025-04-03,Desktop,Silver,Yes,Upper-Middle
+C101348,Female,18,Lagos,South West,2024-12-30,Mobile,Bronze,Yes,Lower-Middle
+C101349,Female,36,Lagos,South West,2025-05-06,Desktop,Gold,Yes,Middle
+C101350,Male,30,Kano,North West,2025-01-20,Desktop,Gold,Yes,Middle
+C101351,Male,48,Abuja,North Central,2024-11-09,Mobile,Gold,Yes,Middle
+C101352,Male,38,Abuja,North Central,2025-07-15,Mobile,Bronze,Yes,Middle
+C101353,Female,0,Kano,North West,2024-05-03,Desktop,Silver,No,Upper-Middle
+C101354,Male,41,Lagos,South West,2024-10-18,Mobile,Silver,Yes,Upper-Middle
+C101355,Non-binary,34,Benin City,South South,2024-04-08,Desktop,Gold,Yes,Low
+C101356,Male,39,Port Harcourt,South South,02/10/2025,Desktop,Silver,Yes,Middle
+C101357,Female,18,Lagos,South West,2025-11-22,Desktop,Bronze,Yes,Upper-Middle
+C101358,Male,29,Jos,North Central,2024-02-08,Mobile,Bronze,TRUE,Lower-Middle
+C101359,Male,29,Port Harcourt,South South,2025-02-10,Mobile,Silver,No,Lower-Middle
+C101360,Female,44,Abuja,North Central,2024-11-30,Tablet,Platinum,Yes,Upper-Middle
+C101361,Female,23,Kano,North West,2025-06-19,Mobile,Gold,Yes,Lower-Middle
+C101362,Male,36,Enugu,South East,2025-07-19,Desktop ,Silver,No,Middle
+C101363,Male,31,Abuja,North Central,2025-09-22,phone,Gold,No,Middle
+C101364,Male,20,Lagos,South West,2024-06-19,Mobile,Silver,Yes,Low
+C101365,Male,28,Calabar,South South,2024-02-15,Mobile,Silver,No,High
+C101366,Female,38,Port Harcourt,South South,2025-07-08,Mobile,Bronze,No,Upper-Middle
+C101367,Female,31,Ibadan,South West,2024-06-05,Desktop,Silver,Yes,Lower-Middle
+C101368,Male,31,Ibadan,South West,2024-06-28,Mobile,Bronze,Yes,Low
+C101369,Male,32,Enugu,South East,2025-04-04,Mobile,Bronze,No,Low
+C101370,Non-binary,34,Port Harcourt,South South,2024-12-10,Mobile,Silver,Yes,Middle
+C101371,Male,36,Kaduna,North West,2024/11/28,Mobile,Bronze,Yes,Middle
+C101372,Female,32,Ibadan,South West,2025-10-06,Mobile,Gold,Yes,Lower-Middle
+C101373,Male,19,Lagos,South West,2025-01-02,Tablet,Silver,No,Middle
+C101374,Male,31,Ibadan,South West,2024-05-17,Desktop,Silver,Yes,Upper-Middle
+C101375,Female,33,Enugu,South East,2024-03-26,Tablet,Bronze,0,Lower-Middle
+C101376,Male,47,Ibadan,South West,2025-06-17,Mobile,Silver,No,Middle
+C101377,Female,24,Port Harcourt,South South,2024-04-20,Desktop,Gold,Yes,Upper-Middle
+C101378,Male,47,Lagos,South West,"May 01, 2024",Desktop,Bronze,Yes,Lower-Middle
+C101379,Male,28,Kano,North West,2025-07-10,Mobile,Gold,Yes,Middle
+C101380,Female,47,Port Harcourt,South South,2025-08-08,Tablet,Bronze,Yes,High
+C101381,Female,18,Abuja,North Central,2025-12-05,Tablet,Gold,Yes,Lower-Middle
+C101382,Male,30,Port Harcourt,South South,"Oct 26, 2025",Desktop,Bronze,Yes,Lower-Middle
+C101383,Female,18,Port Harcourt,south west,2024-10-03,Mobile,Silver,No,Upper-Middle
+C101384,Female,20,Abuja,North Central,"Oct 13, 2025",Mobile,Bronze,Yes,Middle
+C101385,Female,29,Abuja,North Central,2024-03-05,Tablet,Silver,Yes,High
+C101386,Female,37,Ibadan,South West,2024-05-03,Mobile,Bronze,Yes,Middle
+C101387,Female,26,Lagos,South West,2024-02-05,Desktop,Silver,No,Low
+C101388,Male,35,Abuja,North Central,2024-11-02,Mobile,Silver,Yes,Middle
+C101389,Male,25,Port Harcourt,South South,2025-02-16,Mobile,Bronze,Yes,Lower-Middle
+C101390,Male,47,Jos,North Central,2025-08-17,Mobile,Bronze,No,Low
+C101391,Male,27,Port Harcourt,South South,2025-06-11,Mobile,Bronze,Yes,Upper-Middle
+C101392,Male,50,Benin City,South South,"May 23, 2024",Mobile,Gold,Yes,Lower-Middle
+C101393,Male,49,Jos,North Central,2024/09/17,Mobile,Gold,No,Lower-Middle
+C101394,Male,24,Enugu,South East,2024-02-09,Desktop,Bronze,Yes,High
+C101395,Male,37,Kano,North West,2024-03-06,Mobile,Platinum,Yes,Middle
+C101396,Male,28,Benin City,South South,2025-10-31,Mobile,Bronze,Yes,High
+C101397,Male,46,Benin City,South South,23/12/2024,Mobile,Bronze,No,High
+C101398,Female,35,Lagos,South West,2024-08-26,Mobile,Bronze,No,Middle
+C101399,Female,49,Lagos,South West,2024/07/13,Mobile,Bronze,Yes,Middle
+C101400,Male,31,Lagos,South West,2024-02-02,Desktop,Bronze,Yes,Upper-Middle
+C101401,Male,30,Lagos,South West,2024-12-23,TAB,Gold,No,Upper-Middle
+C101402,Female,26,Benin City,South South,2025-11-06,Mobile,Bronze,Yes,Upper-Middle
+C101403,Male,34,Benin City,South South,2025-02-15,Desktop,Bronze,Yes,Low
+C101404,Female,36,,South West,2025-08-11,Mobile,Silver,Yes,High
+C101405,Female,33,Enugu,South East,2025-05-18,Mobile,Bronze,Yes,Lower-Middle
+C101406,Male,35,Ibadan,South West,2025-12-10,Tablet,Bronze,Yes,Upper-Middle
+C101407,Female,39,Ibadan,South West,2024-02-05,Desktop,Bronze,Yes,Low
+C101408,Female,32,Lagos,South West,2024-08-01,Desktop,Silver,Yes,Middle
+C101409,Female,27,Enugu,South East,2025-03-19,Tablet,Bronze,No,Middle
+C101410,Male,24,Lagos,South West,2024-09-19,Mobile,Platinum,Yes,Low
+C101411,Male,27,Lagos,South West,2024-01-09,Mobile,Gold,Yes,Low
+C101412,Female,30,Ibadan,South West,2024-01-08,Mobile,Silver,Yes,Low
+C101413,Non-binary,42,Ibadan,South West,2025-01-11,Mobile,Gold,Yes,High
+C101414,Female,41,Ibadan,South West,2025-04-15,Desktop,Silver,0,Lower-Middle
+C101415,Male,26,Jos,North Central,2024-04-25,Tablet,Bronze,Yes,Upper-Middle
+C101416,Female,38,Lagos,South West,2024-04-22,Mobile,Silver,Yes,Low
+C101417,Female,24,Kano,North West,2025-08-13,Tablet,Platinum,Yes,Lower-Middle
+C101418,Female,40,Port Harcourt,South South,2025-07-22,Mobile,Bronze,Yes,Low
+C101419,Non-binary,18,Enugu,South East,2025-04-10,Desktop,Bronze,Yes,Middle
+C101420,Female,41,Kano,North West,2025-02-28,Desktop,Bronze,Yes,Middle
+C101421,Male,31,Enugu,South East,2024-08-19,Desktop,Silver,Yes,High
+C101422,female ,35,Enugu,South East,2024-10-18,Mobile,Platinum,Yes,Middle
+C101423,Non-binary,32,Kaduna,North West,2025-06-15,Tablet,Silver,Yes,Middle
+C101424,Non-binary,23,Lagos,South West,2025-12-11,Mobile,Gold,No,Low
+C101425,Female,34,Ibadan,South West,2025-08-08,Mobile,Gold,No,Low
+C101426,Male,?,Kaduna,North West,2025-01-29,Mobile,Bronze,No,Upper-Middle
+C101427,Male,39,Kaduna,North West,2025-01-14,Mobile,Platinum,No,Upper-Middle
+C101428,Female,38,Jos,North Central,2024-10-20,Mobile,Gold,Yes,Middle
+C101429,Male,44,Port Harcourt,South South,2024-04-08,Desktop,Bronze,No,Lower-Middle
+C101430,Female,38,Lagos,South West,2024-04-16,Desktop,Bronze,Yes,High
+C101431,Female,22,Kaduna,North West,2024/07/19,Mobile,Gold,Yes,Middle
+C101432,Female,40,Abuja,North Central,2024-08-23,Mobile,Gold,No,Low
+C101433,Female,22,Kano,North West,2025-12-12,Mobile,Gold,Yes,Lower-Middle
+C101434,Male,26,Lagos,South West,2025-04-10,Mobile,Gold,Yes,Middle
+C101435,Female,33,Port Harcourt,South South,2024-08-18,Mobile,Gold,Yes,Middle
+C101436,Male,25,Kano,North West,2024-05-23,Mobile,Bronze,Yes,Upper-Middle
+C101437,Female,29,Lagos,South West,2025-07-11,Mobile,Silver,No,Middle
+C101438,Male,42,Abuja,North Central,2025-05-21,Mobile,Bronze,Yes,Low
+C101439,Female,27,Lagos,South West,2025-03-08,Tablet,Gold,Yes,Middle
+C101440,Female,25,Jos,North Central,2024-08-26,Desktop,Bronze,Yes,Middle
+C101441,Male,21,Kaduna,North West,2024-09-08,Desktop,Gold,Yes,Upper-Middle
+C101442,Male,58,Kano,North West,2024-04-07,Tablet,Silver,Yes,Low
+C101443,Male,29,Ibadan,South West,2025-09-08,Mobile,Bronze,Yes,Lower-Middle
+C101444,M,33,Calabar,South South,2024-04-22,Mobile,Gold,Yes,Low
+C101445,Male,33,Abuja,North Central,2025-01-08,Mobile,Silver,Yes,Middle
+C101446,Male,43,Kano,North West,09-18-2024,Mobile,Silver,No,Middle
+C101447,Male,28,Lagos,South West,2024-06-25,Tablet,Bronze,Yes,Middle
+C101448,Non-binary,25,Kano,North West,2024-06-20,Mobile,Bronze,Yes,Middle
+C101449,Female,29,Lagos,South West,2025-06-21,Mobile,Gold,Yes,High
+C101450,Male,26,Lagos,South West,2024/02/08,Desktop,Silver,Yes,Lower-Middle
+C101451,Female,20,Jos,North Central,2025/04/23,Tablet,Bronze,Yes,Upper-Middle
+C101452,Non-binary,18,Abuja,North Cntrl,2024-12-01,Desktop,Bronze,No,Low
+C101453,Female,33,Calabar,South South,2025-04-27,Tablet,Platinum,No,Middle
+C101454,Male,29,Kano,North West,2025-06-23,Mobile,Silver,Yes,Upper-Middle
+C101455,Female,45,Kano,North West,2024/06/24,Desktop,Silver,Yes,Lower-Middle
+C101456,Female,28,Kano,North West,2025-11-12,Mobile,Platinum,Yes,High
+C101457,Female,30,Calabar,South South,2025-02-19,Mobile,Platinum,No,Low
+C101458,Female,44,Abuja,North Central,2024-08-21,Mobile,Bronze,Yes,Lower-Middle
+C101459,Male,18,Calabar,South South,2024-06-27,Mobile,Bronze,No,Lower-Middle
+C101460,Male,40,Abuja,North Central,2025-04-18,Mobile,Gold,Yes,Middle
+C101461,Female,25,Lagos,South West,2025-08-09,Mobile,Silver,Yes,High
+C101462,Female,23,Jos,North Central,"Jun 30, 2024",Mobile,Silver,Yes,High
+C101463,Male,36,Lagos,South West,2024-03-25,Mobile,Bronze,Yes,High
+C101464,Female,34,Ibadan,South West,2024-10-25,Mobile,Silver,Yes,Low
+C101465,Male,23,Enugu,South East,2025-05-05,Desktop,Silver,Yes,Upper-Middle
+C101466,Male,35,Abuja,North Central,2024-03-09,Desktop,Silver,No,Middle
+C101467,Male,47,Kaduna,North West,2024-08-15,Mobile,Silver,Yes,Lower-Middle
+C101468,Female,40,Kano,North West,2025-08-25,Desktop,Silver,Yes,Middle
+C101469,Male,34,Kano,North West,11-18-2025,Mobile,Gold,No,Low
+C101470,Male,28,Lagos,South West,2024-12-04,Desktop,Silver,Yes,Middle
+C101471,Male,32,Kano,North West,2025-11-09,Desktop,Gold,Yes,Lower-Middle
+C101472,M,37,Enugu,South East,2025-05-02,Mobile,Silver,No,Middle
+C101473,Female,31,Lagos,South West,2024-09-13,Mobile,Silver,Yes,Low
+C101474,Male,37,Calabar,South South,2025-05-29,Mobile,Bronze,Yes,Middle
+C101475,Female,42,Calabar,South South,2025-06-19,Mobile,Silver,Yes,High
+C101476,Female,20,Abuja,North Central,2025-04-10,Desktop,Bronze,Yes,Lower-Middle
+C101477,Non-binary,34,Calabar,South South,2025-10-14,Mobile,Bronze,Yes,Middle
+C101478,Male,37,Jos,North Central,2025-03-16,Mobile,Bronze,Yes,Upper-Middle
+C101479,Male,30,Lagos,South West,2025-04-27,Mobile,Gold,Y,Upper-Middle
+C101480,Male,27,Kaduna,North West,2025-01-17,Mobile,Gold,No,Lower-Middle
+C101481,Female,46,Calabar,South South,2024-09-23,Mobile,Gold,Yes,Upper-Middle
+C101482,Male,32,Enugu,South East,2024-10-14,Desktop,Silver,Yes,Middle
+C101483,Female,32,Lagos,South West,2024-03-06,Desktop,Gold,Yes,Upper-Middle
+C101484,Male,28,Port Harcourt,South South,2024-10-31,Desktop,Bronze,Yes,Middle
+C101485,Male,30,Benin City,South South,2024-12-11,Mobile,Bronze,Yes,Low
+C101486,Female,30,Port Harcourt,South South,2025-05-06,Mobile,Silver,Yes,Lower-Middle
+C101487,Female,32,Port Harcourt,South South,2024-03-26,Mobile,Bronze,Yes,Upper-Middle
+C101488,Female,19,Lagos,South West,2025-11-23,phone,Platinum,No,Low
+C101489,Non-binary,18,Lagos,South West,2025-11-25,Mobile,Bronze,Yes,Low
+C101490,Female,27,Abuja,North Central,2024-05-20,Desktop,Gold,Yes,Upper-Middle
+C101491,Male,30,Port Harcourt,South South,2024-02-08,Desktop,Bronze,No,Middle
+C101492,Male,28,Benin City,South South,09-02-2024,Mobile,Gold,Yes,Lower-Middle
+C101493,Male,39,Calabar,South South,2024-02-27,Mobile,Silver,No,Upper-Middle
+C101494,Female,33,Lagos,South West,2024-03-31,Tablet,Gold,Yes,Upper-Middle
+C101495,Male,39,Port Harcourt,South South,2024-07-15,Tablet,Silver,Yes,Lower-Middle
+C101496,Female,35,Enugu,South East,2024-02-06,Desktop,Bronze,Yes,Lower-Middle
+C101497,Male,18,Enugu,South East,2024-02-11,Desktop,Bronze,Yes,Middle
+C101498,Male,37,Lagos,South West,2025-08-22,Mobile,Bronze,Yes,Lower-Middle
+C101499,Male,46,Kano,North West,2025-08-17,Desktop,Silver,Yes,Lower-Middle
+C101500,Male,34,Lagos,South West,2024-07-28,Mobile,Platinum,No,Lower-Middle
+C101501,Female,32,Calabar,South South,2024-07-05,Mobile,Bronze,Yes,Upper-Middle
+C101502,Female,22,Abuja,North Central,2025-09-20,Mobile,Silver,Yes,Low
+C101503,Male,35,Benin City,South South,2024-08-21,Mobile,Bronze,No,Lower-Middle
+C101504,Non-binary,24,Ibadan,South West,"Oct 28, 2025",Mobile,Bronze,No,Upper-Middle
+C101505,Male,18,Ibadan,South West,2025-10-10,Mobile,Bronze,No,Lower-Middle
+C101506,Male,35,Lagos,South West,2024-09-09,Mobile,Silver,Yes,High
+C101507,Female,40,Port Harcourt,South South,2024-07-11,Mobile,Silver,No,Low
+C101508,Male,30,Abuja,North Central,2024-09-07,Mobile,Gold,Yes,Upper-Middle
+C101509,Female,31,Benin City,South South,07/07/2024,Tablet,Gold,Yes,Middle
+C101510,Male,27,Port Harcourt,South South,2024-02-26,Desktop,Silver,Yes,Middle
+C101511,Female,47,Benin City,South South,2025-03-28,Mobile,Gold,Yes,Low
+C101512,Male,36,Ibadan,South West,2025-09-29,Desktop,Silver,Yes,Upper-Middle
+C101513,Female,30,Kano,North West,2025-10-07,Mobile,Gold,Yes,Upper-Middle
+C101514,Male,30,Calabar,South South,2025-04-23,Mobile,Bronze,Yes,Middle
+C101515,Female,34,Ibadan,South West,2025-10-07,Mobile,Bronze,Yes,Upper-Middle
+C101516,Female,43,Benin City,South South,2025-06-08,Mobile,Silver,No,Upper-Middle
+C101517,Female,28,Benin City,South South,2024-02-10,Desktop,Bronze,Yes,Middle
+C101518,Female,25,Benin City,South South,2024/08/12,Mobile,Bronze,Yes,Lower-Middle
+C101519,Female,36,Port Harcourt,South South,2025-09-14,Mobile,Silver,Yes,Upper-Middle
+C101520,Female,32,Abuja,North Central,2025-10-06,Mobile,Gold,Yes,Lower-Middle
+C101521,Female,20,Ibadan,South West,2025-05-08,Tablet,Gold,Yes,Low
+C101522,Non-binary,32,Abuja,North Central,07-30-2024,Mobile,Bronze,Yes,Middle
+C101523,Female,30,Kano,North West,2025-02-23,Desktop,Bronze,N,Middle
+C101524,Female,29,Jos,North Central,2024-06-17,Mobile,Bronze,Yes,Middle
+C101525,Female,34,Enugu,South East,2024-11-26,Mobile,Bronze,No,Middle
+C101526,Non-binary,35,Kaduna,North West,2024-04-07,Desktop,Bronze,Yes,Lower-Middle
+C101527,Male,48,Lagos,South West,2025-11-08,Mobile,Bronze,No,Middle
+C101528,Female,38,Lagos,South West,2024-12-22,Mobile,Gold,Yes,Low
+C101529,Male,40,Lagos,South West,28/05/2025,Mobile,Bronze,Yes,Middle
+C101530,Female,29,Benin City,South South,2024-08-16,Tablet,Bronze,Yes,Middle
+C101531,Male,33,Lagos,South West,2025-05-19,Mobile,Silver,Yes,Middle
+C101532,Male,27,Lagos,South West,12-06-2024,Desktop,Silver,Yes,Upper-Middle
+C101533,Female,27,Calabar,South South,2025-02-05,Mobile,Bronze,Yes,Low
+C101534,Male,40,Port Harcourt,South South,2025/08/20,Mobile,Silver,Yes,Upper-Middle
+C101535,Female,52,Lagos,South West,2024-03-14,Mobile,Bronze,No,Lower-Middle
+C101536,Female,39,Ibadan,South West,2025-08-06,Mobile,Silver,Yes,High
+C101537,Male,36,Kano,North West,2025/03/19,Desktop,Gold,Yes,Upper-Middle
+C101538,Female,37,Ibadan,South West,2025-04-11,Tablet,Platinum,Yes,Low
+C101539,Male,40,Lagos,South West,2025-11-11,Desktop,Gold,Yes,Middle
+C101540,Male,32,Ibadan,South West,2025-12-16,Desktop,Silver,Yes,Middle
+C101541,Female,32,Lagos,South West,11/07/2025,Mobile,Gold,Y,Middle
+C101542,Male,38, lagos ,North West,2025-03-15,Mobile,Bronze,No,High
+C101543,Male,47,Jos,North Central,24/11/2025,Mobile,Platinum,Yes,Upper-Middle
+C101544,Male,33,Lagos,South West,2027/01/05,Mobile,Silver,No,Middle
+C101545,Female,18,Benin City,South South,2024-12-20,Mobile,Silver,Yes,Upper-Middle
+C101546,Female,40,Enugu,South East,2024-01-15,Mobile,Gold,Yes,Middle
+C101547,Male,35,Kano,North West,2024-07-22,Mobile,Silver,Yes,Upper-Middle
+C101548,Female,26,Lagos,South West,09-07-2024,Mobile,Silver,No,Lower-Middle
+C101549,Male,25,Lagos,South West,2025-05-16,Mobile,Bronze,Yes,Upper-Middle
+C101550,Female,18,Ibadan,South West,2024-12-16,Desktop,Bronze,Yes,Middle
+C101551,Male,26,Lagos,South West,2024-02-25,Mobile,Bronze,Yes,Middle
+C101552,Male,31,Enugu,South East,2025-10-20,Desktop,Silver,No,Middle
+C101553,Female,37,Ibadan,South West,2025-08-27,Mobile,Bronze,No,Lower-Middle
+C101554,Female,32,Abuja,North Central,2025-12-17,Mobile,Bronze,Yes,Middle
+C101555,Male,24,Kaduna,North West,2024-03-02,Mobile,Silver,Yes,Lower-Middle
+C101556,Male,29,Lagos,South West,2024-12-22,Mobile,Bronze,Yes,Middle
+C101557,Female,33,Ibadan,South West,2025-05-21,Desktop,Silver,Yes,High
+C101558,Male,38,Ibadan,South West,2024-09-06,Desktop,Platinum,Yes,Upper-Middle
+C101559,Female,35,Lagos,South West,2025-04-09,Mobile,Gold,No,Upper-Middle
+C101560,Male,40,Enugu,South East,12/03/2025,Desktop,Silver,No,Lower-Middle
+C101561,Female,18,Kano,North West,2025/03/26,Mobile,Silver,Yes,Middle
+C101562,Non-binary,35,Lagos,South West,2024-10-13,Mobile,Bronze,Yes,Upper-Middle
+C101563,Male,35,Port Harcourt,South South,2024-11-22,Mobile,Bronze,No,Middle
+C101564,Male,24,Abuja,North Cntrl,"Mar 15, 2024",Mobile,Bronze,No,Lower-Middle
+C101565,Male,35,Jos,North Central,2024-01-23,Mobile,Silver,Yes,Low
+C101566,Male,28,Kano,North West,2024-01-07,Mobile,Bronze,No,Low
+C101567,Female,22,Calabar,South South,2024-07-17,Desktop,Silver,Yes,Lower-Middle
+C101568,Female,21,Kaduna,North West,2025-05-28,Mobile,Bronze,No,Upper-Middle
+C101569,Male,38,Kaduna,North West,2024-10-17,Tablet,Silver,Yes,Middle
+C101570,Non-binary,38,Abuja,North Central,2025-01-01,Mobile,Bronze,Yes,Lower-Middle
+C101571,Female,43,Enugu,South East,2025-08-20,Mobile,Bronze,0,High
+C101572,Male,40,Abuja,North Central,2025-05-20,Mobile,Gold,Yes,Lower-Middle
+C101573,Male,37,Enugu,South East,2025-08-25,Tablet,Bronze,No,Upper-Middle
+C101574,Male,23,Kano,North West,19/07/2024,Desktop,Bronze,Yes,Upper-Middle
+C101575,Female,31,Ibadan,South West,2024-10-28,Mobile,Bronze,Yes,Middle
+C101576,Male,30,Lagos,South West,2024-11-13,Tablet,Bronze,No,Lower-Middle
+C101577,Female,51,Benin City,South South,2025-06-30,Mobile,Gold,Yes,Lower-Middle
+C101578,Female,25,Kano,North West,2025-08-20,Mobile,Bronze,Yes,Middle
+C101579,Female,21,Kano,North West,2024-04-14,Mobile,Bronze,Yes,Lower-Middle
+C101580,Male,24,Lagos,South West,"Jun 29, 2025",Mobile,Silver,Yes,High
+C101581,Male,42,Abuja,North Central,2024-02-23,Mobile,Silver,Yes,High
+C101582,Male,27,Benin City,South South,05-24-2025,Tablet,Bronze,No,Middle
+C101583,Female,39,Enugu,South East,2024-10-26,Mobile,Silver,Yes,Middle
+C101584,Female,28,Abuja,North Central,2024-11-26,Mobile,Gold,No,Low
+C101585,Male,42,Jos,North Central,2025-06-02,Mobile,Gold,Yes,Low
+C101586,Male,19,Calabar,South South,2025-09-16,Mobile,Bronze,Yes,Middle
+C101587,Male,29,Lagos,South West,"Jun 27, 2024",Mobile,Bronze,Yes,Low
+C101588,Male,38,Kaduna,south west,2024-02-03,Mobile,Bronze,Yes,Middle
+C101589,Female,31,Port Harcourt,South South,2025/09/07,Mobile,Silver,Yes,Low
+C101590,Female,25,Lagos,South West,27/02/2025,Mobile,Silver,Yes,Upper-Middle
+C101591,Female,46,Abuja,North Central,2025-08-19,Mobile,Gold,Yes,Middle
+C101592,Female,20,Port Harcourt,South South,2024-09-22,Desktop,Gold,Yes,Lower-Middle
+C101593,Male,25,Lagos,South West,15/03/2024,Mobile,Platinum,Yes,Lower-Middle
+C101594,Male,43, lagos ,North West,2024-07-23,Mobile,Gold,Yes,Upper-Middle
+C101595,Male,48,Ibadan,South West,2025-08-23,Mobile,Bronze,Yes,Lower-Middle
+C101596,Female,33,Port Harcourt,South South,2024-07-07,Desktop,Bronze,Yes,Middle
+C101597,Female,22,Enugu,South East,2024-05-18,Mobile,Bronze,Yes,High
+C101598,Non-binary,21,Calabar,South South,2024-01-25,Mobile,Bronze,No,Lower-Middle
+C101599,Male,25,Ibadan,South West,2025-04-30,Mobile,Platinum,Yes,Low
+C101600,Female,32,Abuja,North Central,2025-10-31,Mobile,Gold,No,Middle
+C101601,Female,45,Benin City,South South,12-19-2025,Mobile,Bronze,Yes,High
+C101602,Female,41,Port Harcourt,South South,2024-06-13,Mobile,Gold,Yes,Lower-Middle
+C101603,Female,42,Jos,North Central,2024-02-22,Tablet,Bronze,Yes,High
+C101604,Non-binary,29,Abuja,North Central,2025-05-16,Mobile,Silver,Yes,Lower-Middle
+C101605,Male,40,Lagos,South West,2024-11-12,Desktop,Silver,Yes,Middle
+C101606,Female,40,Lagos,South West,2024-01-16,Mobile,Gold,Yes,Middle
+C101607,Male,40,Lagos,South West,2024-10-17,Mobile,Silver,Yes,Low
+C101608,Female,33,Lagos,South West,2025-03-20,Mobile,Bronze,Yes,High
+C101609,Female,29,Jos,North Central,2025-04-04,Mobile,Silver,Yes,Lower-Middle
+C101610,Female,43,Kano,North West,2025-04-10,Mobile,Bronze,Yes,Middle
+C101611,Female,47,Benin City,South South,"Jan 23, 2024",Desktop,Silver,Yes,Upper-Middle
+C101612,Female,31,Calabar,South South,2025-05-17,Desktop,Silver,Yes,Lower-Middle
+C101613,Male,36,Benin City,South-West,2024-02-10,Mobile,Bronze,No,Middle
+C101614,Male,43,Kano,North West,25/04/2024,Desktop ,Silver,No,Lower-Middle
+C101615,Male,47,Lagos,South West,2024-02-22,Mobile,Gold,Yes,Middle
+C101616,Female,49,Abuja,North Central,2024-08-06,Mobile,Silver,Yes,Upper-Middle
+C101617,Female,33,Benin City,South South,2024/12/08,Mobile,Bronze,Yes,Upper-Middle
+C101618,Female,44,Enugu,South East,2025-10-09,Mobile,Bronze,Yes,Middle
+C101619,Male,22,Abuja,North Central,2024-06-24,Mobile,Gold,Yes,Lower-Middle
+C101620,Female,18,Ibadan,South West,2025-12-02,Tablet,Gold,No,Low
+C101621,Female,29,Abuja,North Central,2024-03-29,Mobile,Gold,Yes,Upper-Middle
+C101622,Male,36,Abuja,North Central,16/09/2024,mobile,Bronze,Yes,Lower-Middle
+C101623,Female,20,Benin City,South South,2024-04-08,Mobile,Gold,Yes,Lower-Middle
+C101624,Female,32,Jos,North Central,2025-11-04,Mobile,Platinum,Yes,Low
+C101625,Male,35,Calabar,South South,2025-07-30,Mobile,Bronze,No,Upper-Middle
+C101626,Female,33,Benin City,South South,2025-08-30,Mobile,Gold,No,Low
+C101627,Male,35,Lagos,South West,2025-10-26,Mobile,Bronze,No,Lower-Middle
+C101628,Male,43,Abuja,North Central,2025/01/02,Mobile,Bronze,Yes,Upper-Middle
+C101629,Male,31,Kano,North West,2025-06-22,Mobile,Gold,No,Middle
+C101630,Female,29,Jos,North Central,2025-12-08,Desktop,Silver,Yes,Low
+C101631,Female,38,Lagos,South West,12-20-2024,Mobile,Silver,Yes,Upper-Middle
+C101632,Female,43,Enugu,South East,2024-04-17,Mobile,Gold,Yes,Middle
+C101633,Male,29,Enugu,South East,2025-04-16,Mobile,Gold,No,Low
+C101634,Male,45,Lagos,South West,2024-03-13,Mobile,Gold,Yes,Lower-Middle
+C101635,Male,40,Jos,North Central,2025-11-22,Mobile,Gold,No,Middle
+C101636,Male,30,Benin City,South South,"Aug 12, 2025",Mobile,Bronze,Yes,Low
+C101637,Male,120,Enugu,South East,11-11-2025,Mobile,Bronze,N,Middle
+C101638,Non-binary,26,Kano,North West,2025-08-23,Mobile,Bronze,Yes,Upper-Middle
+C101639,Female,39,Kano,North West,2024-11-14,Desktop,Bronze,Yes,Middle
+C101640,Male,34,Enugu,South East,2025-08-28,Tablet,Bronze,Yes,Upper-Middle
+C101641,Non-binary,51,Kaduna,North West,07-31-2024,Mobile,Silver,Yes,Low
+C101642,Female,18,Port Harcourt,South South,2024-10-16,Mobile,Silver,Yes,Low
+C101643,Male,22,P/Harcourt,South South,2024-02-27,Tablet,Gold,Yes,Upper-Middle
+C101644,Male,28,Calabar,South South,2025-09-22,Mobile,Platinum,No,Low
+C101645,Female,38,Abuja,North Central,2025-07-03,Mobile,Gold,Yes,Middle
+C101646,Male,30,Port Harcourt,South South,2024-01-19,Mobile,Silver,Yes,Upper-Middle
+C101647,Male,27,Lagos,South West,10-11-2025,Mobile,Bronze,Yes,Middle
+C101648,Male,37,Abuja,North Central,2024-08-08,Mobile,Bronze,Yes,Middle
+C101649,Female,29,Benin City,South South,2024-09-11,Mobile,Silver,Yes,Middle
+C101650,Female,35,Lagos,South West,2025-03-25,Mobile,Platinum,Yes,Low
+C101651,Male,41,Port Harcourt,South South,2024-09-03,Mobile,Bronze,Yes,Lower-Middle
+C101652,Female,42,Benin City,South South,2025-08-27,Mobile,Silver,Yes,Low
+C101653,Male,19,Port Harcourt,South South,2024-01-02,Desktop,Silver,No,Low
+C101654,Male,26,Kaduna,North West,2025-10-04,Mobile,Gold,Yes,Lower-Middle
+C101655,Male,37,Ibadan,South West,2024-01-30,Mobile,Silver,Yes,Low
+C101656,Male,31,Abuja,North Central,2024-10-01,Mobile,Bronze,Yes,Middle
+C101657,Male,26,Kaduna,North West,2024-01-19,Mobile,Silver,No,High
+C101658,Male,38,Benin City,South South,2025-01-12,Desktop,Silver,Yes,Low
+C101659,Female,34,Ibadan,South West,2025-11-23,Mobile,Silver,Yes,Middle
+C101660,Male,37,Lagos,South West,2024-01-09,Mobile,Silver,Yes,Middle
+C101661,Male,41,Calabar,South South,2024-09-01,Mobile,Bronze,No,Middle
+C101662,Female,30,Lagos,South West,2025-12-08,Mobile,Silver,No,Middle
+C101663,Female,42,Port Harcourt,South South,2025-08-22,Mobile,Bronze,Yes,Lower-Middle
+C101664,Male,35,Benin City,South South,12-03-2025,Mobile,Bronze,Yes,Upper-Middle
+C101665,Female,35, lagos ,North Central,2024-05-31,Mobile,Bronze,Yes,Lower-Middle
+C101666,Female,42,Abuja,North Central,2025-04-15,Mobile,Silver,No,Upper-Middle
+C101667,Male,19,Lagos,South West,23/04/2025,Mobile,Bronze,Yes,High
+C101668,Male,18,Kano,North West,2025-09-05,Mobile,Silver,Yes,Lower-Middle
+C101669,Male,23,Calabar,South South,2025-01-02,Mobile,Bronze,Yes,Middle
+C101670,Male,41,Ibadan,South West,2024-11-24,Mobile,Silver,Yes,High
+C101671,Female,34,Calabar,South South,2024-12-25,Mobile,Silver,Yes,Low
+C101672,Male,28,Abuja,North Central,2025-06-29,Mobile,Bronze,Yes,Middle
+C101673,Female,24,Jos,North Central,2025-01-21,Desktop,Gold,Yes,Middle
+C101674,Female,18,Lagos,South West,2024-07-14,Desktop,Bronze,Yes,Upper-Middle
+C101675,Female,36,Kano,North West,31/10/2024,Mobile,Bronze,1,Low
+C101676,Female,33,Jos,North Central,2025-01-05,Mobile,Silver,Yes,Upper-Middle
+C101677,Male,36,Abuja,North Central,2025-06-04,Mobile,Bronze,No,Middle
+C101678,Male,41,Enugu,South East,2025-06-19,Mobile,Gold,Yes,Upper-Middle
+C101679,Female,36,Benin City,South South,2025-01-24,Mobile,Bronze,No,Upper-Middle
+C101680,Male,45,Abuja,North Central,2025-04-06,Mobile,Bronze,No,Middle
+C101681,Male,29,Lagos,South West,2024-07-12,Mobile,Silver,Yes,Low
+C101682,Male,46,Kano,North West,2025/04/25,Mobile,Silver,No,Upper-Middle
+C101683,Male,37,Port Harcourt,South South,2025-11-18,Tablet,Silver,Yes,Low
+C101684,Female,28,Benin City,South South,2025-01-28,Tablet,Platinum,Yes,Lower-Middle
+C101685,Male,35,Lagos,South West,2025-03-25,Mobile,Silver,No,Lower-Middle
+C101686,Female,52,Lagos,South West,2025-09-08,Mobile,Platinum,Yes,Upper-Middle
+C101687,Female,22,Lagos,South West,2024-03-02,Mobile,Bronze,No,Low
+C101688,Female,28,Kano,North West,2025-04-26,Desktop,Silver,Yes,Middle
+C101689,Female,29,Lagos,South West,"Sep 28, 2025",Mobile,Silver,No,Lower-Middle
+C101690,Male,35,Abuja,North Central,2025-08-01,Mobile,Bronze,Yes,Middle
+C101691,Female,34,Benin City,South South,2024-08-14,Mobile,Bronze,No,Low
+C101692,Male,49,Abuja,North Central,2025-07-03,Mobile,Silver,Yes,Upper-Middle
+C101693,Male,31,Ibadan,South West,2024-10-09,Tablet,Bronze,Yes,Lower-Middle
+C101694,Non-binary,39,Port Harcourt,South South,2025-10-02,Mobile,Bronze,No,Low
+C101695,Female,29,Kaduna,North West,2024-10-21,Mobile,Silver,Yes,Low
+C101696,Male,23,Port Harcourt,South South,2024-03-29,Tablet,Bronze,Yes,Middle
+C101697,Female,32,Abuja,North Central,2025-06-26,Mobile,Bronze,Yes,Upper-Middle
+C101698,Female,31,Calabar,South South,2024-08-25,Mobile,Gold,Yes,Low
+C101699,Male,39,Lagos,South West,2024-04-11,Mobile,Silver,Yes,Middle
+C101700,Male,45,Kano,North West,2024-07-15,Desktop,Gold,No,Upper-Middle
+C101701,Male,29,Kano,North West,2025-07-31,Mobile,Silver,Yes,Lower-Middle
+C101702,Female,43,Port Harcourt,South South,2025-02-09,Desktop,Bronze,Yes,Middle
+C101703,Non-binary,24,Kaduna,North West,2024-10-01,Desktop,Gold,Yes,Lower-Middle
+C101704,Male,48,Kaduna,North West,2024/08/17,Mobile,Gold,Yes,Upper-Middle
+C101705,Non-binary,20,Ibadan,South West,04-22-2025,Mobile,Bronze,No,Upper-Middle
+C101706,Female,28,Abuja,North Central,2025-11-30,Mobile,Silver,Yes,Lower-Middle
+C101707,Male,35,Lagos,South West,2024-09-07,mobile,Gold,Yes,Middle
+C101708,Male,30,Enugu,South East,2025-05-28,Desktop,Silver,Yes,Upper-Middle
+C101709,Female,23,,South South,2024-05-25,Mobile,Bronze,Yes,Middle
+C101710,Male,39,Abuja,North Central,2025-09-23,Mobile,Silver,Yes,Upper-Middle
+C101711,Female,24,Abuja,North Central,"Aug 03, 2024",Mobile,Platinum,Yes,Upper-Middle
+C101712,Non-binary,41,Kano,North West,2024-05-08,Mobile,Gold,Yes,Lower-Middle
+C101713,Female,20,Kaduna,North West,2024-01-11,Tablet,Bronze,Yes,Middle
+C101714,Male,42,Enugu,South East,2024-10-17,Mobile,Gold,Yes,Middle
+C101715,Male,40,Kaduna,North West,2025-02-26,Desktop,Bronze,No,Low
+C101716,Non-binary,37,Kano,North West,2025-05-30,Mobile,Silver,Yes,Low
+C101717,Female,42,Kano,North West,2025-10-10,Mobile,Silver,Yes,Upper-Middle
+C101718,Female,31,Lagos,South West,2024-06-13,Mobile,Silver,Yes,Lower-Middle
+C101719,Male,32,Ibadan,South West,2024-05-30,Desktop,Silver,Yes,Lower-Middle
+C101720,Non-binary,43,Kano,North West,2024/08/20,Mobile,Silver,No,Upper-Middle
+C101721,Male,0,Abuja,North Central,2025-10-25,Desktop,Bronze,Yes,Upper-Middle
+C101722,Female,?,Abuja,North Central,2024-12-03,Mobile,Platinum,No,Upper-Middle
+C101723,Male,31,Port Harcourt,South South,2025-08-26,Mobile,Bronze,Yes,Middle
+C101724,Non-binary,31,Benin City,South South,2025-06-02,Mobile,Bronze,Yes,Lower-Middle
+C101725,Female,30,Lagos,South West,2025-08-02,Mobile,Silver,Yes,Middle
+C101726,Male,18,Kaduna,North West,2024-05-15,Mobile,Silver,Yes,Lower-Middle
+C101727,Female,33,Kano,North West,2025-06-30,Mobile,Bronze,Yes,Lower-Middle
+C101728,Non-binary,35,Abuja,North Central,2025-09-08,Desktop,Gold,Yes,Low
+C101729,Female,44,Abuja,North Central,2024-06-15,Mobile,Silver,Yes,Low
+C101730,Male,40,Lagos,South West,2024-03-13,Mobile,Bronze,No,Middle
+C101731,Male,28,Port Harcourt,South South,2025-05-05,Desktop,Silver,Yes,Upper-Middle
+C101732,Male,30,Calabar,South South,2025-03-03,Mobile,Gold,Yes,Upper-Middle
+C101733,Female,24,Port Harcourt,South South,2025-12-18,Desktop,Bronze,Yes,Middle
+C101734,Male,30,Jos,North Central,2024/09/22,Desktop,Silver,Yes,Middle
+C101735,Male,27,Lagos,South West,2025-08-20,Desktop,Bronze,No,Low
+C101736,M,42,Abuja,North Central,2024-08-25,Desktop,Bronze,No,Upper-Middle
+C101737,Non-binary,36,Ibadan,South West,2025-01-15,Mobile,Bronze,Yes,High
+C101738,Female,38,Lagos,South West,2024/10/22,Mobile,Gold,Yes,Middle
+C101739,Male,29,Lagos,South West,2025-11-25,Mobile,Bronze,Yes,Low
+C101740,Male,31,Kano,North West,2025-05-03,Tablet,Platinum,Yes,Lower-Middle
+C101741,Female,37,Port Harcourt,South South,2025-09-27,Tablet,Gold,Yes,Upper-Middle
+C101742,Male,26,Kano,North West,2024-11-07,Mobile,Bronze,Yes,Low
+C101743,Female,37,Abuja,North Central,2024-06-05,Mobile,Bronze,Yes,Low
+C101744,Male,40,Abuja,North Central,2025-10-27,Desktop,Silver,Yes,High
+C101745,Female,28,Jos,North Central,2024-07-01,Mobile,Bronze,Yes,Middle
+C101746,Female,33,Benin City,South South,2024-07-27,Mobile,Silver,No,Middle
+C101747,Male,25,Lagos,South West,2025-12-18,Mobile,Silver,Yes,Lower-Middle
+C101748,Female,47,Port Harcourt,South South,2024-04-18,phone,Silver,No,Middle
+C101749,Male,37,Lagos,South West,2024-12-19,Desktop,Bronze,Yes,Middle
+C101750,Male,42,Lagos,South West,2024-01-14,Mobile,Bronze,Yes,Middle
+C101751,Female,31,Benin City,South South,2024-11-11,Mobile,Gold,No,Lower-Middle
+C101752,Female,25,Lagos,South West,2024-01-12,Mobile,Gold,Yes,Middle
+C101753,Male,32,Lagos,South West,2024-02-08,Mobile,Gold,Yes,Upper-Middle
+C101754,Male,45,Lagos,South West,2025-01-11,Mobile,Gold,No,Upper-Middle
+C101755,Female,47,Lagos,South West,2025-03-24,Mobile,Bronze,Yes,Low
+C101756,Male,40,Ibadan,South West,2024-06-04,Mobile,Platinum,Yes,Low
+C101757,Female,33,Lagos,South West,2025-05-20,Tablet,Silver,No,Middle
+C101758,Male,36,Abuja,North Central,2024-05-15,Mobile,Bronze,Yes,Middle
+C101759,Male,42,Port Harcourt,South South,03-10-2024,Desktop,Bronze,Yes,Low
+C101760,Male,24,Lagos,South West,2025-08-20,Mobile,Platinum,No,Upper-Middle
+C101761,Female,41,Lagos,South West,2025-09-10,Mobile,Bronze,Yes,Middle
+C101762,Female,26,Lagos,South West,2024-05-24,Mobile,Gold,Yes,Middle
+C101763,Female,35,Calabar,South South,2024-05-29,Mobile,Silver,Yes,Low
+C101764,Male,39,Port Harcourt,South South,03-11-2024,Mobile,Silver,Yes,Middle
+C101765,Male,36,Ibadan,South West,29/04/2024,Mobile,Gold,Yes,Low
+C101766,Female,34,Kaduna,North West,2025-05-16,Mobile,Bronze,Yes,Low
+C101767,Female,44,Kaduna,North West,2025-09-03,Tablet,Silver,Yes,Upper-Middle
+C101768,Female,30,Kano,North West,2025-02-11,Tablet,Bronze,Yes,Upper-Middle
+C101769,Female,30,Jos,North Central,2025-04-26,Mobile,Bronze,Yes,Middle
+C101770,Female,25,Ibadan,South West,2024-02-26,Desktop,Silver,Yes,Low
+C101771,Female,35,Lagos,south west,2024-05-28,Mobile,Bronze,Yes,Low
+C101772,Male,40,Benin City,South South,2024-08-24,Desktop,Gold,Yes,Low
+C101773,Female,32,Ibadan,South West,2025-11-08,Mobile,Bronze,Yes,Low
+C101774,Female,18,Enugu,South East,2025-05-07,Desktop,Bronze,Yes,Middle
+C101775,Male,37,Abuja,North Central,2025-08-05,Mobile,Bronze,Yes,Lower-Middle
+C101776,Female,39,Kano,North West,2025-05-05,Mobile,Platinum,No,Low
+C101777,Male,26,Lagos,South West,2025-01-20,Mobile,Silver,No,Middle
+C101778,Female,31,Port Harcourt,South South,2025-06-18,Tablet,Silver,Yes,Lower-Middle
+C101779,Female,33,Port Harcourt,South South,2025-03-08,Desktop,Silver,Yes,Upper-Middle
+C101780,Female,26,Lagos,South West,2025-08-17,Mobile,Bronze,0,Upper-Middle
+C101781,Female,35,Enugu,South East,2024-09-26,Mobile,Bronze,No,Lower-Middle
+C101782,Non-binary,34,Enugu,South East,2025-08-09,Mobile,Bronze,Yes,Middle
+C101783,Male,23,Abuja,North Central,2024-10-24,Tablet,Silver,No,Upper-Middle
+C101784,Female,18,Kano,North West,2025-11-08,Mobile,Platinum,Yes,Lower-Middle
+C101785,Female,25,Jos,North Central,2025-08-17,Mobile,Platinum,Yes,Middle
+C101786,Non-binary,45,Benin City,South South,05/12/2025,Mobile,Bronze,Yes,Upper-Middle
+C101787,Male,44,Port Harcourt,South South,2025-02-11,Mobile,Gold,No,High
+C101788,Male,30,Kano,North West,2025-12-09,Mobile,Bronze,Yes,Middle
+C101789,Female,24,Port Harcourt,South South,2025-04-07,Mobile,Bronze,Yes,High
+C101790,Female,46,Benin City,South South,2024-12-20,Mobile,Bronze,No,Middle
+C101791,Male,39,Kano,North West,2024-08-19,Mobile,Gold,Yes,Middle
+C101792,Female,44,Abuja,North Central,2024-04-05,Mobile,Bronze,Yes,Lower-Middle
+C101793,Non-binary,49,Kano,North West,2025-05-09,Mobile,Silver,Yes,Upper-Middle
+C101794,Male,37,Ibadan,South West,2025-10-11,Mobile,Silver,Yes,High
+C101795,Male,34,Benin City,South South,2025-07-11,Desktop,Gold,Yes,Middle
+C101796,Female,0,Abuja,North Central,2024-06-18,Mobile,Silver,Yes,Low
+C101797,Male,34,Kaduna,North West,2024-06-01,Mobile,Silver,Yes,Lower-Middle
+C101798,Male,24,Lagos,South West,2024-10-18,Mobile,Bronze,Yes,Middle
+C101799,Male,42,Ibadan,South West,2024/02/05,Mobile,Bronze,No,Middle
+C101800,Female,31,Ibadan,South West,2025-06-17,Mobile,Bronze,Yes,Low
+C101801,Male,47,Lagos,South West,2024-04-20,Mobile,Bronze,Yes,Upper-Middle
+C101802,Female,30,Kaduna,North West,2025-07-16,Mobile,Bronze,Yes,Lower-Middle
+C101803,Female,37,Benin City,South South,2024-11-20,Mobile,Bronze,Yes,High
+C101804,Female,26,Lagos,South West,2024-02-20,Mobile,Gold,Yes,Lower-Middle
+C101805,Male,41,Enugu,South East,2025-07-11,Mobile,Gold,Yes,Low
+C101806,Male,26,Kano,North West,2025-03-09,Mobile,Silver,No,Middle
+C101807,Male,44,Jos,North Central,2024-08-06,Desktop,Gold,Yes,High
+C101808,Female,38,Kano,North West,2024-07-25,Mobile,Silver,No,Lower-Middle
+C101809,Female,18,Ibadan,South West,2025-01-09,Tablet,Bronze,Yes,Lower-Middle
+C101810,Female,21,Kaduna,North West,2025-05-09,Mobile,Bronze,Yes,Lower-Middle
+C101811,Male,35,Port Harcourt,South South,2024-08-23,Mobile,Bronze,Yes,High
+C101812,Female,33,Port Harcourt,South South,2025-11-18,Mobile,Bronze,Yes,Low
+C101813,Non-binary,51,Port Harcourt,South South,2024-11-01,Mobile,Bronze,No,Low
+C101814,Male,25,Abuja,North Central,2025-04-28,Mobile,Silver,No,Lower-Middle
+C101815,Male,31,Calabar,South South,2024-03-03,Mobile,Gold,No,Lower-Middle
+C101816,Female,33,Ibadan,South West,2025-12-10,Mobile,Bronze,Yes,Lower-Middle
+C101817,Male,35,Ibadan,South West,2024-01-26,Mobile,Silver,Yes,Middle
+C101818,Male,48,Port Harcourt,South South,2024-04-07,Desktop,Bronze,Yes,Middle
+C101819,Female,32,Abuja,North Central,2024-01-26,Mobile,Gold,Yes,Upper-Middle
+C101820,Female,19,Abuja,North Central,2024-04-09,Desktop,Bronze,Yes,Middle
+C101821,Non-binary,47,Calabar,South South,2025-11-02,Mobile,Silver,Yes,Middle
+C101822,Male,37,Kaduna,North West,2025-01-12,Mobile,Gold,Yes,Upper-Middle
+C101823,Female,20,Ibadan,South West,2025/11/05,TAB,Gold,Yes,Low
+C101824,Male,27,Benin City,South South,2025-01-27,Mobile,Bronze,No,Upper-Middle
+C101825,Female,30,Enugu,South East,2024-07-15,Mobile,Bronze,Yes,Middle
+C101826,Female,34,Port Harcourt,South South,2024-12-07,Tablet,Bronze,Yes,Middle
+C101827,Male,40,Abuja,North Central,2024-04-02,Desktop,Bronze,Yes,High
+C101828,Female,31,Ibadan,South West,2024-01-17,Mobile,Bronze,No,Upper-Middle
+C101829,Female,28,Ibadan,South West,2025-12-06,Mobile,Bronze,Yes,Middle
+C101830,Male,25,Enugu,South East,2025-10-02,Mobile,Gold,Yes,Lower-Middle
+C101831,Male,32,Jos,North Central,2025-11-12,Mobile,Silver,Yes,Middle
+C101832,Male,34,Enugu,South East,2025-06-19,Tablet,Platinum,No,Upper-Middle
+C101833,Female,37,Kano,North West,2024-08-26,Mobile,Platinum,Yes,Middle
+C101834,Female,18,Ibadan,South West,2025-01-12,Mobile,Silver,Yes,Middle
+C101835,Female,25,Lagos,South West,10-15-2025,Mobile,Silver,No,High
+C101836,Male,0,Jos,North Central,2024-12-23,Tablet,Bronze,Yes,Upper-Middle
+C101837,Female,48,Enugu,South East,2024-10-24,Mobile,Gold,Yes,Upper-Middle
+C101838,Male,41,Ibadan,South West,2025-01-16,Mobile,Silver,Yes,Low
+C101839,Female,18,Kaduna,North West,2025-07-19,Mobile,Silver,Yes,Low
+C101840,Male,18,Jos,North Central,2025-03-26,Desktop,Silver,Yes,Middle
+C101841,Female,38,Abuja,North Central,2025-08-07,Desktop,Silver,No,Middle
+C101842,Male,33,Benin City,South South,2024-09-10,Mobile,Gold,Yes,Lower-Middle
+C101843,Male,34,Calabar,South South,2024-12-28,Mobile,Bronze,No,Middle
+C101844,Female,50,Abuja,North Central,2025-12-14,Mobile,Bronze,No,Low
+C101845,Male,24,Lagos,South West,2025-07-04,Mobile,Bronze,No,High
+C101846,Female,44,Calabar,South South,2025-05-06,Desktop,Bronze,Yes,Lower-Middle
+C101847,Male,34,Enugu,South East,2025-06-07,Desktop,Bronze,Yes,Middle
+C101848,Female,28,Lagos,South West,2025-02-23,Desktop,Bronze,Yes,Middle
+C101849,Female,18,Benin City,South South,2024-10-09,Tablet,Gold,Yes,Middle
+C101850,Female,23,Kano,North West,2025-09-09,Desktop,Bronze,No,Middle
+C101851,Female,46,Kano,North West,2024-08-15,Mobile,Bronze,Yes,Low
+C101852,Female,34,Benin City,South South,10-27-2024,Tablet,Silver,Yes,Low
+C101853,Male,40,Benin City,South South,2024-01-18,Desktop,Bronze,No,Lower-Middle
+C101854,Female,38,Benin City,South South,2024-10-24,Desktop,Gold,Yes,High
+C101855,Male,32,Benin City,South South,2024-09-14,Mobile,Bronze,Yes,Middle
+C101856,Female,40,Lagos,South West,02/07/2024,Mobile,Bronze,Yes,Lower-Middle
+C101857,Male,36,Lagos,South West,2024-12-02,Mobile,Bronze,Yes,Middle
+C101858,Female,31,Abuja,North Central,2025-11-16,Mobile,Silver,No,Middle
+C101859,Male,30,Jos,North Central,2024-01-28,Tablet,Silver,Yes,Lower-Middle
+C101860,Non-binary,27,Ibadan,South West,2024-10-30,Mobile,Bronze,No,Low
+C101861,Female,36,Benin City,South South,2024-06-06,Mobile,Bronze,No,Lower-Middle
+C101862,Female,31,Calabar,South South,2024-05-01,Mobile,Silver,No,Low
+C101863,Female,43,Lagos,South West,2025-09-20,Mobile,Bronze,No,Low
+C101864,Female,30,Lagos,South West,2025-03-16,Mobile,Gold,Yes,Upper-Middle
+C101865,Male,25,Abuja,North Central,02-11-2024,phone,Bronze,Yes,Middle
+C101866,Female,18,Jos,North Central,2025-06-17,Mobile,Silver,Yes,Low
+C101867,Male,40,Kano,North West,01-26-2024,Mobile,Silver,No,Low
+C101868,Male,55,Lagos,South West,2024-11-29,Mobile,Platinum,1,Upper-Middle
+C101869,Female,33,Lagos,South West,09-06-2025,Desktop,Bronze,Yes,Lower-Middle
+C101870,Non-binary,18,Lagos,South West,2024-05-29,Mobile,Bronze,Yes,Lower-Middle
+C101871,Non-binary,41,Jos,North Central,2024-07-26,Tablet,Gold,No,Upper-Middle
+C101872,Male,27,Port Harcourt,South South,2024-11-07,Mobile,Bronze,Yes,Middle
+C101873,Male,39,Enugu,South East,2025-10-10,Desktop ,Bronze,Yes,Upper-Middle
+C101874,Female,36,Enugu,South East,2024-11-12,Mobile,Gold,Yes,Upper-Middle
+C101875,Male,39,Calabar,South South,02-25-2024,Desktop,Silver,Yes,Middle
+C101876,Female,34,Benin City,South South,2025-09-11,Mobile,Bronze,Yes,Lower-Middle
+C101877,Female,31,Abuja,North Central,2024-06-17,Mobile,Gold,Yes,Low
+C101878,Female,42,Ibadan,South West,2025-07-10,Mobile,Silver,Yes,Upper-Middle
+C101879,Female,30,Jos,North Central,2024-06-30,Desktop,Silver,Yes,Upper-Middle
+C101880,Male,43,Calabar,South South,2024/03/07,Mobile,Bronze,No,Lower-Middle
+C101881,Female,28,Port Harcourt,South South,2024-09-15,Desktop,Silver,Yes,Low
+C101882,Male,34,Ibadan,South West,2024-09-16,Desktop,Bronze,Yes,Middle
+C101883,Female,26,Kaduna,North West,2024-11-05,Mobile,Gold,Yes,Lower-Middle
+C101884,Female,41,Port Harcourt,South South,2025-10-22,Desktop,Bronze,No,Middle
+C101885,Female,27,Abuja,North Central,"Nov 06, 2024",Tablet,Bronze,Yes,Middle
+C101886,Female,26,Abuja,North Central,2024-05-24,Mobile,Bronze,Yes,High
+C101887,Male,41,Ibadan,South West,2024-10-07,Desktop,Silver,No,Middle
+C101888,Male,36,Abuja,North Central,2024-03-23,Mobile,Silver,Yes,Middle
+C101889,Female,32,Kaduna,North West,12-02-2024,Mobile,Bronze,Yes,Lower-Middle
+C101890,Female,24,Kano,North West,2024-02-06,Mobile,Silver,Yes,Middle
+C101891,Female,33,Jos,North Central,2024-09-02,Desktop,Gold,Yes,Middle
+C101892,Female,37,Kaduna,North West,2024-03-12,Mobile,Bronze,No,Low
+C101893,Male,39,Ibadan,South West,2025-03-05,Mobile,Bronze,No,Lower-Middle
+C101894,Male,27,Lagos,South West,2025-09-10,Mobile,Silver,No,Low
+C101895,Female,37,Abuja,North Central,2024-11-12,Mobile,Bronze,Yes,Low
+C101896,Female,18,Jos,North Central,2025-09-26,Mobile,Bronze,Yes,Middle
+C101897,Male,34,Kano,North West,2024-08-15,Mobile,Gold,Yes,Upper-Middle
+C101898,Female,25,Lagos,South West,2025-12-03,Mobile,Bronze,No,Upper-Middle
+C101899,Female,39,Ibadan,South West,2024-02-14,Mobile,Bronze,Yes,Lower-Middle
+C101900,Female,29,Kaduna,North West,2024-03-11,Mobile,Silver,Yes,Middle
+C101901,Female,53,Enugu,South East,2024-07-28,Mobile,Silver,Yes,Middle
+C101902,Female,34,Enugu,South East,21/07/2025,Mobile,Gold,Yes,High
+C101903,Male,36,Jos,North Central,2025-11-09,Mobile,Bronze,Yes,Lower-Middle
+C101904,Male,18,Ibadan,South West,2025-11-20,Mobile,Bronze,Yes,Middle
+C101905,Male,21,Kano,North West,2025-07-28,Mobile,Bronze,0,Low
+C101906,Male,42,Lagos,South West,2024/08/10,Mobile,Silver,Yes,Lower-Middle
+C101907,Male,27,Kano,North West,2024-03-02,Desktop,Silver,Yes,Lower-Middle
+C101908,Non-binary,43,Ibadan,South West,2025-09-20,Mobile,Silver,Yes,Lower-Middle
+C101909,Female,27,Lagos,South West,2024-01-28,Mobile,Platinum,Yes,Lower-Middle
+C101910,Female,38,Abuja,North Central,2025-07-05,Tablet,Bronze,Yes,High
+C101911,Male,26,Kano,North West,2024-07-15,Desktop,Silver,Yes,Lower-Middle
+C101912,Female,37,Abuja,North Central,2024-02-23,Mobile,Silver,No,Middle
+C101913,Female,39,Port Harcourt,South South,2024-01-14,Mobile,Bronze,Yes,Lower-Middle
+C101914,Male,41,Port Harcourt,South South,13/03/2025,Mobile,Platinum,Yes,Lower-Middle
+C101915,Female,26,Kaduna,North West,2024-02-25,Mobile,Silver,No,Middle
+C101916,Female,21,Lagos,South West,03-06-2025,Mobile,Gold,No,Middle
+C101917,Female,38,Lagos,South West,2024-10-29,Mobile,Bronze,Yes,Middle
+C101918,Male,35,Lagos,South West,2024-02-04,Desktop,Bronze,Yes,Upper-Middle
+C101919,Male,39,Kano,North West,2025-06-09,Desktop,Gold,Yes,Middle
+C101920,Male,22,Lagos,South West,14/03/2025,Mobile,Bronze,Yes,Lower-Middle
+C101921,Female,39,Benin City,South South,2025-12-16,Desktop,Gold,Yes,High
+C101922,Female,?,Ibadan,South West,2025-07-12,Mobile,Bronze,Yes,Middle
+C101923,Female,23,Port Harcourt,South South,"May 13, 2025",Tablet,Gold,Yes,High
+C101924,Female,29,Port Harcourt,South South,2025-12-19,Mobile,Gold,Yes,Lower-Middle
+C101925,Male,41,Ibadan,South West,2025-12-18,Mobile,Silver,Yes,Lower-Middle
+C101926,Female,34,Lagos,South West,2025-09-17,Mobile,Gold,No,Low
+C101927,Female,34,Abuja,North Central,2025-08-17,Mobile,Gold,Yes,Upper-Middle
+C101928,Non-binary,34,Abjua,South South,2024-06-15,Mobile,Gold,Yes,Lower-Middle
+C101929,Male,29,Lagos,South West,2025/04/10,Desktop,Gold,No,Middle
+C101930,Male,44,Ibadan,South West,2024-09-26,Mobile,Silver,Yes,Middle
+C101931,Female,33,Abuja,North Central,2025-08-23,Mobile,Silver,Yes,Low
+C101932,Male,20,Lagos,North Cntrl,2025-09-11,Tablet,Bronze,No,High
+C101933,Male,20,Lagos,South West,2024-01-24,Desktop ,Bronze,Yes,Low
+C101934,Female,28,Abuja,North Central,2024-12-10,Mobile,Silver,No,Middle
+C101935,Female,30,Kano,North West,2024-12-11,Desktop,Bronze,Yes,Middle
+C101936,Male,39,Enugu,South East,2025-09-13,Mobile,Gold,No,Middle
+C101937,Male,18,Ibadan,South West,2025-11-10,Desktop,Silver,Yes,Low
+C101938,Female,40,Lagos,South West,2024-03-10,Mobile,Silver,Yes,Middle
+C101939,Female,43,Benin City,South South,2024-04-30,Desktop,Gold,Yes,High
+C101940,Non-binary,99,Jos,North Central,2024-08-23,Mobile,Bronze,No,Middle
+C101941,Male,44,Lagos,South West,2025-08-11,Mobile,Bronze,Yes,Lower-Middle
+C101942,Male,27,Port Harcourt,South South,2024-10-18,Desktop,Platinum,Yes,Low
+C101943,Female,32,Lagos,South West,2025-02-27,Mobile,Gold,No,Middle
+C101944,Female,29,Benin City,South South,2025-04-11,Mobile,Silver,No,Middle
+C101945,Male,47,Lagos,South West,2025-03-20,Mobile,Bronze,Yes,Middle
+C101946,Male,43,Calabar,South South,2025-04-04,Mobile,Silver,No,Lower-Middle
+C101947,Male,43,Port Harcourt,South South,2024-08-23,Mobile,Platinum,Yes,Middle
+C101948,Male,23,Kano,North West,07-24-2025,Mobile,Bronze,No,High
+C101949,Female,34,Abuja,North Central,2025-04-15,Desktop,Gold,No,High
+C101950,Male,23,Abuja,North Central,01-02-2025,Desktop,Gold,Yes,Middle
+C101951,Male,34,Lagos,South West,2025-11-30,Mobile,Gold,No,Lower-Middle
+C101952,Non-binary,38,Enugu,South East,2025-05-13,Desktop,Platinum,Yes,Lower-Middle
+C101953,Female,45,Abuja,North Central,2024-04-26,Desktop,Bronze,No,Low
+C101954,Male,32,Abuja,North Central,2024-04-16,Mobile,Silver,No,Middle
+C101955,Female,35,Port Harcourt,South South,2024-04-29,Tablet,Silver,Yes,High
+C101956,Male,32,Lagos,South West,2025-03-31,mobile,Bronze,,Middle
+C101957,Male,24,Abuja,North Central,2024-11-09,Mobile,Bronze,No,Middle
+C101958,Female,48,P/Harcourt,North Central,2025-06-29,Mobile,Bronze,Yes,Lower-Middle
+C101959,Female,36,Calabar,South South,2024-08-29,Mobile,Gold,No,Middle
+C101960,Non-binary,46,Enugu,South East,2024-05-11,Mobile,Silver,Yes,High
+C101961,Male,41,Abuja,North Central,2025-10-10,Mobile,Bronze,No,Low
+C101962,Male,22,Enugu,South-West,2024-01-06,Mobile,Silver,Yes,Upper-Middle
+C101963,Male,28,Lagos,South West,2025-06-08,Desktop,Bronze,Yes,Low
+C101964,Male,0,Benin City,South South,2025-08-12,Mobile,Silver,Yes,High
+C101965,Male,41,Enugu,South East,2025-06-24,Desktop,Silver,Yes,Lower-Middle
+C101966,Male,39,Lagos,South West,25/01/2024,Mobile,Gold,Yes,Low
+C101967,Male,33,Lagos,South West,2025-02-15,Desktop,Bronze,Yes,Upper-Middle
+C101968,Female,41,Kaduna,North West,18/11/2024,Desktop,Bronze,Yes,Lower-Middle
+C101969,Female,24, lagos ,North West,2025-11-17,Mobile,Silver,Yes,Middle
+C101970,Male,31, lagos ,South South,2025-05-18,Desktop,Gold,Yes,Lower-Middle
+C101971,Male,23,Lagos,South West,"Sep 02, 2024",Desktop,Bronze,Yes,Middle
+C101972,Female,42,Lagos,South West,2025-11-07,Mobile,Gold,Yes,Middle
+C101973,Female,36,Lagos,South West,2025-10-13,Mobile,Gold,Yes,Middle
+C101974,Female,39,Abuja,North Central,2025-03-25,Mobile,Silver,Yes,Middle
+C101975,Male,31,Lagos,South West,2025-04-03,Tablet,Bronze,Yes,Low
+C101976,Male,18,Benin City,South South,2025-10-18,Mobile,Bronze,No,Lower-Middle
+C101977,Male,26,Lagos,South West,2024-02-07,Desktop,Bronze,No,Middle
+C101978,Male,34,Ibadan,South West,2024-12-29,Mobile,Silver,No,High
+C101979,Female,33,Ibadan,South West,2024-06-03,Mobile,Bronze,No,Middle
+C101980,Female,41,Lagos,South West,2024-07-18,Mobile,Gold,Yes,Upper-Middle
+C101981,Male,43,Kano,North West,2025-09-24,Desktop,Bronze,Yes,Lower-Middle
+C101982,Female,28,Calabar,South South,2024-06-22,Desktop,Bronze,Yes,Middle
+C101983,Female,40,Port Harcourt,South South,2024-12-23,Desktop,Gold,Yes,Upper-Middle
+C101984,Male,18,Ibadan,South West,2024-11-24,Mobile,Bronze,Yes,Lower-Middle
+C101985,Male,39,Port Harcourt,South South,2024-04-10,Desktop,Silver,Yes,Middle
+C101986,Female,18,Calabar,South South,2024-08-24,Mobile,Silver,No,High
+C101987,Female,38,Enugu,South East,2025-06-01,Mobile,Silver,Yes,Lower-Middle
+C101988,Female,18,Calabar,South South,2025-08-05,Mobile,Silver,Yes,Low
+C101989,Female,37,Port Harcourt,South South,2024-06-25,Desktop,Bronze,Yes,Lower-Middle
+C101990,Female,47,Abuja,North Central,2025-09-01,Mobile,Gold,No,Lower-Middle
+C101991,Male,31,Lagos,South West,2024-10-12,Mobile,Bronze,Yes,Upper-Middle
+C101992,Female,39,Lagos,South West,2025-10-20,Tablet,Platinum,Yes,Upper-Middle
+C101993,Female,43,Calabar,South South,2025-11-12,Mobile,Gold,Yes,Middle
+C101994,Male,18,Benin City,South South,2025-08-27,Desktop,Gold,No,High
+C101995,Female,18,Ibadan,South West,09-25-2025,Mobile,Gold,No,Upper-Middle
+C101996,Female,33,Lagos,South West,2025-02-25,Desktop,Bronze,No,High
+C101997,Female,23,Jos,North Central,2025-06-16,Mobile,Bronze,Yes,Lower-Middle
+C101998,Female,29,Lagos,South West,2025/08/01,Desktop,Bronze,Yes,High
+C101999,Male,58,Kano,North West,2024-09-05,Mobile,Bronze,Yes,Upper-Middle
+C102000,Male,50,Benin City,South South,2025-06-14,Mobile,Silver,Yes,Low
+C102001,Male,39,Kaduna,North West,03/01/2025,Mobile,Silver,Yes,Low
+C102002,Non-binary,27,Kaduna,North West,2025-02-13,Mobile,Bronze,Yes,Lower-Middle
+C102003,Male,38,Kano,North West,2024-02-27,Tablet,Silver,Yes,Lower-Middle
+C102004,Male,36,Benin City,South South,2025-10-14,Mobile,Gold,Yes,Low
+C102005,Female,32,Port Harcourt,South South,2024-01-24,mobile,Platinum,Yes,Lower-Middle
+C102006,Female,48,Enugu,South East,09-21-2024,Mobile,Platinum,Yes,Upper-Middle
+C102007,Non-binary,18,Lagos,South West,2024-04-17,Mobile,Gold,Yes,Upper-Middle
+C102008,Female,48,Abuja,North Central,2025-10-14,Mobile,Bronze,Yes,Lower-Middle
+C102009,Male,29,Kaduna,North West,2024-11-06,Mobile,Silver,No,Upper-Middle
+C102010,Male,45,Jos,North Central,2024-10-31,Desktop,Silver,No,Lower-Middle
+C102011,Female,32,Kano,North West,11-04-2025,Desktop,Bronze,No,Middle
+C102012,Male,28,Lagos,South West,"Feb 22, 2024",Mobile,Bronze,Yes,Middle
+C102013,Male,-3,Enugu,South East,2024-08-13,Mobile,Gold,Yes,Middle
+C102014,Female,36,Calabar,South South,2025-11-08,Mobile,Bronze,No,Lower-Middle
+C102015,Female,36,Ibadan,South West,2024-05-04,Mobile,Bronze,Yes,Middle
+C102016,Female,61,Port Harcourt,South South,2025-09-30,Mobile,Silver,Yes,High
+C102017,Male,48,Port Harcourt,South South,2025-09-23,Desktop,Silver,Yes,Middle
+C102018,Female,33,Benin City,South South,2025-04-24,Desktop,Gold,No,Lower-Middle
+C102019,Male,22,Lagos,South West,06-14-2024,Mobile,Bronze,Yes,Lower-Middle
+C102020,Male,34,Lagos,South West,12-12-2024,Mobile,Gold,Yes,Lower-Middle
+C102021,Male,39,Calabar,South South,2025-07-28,Mobile,Bronze,Yes,Low
+C102022,Male,18,Abjua,South West,2025-03-02,Desktop,Platinum,Yes,Lower-Middle
+C102023,Female,33,Ibadan,South West,2025-03-22,Mobile,Silver,Yes,Low
+C102024,Female,45,Abuja,North Central,2024-05-03,Mobile,Silver,No,Lower-Middle
+C102025,Female,29,Lagos,South West,2024-05-07,Mobile,Bronze,Yes,Lower-Middle
+C102026,Female,19,Lagos,South West,2024-12-17,Mobile,Bronze,Yes,Lower-Middle
+C102027,Male,40,Lagos,South West,2024-10-03,Mobile,Gold,Yes,Middle
+C102028,Male,48,Kano,North West,2024-02-14,Tablet,Gold,No,Middle
+C102029,Male,31,Kaduna,North West,2024-02-18,Desktop,Bronze,No,Lower-Middle
+C102030,Female,35,Calabar,South South,2025-07-26,Mobile,Silver,Yes,Lower-Middle
+C102031,Female,44,Calabar,South South,2024-12-23,Desktop,Bronze,Yes,Upper-Middle
+C102032,Male,38,Lagos,South West,2024/02/24,Desktop,Bronze,Yes,Low
+C102033,Male,27,Lagos,South West,2025-04-14,Mobile,Bronze,Yes,Middle
+C102034,Male,30,Kano,North West,2025-11-05,Desktop,Gold,Yes,Lower-Middle
+C102035,Male,33,Abuja,North Central,2025-01-25,Mobile,Silver,Yes,Lower-Middle
+C102036,Male,33,Jos,North Central,2024-10-22,Mobile,Bronze,No,Lower-Middle
+C102037,Female,44,Ibadan,South West,2025-01-24,Mobile,Bronze,No,Lower-Middle
+C102038,male,24,Port Harcourt,South South,2025-02-16,Desktop,Bronze,No,High
+C102039,Male,37,Port Harcourt,South South,2024-06-04,Mobile,Silver,No,Middle
+C102040,Male,32,Abuja,North Central,2025-10-04,Mobile,Bronze,Yes,Middle
+C102041,Female,18,Benin City,South South,2024-04-27,Mobile,Bronze,Yes,Upper-Middle
+C102042,Female,40,Lagos,South West,2024-07-15,Tablet,Silver,No,Low
+C102043,Female,35,Calabar,South South,2024-04-15,Mobile,Silver,No,High
+C102044,Female,22,Enugu,South East,2024-01-02,Mobile,Bronze,No,Low
+C102045,Female,18,Enugu,South East,2025-08-08,Desktop,Silver,Yes,Middle
+C102046,Male,42,Calabar,South South,2024-11-28,Tablet,Gold,Yes,Lower-Middle
+C102047,Female,49,Kano,North West,2025-08-02,mobile,Bronze,Yes,Upper-Middle
+C102048,Male,34,Jos,North Central,2024-01-15,Mobile,Bronze,Yes,Lower-Middle
+C102049,Male,31, lagos ,North West,2024-11-28,Mobile,Bronze,Yes,Upper-Middle
+C102050,Male,40,Ibadan,South West,2025-04-28,Desktop,Bronze,Yes,Lower-Middle
+C102051,Male,27,Lagos,South West,10-04-2024,Mobile,Gold,Yes,Middle
+C102052,Female,29,Ibadan,South West,2025-10-13,Mobile,Bronze,Yes,Lower-Middle
+C102053,Male,42,Ibadan,South West,2024-11-26,Desktop,Bronze,Yes,Middle
+C102054,Male,23,Kaduna,North West,2025-04-15,Mobile,Gold,Yes,Middle
+C102055,Male,44,Enugu,South East,2024-12-10,Mobile,Silver,Yes,Upper-Middle
+C102056,Female,36,Kano,North West,2024-10-06,Mobile,Silver,No,Upper-Middle
+C102057,Female,45,Lagos,South West,2025-10-22,Mobile,Platinum,Yes,Lower-Middle
+C102058,Female,18,Lagos,South West,10-06-2025,Mobile,Gold,No,Lower-Middle
+C102059,Female,45,Enugu,South East,2024-09-19,Mobile,Silver,Yes,Lower-Middle
+C102060,Male,33,Jos,North Central,2025-02-06,Mobile,Bronze,Yes,Upper-Middle
+C102061,Female,39,Port Harcourt,South South,2024-11-16,Tablet,Gold,Yes,Low
+C102062,Female,26,Lagos,South West,"Nov 25, 2024",Mobile,Silver,Yes,High
+C102063,Male,24,Lagos,South West,2024-12-30,Mobile,Bronze,No,Upper-Middle
+C102064,Male,44,Lagos,South West,2025-03-08,Tablet,Gold,No,Upper-Middle
+C102065,Non-binary,38,Jos,North Central,2025-03-09,Mobile,Bronze,Yes,Middle
+C102066,Female,39,Port Harcourt,South South,2025-08-18,Tablet,Bronze,Yes,Lower-Middle
+C102067,Female,40,Ibadan,South West,2024-08-28,Mobile,Bronze,Yes,High
+C102068,Female,39,Enugu,South East,2025-06-12,Mobile,Platinum,Yes,Upper-Middle
+C102069,Female,19,Abuja,North Central,2025-04-24,Desktop,Bronze,No,Upper-Middle
+C102070,Male,31,Ibadan,South West,2025-08-22,Desktop,Platinum,Yes,Low
+C102071,Male,30,Benin City,South South,2025-08-16,Mobile,Silver,No,High
+C102072,Female,52,Port Harcourt,South South,2025-11-22,Mobile,Bronze,No,Low
+C102073,Female,46,Lagos,South West,2025-03-03,Mobile,Silver,Yes,Low
+C102074,Female,25,Port Harcourt,South South,2024-04-08,Mobile,Gold,Yes,Upper-Middle
+C102075,Female,20,Lagos,South West,2025-11-05,Desktop,Bronze,Yes,Upper-Middle
+C102076,Female,40,Abuja,North Central,2025-03-16,Mobile,Platinum,Yes,Low
+C102077,Female,39,Port Harcourt,South South,2024-09-15,Mobile,Gold,No,Lower-Middle
+C102078,Male,46,Lagos,South West,2025-08-26,Mobile,Bronze,Yes,Middle
+C102079,Male,23,Calabar,South South,2025-06-22,Mobile,Gold,No,Upper-Middle
+C102080,Non-binary,49,Kano,North West,2025-02-25,Mobile,Bronze,Yes,High
+C102081,Female,35,Jos,North Central,2025-07-27,Mobile,Bronze,No,Middle
+C102082,Female,45,Jos,North Central,2025-09-03,Desktop,Bronze,No,Lower-Middle
+C102083,Female,36,Abuja,North Central,2025-09-12,Desktop,Bronze,No,Lower-Middle
+C102084,Male,30,Lagos,South West,2024-09-16,Mobile,Silver,Yes,Low
+C102085,Male,26,Calabar,South South,2025-03-31,Mobile,Silver,Yes,Upper-Middle
+C102086,Female,46,Ibadan,South West,18/09/2025,Mobile,Silver,N,Middle
+C102087,Male,18,Kano,North West,2024-06-03,Mobile,Gold,Yes,Lower-Middle
+C102088,Male,44,Enugu,South East,2024-06-20,Desktop,Bronze,Yes,Lower-Middle
+C102089,Female,40,Abuja,North Central,2025-05-13,Mobile,Bronze,Yes,Upper-Middle
+C102090,Male,27,Benin City,South South,2024-08-19,Mobile,Bronze,Yes,High
+C102091,Female,41,Abuja,North Central,08-05-2024,Mobile,Silver,Yes,Lower-Middle
+C102092,Male,32,Lagos,South West,2024-08-19,Desktop,Bronze,Yes,Upper-Middle
+C102093,Female,22,Lagos,N Central,09-01-2024,Mobile,Gold,No,High
+C102094,Female,31,Abuja,North Central,"May 11, 2024",Mobile,Bronze,No,Low
+C102095,Male,39,Abuja,North Central,2025-11-10,Mobile,Silver,Yes,High
+C102096,Male,34,Kaduna,North West,2025-08-09,Mobile,Bronze,Yes,High
+C102097,Male,26,Ibadan,South West,2024-03-08,Mobile,Gold,No,Middle
+C102098,Female,40,Kaduna,North West,2024-12-20,Mobile,Silver,No,Upper-Middle
+C102099,Female,40,Abuja,North Central,2025-09-28,Desktop,Bronze,Yes,High
+C102100,Female,45,Lagos,South West,2024-05-20,mobile,Silver,No,Lower-Middle
+C102101,Male,35,Benin City,South South,2024-10-16,Mobile,Silver,Yes,Low
+C102102,Male,47,Abuja,North Central,2024-07-03,Mobile,Gold,No,Middle
+C102103,Male,27,Kaduna,North West,2024-07-29,Mobile,Gold,Yes,Middle
+C102104,Female,29,Port Harcourt,South South,2024/03/13,Mobile,Platinum,Yes,Middle
+C102105,Female,20,Abuja,North Central,2024-12-13,Tablet,Gold,Yes,Lower-Middle
+C102106,Female,33,Kaduna,North West,2025-06-20,Desktop,Bronze,No,Low
+C102107,Female,34,Lagos,South West,"Nov 25, 2025",Desktop,Bronze,Yes,Middle
+C102108,Non-binary,33,Kaduna,south west,2024-04-26,Mobile,Bronze,Yes,Low
+C102109,Male,21,Port Harcourt,South South,17/11/2024,Mobile,Bronze,Yes,Middle
+C102110,Female,43,Lagos,South West,2025-08-01,Mobile,Silver,No,Low
+C102111,Male,18,Kano,North West,2025-08-16,Mobile,Bronze,Yes,Lower-Middle
+C102112,Female,24,Benin City,South South,2025-01-22,Mobile,Bronze,No,Lower-Middle
+C102113,Male,18,Lagos,South West,2025-10-15,Desktop,Bronze,No,Middle
+C102114,Male,43,Ibadan,South West,10-26-2025,Desktop,Bronze,No,Low
+C102115,Male,0,Ibadan,South West,"Apr 07, 2025",Desktop,Gold,Yes,Middle
+C102116,Female,31,Kano,North West,2025-06-02,Mobile,Bronze,Yes,High
+C102117,Female,36,Lagos,South West,10-11-2024,Desktop,Bronze,No,High
+C102118,Male,22,Benin City,South South,2025-11-17,Desktop,Silver,Yes,Lower-Middle
+C102119,Female,23,Calabar,South South,03-06-2024,Desktop,Platinum,No,Middle
+C102120,Female,24,Lagos,South West,2025-01-03,Desktop,Gold,Yes,Middle
+C102121,Male,36,Kano,North West,05-01-2024,Mobile,Bronze,No,Middle
+C102122,Male,29,Port Harcourt,South South,2025-11-03,Mobile,Gold,Yes,High
+C102123,M,35,Ibadan,South West,2024-11-02,Mobile,Bronze,No,Middle
+C102124,Female,23,Abuja,North Central,2025-06-27,Mobile,Gold,No,High
+C102125,Female,20,Ibadan,South West,2025-07-06,Tablet,Bronze,Yes,Low
+C102126,Female,37,Ibadan,South West,"Jul 06, 2025",Mobile,Bronze,Yes,Upper-Middle
+C102127,Male,36,Jos,North Central,2024-03-09,Mobile,Bronze,Yes,Middle
+C102128,Male,37,Enugu,South East,2025-07-16,Mobile,Platinum,No,Lower-Middle
+C102129,Male,27,Jos,North Central,02-14-2025,Mobile,Bronze,Yes,High
+C102130,Male,36,Calabar,South South,2024-02-10,Mobile,Bronze,Yes,Low
+C102131,Female,19,Port Harcourt,South South,2024-02-09,Mobile,Gold,No,Lower-Middle
+C102132,Female,23,Kaduna,North West,"Apr 15, 2025",Mobile,Silver,Yes,Lower-Middle
+C102133,Male,36,Jos,North Central,2025-09-03,Mobile,Gold,Yes,Upper-Middle
+C102134,Female,24,Lagos,South West,2024-02-07,Desktop,Bronze,Yes,Middle
+C102135,Male,22,Kaduna,North West,2025-03-09,Mobile,Platinum,Yes,High
+C102136,Male,24,Benin City,South South,2025-06-07,Tablet,Silver,No,Low
+C102137,Male,48,Lagos,South West,2024-03-26,Tablet,Bronze,Yes,Low
+C102138,Female,29,Kano,North West,12-22-2024,Mobile,Bronze,Yes,Middle
+C102139,Female,36,Kano,North West,2024-07-06,Mobile,Bronze,Yes,Upper-Middle
+C102140,Male,32,Kano,North West,2025-02-27,Tablet,Gold,Yes,Low
+C102141,Male,56,Lagos,South West,2024-06-20,Mobile,Bronze,Yes,Lower-Middle
+C102142,Female,32,Jos,North Central,2025-12-17,Desktop,Bronze,Yes,Low
+C102143,Male,43,Port Harcourt,South South,2025-07-26,Mobile,Bronze,No,Low
+C102144,Female,42,Enugu,South East,2025-11-29,Mobile,Bronze,Yes,Lower-Middle
+C102145,Female,37,Lagos,South West,"Jan 25, 2024",Mobile,Bronze,Yes,Low
+C102146,Male,33,Benin City,South South,2025-04-25,Desktop,Silver,No,Lower-Middle
+C102147,Female,19,Lagos,South West,2024-01-06,Mobile,Silver,Yes,Lower-Middle
+C102148,Male,39,Benin City,South South,2025-03-05,Desktop,Bronze,Yes,High
+C102149,F,54,Kano,North West,2025-06-05,Mobile,Bronze,Yes,Upper-Middle
+C102150,Male,38,Port Harcourt,South South,2024-12-30,Desktop,Platinum,Yes,Lower-Middle
+C102151,Female,52,Kano,North West,2024-07-06,Mobile,Platinum,Yes,Lower-Middle
+C102152,Female,40,Ibadan,South West,09-24-2024,Mobile,Silver,Yes,Lower-Middle
+C102153,Male,42,Lagos,South West,2024-08-16,Mobile,Gold,Yes,Middle
+C102154,Male,29,Lagos,South West,2025-09-11,Mobile,Bronze,Yes,Upper-Middle
+C102155,Male,32,Lagos,South West,2024-10-01,Tablet,Silver,Yes,Low
+C102156,Non-binary,38,Abuja,North Central,2025-05-03,Mobile,Silver,Yes,Upper-Middle
+C102157,Male,44,Jos,North Central,2024-04-13,Tablet,Bronze,No,Low
+C102158,Male,24,Abuja,North Central,2024-09-21,Mobile,Bronze,Yes,Middle
+C102159,Male,20,Enugu,South East,2025-01-08,Mobile,Bronze,0,Low
+C102160,Female,32,Kano,North West,2024-10-20,Mobile,Gold,Yes,High
+C102161,Female,32,Kano,North West,2025-10-01,Tablet,Bronze,Yes,Low
+C102162,Female,38,Kano,North West,2025-05-04,Mobile,Silver,Yes,Lower-Middle
+C102163,Female,49,Lagos,South West,2025/12/07,Desktop,Silver,Yes,Lower-Middle
+C102164,Male,28,Enugu,South East,2025-03-19,Mobile,Bronze,Yes,Lower-Middle
+C102165,Female,51,Port Harcourt,South South,2024-12-10,Desktop,Bronze,Yes,Middle
+C102166,Female,39,Jos,North Central,2024-09-18,Mobile,Silver,No,Middle
+C102167,Male,34,Lagos,South West,2024-09-01,Mobile,Bronze,Yes,Lower-Middle
+C102168,Male,18,Lagos,South West,09/03/2024,Mobile,Gold,Yes,Middle
+C102169,Male,47,Lagos,South West,2024-05-16,Mobile,Bronze,Yes,Middle
+C102170,Female,50,Kaduna,North West,2024-06-25,Mobile,Silver,Yes,Lower-Middle
+C102171,Female,38,Lagos,South West,12-19-2025,Tablet,Bronze,No,Upper-Middle
+C102172,Female,38,Port Harcourt,South South,2024-06-20,Desktop,Silver,No,Lower-Middle
+C102173,Male,30,Ibadan,South West,2024-10-05,Mobile,Gold,Yes,Middle
+C102174,Female,18,Ibadan,South West,08/08/2025,Desktop,Platinum,Yes,High
+C102175,Male,26,Abuja,North Central,"Jun 30, 2025",Mobile,Gold,No,Middle
+C102176,Male,20,Jos,North Central,2025-10-25,Mobile,Bronze,Yes,Upper-Middle
+C102177,Female,0,Ibadan,South West,2025-03-14,Mobile,Silver,Yes,Low
+C102178,Male,25,Lagos,South West,2025-12-11,Mobile,Gold,Yes,Low
+C102179,Non-binary,28,Benin City,South South,2025-03-05,Mobile,Bronze,Yes,Low
+C102180,Female,38,Lagos,South West,2025-01-31,Mobile,Silver,No,Middle
+C102181,Male,45,Kano,North West,2024-06-17,Tablet,Silver,Yes,Middle
+C102182,Female,31,Lagos,South West,2024-01-01,Mobile,Bronze,Yes,Middle
+C102183,Non-binary,41,Jos,North Central,2025/07/26,Mobile,Bronze,Yes,Middle
+C102184,Male,30,Lagos,South West,2024-04-06,Tablet,Bronze,Yes,Low
+C102185,Male,30,Abuja,North Central,2025-04-23,Mobile,Silver,Yes,Upper-Middle
+C102186,Female,36,Lagos,South West,2025-03-03,Mobile,Platinum,Yes,Low
+C102187,Female,27,Benin City,South South,2024-09-12,Mobile,Bronze,Yes,Upper-Middle
+C102188,Female,35,Port Harcourt,South South,2025-06-30,Mobile,Gold,No,High
+C102189,Female,29,Ibadan,South West,2024-10-14,Mobile,Silver,Yes,Low
+C102190,Female,25,Ibadan,South West,2025-04-29,Mobile,Silver,Yes,Low
+C102191,Female,27,Benin City,South South,2024-04-26,Desktop,Silver,No,High
+C102192,Male,47,Abuja,North Central,2024-07-04,Mobile,Bronze,Yes,Middle
+C102193,Non-binary,35,Abuja,North Central,2024-10-24,Mobile,Platinum,Yes,Middle
+C102194,Female,29,Abuja,North Central,2024-03-24,Mobile,Bronze,Yes,Upper-Middle
+C102195,Female,35,Lagos,South West,2025-12-15,Mobile,Bronze,No,Middle
+C102196,Female,26,Kano,North West,02-04-2024,Mobile,Bronze,No,Upper-Middle
+C102197,Female,29,Jos,North Central,2024/02/05,Desktop,Gold,Yes,Upper-Middle
+C102198,Male,30,Jos,North Central,2025-08-13,Mobile,Bronze,Yes,Middle
+C102199,Female,18,Calabar,South South,2024-07-22,Mobile,Silver,Yes,High
+C102200,Male,31,Lagos,South West,2024-09-30,Tablet,Gold,Yes,Low
+C102201,Male,37,Kano,North West,2024-03-30,Mobile,Bronze,Yes,Middle
+C102202,Female,99,Lagos,South West,2024-04-09,Mobile,Silver,Yes,Middle
+C102203,Female,32,Enugu,South East,2024-03-13,Tablet,Bronze,Yes,Low
+C102204,Male,43,Enugu,South East,2024-02-17,Desktop,Gold,No,Middle
+C102205,Male,25,Ibadan,South West,2024-12-18,Mobile,Platinum,No,Middle
+C102206,Female,43,Calabar,South South,"Nov 04, 2024",Desktop,Gold,No,Lower-Middle
+C102207,M,42,Ibadan,South West,2024-03-19,Mobile,Silver,Yes,High
+C102208,Male,35,Benin City,South South,2025-01-29,Desktop,Gold,Yes,Lower-Middle
+C102209,Female,47,Abuja,North Central,2025-06-03,Mobile,Silver,Yes,Lower-Middle
+C102210,Male,26,Enugu,South East,02-18-2025,Mobile,Bronze,No,Low
+C102211,Female,35,Benin City,South South,2025-04-03,Mobile,Bronze,No,Low
+C102212,Female,32,Ibadan,South West,2024-03-12,Mobile,Silver,Yes,Middle
+C102213,Male,26,Port Harcourt,South South,2025-09-03,Mobile,Bronze,Yes,Lower-Middle
+C102214,Male,30,Kaduna,North West,2025-00-11,Mobile,Bronze,Yes,Upper-Middle
+C102215,Male,37,Lagos,South West,2025-11-05,Mobile,Bronze,Yes,Lower-Middle
+C102216,Male,37,Kano,North West,2024-04-29,Desktop,Bronze,No,Low
+C102217,Non-binary,39,Lagos,South West,2024-11-14,Mobile,Silver,Yes,Middle
+C102218,Male,27,Lagos,South West,2024-10-21,Desktop,Silver,No,Upper-Middle
+C102219,Male,32,Lagos,South West,2024-03-28,Mobile,Gold,Yes,Low
+C102220,Female,32,Ibadan,South West,01/10/2025,Mobile,Gold,Yes,Upper-Middle
+C102221,Male,27,Calabar,South South,2025-11-26,Mobile,Bronze,No,Low
+C102222,Male,33,Lagos,South West,2024-02-28,Mobile,Gold,Yes,Lower-Middle
+C102223,Female,18,Lagos,South West,2024-12-11,Mobile,Silver,Yes,Middle
+C102224,Male,22,Ibadan,South West,2025/08/22,Desktop,Bronze,Yes,High
+C102225,Male,28,Lagos,South West,2025-06-11,Mobile,Silver,No,Low
+C102226,Male,29,Port Harcourt,South South,2024-06-23,Desktop,Platinum,Yes,Upper-Middle
+C102227,Female,39,Ibadan,South West,2024-11-04,Mobile,Gold,Yes,Low
+C102228,Female,28,Lagos,South West,2025-06-15,Tablet,Gold,No,High
+C102229,Female,48,Jos,North Central,2025-05-16,Mobile,Gold,No,Upper-Middle
+C102230,Male,99,Port Harcourt,South South,2024-11-07,Mobile,Silver,Yes,Middle
+C102231,Male,50,Benin City,South-West,19/04/2025,Mobile,Gold,TRUE,Upper-Middle
+C102232,Female,24,Lagos,South West,2024-06-29,Mobile,Bronze,No,Lower-Middle
+C102233,female ,22,Calabar,South South,2024-04-08,Tablet,Bronze,No,Lower-Middle
+C102234,Male,26,Lagos,South West,2024-03-13,Mobile,Bronze,Yes,Upper-Middle
+C102235,Male,27,Ibadan,South West,2024-02-26,Desktop,Gold,No,Middle
+C102236,Male,30,Lagos,South West,2025-07-12,Mobile,Silver,No,Low
+C102237,Female,29,Lagos,South West,2025-02-24,Mobile,Platinum,Yes,Middle
+C102238,Male,37,Lagos,South West,2025-05-08,Mobile,Bronze,Yes,Upper-Middle
+C102239,Male,40,Port Harcourt,South South,2024-01-10,Desktop,Bronze,No,Middle
+C102240,Male,23,Lagos,South West,2024-05-16,Mobile,Bronze,Yes,Middle
+C102241,Male,44,Ibadan,South West,2025-01-14,Mobile,Bronze,No,Lower-Middle
+C102242,Female,35,Benin City,South South,2024-09-10,Mobile,Gold,Yes,Lower-Middle
+C102243,Male,33,Lagos,South West,2024-11-30,Mobile,Bronze,Yes,Lower-Middle
+C102244,Female,40,Kaduna,North West,2025-08-22,Mobile,Bronze,No,Middle
+C102245,Female,32,Lagos,South West,2025-04-19,Desktop,Platinum,Yes,Middle
+C102246,Female,46,Benin City,South South,2024-07-16,Mobile,Gold,Yes,Low
+C102247,Female,22,Abjua,South East,2024-09-24,Desktop,Silver,Yes,Middle
+C102248,Female,44,Benin City,South South,2025-01-13,Mobile,Bronze,Yes,High
+C102249,Female,29,Lagos,South West,2024-08-15,Mobile,Gold,No,Low
+C102250,Male,39,Lagos,South West,2024-12-20,Mobile,Bronze,No,Lower-Middle
+C102251,Female,29,Lagos,South West,2025/04/20,Mobile,Bronze,Yes,Lower-Middle
+C102252,Male,48,Lagos,South West,2024-06-05,Mobile,Bronze,Yes,Low
+C102253,Male,36,Ibadan,South West,2024-03-15,Mobile,Bronze,Yes,Lower-Middle
+C102254,Non-binary,40,Calabar,South South,2025-07-23,Mobile,Bronze,Yes,Middle
+C102255,Male,23,Port Harcourt,South South,2024/01/02,Mobile,Bronze,Yes,Middle
+C102256,Male,19,Kaduna,North West,"Sep 17, 2024",Desktop,Bronze,Yes,Middle
+C102257,Male,35,Abuja,North Central,2024-05-12,Tablet,Silver,Yes,High
+C102258,Female,47,Calabar,South South,2024-12-02,Mobile,Bronze,Yes,Lower-Middle
+C102259,Male,34,Port Harcourt,South South,2025-10-22,Mobile,Silver,Yes,Lower-Middle
+C102260,Female,20,Lagos,South West,2024-11-22,Mobile,Silver,Yes,Lower-Middle
+C102261,Female,48,Lagos,South West,11-24-2025,Mobile,Silver,No,High
+C102262,Male,28,Lagos,South West,2025-02-09,Mobile,Platinum,No,Low
+C102263,Male,40,Lagos,South West,23/09/2024,Mobile,Silver,Yes,Upper-Middle
+C102264,Female,25,Jos,North Central,2024-08-13,Desktop,Bronze,Yes,Middle
+C102265,Male,26,Kaduna,North West,2024/07/21,Mobile,Bronze,No,Middle
+C102266,Male,35,Lagos,South West,2025-06-11,Mobile,Gold,No,Low
+C102267,Female,18,Benin City,South South,2024-11-14,Desktop,Silver,Yes,Low
+C102268,Female,24,Ibadan,South West,27/03/2025,Mobile,Gold,No,Low
+C102269,Male,29,Lagos,South West,2024-02-12,Desktop,Silver,Yes,Low
+C102270,Male,29,Calabar,South South,2025-01-04,Desktop,Bronze,Yes,Middle
+C102271,Male,18,Abuja,North Central,2024-01-20,Mobile,Bronze,No,High
+C102272,Male,43,Benin City,South South,2024-08-01,Mobile,Bronze,Yes,Middle
+C102273,Female,31,Port Harcourt,South South,2025-06-07,Desktop,Silver,Yes,Middle
+C102274,Female,31,Ibadan,South West,2024-07-03,Desktop,Bronze,Yes,Upper-Middle
+C102275,Female,18,Calabar,South South,2025-03-25,Mobile,Bronze,Yes,Middle
+C102276,Male,32,Kaduna,North West,03-29-2024,Mobile,Gold,Yes,Middle
+C102277,Female,38,Abuja,North Central,2025-03-12,Desktop,Silver,Yes,Middle
+C102278,Male,40,Kano,North West,2025-06-06,Mobile,Gold,Yes,Low
+C102279,Male,38,Ibadan,South West,05-27-2024,Mobile,Bronze,Yes,Upper-Middle
+C102280,Male,32,Abuja,North Central,10-22-2025,Mobile,Gold,Yes,High
+C102281,Female,30,Benin City,South South,2025-07-05,Mobile,Bronze,Yes,Lower-Middle
+C102282,Female,34,Abuja,North Central,2025-01-13,Mobile,Silver,Yes,Lower-Middle
+C102283,Male,38,Enugu,South East,2025-08-30,Mobile,Silver,Yes,Middle
+C102284,Female,30,Abuja,North Central,2025-05-24,Mobile,Bronze,No,Low
+C102285,Male,30,Lagos,South West,2025-01-26,Tablet,Gold,No,Middle
+C102286,Male,36,Enugu,South East,2024-06-23,Desktop,Gold,Yes,Middle
+C102287,Female,30,Lagos,South West,2024-05-08,Desktop,Gold,Yes,Low
+C102288,Female,35,Kano,North West,2025-10-07,Mobile,Silver,No,High
+C102289,Female,33,Enugu,South East,2024-10-22,Desktop,Bronze,No,Low
+C102290,Male,24,Kaduna,North West,05/01/2025,Mobile,Gold,Yes,Upper-Middle
+C102291,Male,46,Calabar,South South,2025-09-04,Mobile,Silver,Yes,Middle
+C102292,Male,38,Abuja,North Central,2024-11-23,Mobile,Bronze,Yes,Upper-Middle
+C102293,Female,24,Port Harcourt,South South,2024-06-19,Mobile,Bronze,No,Lower-Middle
+C102294,Female,24,Kano,North West,2025-05-04,Mobile,Bronze,Yes,Lower-Middle
+C102295,Male,28,Lagos,South West,2025-01-08,Mobile,Silver,No,Low
+C102296,Female,27,Calabar,South South,2024-04-15,Mobile,Silver,Yes,Lower-Middle
+C102297,Female,23,Kano,North West,2024-07-31,Mobile,Silver,Yes,Lower-Middle
+C102298,Female,34,Kano,North West,02-10-2025,Mobile,Platinum,Yes,Lower-Middle
+C102299,Female,29,Benin City,South South,2024-06-06,Desktop,Bronze,Yes,Low
+C102300,Female,24,Ibadan,South West,2024-09-02,Mobile,Silver,Yes,High
+C102301,Male,46,Lagos,South West,2025-05-27,Mobile,Bronze,No,Upper-Middle
+C102302,Female,29,Lagos,South West,2025-10-31,Mobile,Bronze,No,Middle
+C102303,Female,35,Abuja,North Central,2024-10-30,Desktop,Platinum,Yes,Low
+C102304,Female,20,Lagos,South West,07-27-2025,Tablet,Bronze,Yes,Middle
+C102305,Male,22,Kano,North West,2024-01-31,Mobile,Bronze,Yes,High
+C102306,Female,23,Lagos,South West,2025-07-12,Mobile,Silver,No,Upper-Middle
+C102307,Female,40,Jos,North Central,2024-10-06,Mobile,Gold,Yes,Lower-Middle
+C102308,Male,38,Lagos,South West,2025-10-24,Mobile,Gold,Yes,Middle
+C102309,Female,30,Abuja,North Central,07-24-2024,Mobile,Gold,No,Middle
+C102310,Male,29,Enugu,South East,2024-10-06,Desktop,Silver,Yes,Lower-Middle
+C102311,Male,35,Kano,North West,2025-10-25,phone,Silver,Yes,Lower-Middle
+C102312,Male,24,Port Harcourt,South South,2025-12-05,Mobile,Gold,No,High
+C102313,Male,30,Kaduna,North West,2024-01-30,TAB,Silver,Yes,Low
+C102314,Female,40,Port Harcourt,South South,2025/11/04,Desktop,Silver,Yes,Middle
+C102315,Male,24,,South West,2024-08-06,Mobile,Bronze,Yes,Middle
+C102316,Non-binary,38,Calabar,South South,2024-11-19,Desktop,Gold,Yes,Middle
+C102317,Male,31,Enugu,South East,2024-04-05,Mobile,Silver,Yes,Middle
+C102318,Male,34,Kaduna,North West,2025-12-11,Tablet,Bronze,Yes,Lower-Middle
+C102319,Male,31,Abuja,North Central,"Jun 04, 2024",Mobile,Bronze,Yes,Middle
+C102320,Female,39,Ibadan,South West,2024-10-07,Mobile,Silver,Yes,Lower-Middle
+C102321,Female,40,Lagos,South West,2025-10-15,Mobile,Bronze,No,Upper-Middle
+C102322,Male,37,Lagos,South West,2025-09-24,Mobile,Bronze,No,Upper-Middle
+C102323,Female,18,Calabar,South South,07-06-2025,Mobile,Bronze,No,Middle
+C102324,Prefer not say,33,,South South,2025-06-03,Desktop,Silver,Yes,Upper-Middle
+C102325,Male,42,Lagos,South West,2025-05-04,Mobile,Bronze,Yes,Low
+C102326,Male,23,Kaduna,North West,2024/01/29,Mobile,Bronze,Yes,Middle
+C102327,Male,18,Ibadan,South West,14/01/2025,Mobile,Bronze,No,Middle
+C102328,Female,30,Kano,North West,2024-03-02,Desktop,Gold,Yes,Middle
+C102329,Female,39, lagos ,South West,2024-01-01,Desktop,Bronze,Yes,Middle
+C102330,Male,21,Ibadan,South West,2024-10-27,Mobile,Platinum,Yes,Upper-Middle
+C102331,Female,35,Port Harcourt,South South,2025-06-16,Mobile,Silver,Yes,Upper-Middle
+C102332,Male,29,Abuja,North Central,2025-07-30,Mobile,Bronze,Yes,High
+C102333,Male,32,Lagos,South West,2024-08-17,Mobile,Platinum,Yes,Low
+C102334,Male,36,Enugu,South East,2025-12-08,Mobile,Bronze,Yes,Upper-Middle
+C102335,Female,30,Kaduna,North West,2025-02-20,Desktop,Bronze,No,Low
+C102336,Female,27,Benin City,South South,2025-05-10,Mobile,Gold,Yes,Lower-Middle
+C102337,Female,33,Abuja,North Central,2025-01-16,Desktop,Silver,Yes,Low
+C102338,Male,46,Kano,North West,2025-06-02,Mobile,Bronze,Yes,Middle
+C102339,Female,37,Port Harcourt,South South,2025-09-30,Tablet,Bronze,Yes,Middle
+C102340,Female,38,Lagos,South West,2025-05-27,Mobile,Silver,Yes,Low
+C102341,Female,24,Kano,North West,2024-04-08,Mobile,Bronze,Yes,Middle
+C102342,Female,27,Kano,North West,"Oct 22, 2024",Mobile,Bronze,Yes,Middle
+C102343,Male,20,Calabar,South South,2025-02-06,Mobile,Silver,Yes,Low
+C102344,Male,40,Enugu,South East,2025-08-22,Desktop,Bronze,No,Middle
+C102345,Male,41,Lagos,South West,2024-05-17,Desktop,Gold,No,Upper-Middle
+C102346,Male,36,Abuja,North Central,2024-07-22,Mobile,Silver,Yes,Upper-Middle
+C102347,Female,39,Lagos,South West,2024-10-06,Desktop,Silver,Yes,Middle
+C102348,Female,120,Lagos,South West,2024-09-13,Mobile,Silver,Yes,Lower-Middle
+C102349,Male,29,Ibadan,South West,2025-11-29,Desktop,Bronze,Yes,Lower-Middle
+C102350,Male,43,Lagos,South West,2024/01/14,Mobile,Bronze,Yes,Lower-Middle
+C102351,Female,29,Lagos,South West,2025-10-25,Desktop,Silver,Yes,Upper-Middle
+C102352,Female,41,Kano,North West,06/11/2024,Desktop,Bronze,Yes,Lower-Middle
+C102353,Male,47,Jos,North Central,2025-07-30,Desktop,Silver,Yes,Upper-Middle
+C102354,Male,22,Enugu,South East,2024-06-04,Mobile,Silver,No,Middle
+C102355,Female,24,Lagos,S/South,2024-11-23,Tablet,Bronze,Yes,Lower-Middle
+C102356,Female,47,Abuja,North Central,2025-04-29,Desktop,Bronze,No,Middle
+C102357,Female,41,Lagos,South West,2025-04-17,Mobile,Silver,No,Middle
+C102358,Male,46,Port Harcourt,South South,2025-11-15,Desktop,Silver,No,Lower-Middle
+C102359,Male,47,Jos,North Central,2024-11-27,Mobile,Platinum,Yes,High
+C102360,Male,30,Lagos,South West,2024-04-24,Mobile,Bronze,No,Lower-Middle
+C102361,Male,50,Kaduna,North Cntrl,2024-01-15,Mobile,Bronze,No,Upper-Middle
+C102362,Male,45,Ibadan,South West,2024-03-19,Mobile,Platinum,No,Upper-Middle
+C102363,Female,41,Ibadan,South West,2024-05-08,Mobile,Bronze,No,Middle
+C102364,Female,35,Enugu,South East,2025-05-16,Mobile,Silver,Yes,Upper-Middle
+C102365,Male,29,Abuja,North Central,2025-03-11,Mobile,Gold,Yes,Middle
+C102366,Male,26,Abuja,North Central,2025-01-30,Desktop,Gold,Yes,Middle
+C102367,Female,20,Kaduna,North West,2024-08-07,Mobile,Bronze,No,Low
+C102368,Male,25,Lagos,South West,2024-07-12,Tablet,Silver,Yes,Upper-Middle
+C102369,Female,25,Lagos,South West,2025-02-08,Desktop,Bronze,Yes,Upper-Middle
+C102370,Female,34,Port Harcourt,South South,09-14-2024,Tablet,Platinum,Yes,Middle
+C102371,Male,26,Port Harcourt,South South,2025-03-17,Desktop,Silver,N,Middle
+C102372,Male,18,Abuja,North Central,2024-04-10,Mobile,Platinum,No,Middle
+C102373,Female,34,Abuja,North Central,2024-12-31,Mobile,Silver,No,Low
+C102374,Female,18,Jos,North Central,2025-04-18,Mobile,Bronze,Yes,Upper-Middle
+C102375,Male,29,Port Harcourt,South South,2024-03-17,Mobile,Silver,No,Middle
+C102376,Male,38,Abuja,North Central,2024-01-19,Mobile,Gold,No,Lower-Middle
+C102377,Female,19,Kaduna,North West,2025-03-01,Mobile,Gold,Yes,Low
+C102378,Male,22,Enugu,South East,26/07/2024,Mobile,Gold,Yes,Low
+C102379,Male,32,Kano,North West,"Aug 21, 2024",Mobile,Bronze,Yes,Upper-Middle
+C102380,Female,44,Calabar,South South,2025-07-26,Mobile,Bronze,Yes,High
+C102381,Female,31,Lagos,South West,2025-10-21,Mobile,Gold,Yes,Low
+C102382,Female,28,Ibadan,South West,2024-05-23,Mobile,Bronze,No,Middle
+C102383,Female,35,Enugu,South East,2025-06-14,Mobile,Bronze,No,Middle
+C102384,Male,18,Calabar,South South,2024-01-21,Tablet,Silver,Yes,Upper-Middle
+C102385,Female,19,Lagos,South West,04-09-2024,Mobile,Bronze,Yes,Upper-Middle
+C102386,Male,38,Kaduna,North West,2025-10-31,Mobile,Gold,No,High
+C102387,Female,39,Lagos,South West,2025-10-27,Mobile,Bronze,Yes,Lower-Middle
+C102388,Male,38,Port Harcourt,South South,2025-12-19,Mobile,Bronze,No,Upper-Middle
+C102389,Female,33,Kaduna,North West,2025-01-24,Desktop,Silver,Yes,Middle
+C102390,Female,36,Kaduna,North West,12/03/2024,Desktop,Bronze,Yes,Middle
+C102391,Male,18,Lagos,South West,2024-09-08,Mobile,Gold,Yes,Middle
+C102392,Female,23,Abuja,North Central,15/06/2024,Desktop,Bronze,Yes,Lower-Middle
+C102393,Female,29,Calabar,South South,2025-08-14,Mobile,Silver,Yes,Upper-Middle
+C102394,Male,120,Benin City,South South,2025-11-19,Mobile,Bronze,Yes,Middle
+C102395,Female,34,Benin City,South South,2024-08-17,Mobile,Silver,Yes,Middle
+C102396,Female,33,Abuja,North Central,2024-03-04,Mobile,Bronze,No,Lower-Middle
+C102397,Male,22,Ibadan,South West,2025-11-30,Desktop,Bronze,No,Low
+C102398,Male,33,Abuja,North Central,2024-07-10,Desktop,Bronze,Yes,Lower-Middle
+C102399,Female,36,Lagos,South West,2024-12-30,Mobile,Silver,Yes,Lower-Middle
+C101348,Female,18,Lagos,South West,2024-12-30,Mobile,Bronze,Yes,Lower-Middle
+C100468,Non-binary,24,Lagos,South West,2024-07-28,Mobile,Silver,No,Lower-Middle
+C101463,Male,36,Lagos,South West,2024-03-25,Mobile,Bronze,Yes,High
+C102267,Female,18,Lagos,South South,2024-11-14,Desktop,Silver,Yes,Low
+C100943,Male,50,Lagos,South South,2025-07-28,Mobile,Silver,Yes,Lower-Middle
+C100839,Female,34,Lagos,North Central,2025-09-29,Desktop,Platinum,No,Low
+C100396,Female,26,Benin City,South South,2025-03-26,Mobile,Bronze,Yes,Middle
+C101236,Female,33,Ibadan,South West,2025-08-24,Desktop,Silver,Yes,Upper-Middle
+C100900,Female,18,Kaduna,North West,08-28-2025,Tablet,Bronze,Yes,Upper-Middle
+C102190,Female,25,Ibadan,South West,2025-04-29,Mobile,Silver,Yes,Low
+C101672,Male,28,Abuja,North Central,2025-06-29,Mobile,Bronze,Yes,Middle
+C101215,Male,43,Kaduna,North West,2024-01-12,Mobile,Bronze,Yes,Lower-Middle
+C101263,Male,38,Calabar,South South,2025-10-23,Desktop,Gold,Yes,Low
+C100194,Female,35,Abuja,North Central,2024-01-13,Mobile,Gold,No,Middle
+C101552,Male,31,Enugu,South East,2025-10-20,Desktop,Silver,No,Middle
+C101249,Female,35,Ibadan,South West,05-16-2025,Mobile,Platinum,Yes,Lower-Middle
+C102024,Female,45,Abuja,North Central,2024-05-03,Mobile,Silver,No,Lower-Middle
+C100569,Male,23,Lagos,South West,20/08/2024,Mobile,Bronze,Yes,Upper-Middle
