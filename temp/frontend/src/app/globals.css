@@ -1,0 +1,336 @@
+@import "tailwindcss";
+
+:root {
+  --background: #020617;
+  --foreground: #e2e8f0;
+  --card: #0f172a;
+  --card-border: #1e293b;
+  --accent: #3b82f6;
+  --accent-emerald: #10b981;
+  --accent-amber: #f59e0b;
+  --accent-rose: #ef4444;
+  --muted: #94a3b8;
+  --sidebar: #0f172a;
+}
+
+[data-theme="light"] {
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --card: #ffffff;
+  --card-border: #e2e8f0;
+  --accent: #1e3a8a;
+  --muted: #64748b;
+  --sidebar: #ffffff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-border: var(--card-border);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  --color-sidebar: var(--sidebar);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #334155 transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #334155;
+  border-radius: 3px;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+[data-theme="light"] * {
+  scrollbar-color: #cbd5e1 transparent;
+}
+
+[data-theme="light"] body,
+[data-theme="light"] .bg-slate-950 {
+  background-color: #ffffff !important;
+  color: #0f172a;
+}
+
+[data-theme="light"] .bg-slate-900,
+[data-theme="light"] [class~="bg-slate-900/95"],
+[data-theme="light"] [class~="bg-slate-900/90"],
+[data-theme="light"] [class~="bg-slate-900/80"],
+[data-theme="light"] [class~="bg-slate-900/70"],
+[data-theme="light"] [class~="bg-slate-900/60"],
+[data-theme="light"] [class~="bg-slate-900/50"],
+[data-theme="light"] [class~="bg-slate-900/40"],
+[data-theme="light"] [class~="bg-slate-900/30"] {
+  background-color: #ffffff !important;
+}
+
+[data-theme="light"] .bg-slate-800,
+[data-theme="light"] [class~="bg-slate-800/95"],
+[data-theme="light"] [class~="bg-slate-800/90"],
+[data-theme="light"] [class~="bg-slate-800/80"],
+[data-theme="light"] [class~="bg-slate-800/70"],
+[data-theme="light"] [class~="bg-slate-800/60"],
+[data-theme="light"] [class~="bg-slate-800/50"],
+[data-theme="light"] [class~="bg-slate-800/40"],
+[data-theme="light"] [class~="bg-slate-800/30"] {
+  background-color: #f1f5f9 !important;
+}
+
+[data-theme="light"] [class~="bg-slate-950/95"],
+[data-theme="light"] [class~="bg-slate-950/90"],
+[data-theme="light"] [class~="bg-slate-950/80"],
+[data-theme="light"] [class~="bg-slate-950/70"],
+[data-theme="light"] [class~="bg-slate-950/60"],
+[data-theme="light"] [class~="bg-slate-950/50"],
+[data-theme="light"] [class~="bg-slate-950/40"],
+[data-theme="light"] [class~="bg-slate-950/30"] {
+  background-color: rgba(248, 250, 252, 0.92) !important;
+}
+
+[data-theme="light"] .border-slate-900,
+[data-theme="light"] .border-slate-800,
+[data-theme="light"] .border-slate-700,
+[data-theme="light"] [class~="border-slate-800/80"],
+[data-theme="light"] [class~="border-slate-800/70"],
+[data-theme="light"] [class~="border-slate-800/60"],
+[data-theme="light"] [class~="border-slate-800/50"],
+[data-theme="light"] [class~="border-slate-700/80"],
+[data-theme="light"] [class~="border-slate-700/70"],
+[data-theme="light"] [class~="border-slate-700/60"],
+[data-theme="light"] [class~="border-slate-700/50"] {
+  border-color: #e2e8f0 !important;
+}
+
+[data-theme="light"] .text-white,
+[data-theme="light"] .text-slate-100,
+[data-theme="light"] .text-slate-200 {
+  color: #0f172a !important;
+}
+
+[data-theme="light"] .text-slate-300,
+[data-theme="light"] .text-slate-400 {
+  color: #475569 !important;
+}
+
+[data-theme="light"] .text-slate-500,
+[data-theme="light"] .text-slate-600 {
+  color: #64748b !important;
+}
+
+[data-theme="light"] .placeholder-slate-500::placeholder,
+[data-theme="light"] .placeholder-slate-400::placeholder {
+  color: #94a3b8 !important;
+}
+
+[data-theme="light"] .divide-slate-800> :not([hidden])~ :not([hidden]),
+[data-theme="light"] .divide-slate-700> :not([hidden])~ :not([hidden]) {
+  border-color: #dbe3ee !important;
+}
+
+[data-theme="light"] .ring-slate-800,
+[data-theme="light"] .ring-slate-700 {
+  --tw-ring-color: #dbe3ee !important;
+}
+
+[data-theme="light"] .shadow-2xl,
+[data-theme="light"] .shadow-xl,
+[data-theme="light"] .shadow-lg,
+[data-theme="light"] .shadow {
+  --tw-shadow-color: rgba(15, 23, 42, 0.12) !important;
+}
+
+[data-theme="light"] .hover\:bg-slate-900:hover,
+[data-theme="light"] .hover\:bg-slate-800:hover,
+[data-theme="light"] [class~="hover:bg-slate-800/80"]:hover,
+[data-theme="light"] [class~="hover:bg-slate-800/70"]:hover,
+[data-theme="light"] [class~="hover:bg-slate-800/60"]:hover,
+[data-theme="light"] [class~="hover:bg-slate-800/50"]:hover {
+  background-color: #e2e8f0 !important;
+}
+
+[data-theme="light"] .hover\:text-white:hover,
+[data-theme="light"] .hover\:text-slate-100:hover,
+[data-theme="light"] .hover\:text-slate-200:hover {
+  color: #0f172a !important;
+}
+
+[data-theme="light"] [class~="bg-blue-600/10"],
+[data-theme="light"] [class~="bg-cyan-500/10"],
+[data-theme="light"] [class~="bg-emerald-500/10"],
+[data-theme="light"] [class~="bg-amber-500/10"],
+[data-theme="light"] [class~="bg-rose-500/10"],
+[data-theme="light"] [class~="bg-violet-500/10"] {
+  background-color: rgba(15, 23, 42, 0.05) !important;
+}
+
+/* Force Dark Blue for all Cyan/Blue accent elements in Light Mode */
+[data-theme="light"] .text-cyan-300,
+[data-theme="light"] .text-cyan-400,
+[data-theme="light"] .text-cyan-500,
+[data-theme="light"] .text-blue-400,
+[data-theme="light"] .text-blue-500,
+[data-theme="light"] .text-blue-600,
+[data-theme="light"] .text-indigo-400,
+[data-theme="light"] .text-teal-400 {
+  color: #1e3a8a !important;
+}
+
+[data-theme="light"] .bg-cyan-500,
+[data-theme="light"] .bg-cyan-600,
+[data-theme="light"] .bg-blue-500,
+[data-theme="light"] .bg-blue-600 {
+  background-color: #1e3a8a !important;
+  color: #ffffff !important;
+}
+
+[data-theme="light"] .bg-cyan-500\/10,
+[data-theme="light"] .bg-blue-500\/10,
+[data-theme="light"] .bg-cyan-500\/5,
+[data-theme="light"] .bg-blue-500\/5 {
+  background-color: rgba(30, 58, 138, 0.08) !important;
+}
+
+[data-theme="light"] .border-cyan-500\/30,
+[data-theme="light"] .border-blue-500\/30,
+[data-theme="light"] .border-cyan-400\/50 {
+  border-color: rgba(30, 58, 138, 0.2) !important;
+}
+
+[data-theme="light"] .bg-cyan-400\/50,
+[data-theme="light"] .bg-blue-400\/50 {
+  background-color: #1e3a8a !important;
+}
+
+[data-theme="light"] .hover\:bg-cyan-400:hover,
+[data-theme="light"] .hover\:bg-blue-400:hover {
+  background-color: #1d4ed8 !important;
+}
+
+
+[data-theme="light"] .prose-invert {
+  --tw-prose-body: #334155;
+  --tw-prose-headings: #0f172a;
+  --tw-prose-lead: #475569;
+  --tw-prose-links: #0369a1;
+  --tw-prose-bold: #0f172a;
+  --tw-prose-counters: #64748b;
+  --tw-prose-bullets: #94a3b8;
+  --tw-prose-hr: #dbe3ee;
+  --tw-prose-quotes: #334155;
+  --tw-prose-quote-borders: #06b6d4;
+  --tw-prose-captions: #64748b;
+  --tw-prose-code: #92400e;
+  --tw-prose-pre-code: #334155;
+  --tw-prose-pre-bg: #f1f5f9;
+  --tw-prose-th-borders: #cbd5e1;
+  --tw-prose-td-borders: #e2e8f0;
+}
+
+/* Plotly chart containers */
+.js-plotly-plot .plotly .modebar {
+  background: transparent !important;
+}
+
+.js-plotly-plot .plotly .modebar-btn path {
+  fill: #94a3b8 !important;
+}
+
+.js-plotly-plot .plotly .modebar-btn:hover path {
+  fill: #e2e8f0 !important;
+}
+
+[data-theme="light"] .js-plotly-plot .plotly text {
+  fill: #334155 !important;
+}
+
+[data-theme="light"] .js-plotly-plot .plotly .gridlayer path {
+  stroke: #dbe3ee !important;
+}
+
+[data-theme="light"] .js-plotly-plot .plotly .zerolinelayer path,
+[data-theme="light"] .js-plotly-plot .plotly .xlines-above crisp,
+[data-theme="light"] .js-plotly-plot .plotly .ylines-above crisp {
+  stroke: #cbd5e1 !important;
+}
+
+[data-theme="light"] .js-plotly-plot .plotly .modebar-btn path {
+  fill: #64748b !important;
+}
+
+[data-theme="light"] .js-plotly-plot .plotly .modebar-btn:hover path {
+  fill: #0f172a !important;
+}
+
+/* Custom animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+  }
+
+  50% {
+    box-shadow: 0 0 20px 4px rgba(59, 130, 246, 0.15);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.4s ease-out forwards;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s infinite;
+}
+
+/* Skeleton loading */
+.skeleton {
+  background: linear-gradient(90deg, #1e293b 25%, #334155 50%, #1e293b 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+[data-theme="light"] .skeleton {
+  background: linear-gradient(90deg, #e2e8f0 25%, #f8fafc 50%, #e2e8f0 75%);
+  background-size: 200% 100%;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
+}
