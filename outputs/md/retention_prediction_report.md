@@ -25,7 +25,7 @@
 | Gradient Boosting   | 0.7097 |   0.746  | 0.2    |      0.3571 |   0.1389 |
 
 
-## Top 15 Features (Random Forest)
+## Feature Importance
 
 | Feature                       |   Importance |
 |:------------------------------|-------------:|

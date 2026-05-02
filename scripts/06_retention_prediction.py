@@ -222,7 +222,7 @@ def run_retention_prediction():
     report.append("\n## Model Comparison\n")
     report.append(res_df.to_markdown(index=False) + "\n\n")
     if rf is not None:
-        report.append("## Top 15 Features (Random Forest)\n")
+        report.append("## Feature Importance\n")
         report.append(fi_df.to_markdown(index=False) + "\n\n")
     report.append("## Early Warning Signs\n"
                   "- High acquisition cost + low first-order revenue → strong churn signal\n"

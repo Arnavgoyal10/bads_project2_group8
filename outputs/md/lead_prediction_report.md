@@ -21,6 +21,22 @@ These tests validate that the chosen features have statistical signal before mod
 | Random Forest       |       0.6081 |            0.5846 | 0.3148 |      0.4972 |   0.2304 |
 
 
+## Feature Importance
+
+| Feature                    |   Importance |
+|:---------------------------|-------------:|
+| lead_score                 |    0.298791  |
+| avg_time_on_site           |    0.116397  |
+| avg_pages_viewed           |    0.0990076 |
+| total_sessions             |    0.067988  |
+| age                        |    0.0515274 |
+| loyalty_tier_platinum      |    0.049461  |
+| total_add_to_cart          |    0.0361756 |
+| observed_region_North West |    0.0305433 |
+| income_band_Middle         |    0.0260934 |
+| total_checkout_started     |    0.0228787 |
+
+
 ## Selected Model: Logistic Regression
 - **Rationale**: Highest cross-validated AUC (0.6196), best balance of precision/recall.
 - Class weights balanced to address conversion class imbalance.

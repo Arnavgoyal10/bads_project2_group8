@@ -242,6 +242,10 @@ def run_lead_prediction():
                                   labels=['Low','Medium','High'])
     df.to_csv('outputs/csv/lead_scores.csv', index=False)
 
+    # ── Feature Importance Table ──────────────────────────────────────────
+    feat_importances = pd.DataFrame({'Feature': X.columns, 'Importance': gb_model.feature_importances_})
+    feat_importances = feat_importances.sort_values('Importance', ascending=False).head(10)
+
     # ── Report ────────────────────────────────────────────────────────────
     report = ["# Lead Conversion Prediction Report\n",
               "## Pre-Model Hypothesis Tests\n"
@@ -251,6 +255,8 @@ def run_lead_prediction():
     report.append("\n")
     report.append("## Model Comparison\n")
     report.append(res_df.to_markdown(index=False) + "\n\n")
+    report.append("## Feature Importance\n")
+    report.append(feat_importances.to_markdown(index=False) + "\n\n")
     report.append(f"## Selected Model: {best_model_name}\n"
                   f"- **Rationale**: Highest cross-validated AUC ({cv_aucs[best_model_name]:.4f}), best balance of precision/recall.\n"
                   f"- Class weights balanced to address conversion class imbalance.\n"
