@@ -1,6 +1,14 @@
+import os
+import sys
+
+# ── WORKING DIRECTORY CORRECTION ──────────────────────────────────────
+# Ensures relative paths work whether run from root or scripts/
+if os.path.basename(os.getcwd()) == 'scripts':
+    os.chdir('..')
+# ──────────────────────────────────────────────────────────────────────
+
 import pandas as pd
 import numpy as np
-import os
 import re
 import base64
 import json
@@ -342,7 +350,7 @@ def generate_dashboard():
             </button>
             <button onclick="showPage('page-home')" class="nav-link w-full flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 hover:text-white transition-all" id="btn-home">
                 <i data-lucide="layout-dashboard" class="w-5 h-5"></i>
-                <span class="font-medium">Executive Command Center</span>
+                <span class="font-medium">Command Center</span>
             </button>
             <button onclick="showPage('page-customer')" class="nav-link w-full flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 hover:text-white transition-all" id="btn-customer">
                 <i data-lucide="users" class="w-5 h-5"></i>
@@ -618,7 +626,7 @@ def generate_dashboard():
             </div>
         </div>
 
-        <!-- PAGE 1: EXECUTIVE COMMAND CENTER -->
+        <!-- PAGE 1: COMMAND CENTER -->
         <div id="page-home" class="page-view p-10">
             <div class="max-w-[1400px] mx-auto space-y-12">
                 <header class="space-y-2">

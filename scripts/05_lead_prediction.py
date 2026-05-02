@@ -1,3 +1,6 @@
+import os
+if os.path.basename(os.getcwd()) == "scripts": os.chdir("..")
+
 import pandas as pd
 import numpy as np
 import os
