@@ -1,0 +1,9 @@
+marketing_channel,n_transactions,return_rate,total_returns,avg_revenue
+email,406,0.089,36,61.734
+paid search,396,0.088,35,61.154
+affiliate,395,0.084,33,50.936
+paid social,402,0.082,33,68.21
+direct,392,0.079,31,62.225
+organic,391,0.077,30,54.492
+influencer,407,0.066,27,52.872
+search,19,0.0,0,39.214

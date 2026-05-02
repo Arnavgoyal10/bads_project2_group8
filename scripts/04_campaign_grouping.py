@@ -41,7 +41,11 @@ def run_campaign_grouping():
 
     campaigns['spend_usd']  = campaigns['spend_usd'].apply(clean_currency)
     campaigns['budget_usd'] = campaigns['budget_usd'].apply(clean_currency)
-    campaigns['channel']    = campaigns['channel'].str.lower().str.strip()
+    _ch_map = {'e-mail': 'email', 'paid-social': 'paid social', 'influencers': 'influencer'}
+    campaigns['channel']    = campaigns['channel'].str.lower().str.strip().replace(_ch_map)
+    # Deduplicate and remove negative spend before any analysis
+    campaigns = campaigns.drop_duplicates('campaign_id').copy()
+    campaigns.loc[campaigns['spend_usd'] < 0, 'spend_usd'] = np.nan
     campaigns['objective']  = campaigns['objective'].str.strip()
     campaigns['start_date'] = pd.to_datetime(campaigns['start_date'], errors='coerce')
     campaigns['end_date']   = pd.to_datetime(campaigns['end_date'],   errors='coerce')
@@ -199,6 +203,116 @@ def run_campaign_grouping():
     plt.suptitle('Channel ROAS & Spend Comparison', fontsize=13)
     plt.tight_layout()
     plt.savefig('outputs/png/channel_roas.png', bbox_inches='tight')
+    plt.close()
+
+    # ── Campaign Quality vs Surface Efficiency ────────────────────────────
+    abt = pd.read_csv('outputs/csv/analytical_base_table.csv')
+    leads_q = leads[leads['customer_id'].notna()].copy()
+    leads_q = leads_q.merge(
+        abt[['customer_id', 'CLV_proxy', 'total_orders', 'total_acquisition_cost']],
+        on='customer_id', how='left')
+    leads_q['is_repeat'] = (leads_q['total_orders'].fillna(0) >= 2).astype(int)
+
+    camp_downstream = leads_q.groupby('campaign_id').agg(
+        avg_customer_ltv=('CLV_proxy', 'mean'),
+        repeat_rate     =('is_repeat', 'mean'),
+    ).reset_index()
+
+    camp_quality = camp_features.merge(camp_downstream, on='campaign_id', how='left')
+    roas_med = camp_quality['ROAS'].median()
+    rr_med   = camp_quality['repeat_rate'].fillna(0).median()
+    camp_quality['deceptive_efficiency'] = (
+        (camp_quality['ROAS'] > roas_med) &
+        (camp_quality['repeat_rate'].fillna(0) < rr_med) &
+        (camp_quality['repeat_rate'].notna())
+    )
+
+    camp_quality[['campaign_id', 'channel', 'ROAS', 'LCR', 'repeat_rate',
+                  'avg_customer_ltv', 'deceptive_efficiency', 'Group_Label']]\
+        .sort_values('ROAS', ascending=False)\
+        .to_csv('outputs/csv/campaign_quality_vs_efficiency.csv', index=False)
+
+    deceptive = camp_quality[camp_quality['deceptive_efficiency'] == True]
+    report.append("## Campaign Quality vs Surface Efficiency\n")
+    report.append("Campaigns with above-median ROAS but below-median customer repeat rate "
+                  "are flagged as **Deceptive Efficiency** — they look good on ROAS but "
+                  "bring in low-retention customers.\n\n")
+    report.append(camp_quality[['campaign_id', 'channel', 'ROAS', 'LCR', 'repeat_rate',
+                                 'avg_customer_ltv', 'deceptive_efficiency', 'Group_Label']]
+                  .sort_values('ROAS', ascending=False).to_markdown(index=False) + "\n\n")
+    if len(deceptive) > 0:
+        report.append(f"- **{len(deceptive)} Deceptively Efficient Campaigns**: above-median ROAS "
+                      f"but below-median customer repeat rate.\n")
+        report.append(f"  IDs: {', '.join(deceptive['campaign_id'].astype(str).tolist())}\n\n")
+
+    # Scatter: ROAS vs repeat_rate
+    scatter_data = camp_quality[camp_quality['ROAS'].notna() & camp_quality['repeat_rate'].notna()]
+    colors_q = ['#ef4444' if d else '#10b981' for d in scatter_data['deceptive_efficiency']]
+    fig, ax = plt.subplots(figsize=(12, 8))
+    ax.scatter(scatter_data['ROAS'], scatter_data['repeat_rate'],
+               c=colors_q, s=80, alpha=0.75, edgecolors='#334155')
+    ax.axvline(roas_med, color='#f59e0b', linestyle='--', linewidth=1, alpha=0.7, label='Median ROAS')
+    ax.axhline(rr_med,   color='#3b82f6', linestyle='--', linewidth=1, alpha=0.7, label='Median Repeat Rate')
+    ax.set_xlabel('ROAS (Revenue / Spend)'); ax.set_ylabel('Customer Repeat Rate')
+    ax.set_title('Campaign Quality Matrix: ROAS vs Customer Retention\n'
+                 '(Red = Deceptive Efficiency: high ROAS, low repeat rate)', fontsize=12)
+    legend_patches = [mpatches.Patch(facecolor='#ef4444', label='Deceptive Efficiency'),
+                      mpatches.Patch(facecolor='#10b981', label='Consistent Performance')]
+    ax.legend(handles=legend_patches, fontsize=9, framealpha=0.3)
+    plt.tight_layout()
+    plt.savefig('outputs/png/campaign_efficiency_vs_quality.png', bbox_inches='tight')
+    plt.close()
+
+    # ── Budget Reallocation Recommendation ───────────────────────────────
+    ch_budget = camp_quality.groupby('channel').agg(
+        total_spend     =('spend_usd', 'sum'),
+        avg_roas        =('ROAS', 'mean'),
+        avg_lcr         =('LCR', 'mean'),
+        avg_ltv         =('avg_customer_ltv', 'mean'),
+        avg_repeat_rate =('repeat_rate', 'mean'),
+    ).reset_index()
+    ch_budget['total_spend'] = ch_budget['total_spend'].fillna(0)
+
+    def _norm(s):
+        rng = s.max() - s.min()
+        return (s - s.min()) / rng if rng > 0 else pd.Series(np.ones(len(s)), index=s.index)
+
+    ch_budget['composite_score'] = (
+        _norm(ch_budget['avg_roas'].fillna(0))        * 0.35 +
+        _norm(ch_budget['avg_lcr'].fillna(0))          * 0.25 +
+        _norm(ch_budget['avg_ltv'].fillna(0))          * 0.25 +
+        _norm(ch_budget['avg_repeat_rate'].fillna(0))  * 0.15
+    ).round(3)
+
+    total_spend_all = ch_budget['total_spend'].sum()
+    ch_budget['current_budget_pct']     = (ch_budget['total_spend'] / (total_spend_all or 1) * 100).round(1)
+    ch_budget['recommended_budget_pct'] = (ch_budget['composite_score'] /
+                                            ch_budget['composite_score'].sum() * 100).round(1)
+    ch_budget['budget_shift_pp']        = (ch_budget['recommended_budget_pct'] -
+                                            ch_budget['current_budget_pct']).round(1)
+    ch_budget = ch_budget.sort_values('composite_score', ascending=False)
+    ch_budget.to_csv('outputs/csv/budget_reallocation.csv', index=False)
+
+    report.append("## Budget Reallocation Recommendation\n")
+    report.append("Composite score = 35% ROAS + 25% LCR + 25% Avg Customer LTV + 15% Repeat Rate\n\n")
+    report.append(ch_budget[['channel', 'total_spend', 'composite_score',
+                              'current_budget_pct', 'recommended_budget_pct', 'budget_shift_pp']]
+                  .to_markdown(index=False) + "\n\n")
+
+    colors_budget = ['#10b981' if v > 0 else '#ef4444' for v in ch_budget['budget_shift_pp']]
+    fig, ax = plt.subplots(figsize=(10, 5))
+    bars = ax.bar(ch_budget['channel'], ch_budget['budget_shift_pp'],
+                  color=colors_budget, edgecolor='#334155')
+    for bar, val in zip(bars, ch_budget['budget_shift_pp']):
+        ax.text(bar.get_x() + bar.get_width()/2,
+                val + (0.2 if val >= 0 else -0.5),
+                f'{val:+.1f}pp', ha='center', va='bottom', fontsize=9, color='#e2e8f0')
+    ax.axhline(0, color='#94a3b8', linewidth=0.8)
+    ax.set_title('Recommended Budget Shift by Channel\n(+pp = increase allocation, −pp = reduce)', fontsize=12)
+    ax.set_xlabel('Channel'); ax.set_ylabel('Budget Change (percentage points)')
+    ax.tick_params(axis='x', rotation=30)
+    plt.tight_layout()
+    plt.savefig('outputs/png/budget_reallocation.png', bbox_inches='tight')
     plt.close()
 
     camp_features.to_csv('outputs/csv/campaign_features.csv', index=False)

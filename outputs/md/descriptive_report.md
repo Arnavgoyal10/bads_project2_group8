@@ -4,39 +4,36 @@
 
 | channel     |   leads |   conversions |      LCR |      CPL |
 |:------------|--------:|--------------:|---------:|---------:|
-| e-mail      |     308 |           132 | 0.428571 |  29237.6 |
-| email       |     574 |           224 | 0.390244 |  69800.1 |
+| email       |     882 |           356 | 0.403628 |  67762.5 |
 | paid search |    1147 |           447 | 0.389712 |  31649.5 |
-| search      |     575 |           224 | 0.389565 |  53905.1 |
-| affiliate   |     614 |           228 | 0.371336 | 267573   |
-| paid-social |     132 |            48 | 0.363636 |  85475   |
-| influencer  |     289 |           104 | 0.359862 |  74976.3 |
-| paid social |    1599 |           554 | 0.346467 |  30652.1 |
+| search      |     426 |           164 | 0.384977 |  51490   |
+| affiliate   |     446 |           157 | 0.352018 | 346666   |
+| paid social |    1572 |           545 | 0.346692 |  46055   |
 | display     |     292 |            95 | 0.325342 |  71837.4 |
-| influencers |     130 |            29 | 0.223077 |  36223   |
+| influencer  |     419 |           133 | 0.317422 |  62952.6 |
 
 
 ### Hypothesis Test: Channel Conversion Rates
 - **H₀**: Conversion rate is identical across all acquisition channels.
-- **Test**: Pearson Chi-Square (df=9)
-- **χ² = 26.874, p = 0.0015** **
+- **Test**: Pearson Chi-Square (df=6)
+- **χ² = 18.066, p = 0.0061** **
 - **Decision**: Reject H₀ — channels convert at statistically different rates. Budget reallocation is evidenced.
 
 
-- **Kruskal-Wallis H = 26.870, p = 0.0015** ** (non-parametric confirmation)
+- **Kruskal-Wallis H = 18.062, p = 0.0061** ** (non-parametric confirmation)
 
 
 ## 2. Campaign Objective Analysis
 
 | objective   |   leads |   conversions |      LCR |
 |:------------|--------:|--------------:|---------:|
-| Awareness   |    1595 |           599 | 0.375549 |
+| Awareness   |    1446 |           539 | 0.372752 |
 | Conversion  |     970 |           335 | 0.345361 |
-| Lead Gen    |    1934 |           729 | 0.376939 |
-| Retention   |    1161 |           422 | 0.36348  |
+| Lead Gen    |    1766 |           658 | 0.372593 |
+| Retention   |    1002 |           365 | 0.364271 |
 
 
-- **Chi-Square across Objectives**: χ²=3.290, p=0.3490 ns
+- **Chi-Square across Objectives**: χ²=2.409, p=0.4920 ns
 
 
 ## 3. Creative Type Analysis
@@ -45,9 +42,9 @@
 |:----------------|--------:|--------------:|---------:|
 | Carousel        |    1262 |           473 | 0.374802 |
 | Promo           |     439 |           163 | 0.371298 |
-| Static          |    1209 |           448 | 0.370554 |
+| Static          |    1041 |           377 | 0.362152 |
 | Testimonial     |     583 |           197 | 0.337907 |
-| UGC             |    1574 |           587 | 0.372935 |
+| UGC             |    1266 |           470 | 0.371248 |
 | Video           |     593 |           217 | 0.365936 |
 
 
@@ -138,4 +135,62 @@
 
 - **total_checkout_started**: r=-0.0287, p=0.1598 ns → Not significant
 
+
+
+## 11. Acquisition Channel → Customer Quality
+
+| acquisition_channel   |   n_customers |   avg_ltv |   median_ltv |   avg_aov |   repeat_rate |   avg_acq_cost |   ltv_per_acq_cost |
+|:----------------------|--------------:|----------:|-------------:|----------:|--------------:|---------------:|-------------------:|
+| influencer            |           172 |     76.22 |        39.94 |     67.7  |          0.3  |          38.36 |              1.987 |
+| search                |            64 |     74.84 |        24.66 |     62.21 |          0.36 |          32.34 |              2.314 |
+| display               |           172 |     74.59 |        44.5  |     66.4  |          0.35 |          32.71 |              2.28  |
+| paid social           |           495 |     67.93 |        29.99 |     68.21 |          0.29 |          33.54 |              2.025 |
+| paid search           |           454 |     66.55 |        38.96 |     55.68 |          0.32 |          39.22 |              1.697 |
+| (unattributed)        |           276 |     65.06 |        32.61 |     51.22 |          0.36 |           0.35 |            185.886 |
+| affiliate             |           305 |     64.81 |        36.53 |     55.62 |          0.33 |          31.93 |              2.03  |
+| email                 |           462 |     59.28 |        27.88 |     52.12 |          0.3  |          27.31 |              2.171 |
+
+
+- **Kruskal-Wallis LTV across acquisition channels**: H=6.284, p=0.3921 ns
+- **Decision**: No significant LTV difference across channels.
+
+
+## 12. Product Category Analysis
+
+| product_category   |   n_transactions |   total_revenue |   avg_revenue |   return_rate |   avg_discount |   first_purchase_repeat_rate |
+|:-------------------|-----------------:|----------------:|--------------:|--------------:|---------------:|-----------------------------:|
+| baby               |              474 |         39902.9 |         84.72 |          0.07 |           8.43 |                        0.524 |
+| home care          |              488 |         32015   |         65.6  |          0.08 |           8.21 |                        0.475 |
+| supplements        |              458 |         31197.7 |         68.87 |          0.09 |           8.9  |                        0.477 |
+| personal care      |              463 |         26872.6 |         58.17 |          0.08 |           8.06 |                        0.58  |
+| snacks             |              489 |         19533.3 |         40.27 |          0.08 |           8.47 |                        0.516 |
+| beverages          |              436 |         14287.2 |         33.07 |          0.08 |           8.86 |                        0.527 |
+
+
+## 13. Return Rate Analysis
+
+### Return Rate by Marketing Channel (Last Touch)
+
+| marketing_channel   |   n_transactions |   return_rate |   total_returns |   avg_revenue |
+|:--------------------|-----------------:|--------------:|----------------:|--------------:|
+| email               |              406 |         0.089 |              36 |        61.734 |
+| paid search         |              396 |         0.088 |              35 |        61.154 |
+| affiliate           |              395 |         0.084 |              33 |        50.936 |
+| paid social         |              402 |         0.082 |              33 |        68.21  |
+| direct              |              392 |         0.079 |              31 |        62.225 |
+| organic             |              391 |         0.077 |              30 |        54.492 |
+| influencer          |              407 |         0.066 |              27 |        52.872 |
+| search              |               19 |         0     |               0 |        39.214 |
+
+
+### Return Rate by Product Category
+
+| product_category   |   n |   return_rate |
+|:-------------------|----:|--------------:|
+| supplements        | 458 |         0.085 |
+| personal care      | 463 |         0.084 |
+| beverages          | 436 |         0.083 |
+| snacks             | 489 |         0.08  |
+| home care          | 488 |         0.076 |
+| baby               | 474 |         0.074 |
 

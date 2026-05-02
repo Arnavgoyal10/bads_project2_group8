@@ -11,7 +11,7 @@ import seaborn as sns
 from sklearn.model_selection import train_test_split, cross_val_score, StratifiedKFold
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
-from sklearn.metrics import roc_auc_score, f1_score, precision_score, recall_score
+from sklearn.metrics import roc_auc_score, accuracy_score, f1_score, precision_score, recall_score
 from sklearn.preprocessing import label_binarize
 from scipy.stats import chi2_contingency, mannwhitneyu, kruskal
 
@@ -87,8 +87,6 @@ def run_retention_prediction():
     existing_cats = [c for c in cat_features if c in df.columns]
     X = pd.get_dummies(df[num_features + existing_cats], drop_first=True)
     y = df['repeat_90d']
-    print(f"DEBUG: df shape: {df.shape}")
-    print(f"DEBUG: repeat_90d counts:\n{y.value_counts()}")
 
     # Guard: if only one class, skip modeling
     if y.nunique() < 2:
@@ -102,7 +100,7 @@ def run_retention_prediction():
             f.write("\n".join(report))
         return
 
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42, stratify=y)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=42, stratify=y)
     skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
 
     models = {
@@ -118,21 +116,22 @@ def run_retention_prediction():
             model.fit(X_train, y_train)
             y_pred = model.predict(X_test)
             y_prob = model.predict_proba(X_test)[:, 1]
+            acc  = accuracy_score(y_test, y_pred)
             auc  = roc_auc_score(y_test, y_prob)
             f1   = f1_score(y_test, y_pred, zero_division=0)
             prec = precision_score(y_test, y_pred, zero_division=0)
             rec  = recall_score(y_test, y_pred, zero_division=0)
             cv_auc = cross_val_score(model, X, y, cv=skf, scoring='roc_auc').mean()
-            results.append({'Model': name, 'AUC': round(auc,4), 'CV AUC': round(cv_auc,4),
-                            'F1': round(f1,4), 'Precision': round(prec,4), 'Recall': round(rec,4)})
+            results.append({'Model': name, 'Accuracy': round(acc,4), 'AUC': round(auc,4),
+                            'CV AUC': round(cv_auc,4), 'F1': round(f1,4),
+                            'Precision': round(prec,4), 'Recall': round(rec,4)})
             trained_models[name] = model
         except Exception as e:
-            print(f"DEBUG: Model {name} failed: {e}")
+            print(f"Warning: Model {name} failed: {e}")
             results.append({'Model': name, 'AUC': np.nan, 'CV AUC': np.nan,
                             'F1': 0, 'Precision': 0, 'Recall': 0})
 
     res_df = pd.DataFrame(results)
-    print(f"DEBUG: Trained models: {list(trained_models.keys())}")
 
     # ── Feature Importance (Random Forest) ────────────────────────────────
     rf = trained_models.get('Random Forest')
@@ -162,8 +161,6 @@ def run_retention_prediction():
         df['projected_clv_6m']    = (df['total_revenue'] +
                                       (df['total_revenue'] / df['total_orders'].replace(0, 1)) *
                                       df['projected_orders_6m'])
-        print(f"DEBUG: df columns: {df.columns.tolist()}")
-        print(f"DEBUG: gb is None? {gb is None}")
         df[['customer_id','prob_repeat_90d','projected_orders_6m','projected_clv_6m']]\
             .to_csv('outputs/csv/clv_projection.csv', index=False)
 

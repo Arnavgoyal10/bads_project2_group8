@@ -1,0 +1,4 @@
+Model,R2,Adj_R2,n_train,n_test,Top_Predictor
+A: Predict Customer LTV,0.851,0.846,971,324,AOV
+B: Predict Revenue/Transaction,0.716,0.706,2048,683,units
+C: Predict Days-to-Convert,-0.01,-0.107,723,242,src_Google

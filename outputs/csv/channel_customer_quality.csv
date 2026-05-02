@@ -1,0 +1,9 @@
+acquisition_channel,n_customers,avg_ltv,median_ltv,avg_aov,repeat_rate,avg_acq_cost,ltv_per_acq_cost
+influencer,172,76.22,39.94,67.7,0.3,38.36,1.987
+search,64,74.84,24.66,62.21,0.36,32.34,2.314
+display,172,74.59,44.5,66.4,0.35,32.71,2.28
+paid social,495,67.93,29.99,68.21,0.29,33.54,2.025
+paid search,454,66.55,38.96,55.68,0.32,39.22,1.697
+(unattributed),276,65.06,32.61,51.22,0.36,0.35,185.886
+affiliate,305,64.81,36.53,55.62,0.33,31.93,2.03
+email,462,59.28,27.88,52.12,0.3,27.31,2.171

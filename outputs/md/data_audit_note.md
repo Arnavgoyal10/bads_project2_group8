@@ -24,7 +24,11 @@
 
 - **Anomalies**: 21 campaigns have spend > budget. Flagged but kept.
 
-- **Anomalies**: 25 campaigns have clicks > impressions. Kept as is, but noted.
+- **Duplicates**: 3 duplicated campaign_ids found and dropped.
+
+- **Negative spend**: 3 campaigns have spend_usd < 0. Set to NaN.
+
+- **Anomalies**: 23 campaigns have clicks > impressions. Kept as is, but noted.
 
 
 ## Leads
@@ -63,7 +67,7 @@
 
 - **Customers**: 99.7/100 (✅ Healthy)
 
-- **Campaigns**: 67.9/100 (🚨 Critical)
+- **Campaigns**: 68.1/100 (🚨 Critical)
 
 - **Leads**: 89.8/100 (⚠️ Warning)
 

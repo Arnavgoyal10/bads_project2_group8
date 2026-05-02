@@ -1,0 +1,9 @@
+Model,n,slope,intercept,r,R2,p
+Campaign Spend → Leads,39,-0.0,145.9223,-0.1385,0.0192,0.400279
+Lead Score → Revenue,2129,0.8307,35.4597,0.0831,0.0069,0.000124
+Time on Site → Conversion,2131,0.0001,0.3378,0.0329,0.0011,0.128394
+Pages Viewed → Add-to-Cart,2400,0.4799,0.3622,0.233,0.0543,0.0
+Discount % → Revenue,2698,-0.5032,54.6381,-0.1219,0.0148,0.0
+Acquisition Cost → LTV,2400,0.1627,61.7101,0.0267,0.0007,0.191503
+Impressions → Clicks,28,0.2618,-130613.6296,0.3318,0.1101,0.084584
+Session Quality → Repeat,2400,-0.0099,0.3328,-0.0176,0.0003,0.387908

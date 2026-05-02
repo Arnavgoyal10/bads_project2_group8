@@ -18,32 +18,32 @@
 
 ## Model Comparison
 
-| Model               |    AUC |   CV AUC |     F1 |   Precision |   Recall |
-|:--------------------|-------:|---------:|-------:|------------:|---------:|
-| Logistic Regression | 0.7075 |   0.6868 | 0.5    |      0.4107 |   0.6389 |
-| Random Forest       | 0.684  |   0.7373 | 0.1163 |      0.3571 |   0.0694 |
-| Gradient Boosting   | 0.7097 |   0.746  | 0.2    |      0.3571 |   0.1389 |
+| Model               |   Accuracy |    AUC |   CV AUC |     F1 |   Precision |   Recall |
+|:--------------------|-----------:|-------:|---------:|-------:|------------:|---------:|
+| Logistic Regression |     0.6721 | 0.68   |   0.6867 | 0.4622 |      0.3852 |   0.5778 |
+| Random Forest       |     0.7425 | 0.6994 |   0.7373 | 0.0777 |      0.3077 |   0.0444 |
+| Gradient Boosting   |     0.7398 | 0.7205 |   0.746  | 0.2381 |      0.4167 |   0.1667 |
 
 
 ## Feature Importance
 
-| Feature                       |   Importance |
-|:------------------------------|-------------:|
-| total_revenue                 |    0.24831   |
-| total_acquisition_cost        |    0.100701  |
-| avg_pages_viewed              |    0.0985179 |
-| age                           |    0.0876594 |
-| total_sessions                |    0.0688643 |
-| total_add_to_cart             |    0.0575257 |
-| gender_male                   |    0.0206409 |
-| payment_type_Card             |    0.0173124 |
-| region_south west             |    0.0171132 |
-| loyalty_tier_gold             |    0.0166519 |
-| income_band_Middle            |    0.0160893 |
-| loyalty_tier_silver           |    0.0159614 |
-| payment_type_Wallet           |    0.0151346 |
-| product_category_Beverages    |    0.0147983 |
-| payment_type_Cash on Delivery |    0.0146229 |
+| Feature                    |   Importance |
+|:---------------------------|-------------:|
+| total_revenue              |    0.239863  |
+| total_acquisition_cost     |    0.105018  |
+| avg_pages_viewed           |    0.0943676 |
+| age                        |    0.08822   |
+| total_sessions             |    0.0700449 |
+| total_add_to_cart          |    0.055821  |
+| gender_male                |    0.0202794 |
+| region_south west          |    0.0185232 |
+| loyalty_tier_gold          |    0.0170388 |
+| loyalty_tier_silver        |    0.0158324 |
+| payment_type_Card          |    0.0158089 |
+| income_band_Middle         |    0.0158034 |
+| product_category_Home Care |    0.0156743 |
+| product_category_Beverages |    0.0152684 |
+| region_south south         |    0.0151508 |
 
 
 ## Early Warning Signs

@@ -53,9 +53,12 @@ def run_descriptive_stats():
     leads['discount_pct']  = pd.to_numeric(
         leads['discount_offered_pct'].astype(str).str.replace('%','', regex=False), errors='coerce')
 
-    campaigns['channel']   = campaigns['channel'].str.lower().str.strip()
+    _ch_map = {'e-mail': 'email', 'paid-social': 'paid social', 'influencers': 'influencer'}
+    campaigns['channel']   = campaigns['channel'].str.lower().str.strip().replace(_ch_map)
     campaigns['spend_usd'] = campaigns['spend_usd'].replace(r'[\$,]','', regex=True)\
                                                     .replace('USD','', regex=True).astype(float)
+    campaigns = campaigns.drop_duplicates('campaign_id').copy()
+    campaigns.loc[campaigns['spend_usd'] < 0, 'spend_usd'] = np.nan
 
     leads_camp = leads.merge(
         campaigns[['campaign_id','channel','spend_usd','objective','budget_usd']], on='campaign_id', how='left')
@@ -381,6 +384,168 @@ def run_descriptive_stats():
         plt.tight_layout()
         plt.savefig('outputs/png/cohort_retention.png', bbox_inches='tight')
         plt.close()
+
+    # ── Section 11: Acquisition Channel → Customer Quality ───────────────
+    report.append("## 11. Acquisition Channel → Customer Quality\n")
+    cust_ch_map = (leads_camp[['customer_id', 'channel']]
+                   .dropna(subset=['customer_id', 'channel'])
+                   .groupby('customer_id')['channel']
+                   .agg(lambda x: x.mode()[0])
+                   .reset_index()
+                   .rename(columns={'channel': 'acquisition_channel'}))
+    ch_quality = abt.merge(cust_ch_map, on='customer_id', how='left')
+    ch_quality['acquisition_channel'] = ch_quality['acquisition_channel'].fillna('(unattributed)')
+
+    ch_qs = ch_quality.groupby('acquisition_channel').agg(
+        n_customers  =('customer_id', 'count'),
+        avg_ltv      =('CLV_proxy', 'mean'),
+        median_ltv   =('CLV_proxy', 'median'),
+        avg_aov      =('AOV', 'mean'),
+        repeat_rate  =('total_orders', lambda x: (x >= 2).mean()),
+        avg_acq_cost =('total_acquisition_cost', 'mean'),
+    ).reset_index().round(2)
+    ch_qs['ltv_per_acq_cost'] = (ch_qs['avg_ltv'] /
+                                  ch_qs['avg_acq_cost'].replace(0, np.nan)).round(3)
+    ch_qs = ch_qs.sort_values('avg_ltv', ascending=False)
+    ch_qs.to_csv('outputs/csv/channel_customer_quality.csv', index=False)
+    report.append(ch_qs.to_markdown(index=False) + "\n\n")
+
+    ch_ltv_grps = [ch_quality[ch_quality['acquisition_channel'] == c]['CLV_proxy'].dropna().values
+                   for c in ch_qs['acquisition_channel'] if c != '(unattributed)']
+    ch_ltv_grps = [g for g in ch_ltv_grps if len(g) > 1]
+    if len(ch_ltv_grps) >= 2:
+        kw_cq_h, kw_cq_p = kruskal(*ch_ltv_grps)
+        report.append(f"- **Kruskal-Wallis LTV across acquisition channels**: H={kw_cq_h:.3f}, p={kw_cq_p:.4f} {sig_stars(kw_cq_p)}\n"
+                      f"- **Decision**: {'Acquisition channel significantly determines long-term customer value — budget reallocation is evidenced.' if kw_cq_p < 0.05 else 'No significant LTV difference across channels.'}\n\n")
+
+    ch_qs_plot = ch_qs[ch_qs['acquisition_channel'] != '(unattributed)'].copy()
+    colors_ch = [PALETTE[i % len(PALETTE)] for i in range(len(ch_qs_plot))]
+    fig, axes = plt.subplots(1, 2, figsize=(14, 5))
+    bars0 = axes[0].bar(ch_qs_plot['acquisition_channel'], ch_qs_plot['avg_ltv'],
+                        color=colors_ch, edgecolor='#334155')
+    axes[0].set_title('Avg Customer LTV by Acquisition Channel')
+    axes[0].set_ylabel('Avg LTV (USD)'); axes[0].tick_params(axis='x', rotation=30)
+    for bar in bars0:
+        axes[0].text(bar.get_x() + bar.get_width()/2, bar.get_height() + 1,
+                     f'${bar.get_height():.0f}', ha='center', va='bottom', fontsize=7, color='#e2e8f0')
+    bars1 = axes[1].bar(ch_qs_plot['acquisition_channel'], ch_qs_plot['repeat_rate'],
+                        color=colors_ch, edgecolor='#334155')
+    axes[1].set_title('Repeat Buyer Rate by Acquisition Channel')
+    axes[1].set_ylabel('Repeat Rate'); axes[1].tick_params(axis='x', rotation=30)
+    for bar in bars1:
+        axes[1].text(bar.get_x() + bar.get_width()/2, bar.get_height() + 0.002,
+                     f'{bar.get_height():.1%}', ha='center', va='bottom', fontsize=7, color='#e2e8f0')
+    plt.suptitle('Acquisition Channel: Customer Quality Comparison\n(value over volume)', fontsize=12)
+    plt.tight_layout()
+    plt.savefig('outputs/png/channel_customer_quality.png', bbox_inches='tight')
+    plt.close()
+
+    # ── Section 12: Product Category Analysis ────────────────────────────
+    report.append("## 12. Product Category Analysis\n")
+    _cat_map = {'baby care': 'baby', 'personal-care': 'personal care', 'beverage': 'beverages'}
+    _ch_map_tx = {'e-mail': 'email', 'paid-social': 'paid social', 'influencers': 'influencer'}
+    transactions['product_category'] = (
+        transactions['product_category'].str.lower().str.strip().replace(_cat_map))
+    transactions['marketing_channel_last_touch'] = (
+        transactions['marketing_channel_last_touch'].str.lower().str.strip().replace(_ch_map_tx))
+    transactions['returned_flag_bool'] = (
+        transactions['returned_flag'].astype(str).str.lower().str.strip()
+        .isin(['true', '1', '1.0', 'yes']))
+    transactions['product_category_clean'] = (
+        transactions['product_category'].astype(str).str.lower().str.strip())
+    transactions['revenue_usd_num'] = pd.to_numeric(
+        transactions['revenue_usd'].astype(str)
+        .str.replace(r'[\$,]', '', regex=True).str.replace('USD', '', regex=True),
+        errors='coerce')
+    transactions['discount_pct_num'] = pd.to_numeric(
+        transactions['discount_pct'].astype(str).str.replace('%', '', regex=False),
+        errors='coerce')
+
+    cat_stats = transactions.groupby('product_category_clean').agg(
+        n_transactions =('order_id', 'count'),
+        total_revenue  =('revenue_usd_num', 'sum'),
+        avg_revenue    =('revenue_usd_num', 'mean'),
+        return_rate    =('returned_flag_bool', 'mean'),
+        avg_discount   =('discount_pct_num', 'mean'),
+    ).reset_index().round(2).rename(columns={'product_category_clean': 'product_category'})
+    cat_stats = cat_stats.sort_values('total_revenue', ascending=False)
+
+    transactions['order_date_dt'] = pd.to_datetime(
+        transactions['order_date'], format='mixed', errors='coerce')
+    first_cat = (transactions.sort_values('order_date_dt')
+                 .drop_duplicates('customer_id', keep='first')
+                 [['customer_id', 'product_category_clean']]
+                 .rename(columns={'product_category_clean': 'first_category'}))
+    cust_orders = transactions.groupby('customer_id').size().reset_index(name='order_count')
+    cust_orders['is_repeat'] = (cust_orders['order_count'] >= 2).astype(int)
+    cat_repeat = first_cat.merge(cust_orders, on='customer_id')
+    cat_rr = (cat_repeat.groupby('first_category')['is_repeat'].mean()
+              .reset_index().rename(columns={'first_category': 'product_category',
+                                             'is_repeat': 'first_purchase_repeat_rate'}))
+    cat_stats = cat_stats.merge(cat_rr, on='product_category', how='left').round(3)
+    cat_stats.to_csv('outputs/csv/category_analysis.csv', index=False)
+    report.append(cat_stats.to_markdown(index=False) + "\n\n")
+
+    fig, ax1 = plt.subplots(figsize=(12, 5))
+    colors_cat = [PALETTE[i % len(PALETTE)] for i in range(len(cat_stats))]
+    ax1.bar(cat_stats['product_category'], cat_stats['total_revenue'],
+            color=colors_cat, edgecolor='#334155', alpha=0.85, label='Total Revenue')
+    ax2 = ax1.twinx()
+    ax2.plot(cat_stats['product_category'], cat_stats['return_rate'],
+             marker='o', color='#ef4444', linewidth=2, label='Return Rate')
+    ax2.set_ylabel('Return Rate', color='#ef4444')
+    ax1.set_ylabel('Total Revenue (USD)')
+    ax1.set_title('Product Category: Revenue vs Return Rate', fontsize=12)
+    ax1.tick_params(axis='x', rotation=30)
+    h1, l1 = ax1.get_legend_handles_labels()
+    h2, l2 = ax2.get_legend_handles_labels()
+    ax1.legend(h1 + h2, l1 + l2, fontsize=9, loc='upper right', framealpha=0.3)
+    plt.tight_layout()
+    plt.savefig('outputs/png/category_revenue_returns.png', bbox_inches='tight')
+    plt.close()
+
+    # ── Section 13: Return Rate Analysis ─────────────────────────────────
+    report.append("## 13. Return Rate Analysis\n")
+    transactions['mkt_channel_clean'] = (
+        transactions['marketing_channel_last_touch'].astype(str).str.lower().str.strip())
+    ch_returns = (transactions.groupby('mkt_channel_clean').agg(
+        n_transactions =('order_id', 'count'),
+        return_rate    =('returned_flag_bool', 'mean'),
+        total_returns  =('returned_flag_bool', 'sum'),
+        avg_revenue    =('revenue_usd_num', 'mean'),
+    ).reset_index().rename(columns={'mkt_channel_clean': 'marketing_channel'})
+                  .sort_values('return_rate', ascending=False).round(3))
+    ch_returns.to_csv('outputs/csv/return_rate_analysis.csv', index=False)
+    report.append("### Return Rate by Marketing Channel (Last Touch)\n")
+    report.append(ch_returns.to_markdown(index=False) + "\n\n")
+
+    cat_ret = (transactions.groupby('product_category_clean').agg(
+        n=('order_id', 'count'),
+        return_rate=('returned_flag_bool', 'mean'),
+    ).reset_index().rename(columns={'product_category_clean': 'product_category'})
+               .sort_values('return_rate', ascending=False).round(3))
+    report.append("### Return Rate by Product Category\n")
+    report.append(cat_ret.to_markdown(index=False) + "\n\n")
+
+    fig, axes = plt.subplots(1, 2, figsize=(14, 5))
+    mean_ch_ret = ch_returns['return_rate'].mean()
+    mean_cat_ret = cat_ret['return_rate'].mean()
+    colors_ch_r = ['#ef4444' if v > mean_ch_ret else '#10b981' for v in ch_returns['return_rate']]
+    colors_cat_r = ['#ef4444' if v > mean_cat_ret else '#10b981' for v in cat_ret['return_rate']]
+    axes[0].barh(ch_returns['marketing_channel'], ch_returns['return_rate'],
+                 color=colors_ch_r, edgecolor='#334155')
+    axes[0].axvline(mean_ch_ret, color='#f59e0b', linestyle='--', linewidth=1.2, label=f'Mean={mean_ch_ret:.1%}')
+    axes[0].set_title('Return Rate by Marketing Channel'); axes[0].set_xlabel('Return Rate')
+    axes[0].legend(fontsize=9)
+    axes[1].barh(cat_ret['product_category'], cat_ret['return_rate'],
+                 color=colors_cat_r, edgecolor='#334155')
+    axes[1].axvline(mean_cat_ret, color='#f59e0b', linestyle='--', linewidth=1.2, label=f'Mean={mean_cat_ret:.1%}')
+    axes[1].set_title('Return Rate by Product Category'); axes[1].set_xlabel('Return Rate')
+    axes[1].legend(fontsize=9)
+    plt.suptitle('Return Rate Analysis (Red = above average)', fontsize=12)
+    plt.tight_layout()
+    plt.savefig('outputs/png/return_rate_analysis.png', bbox_inches='tight')
+    plt.close()
 
     with open('outputs/md/descriptive_report.md', 'w') as f:
         f.write("\n".join(report))

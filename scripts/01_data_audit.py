@@ -92,8 +92,19 @@ def audit_and_clean_data():
     spend_anomalies = (campaigns['spend_usd'] > campaigns['budget_usd']).sum()
     audit_notes.append(f"- **Anomalies**: {spend_anomalies} campaigns have spend > budget. Flagged but kept.\n")
     
+    # Deduplicate campaigns (3 duplicate campaign_ids in raw data)
+    dup_campaigns = campaigns.duplicated('campaign_id').sum()
+    audit_notes.append(f"- **Duplicates**: {dup_campaigns} duplicated campaign_ids found and dropped.\n")
+    campaigns = campaigns.drop_duplicates('campaign_id')
+
     campaigns['target_region'] = campaigns['target_region'].str.lower().str.strip().replace({'all': 'nationwide', 'nationwide': 'nationwide'})
-    campaigns['channel'] = campaigns['channel'].str.lower().str.strip()
+    _ch_map = {'e-mail': 'email', 'paid-social': 'paid social', 'influencers': 'influencer'}
+    campaigns['channel'] = campaigns['channel'].str.lower().str.strip().replace(_ch_map)
+
+    # Negative spend (3 campaigns with spend = -5000) — set to NaN
+    neg_spend = (campaigns['spend_usd'] < 0).sum()
+    audit_notes.append(f"- **Negative spend**: {neg_spend} campaigns have spend_usd < 0. Set to NaN.\n")
+    campaigns.loc[campaigns['spend_usd'] < 0, 'spend_usd'] = np.nan
     
     click_anomalies = (campaigns['clicks'] > campaigns['impressions']).sum()
     audit_notes.append(f"- **Anomalies**: {click_anomalies} campaigns have clicks > impressions. Kept as is, but noted.\n")
@@ -162,8 +173,11 @@ def audit_and_clean_data():
     audit_notes.append(f"- **Invalid**: {inv_units} transactions with units <= 0. Flagged.\n")
     
     transactions['payment_type'] = transactions['payment_type'].str.lower().str.strip()
-    transactions['product_category'] = transactions['product_category'].str.lower().str.strip()
-    transactions['marketing_channel_last_touch'] = transactions['marketing_channel_last_touch'].str.lower().str.strip()
+    _cat_map = {'baby care': 'baby', 'personal-care': 'personal care', 'beverage': 'beverages'}
+    transactions['product_category'] = transactions['product_category'].str.lower().str.strip().replace(_cat_map)
+    _ch_map_tx = {'e-mail': 'email', 'paid-social': 'paid social', 'influencers': 'influencer'}
+    transactions['marketing_channel_last_touch'] = (
+        transactions['marketing_channel_last_touch'].str.lower().str.strip().replace(_ch_map_tx))
     
     match_rate_txn_cust = transactions['customer_id'].isin(customers['customer_id']).mean() * 100
     audit_notes.append(f"- **Join Rates**: {match_rate_txn_cust:.1f}% of transactions match a customer.\n")
