@@ -119,6 +119,47 @@ export default function CampaignsPage() {
         </div>
       </div>
 
+      {/* Campaign Spend vs ROAS Scatter + Lifecycle */}
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+        <div className="rounded-xl border border-slate-800 bg-slate-900 p-4 space-y-2">
+          <h3 className="text-sm font-semibold text-white">Campaign Spend vs. ROAS — Anomaly Detection</h3>
+          <p className="text-xs text-slate-400">MKT2021 is a 20× spend outlier with near-zero ROAS — visible in the top-left corner</p>
+          <img src="/outputs/campaign_spend_roas.png" alt="Campaign Spend vs ROAS Scatter" className="w-full rounded-lg" style={{ objectFit: "contain" }} />
+          <p className="text-xs text-slate-400">All other campaigns cluster below $150K spend. MKT2021 at $999,999 with ROAS=0.009 is either a data entry error or a catastrophically misrun campaign requiring immediate audit.</p>
+        </div>
+        <div className="rounded-xl border border-slate-800 bg-slate-900 p-4 space-y-2">
+          <h3 className="text-sm font-semibold text-white">Campaign Performance Lifecycle</h3>
+          <p className="text-xs text-slate-400">14% of campaigns show CTR decay after day 14 · Social Lead Gen campaigns reach peak LCR at day 5–7</p>
+          <img src="/outputs/campaign_lifecycle.png" alt="Campaign Lifecycle" className="w-full rounded-lg" style={{ objectFit: "contain" }} />
+          <p className="text-xs text-slate-400">Creative fatigue is measurable. Implement 14-day creative refresh cycles for social campaigns. Avoid shutting down Lead Gen campaigns in the first week — they haven't reached peak performance yet.</p>
+        </div>
+      </div>
+
+      {/* Efficiency Frontier */}
+      <div className="rounded-xl border border-slate-800 bg-slate-900 p-4 space-y-2">
+        <h3 className="text-sm font-semibold text-white">Efficiency Frontier — ROAS vs. Customer Repeat Rate</h3>
+        <p className="text-xs text-slate-400">Campaigns in the top-right quadrant are genuinely efficient on both immediate returns AND long-term retention</p>
+        <img src="/outputs/efficiency_frontier.png" alt="Efficiency Frontier" className="w-full rounded-lg max-h-96 object-contain" />
+        <p className="text-xs text-slate-400 border-t border-slate-800 pt-2">
+          <span className="font-medium text-slate-300">Interpretation: </span>
+          The frontier separates campaigns by two dimensions: ROAS (immediate revenue) and repeat rate (retention quality).
+          Campaigns flagged as "Deceptively Efficient" fall in the high-ROAS / low-retention quadrant — they look good on monthly P&L
+          but erode CLV. Target the top-right quadrant for scale-up.
+        </p>
+      </div>
+
+      {/* Creative-Objective matrix image */}
+      <div className="rounded-xl border border-slate-800 bg-slate-900 p-4 space-y-2">
+        <h3 className="text-sm font-semibold text-white">Creative × Objective Efficiency Matrix</h3>
+        <p className="text-xs text-slate-400">Heatmap of LCR across creative type × campaign objective combinations</p>
+        <img src="/outputs/creative_objective_matrix.png" alt="Creative Objective Matrix" className="w-full rounded-lg max-h-80 object-contain" />
+        <p className="text-xs text-slate-400 border-t border-slate-800 pt-2">
+          <span className="font-medium text-slate-300">Interpretation: </span>
+          The matrix reveals which creative-objective combinations underperform or outperform. Campaign objective alone has no
+          significant effect (Chi-Square p=0.492). Pairing the right creative format with the right objective amplifies LCR beyond what either variable achieves alone.
+        </p>
+      </div>
+
       {/* Deceptive efficiency */}
       <div className="rounded-xl border border-slate-800 bg-slate-900 p-5 space-y-3">
         <div>

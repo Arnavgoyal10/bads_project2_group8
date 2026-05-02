@@ -18,7 +18,7 @@ const THEMES = [
     why: "The raw campaign data showed wide variance in spend across channels. We hypothesized that money was not going to channels generating the most valuable customers. A composite score model (35% ROAS · 25% LCR · 25% LTV · 15% Repeat Rate) was built to rank channels on downstream value, not surface metrics. Kruskal-Wallis confirmed LTV differs significantly across channels (H=20.39, p=0.040).",
     findings: [
       "Affiliate consumes 42.7% of budget ($1.12M) but has the lowest ROAS (0.11) and below-average LTV ($65)",
-      "Display acquires customers with the highest avg LTV ($87) at only 5.5% of budget",
+      "Display acquires customers with avg LTV of $75 at only 5.5% of budget — heavily underinvested vs. its quality rank",
       "Paid Search composite score = 0.726 (highest) vs Affiliate = 0.276 (lowest)",
     ],
     recommendations: [

@@ -5,7 +5,8 @@ import { BarChart3, Info } from "lucide-react";
 import {
   CHANNEL_QUALITY, CATEGORY_ANALYSIS, RETURN_RATE_BY_CHANNEL,
   SLR_RESULTS, DISCOUNT_UPLIFT_CHANNEL, LANDING_PAGE_LCR,
-  DAYS_TO_CONVERT, LOYALTY_TIERS,
+  DAYS_TO_CONVERT, LOYALTY_TIERS, CHANNEL_PERFORMANCE,
+  REGION_ANALYSIS, DEVICE_ANALYSIS, CREATIVE_TYPE, CAMPAIGN_OBJECTIVE,
 } from "@/lib/data";
 import { PLOTLY_DARK_LAYOUT, PLOTLY_CONFIG, CHART_COLORS } from "@/lib/plotly-theme";
 
@@ -78,11 +79,58 @@ export default function DescriptivePage() {
         observed differences are statistically robust and not sampling noise.
       </MethodBox>
 
+      {/* Channel Performance Matrix */}
+      <div className="rounded-xl border border-slate-800 bg-slate-900 p-5 space-y-3">
+        <div>
+          <h3 className="text-base font-semibold text-white">Channel Performance Matrix — Leads, Conversions & CPL</h3>
+          <p className="text-xs text-slate-400 mt-0.5">Chi-Square: χ²=18.07, p=0.006 ** — channels convert at statistically different rates</p>
+        </div>
+        <MethodBox>
+          Before assessing customer quality, we first measure channel volume efficiency: how many leads each channel
+          generates, how many convert (LCR), and what each conversion costs (CPL = total spend / conversions).
+          CPL surfaces a critical flaw invisible in LCR alone — Affiliate has a CPL of $346,666 despite a 35.2% LCR.
+        </MethodBox>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-slate-800 bg-slate-900/80">
+                {["Channel", "Leads", "Conversions", "LCR", "CPL ($)", "Flag"].map((h) => (
+                  <th key={h} className="px-4 py-3 text-left text-xs font-semibold text-slate-400 uppercase">{h}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {CHANNEL_PERFORMANCE.map((c, i) => (
+                <tr key={i} className={`border-b border-slate-800/50 hover:bg-slate-900/40 ${c.channel === "Affiliate" ? "bg-rose-500/5" : ""}`}>
+                  <td className="px-4 py-3 font-medium text-slate-300">{c.channel}</td>
+                  <td className="px-4 py-3 font-mono text-xs text-slate-400">{c.leads.toLocaleString()}</td>
+                  <td className="px-4 py-3 font-mono text-xs text-slate-400">{c.conversions.toLocaleString()}</td>
+                  <td className="px-4 py-3 font-mono text-xs text-slate-300 font-semibold">{(c.lcr * 100).toFixed(1)}%</td>
+                  <td className={`px-4 py-3 font-mono text-xs font-semibold ${c.cpl > 100000 ? "text-rose-400" : "text-slate-400"}`}>
+                    ${c.cpl > 1000 ? (c.cpl / 1000).toFixed(0) + "K" : c.cpl.toLocaleString()}
+                  </td>
+                  <td className="px-4 py-3">
+                    {c.cpl > 100000 && <span className="inline-block rounded-full bg-rose-500/15 px-2 py-0.5 text-xs font-medium text-rose-400">⚠ CPL outlier</span>}
+                    {c.lcr > 0.39 && <span className="inline-block rounded-full bg-emerald-500/15 px-2 py-0.5 text-xs font-medium text-emerald-400">✓ Top LCR</span>}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <div className="border-t border-slate-800 pt-3">
+          <p className="text-xs text-slate-400 leading-relaxed"><span className="font-medium text-slate-300">Insight: </span>
+            Affiliate's CPL of $346,666 is 5× the nearest channel — caused by MKT2021's $999,999 anomalous spend.
+            Email leads on LCR (40.4%) and has the 3rd-lowest CPL ($67.8K per conversion). Paid Social generates the most leads (1,572) but at below-median LCR.
+          </p>
+        </div>
+      </div>
+
       {/* Channel quality */}
       <ChartCard
         title="Channel → Customer Quality (LTV, Repeat Rate, Acquisition Cost)"
         method="Kruskal-Wallis test on LTV across channels: H=20.39, p=0.040 ✓ significant"
-        insight="Display acquires customers with the highest avg LTV ($87) but receives only 5.5% of budget. Influencer has the best avg LTV ($76) and lowest return rate (6.6%). Email acquires the cheapest customers ($27 CPA) but they have the lowest LTV ($59)."
+        insight="Influencer acquires the highest avg LTV customers ($76) and has the lowest return rate (6.6%). Display is second-highest LTV ($75) yet only gets 5.5% of budget — heavily underinvested. Email acquires the cheapest customers ($27 CPA) but they have the lowest LTV ($59)."
       >
         <Plot
           data={[
@@ -254,6 +302,139 @@ export default function DescriptivePage() {
           Platinum tier LTV ($88.69) is 64% higher than Bronze ($54.07). The AOV gap ($69 vs $53) explains part of this.
           Invest in programs that migrate Bronze customers to Silver — loyalty upgrade campaigns can be justified by the $15.56 LTV gap.
         </InsightBox>
+      </div>
+
+      {/* Regional Analysis */}
+      <div className="rounded-xl border border-slate-800 bg-slate-900 p-5 space-y-3">
+        <div>
+          <h3 className="text-base font-semibold text-white">Regional Performance Analysis</h3>
+          <p className="text-xs text-slate-400 mt-0.5">Kruskal-Wallis: H=17.78, p=0.023 * — revenue differs significantly across regions</p>
+        </div>
+        <MethodBox>
+          Regional breakdowns identify geographic concentration of value. Kruskal-Wallis confirms the revenue
+          differences are not sampling noise. This surfaces targeting and media-buying opportunities in
+          underperforming regions.
+        </MethodBox>
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+          <Plot
+            data={[
+              { type: "bar", name: "Avg Revenue ($)", x: REGION_ANALYSIS.map((r) => r.region), y: REGION_ANALYSIS.map((r) => r.avgRevenue), marker: { color: CHART_COLORS[0] } },
+              { type: "bar", name: "Avg LCR (%×100)", x: REGION_ANALYSIS.map((r) => r.region), y: REGION_ANALYSIS.map((r) => +(r.avgLcr * 100).toFixed(1)), marker: { color: CHART_COLORS[1] } },
+            ]}
+            layout={{
+              ...PLOTLY_DARK_LAYOUT,
+              height: 280,
+              barmode: "group",
+              xaxis: { ...PLOTLY_DARK_LAYOUT.xaxis, tickangle: -15 },
+              yaxis: { ...PLOTLY_DARK_LAYOUT.yaxis, title: "Value" },
+              legend: { orientation: "h", y: 1.1 },
+            }}
+            config={PLOTLY_CONFIG}
+            style={{ width: "100%" }}
+          />
+          <div className="space-y-2">
+            {REGION_ANALYSIS.map((r) => (
+              <div key={r.region} className="flex items-center justify-between rounded-lg bg-slate-800/40 px-3 py-2">
+                <div>
+                  <p className="text-sm font-medium text-slate-200">{r.region}</p>
+                  <p className="text-xs text-slate-400">{r.customers.toLocaleString()} customers · LCR {(r.avgLcr * 100).toFixed(1)}%</p>
+                </div>
+                <div className="text-right">
+                  <p className="text-sm font-bold text-white">${(r.totalRevenue / 1000).toFixed(0)}K</p>
+                  <p className="text-xs text-slate-400">Avg ${r.avgRevenue.toFixed(0)}</p>
+                </div>
+              </div>
+            ))}
+            <p className="text-xs text-slate-400 pt-1 border-t border-slate-800">South West leads on revenue ($56.5K) and LCR (39.7%). North West underperforms on both — investigate channel mix in that region.</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Creative/Objective & Device */}
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+        <div className="rounded-xl border border-slate-800 bg-slate-900 p-5 space-y-3">
+          <h3 className="text-base font-semibold text-white">Creative Type & Campaign Objective LCR</h3>
+          <p className="text-xs text-slate-400">Chi-Square: Objective p=0.492 ns · Creative not formally tested — differences are small</p>
+          <Plot
+            data={[
+              {
+                type: "bar", name: "Creative Type", x: CREATIVE_TYPE.map((c) => c.type), y: CREATIVE_TYPE.map((c) => +(c.lcr * 100).toFixed(1)),
+                marker: { color: CHART_COLORS[0] + "cc" },
+              },
+            ]}
+            layout={{
+              ...PLOTLY_DARK_LAYOUT,
+              height: 240,
+              xaxis: { ...PLOTLY_DARK_LAYOUT.xaxis, tickangle: -15 },
+              yaxis: { ...PLOTLY_DARK_LAYOUT.yaxis, title: "LCR (%)", range: [30, 40] },
+              legend: { orientation: "h", y: 1.1 },
+            }}
+            config={PLOTLY_CONFIG}
+            style={{ width: "100%" }}
+          />
+          <p className="text-xs text-slate-400 border-t border-slate-800 pt-2">
+            <span className="font-medium text-slate-300">Insight: </span>
+            Carousel (37.5%) and UGC (37.1%) outperform Testimonial (33.8%). No objective shows a statistically
+            significant LCR advantage — Awareness and Lead Gen are virtually tied. Creative format matters more than campaign objective.
+          </p>
+        </div>
+
+        <div className="rounded-xl border border-slate-800 bg-slate-900 p-5 space-y-3">
+          <h3 className="text-base font-semibold text-white">Device Analysis — Revenue & Engagement</h3>
+          <p className="text-xs text-slate-400">Mann-Whitney: p=0.349 ns · Welch t: p=0.341 ns — no significant revenue difference between mobile and desktop</p>
+          <Plot
+            data={[
+              { type: "bar", name: "Avg Revenue ($)", x: DEVICE_ANALYSIS.map((d) => d.device), y: DEVICE_ANALYSIS.map((d) => d.avgRevenue), marker: { color: CHART_COLORS[2] } },
+              { type: "bar", name: "Customers", x: DEVICE_ANALYSIS.map((d) => d.device), y: DEVICE_ANALYSIS.map((d) => d.nCustomers), yaxis: "y2", marker: { color: CHART_COLORS[4] + "88" } },
+            ]}
+            layout={{
+              ...PLOTLY_DARK_LAYOUT,
+              height: 240,
+              barmode: "group",
+              yaxis: { ...PLOTLY_DARK_LAYOUT.yaxis, title: "Avg Revenue ($)" },
+              yaxis2: { title: "# Customers", overlaying: "y", side: "right", showgrid: false, tickfont: { color: "#94a3b8" } },
+              legend: { orientation: "h", y: 1.1 },
+            }}
+            config={PLOTLY_CONFIG}
+            style={{ width: "100%" }}
+          />
+          <p className="text-xs text-slate-400 border-t border-slate-800 pt-2">
+            <span className="font-medium text-slate-300">Insight: </span>
+            Mobile accounts for 68% of customers but generates 9.3% less avg revenue than desktop ($64.9 vs $71.5).
+            The difference is not statistically significant — optimize for mobile UX but do not deprioritize desktop.
+          </p>
+        </div>
+      </div>
+
+      {/* SLR Panel image + Bootstrap */}
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+        <div className="rounded-xl border border-slate-800 bg-slate-900 p-4 space-y-2">
+          <h3 className="text-sm font-semibold text-white">SLR Results Panel (8 Models)</h3>
+          <p className="text-xs text-slate-400">Visual output of all 8 simple linear regressions run across this phase</p>
+          <img src="/outputs/slr_panel.png" alt="SLR Panel" className="w-full rounded-lg" style={{ objectFit: "contain" }} />
+        </div>
+        <div className="rounded-xl border border-slate-800 bg-slate-900 p-4 space-y-2">
+          <h3 className="text-sm font-semibold text-white">Bootstrap Confidence Intervals</h3>
+          <p className="text-xs text-slate-400">AOV: $58.87 (95% CI: $54.67–$63.85) · ROAS: 0.23 (95% CI: 0.17–0.30)</p>
+          <div className="grid grid-cols-2 gap-2">
+            <img src="/outputs/bootstrap_aov.png" alt="Bootstrap AOV CI" className="w-full rounded-lg" />
+            <img src="/outputs/bootstrap_roas.png" alt="Bootstrap ROAS CI" className="w-full rounded-lg" />
+          </div>
+          <p className="text-xs text-slate-400">Bootstrap with 1,000 iterations confirms our KPI point estimates are stable. The wide ROAS CI (0.17–0.30) reflects genuine campaign variance, not measurement error.</p>
+        </div>
+      </div>
+
+      {/* Intent signals image */}
+      <div className="rounded-xl border border-slate-800 bg-slate-900 p-4 space-y-2">
+        <h3 className="text-sm font-semibold text-white">Digital Intent Signals — Correlation with Purchase</h3>
+        <p className="text-xs text-slate-400">Pages viewed → add-to-cart: r=0.233, R²=0.054, p&lt;0.001 ✓ · All other session signals: not significant</p>
+        <img src="/outputs/intent_signals.png" alt="Intent Signals" className="w-full rounded-lg max-h-80 object-contain" />
+        <p className="text-xs text-slate-400 border-t border-slate-800 pt-2">
+          <span className="font-medium text-slate-300">Key finding: </span>
+          Only pages viewed has a statistically significant relationship with purchase intent (via add-to-cart).
+          Time on site, add-to-cart count, and checkout-started count are NOT significant predictors on their own.
+          Content breadth matters more than time spent — optimize for content discovery, not session duration.
+        </p>
       </div>
 
       {/* Landing page & days to convert */}

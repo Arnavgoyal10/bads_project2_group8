@@ -109,6 +109,34 @@ export default function SegmentationPage() {
         An RFM model (Recency, Frequency, Monetary) was run independently as a cross-validation.
       </MethodBox>
 
+      {/* KMeans validation + t-SNE */}
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+        <div className="rounded-xl border border-slate-800 bg-slate-900 p-4 space-y-2">
+          <h3 className="text-sm font-semibold text-white">K-Means Validation: Elbow & Silhouette</h3>
+          <p className="text-xs text-slate-400">Silhouette score peaks at k=4 (0.194). Elbow curve inflects at k=4. Both methods agree.</p>
+          <img src="/outputs/kmeans_validation.png" alt="KMeans Validation" className="w-full rounded-lg" style={{ objectFit: "contain" }} />
+          <p className="text-xs text-slate-400">Silhouette &gt; 0.15 = acceptable cluster separation. The elbow curve drop from k=3→4 confirms meaningful structure added by the 4th cluster.</p>
+        </div>
+        <div className="rounded-xl border border-slate-800 bg-slate-900 p-4 space-y-2">
+          <h3 className="text-sm font-semibold text-white">Segment Scatter — Behavioral Topology</h3>
+          <p className="text-xs text-slate-400">2D projection of customer clusters by revenue vs. add-to-cart behavior</p>
+          <img src="/outputs/segment_scatter.png" alt="Segment Scatter" className="w-full rounded-lg" style={{ objectFit: "contain" }} />
+          <p className="text-xs text-slate-400">Champions are clearly separated in the revenue dimension. Engaged Browsers form a distinct high-cart / low-revenue cluster confirming the checkout friction hypothesis.</p>
+        </div>
+      </div>
+
+      {/* t-SNE visualization */}
+      <div className="rounded-xl border border-slate-800 bg-slate-900 p-4 space-y-2">
+        <h3 className="text-sm font-semibold text-white">t-SNE Segment Topology — High-Dimensional Cluster Visualization</h3>
+        <p className="text-xs text-slate-400">t-SNE reduces all behavioral features to 2D for visual cluster validation — confirms K-Means segments are geometrically distinct</p>
+        <img src="/outputs/segment_tsne.png" alt="t-SNE Segment Topology" className="w-full rounded-lg max-h-96 object-contain" />
+        <p className="text-xs text-slate-400 border-t border-slate-800 pt-2">
+          <span className="font-medium text-slate-300">Why t-SNE: </span>
+          K-Means operates in high-dimensional space. t-SNE projects onto 2D while preserving local neighborhood structure.
+          Well-separated clusters in t-SNE space confirm the segments are genuinely distinct — not artifacts of the clustering algorithm.
+        </p>
+      </div>
+
       {/* Segment overview charts */}
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
         <div className="rounded-xl border border-slate-800 bg-slate-900 p-4 space-y-2">
@@ -156,6 +184,22 @@ export default function SegmentationPage() {
             config={PLOTLY_CONFIG}
             style={{ width: "100%" }}
           />
+        </div>
+      </div>
+
+      {/* Gini-Lorenz + Acq Cost vs CLV */}
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+        <div className="rounded-xl border border-slate-800 bg-slate-900 p-4 space-y-2">
+          <h3 className="text-sm font-semibold text-white">Gini-Lorenz Curve — Revenue Inequality</h3>
+          <p className="text-xs text-slate-400">Gini = 0.673 · The 45° diagonal = perfect equality. The larger the gap, the more concentrated revenue is.</p>
+          <img src="/outputs/gini_lorenz.png" alt="Gini-Lorenz Curve" className="w-full rounded-lg" style={{ objectFit: "contain" }} />
+          <p className="text-xs text-slate-400">18 Champion customers (0.75% of base) generate revenue equal to the bottom 1,000. Protecting this group delivers 37× more value per customer than acquiring new Bronze customers.</p>
+        </div>
+        <div className="rounded-xl border border-slate-800 bg-slate-900 p-4 space-y-2">
+          <h3 className="text-sm font-semibold text-white">Acquisition Cost vs. Projected CLV Matrix</h3>
+          <p className="text-xs text-slate-400">14.2% of acquired customers have projected 6m CLV lower than their acquisition cost</p>
+          <img src="/outputs/acq_cost_clv_matrix.png" alt="Acquisition Cost vs CLV Matrix" className="w-full rounded-lg" style={{ objectFit: "contain" }} />
+          <p className="text-xs text-slate-400">Points below the 1:1 diagonal are loss-making acquisitions. Paid Search campaigns account for 65% of these — high CPA ($39.22) is not being offset by proportionally higher LTV.</p>
         </div>
       </div>
 

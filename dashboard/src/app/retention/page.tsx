@@ -79,6 +79,19 @@ export default function RetentionPage() {
         </div>
       </div>
 
+      {/* Kaplan-Meier Survival Curve */}
+      <div className="rounded-xl border border-slate-800 bg-slate-900 p-4 space-y-2">
+        <h3 className="text-sm font-semibold text-white">Kaplan-Meier Survival Curve — Time to Second Purchase</h3>
+        <p className="text-xs text-slate-400">n=1,477 customers with first purchase · n_events=4 second purchases in observation window</p>
+        <img src="/outputs/kaplan_km.png" alt="Kaplan-Meier Survival Curve" className="w-full rounded-lg max-h-80 object-contain" />
+        <p className="text-xs text-slate-400 border-t border-slate-800 pt-2">
+          <span className="font-medium text-slate-300">Reading the chart: </span>
+          The survival function (probability of NOT yet having made a 2nd purchase) never drops to 0.5 in the observation window.
+          This means the median time to a 2nd purchase is statistically infinite — more than half of customers never return.
+          Borrowed from clinical trial methodology, this survival analysis is far more informative than a simple repeat-rate percentage.
+        </p>
+      </div>
+
       {/* Pre-model tests */}
       <div className="rounded-xl border border-slate-800 bg-slate-900 p-5 space-y-3">
         <h3 className="text-base font-semibold text-white">Pre-Model Hypothesis Tests</h3>
@@ -267,6 +280,45 @@ export default function RetentionPage() {
           "Starter kit" bundles that raise first AOV from $53 to $69 (Bronze → Platinum AOV gap) should significantly
           improve predicted LTV for new customers.
         </InsightBox>
+      </div>
+
+      {/* Cohort Retention + MLR Charts */}
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+        <div className="rounded-xl border border-slate-800 bg-slate-900 p-4 space-y-2">
+          <h3 className="text-sm font-semibold text-white">Cohort Retention Heatmap</h3>
+          <p className="text-xs text-slate-400">Week-over-week retention by acquisition cohort</p>
+          <img src="/outputs/cohort_retention.png" alt="Cohort Retention" className="w-full rounded-lg" style={{ objectFit: "contain" }} />
+          <p className="text-xs text-slate-400">The heatmap reveals which acquisition cohorts retain best. Darker cells = higher retention in that week. Use this to assess whether recent marketing changes have improved long-term retention.</p>
+        </div>
+        <div className="rounded-xl border border-slate-800 bg-slate-900 p-4 space-y-2">
+          <h3 className="text-sm font-semibold text-white">Early Warning Signals — Feature Analysis</h3>
+          <p className="text-xs text-slate-400">Gradient Boosting feature contributions to churn prediction</p>
+          <img src="/outputs/early_warning_signals.png" alt="Early Warning Signals" className="w-full rounded-lg" style={{ objectFit: "contain" }} />
+          <p className="text-xs text-slate-400">High acquisition cost with low first-order revenue is the dominant churn signal. This pattern is detectable at first purchase and enables proactive CRM intervention before the 90-day window closes.</p>
+        </div>
+      </div>
+
+      {/* MLR charts */}
+      <div className="rounded-xl border border-slate-800 bg-slate-900 p-5 space-y-3">
+        <h3 className="text-base font-semibold text-white">MLR Model Outputs — Visual Diagnostics</h3>
+        <p className="text-xs text-slate-400">Actual vs. predicted plots for all 3 regression models — Model C failure is visually obvious</p>
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
+          <div className="space-y-1">
+            <p className="text-xs font-semibold text-emerald-400">Model A: Predict Customer LTV (R²=0.851)</p>
+            <img src="/outputs/mlr_ltv.png" alt="MLR LTV" className="w-full rounded-lg" />
+            <p className="text-xs text-slate-400">Tight prediction band. AOV as top predictor means first basket size reliably determines lifetime value.</p>
+          </div>
+          <div className="space-y-1">
+            <p className="text-xs font-semibold text-blue-400">Model B: Predict Transaction Revenue (R²=0.716)</p>
+            <img src="/outputs/mlr_revenue.png" alt="MLR Revenue" className="w-full rounded-lg" />
+            <p className="text-xs text-slate-400">Units purchased dominates. Multi-unit orders are the primary lever for transaction-level revenue optimization.</p>
+          </div>
+          <div className="space-y-1">
+            <p className="text-xs font-semibold text-rose-400">Model C: Days-to-Convert (R²=−0.010) — Failed</p>
+            <img src="/outputs/mlr_days_convert.png" alt="MLR Days to Convert" className="w-full rounded-lg" />
+            <p className="text-xs text-slate-400">Predictions show no structure — a flat mean line would outperform this model. Channel cannot predict conversion speed; all channels take ~15 days.</p>
+          </div>
+        </div>
       </div>
 
       {/* Early warning signs */}

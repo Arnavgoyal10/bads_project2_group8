@@ -20,9 +20,9 @@ function MethodBox({ children }: { children: React.ReactNode }) {
 }
 
 const SCORE_CARDS = [
-  { table: "Customers", score: 94.2, status: "healthy" },
-  { table: "Campaigns", score: 87.1, status: "warning" },
-  { table: "Leads", score: 91.5, status: "healthy" },
+  { table: "Customers", score: 99.7, status: "healthy" },
+  { table: "Campaigns", score: 68.1, status: "critical" },
+  { table: "Leads", score: 89.8, status: "warning" },
   { table: "Transactions", score: 88.3, status: "warning" },
   { table: "Sessions", score: 78.0, status: "warning" },
 ];
@@ -74,10 +74,12 @@ export default function AuditPage() {
           {SCORE_CARDS.map((s) => (
             <div key={s.table} className="rounded-xl border border-slate-800 bg-slate-900 p-4 text-center">
               <p className="text-xs font-medium text-slate-400">{s.table}</p>
-              <p className={`mt-1 text-2xl font-bold ${s.status === "healthy" ? "text-emerald-400" : "text-amber-400"}`}>{s.score}</p>
+              <p className={`mt-1 text-2xl font-bold ${s.status === "healthy" ? "text-emerald-400" : s.status === "critical" ? "text-rose-400" : "text-amber-400"}`}>{s.score}</p>
               <div className="mt-1 flex items-center justify-center gap-1">
                 {s.status === "healthy"
                   ? <><CheckCircle2 className="h-3 w-3 text-emerald-400" /><span className="text-xs text-emerald-400">Healthy</span></>
+                  : s.status === "critical"
+                  ? <><AlertTriangle className="h-3 w-3 text-rose-400" /><span className="text-xs text-rose-400">Critical</span></>
                   : <><AlertTriangle className="h-3 w-3 text-amber-400" /><span className="text-xs text-amber-400">Warning</span></>
                 }
               </div>

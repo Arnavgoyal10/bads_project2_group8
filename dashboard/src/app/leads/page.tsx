@@ -208,6 +208,50 @@ export default function LeadsPage() {
         </div>
       </div>
 
+      {/* Model reliability charts */}
+      <div className="rounded-xl border border-slate-800 bg-slate-900 p-5 space-y-3">
+        <h3 className="text-base font-semibold text-white">Model Reliability — ROC, Calibration & Lift</h3>
+        <MethodBox>
+          AUC and accuracy alone can be misleading. We validate the selected Logistic Regression model using three
+          additional diagnostics: (1) ROC curves compare all 5 models on true/false positive tradeoff,
+          (2) the calibration curve checks if predicted probabilities match actual conversion rates,
+          (3) the lift chart shows how much better our model is vs. random targeting across deciles.
+        </MethodBox>
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
+          <div className="space-y-2">
+            <p className="text-xs font-semibold text-slate-300">ROC Curves — All 5 Models</p>
+            <img src="/outputs/roc_curves.png" alt="ROC Curves" className="w-full rounded-lg" />
+            <p className="text-xs text-slate-400">Logistic Regression (AUC=0.636) and Gradient Boosting (0.621) are closest. The selected model is not the highest test AUC — it wins on cross-validated AUC which better predicts generalization.</p>
+          </div>
+          <div className="space-y-2">
+            <p className="text-xs font-semibold text-slate-300">Calibration Curve</p>
+            <img src="/outputs/calibration_curve.png" alt="Calibration Curve" className="w-full rounded-lg" />
+            <p className="text-xs text-slate-400">The calibration curve shows predicted probabilities align with actual outcomes. A well-calibrated model means P=0.7 truly converts ~70% of the time — essential for threshold optimization.</p>
+          </div>
+          <div className="space-y-2">
+            <p className="text-xs font-semibold text-slate-300">Lift Chart</p>
+            <img src="/outputs/lift_chart.png" alt="Lift Chart" className="w-full rounded-lg" />
+            <p className="text-xs text-slate-400">Top decile lift: 1.4× — targeting the top 10% of scored leads yields 40% more conversions per contact than random. Focus sales on High-tier leads to maximize conversion per rep-hour.</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Confusion Matrix */}
+      <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
+        <div className="rounded-xl border border-slate-800 bg-slate-900 p-4 space-y-2">
+          <h3 className="text-sm font-semibold text-white">Confusion Matrix — Logistic Regression @ Threshold 0.17</h3>
+          <p className="text-xs text-slate-400">Optimized threshold (0.17 vs default 0.50) dramatically increases recall for the minority convert class</p>
+          <img src="/outputs/confusion_matrix.png" alt="Confusion Matrix" className="w-full rounded-lg" style={{ objectFit: "contain" }} />
+          <p className="text-xs text-slate-400">At threshold=0.17, the model catches more true positives at the cost of more false positives — the right tradeoff when a missed conversion costs $20 but a false positive costs only $5.</p>
+        </div>
+        <div className="rounded-xl border border-slate-800 bg-slate-900 p-4 space-y-2">
+          <h3 className="text-sm font-semibold text-white">SHAP Global Feature Importance</h3>
+          <p className="text-xs text-slate-400">SHAP values from Random Forest — direction and magnitude of feature contributions</p>
+          <img src="/outputs/shap_summary.png" alt="SHAP Summary" className="w-full rounded-lg" style={{ objectFit: "contain" }} />
+          <p className="text-xs text-slate-400">Lead score pushes predictions both ways — high scores strongly predict conversion, low scores strongly predict non-conversion. Behavioral features (time on site, pages viewed) are more consistently directional.</p>
+        </div>
+      </div>
+
       {/* Discount causal analysis */}
       <div className="rounded-xl border border-slate-800 bg-slate-900 p-5 space-y-3">
         <h3 className="text-base font-semibold text-white">Discount Effect on Conversion — Causal Analysis</h3>

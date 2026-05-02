@@ -13,11 +13,11 @@ export const KPI_SUMMARY = {
 export const BUDGET_REALLOCATION = [
   { channel: "Paid Search", currentPct: 9.9, recommendedPct: 24.8, shift: 14.9, avgLtv: 66.55, roas: 0.360, compositeScore: 0.726 },
   { channel: "Search", currentPct: 5.9, recommendedPct: 18.4, shift: 12.5, avgLtv: 74.84, roas: 0.221, compositeScore: 0.539 },
-  { channel: "Display", currentPct: 5.5, recommendedPct: 17.1, shift: 11.6, avgLtv: 87.21, roas: 0.173, compositeScore: 0.500 },
-  { channel: "Email", currentPct: 12.9, recommendedPct: 13.7, shift: 0.8, avgLtv: 65.92, roas: 0.151, compositeScore: 0.400 },
-  { channel: "Paid Social", currentPct: 16.0, recommendedPct: 14.6, shift: -1.4, avgLtv: 70.85, roas: 0.250, compositeScore: 0.426 },
-  { channel: "Affiliate", currentPct: 42.7, recommendedPct: 9.4, shift: -33.3, avgLtv: 66.76, roas: 0.113, compositeScore: 0.276 },
-  { channel: "Influencer", currentPct: 7.2, recommendedPct: 2.0, shift: -5.2, avgLtv: 63.34, roas: 0.155, compositeScore: 0.059 },
+  { channel: "Display", currentPct: 5.5, recommendedPct: 17.1, shift: 11.6, avgLtv: 74.59, roas: 0.173, compositeScore: 0.500 },
+  { channel: "Email", currentPct: 12.9, recommendedPct: 13.7, shift: 0.8, avgLtv: 59.28, roas: 0.151, compositeScore: 0.400 },
+  { channel: "Paid Social", currentPct: 16.0, recommendedPct: 14.6, shift: -1.4, avgLtv: 67.93, roas: 0.250, compositeScore: 0.426 },
+  { channel: "Affiliate", currentPct: 42.7, recommendedPct: 9.4, shift: -33.3, avgLtv: 64.81, roas: 0.113, compositeScore: 0.276 },
+  { channel: "Influencer", currentPct: 7.2, recommendedPct: 2.0, shift: -5.2, avgLtv: 76.22, roas: 0.155, compositeScore: 0.059 },
 ];
 
 export const CHANNEL_QUALITY = [
@@ -114,9 +114,9 @@ export const RETENTION_FEATURE_IMPORTANCE = [
   { feature: "total_sessions", importance: 0.0700 },
   { feature: "total_add_to_cart", importance: 0.0558 },
   { feature: "gender_male", importance: 0.0203 },
+  { feature: "region_south_west", importance: 0.0185 },
   { feature: "loyalty_tier_gold", importance: 0.0170 },
-  { feature: "payment_type_Card", importance: 0.0158 },
-  { feature: "income_band_Middle", importance: 0.0158 },
+  { feature: "loyalty_tier_silver", importance: 0.0158 },
 ];
 
 export const SLR_RESULTS = [
@@ -182,7 +182,7 @@ export const DATA_QUALITY_ISSUES = [
   { table: "Customers", issue: "Duplicate customer_ids", treatment: "Dropped duplicates on customer_id", severity: "medium" },
   { table: "Customers", issue: "Invalid ages (< 0 or > 120)", treatment: "Set to NaN", severity: "low" },
   { table: "Customers", issue: "Gender label variants (m, M, Male, male)", treatment: "Normalized to 'male'/'female'", severity: "low" },
-  { table: "Leads", issue: "Conversion dates before lead dates", treatment: "Set conversion_date to NaN", severity: "medium" },
+  { table: "Leads", issue: "26 anonymous leads (no customer_id) & 33 unattributed leads (no campaign_id)", treatment: "Kept for aggregate analysis; excluded from customer-level joins", severity: "medium" },
   { table: "Transactions", issue: "9+ product category variants (baby, baby care, etc.)", treatment: "Normalized to 6 canonical categories", severity: "high" },
   { table: "Transactions", issue: "Revenue ≤ 0 transactions", treatment: "Flagged, kept in dataset", severity: "low" },
   { table: "Website Sessions", issue: "22% of sessions are anonymous (no customer_id)", treatment: "Kept for aggregate analysis; excluded from joins", severity: "medium" },
@@ -205,4 +205,44 @@ export const DAYS_TO_CONVERT = [
   { channel: "Email", meanDays: 15.15, medianDays: 15, n: 235 },
   { channel: "Paid Search", meanDays: 15.73, medianDays: 16, n: 283 },
   { channel: "Display", meanDays: 16.58, medianDays: 17, n: 65 },
+];
+
+export const CHANNEL_PERFORMANCE = [
+  { channel: "Email", leads: 882, conversions: 356, lcr: 0.4036, cpl: 67762.5 },
+  { channel: "Paid Search", leads: 1147, conversions: 447, lcr: 0.3897, cpl: 31649.5 },
+  { channel: "Search", leads: 426, conversions: 164, lcr: 0.3850, cpl: 51490 },
+  { channel: "Affiliate", leads: 446, conversions: 157, lcr: 0.3520, cpl: 346666 },
+  { channel: "Paid Social", leads: 1572, conversions: 545, lcr: 0.3467, cpl: 46055 },
+  { channel: "Display", leads: 292, conversions: 95, lcr: 0.3253, cpl: 71837 },
+  { channel: "Influencer", leads: 419, conversions: 133, lcr: 0.3174, cpl: 62953 },
+];
+
+export const REGION_ANALYSIS = [
+  { region: "South West", customers: 791, avgRevenue: 71.47, avgLcr: 0.397, totalRevenue: 56531 },
+  { region: "South South", customers: 559, avgRevenue: 69.03, avgLcr: 0.394, totalRevenue: 38589 },
+  { region: "North Central", customers: 441, avgRevenue: 67.59, avgLcr: 0.366, totalRevenue: 29806 },
+  { region: "South East", customers: 186, avgRevenue: 69.79, avgLcr: 0.336, totalRevenue: 12981 },
+  { region: "North West", customers: 396, avgRevenue: 50.10, avgLcr: 0.289, totalRevenue: 19841 },
+];
+
+export const DEVICE_ANALYSIS = [
+  { device: "Mobile", nCustomers: 1621, avgRevenue: 64.88, avgEngagement: 1.574 },
+  { device: "Desktop", nCustomers: 559, avgRevenue: 71.50, avgEngagement: 1.647 },
+  { device: "Tablet", nCustomers: 202, avgRevenue: 66.78, avgEngagement: 1.583 },
+];
+
+export const CREATIVE_TYPE = [
+  { type: "Carousel", leads: 1262, conversions: 473, lcr: 0.3748 },
+  { type: "UGC", leads: 1266, conversions: 470, lcr: 0.3712 },
+  { type: "Promo", leads: 439, conversions: 163, lcr: 0.3713 },
+  { type: "Video", leads: 593, conversions: 217, lcr: 0.3659 },
+  { type: "Static", leads: 1041, conversions: 377, lcr: 0.3622 },
+  { type: "Testimonial", leads: 583, conversions: 197, lcr: 0.3379 },
+];
+
+export const CAMPAIGN_OBJECTIVE = [
+  { objective: "Awareness", leads: 1446, conversions: 539, lcr: 0.3728 },
+  { objective: "Lead Gen", leads: 1766, conversions: 658, lcr: 0.3726 },
+  { objective: "Retention", leads: 1002, conversions: 365, lcr: 0.3643 },
+  { objective: "Conversion", leads: 970, conversions: 335, lcr: 0.3454 },
 ];
